@@ -1,0 +1,59 @@
+---
+title: "What is in the box?"
+slug: whats-in-the-box
+section: getting-started
+summary: "What you find inside the box, and what each piece does."
+order: 4
+status: edited-2026-05
+emoji: 📦
+---
+
+Every Playtronica device ships in a small cardboard box with a USB-C cable, the parts the device needs, and a quick-start card. No power adapter is included — every device is powered through USB.
+
+You will need a computer with **Brave** or **Chrome** installed to use any Playtronica device with the browser synth.
+
+## 👐 TouchMe
+
+- **TouchMe device** — the main PCB with two touch-sensitive gold pads.
+- **USB-C cable** — for connecting to your computer.
+- **Quick-start card.**
+
+## 🍉 Playtron
+
+- **Playtron device** — the main PCB with 16 alligator-clip pins and a gold ground pin.
+- **USB-C cable.**
+- **Alligator-clip cables** — usually 8 in the box.
+- **Quick-start card.**
+
+## 🌿 Biotron
+
+- **Biotron device** — the main PCB with a built-in light sensor.
+- **USB-C cable.**
+- **Two leaf-pad probes on cables** — for clipping to plant leaves or branches.
+- **Quick-start card.**
+
+## 🌀 Orbita
+
+- **Orbita device** — the main PCB with a rotating ring, central encoder, and side buttons.
+- **USB-C cable.**
+- **Set of coloured magnets** — for placing on the four tracks.
+- **Quick-start card.**
+
+## ⚖️ Scales
+
+- **Scales device** — the main PCB with a weight plate and three buttons.
+- **USB-C cable.**
+- **TRS MIDI cable** (sometimes included) — for connecting to a hardware synth.
+- **Quick-start card.**
+
+## Something missing?
+
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Missing item #[order number]` and a photo of what arrived. We will send a replacement.
+
+## Ask the community
+
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+
+## Still stuck
+
+[Email support@playtronica.com](mailto:support@playtronica.com). We aim for 24 hours, but a reply may take up to 3 business days.

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">TouchMe — labelled schematic, top view (v6)</title>
+  <desc id="desc">A schematic top-down view of the Playtronica TouchMe. The board is a stretched stadium-shape (long rounded rectangle, uniform height) with two large circular gold capacitive pads on either end, joined by a wide PCB bridge that carries the TOUCH ME silkscreen, PLAYTRONICA wordmark, two rows of 12 note-labelled mini-sensors, 4 mounting holes, the microcontroller, status LED, and the USB-C connector on the top edge.</desc>
+
+  <defs>
+    <style>
+      .stroke         { fill: none; stroke: #1a1a2e; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-thin    { fill: none; stroke: #1a1a2e; stroke-width: 1; }
+      .pcb            { fill: #f6f2e7; }
+      .pad-gold       { fill: #c9a878; }
+      .gold-coil      { fill: none; stroke: #6f4f1e; stroke-width: 5.5; stroke-linecap: round; stroke-linejoin: round; }
+      .pcb-hole       { fill: #f6f2e7; stroke: #1a1a2e; stroke-width: 0.8; }
+      .pcb-hole-big   { fill: #f6f2e7; stroke: #1a1a2e; stroke-width: 1.2; }
+      .chip           { fill: #1a1a2e; }
+      .smd            { fill: #b8a079; }
+      .silk           { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 26px; fill: #1a1a2e; font-weight: 700; letter-spacing: 0.07em; }
+      .silk-mid       { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 14px; fill: #1a1a2e; font-weight: 700; letter-spacing: 0.08em; }
+      .silk-tiny      { font-family: "JetBrains Mono", monospace; font-size: 9px; fill: #4a3a20; letter-spacing: 0.05em; }
+      .leader         { stroke: #1a1a2e; stroke-width: 0.6; opacity: 0.72; fill: none; }
+      .leader-dot     { fill: #1a1a2e; }
+      .label          { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; fill: #1a1a2e; }
+      .label-sub      { font-family: "JetBrains Mono", monospace; font-size: 10px; fill: #555; }
+      .marker         { fill: #5c6bc0; }
+      .marker-text    { font-family: "JetBrains Mono", monospace; font-size: 11px; fill: #fff; font-weight: 700; }
+    </style>
+    <!-- Pad clips: circular pads inset within the rounded ends of the stadium -->
+    <clipPath id="leftPadClip"><circle cx="220" cy="280" r="105"/></clipPath>
+    <clipPath id="rightPadClip"><circle cx="980" cy="280" r="105"/></clipPath>
+  </defs>
+
+  <!-- ============ DEVICE BODY ============ -->
+  <!-- Stadium silhouette: width 1010 (x=95 to x=1105), height 240 (y=160 to y=400),
+       end-cap radius = 120, so the rectangular middle goes from x=215 to x=985.
+       This is a TRUE stadium — bridge height == end-cap diameter. No "narrowing". -->
+  <path class="pcb" d="
+    M 215 160
+    H 985
+    A 120 120 0 0 1 985 400
+    H 215
+    A 120 120 0 0 1 215 160
+    Z"/>
+  <path class="stroke" d="
+    M 215 160
+    H 985
+    A 120 120 0 0 1 985 400
+    H 215
+    A 120 120 0 0 1 215 160
+    Z"/>
+
+  <!-- ============ LEFT GOLD PAD ============ -->
+  <!-- Inset by 15px from the stadium edge, so pad fits cleanly inside the rounded end -->
+  <circle cx="220" cy="280" r="105" class="pad-gold"/>
+  <!-- Serpentine coil: 7 nested U-loops opening LEFT, U-bend toward bridge -->
+  <g clip-path="url(#leftPadClip)" class="gold-coil">
+    <path d="M 110 196 H 280 A 11 11 0 0 1 280 218 H 110"/>
+    <path d="M 110 219 H 270 A 11 11 0 0 1 270 241 H 110"/>
+    <path d="M 110 242 H 260 A 11 11 0 0 1 260 264 H 110"/>
+    <path d="M 110 265 H 250 A 11 11 0 0 1 250 287 H 110"/>
+    <path d="M 110 288 H 240 A 11 11 0 0 1 240 310 H 110"/>
+    <path d="M 110 311 H 230 A 11 11 0 0 1 230 333 H 110"/>
+    <path d="M 110 334 H 220 A 11 11 0 0 1 220 356 H 110"/>
+  </g>
+  <!-- Two clip holes inside left pad, near center, slightly toward inner -->
+  <circle cx="280" cy="270" r="3.5" class="pcb-hole"/>
+  <circle cx="280" cy="290" r="3.5" class="pcb-hole"/>
+
+  <!-- ============ RIGHT GOLD PAD ============ -->
+  <circle cx="980" cy="280" r="105" class="pad-gold"/>
+  <g clip-path="url(#rightPadClip)" class="gold-coil">
+    <path d="M 1090 196 H 920 A 11 11 0 0 0 920 218 H 1090"/>
+    <path d="M 1090 219 H 930 A 11 11 0 0 0 930 241 H 1090"/>
+    <path d="M 1090 242 H 940 A 11 11 0 0 0 940 264 H 1090"/>
+    <path d="M 1090 265 H 950 A 11 11 0 0 0 950 287 H 1090"/>
+    <path d="M 1090 288 H 960 A 11 11 0 0 0 960 310 H 1090"/>
+    <path d="M 1090 311 H 970 A 11 11 0 0 0 970 333 H 1090"/>
+    <path d="M 1090 334 H 980 A 11 11 0 0 0 980 356 H 1090"/>
+  </g>
+  <circle cx="920" cy="270" r="3.5" class="pcb-hole"/>
+  <circle cx="920" cy="290" r="3.5" class="pcb-hole"/>
+
+  <!-- ============ BRIDGE CONTENT ============ -->
+
+  <!-- USB-C connector mounted on the top edge of the bridge (centered) -->
+  <rect x="572" y="148" width="56" height="14" rx="3" class="pcb"/>
+  <rect x="572" y="148" width="56" height="14" rx="3" class="stroke"/>
+  <line x1="580" y1="155" x2="620" y2="155" class="stroke-thin"/>
+
+  <!-- TOUCH ME silkscreen, upper-left of bridge (clear of mounting holes at x=358) -->
+  <text x="390" y="208" class="silk">TOUCH ME</text>
+
+  <!-- PLAYTRONICA wordmark, upper-right of bridge (clear of mounting holes at x=842) -->
+  <text x="725" y="208" class="silk-mid">PLAYTRONICA</text>
+  <path class="stroke-thin" d="M 725 216 Q 750 224 768 213 T 800 213 T 832 213"/>
+
+  <!-- 4 mounting holes near the pad-bridge junction (close to the gold circles, NOT under the silkscreen) -->
+  <g>
+    <circle cx="358" cy="200" r="9" class="pcb-hole-big"/>
+    <circle cx="358" cy="200" r="3.5" class="chip"/>
+    <circle cx="358" cy="360" r="9" class="pcb-hole-big"/>
+    <circle cx="358" cy="360" r="3.5" class="chip"/>
+    <circle cx="842" cy="200" r="9" class="pcb-hole-big"/>
+    <circle cx="842" cy="200" r="3.5" class="chip"/>
+    <circle cx="842" cy="360" r="9" class="pcb-hole-big"/>
+    <circle cx="842" cy="360" r="3.5" class="chip"/>
+  </g>
+
+  <!-- Row of test-pad dots (small gold dots in a horizontal line, near top center of bridge) -->
+  <g fill="#c9a878">
+    <circle cx="525" cy="183" r="2"/>
+    <circle cx="535" cy="183" r="2"/>
+    <circle cx="545" cy="183" r="2"/>
+    <circle cx="555" cy="183" r="2"/>
+    <circle cx="565" cy="183" r="2"/>
+    <circle cx="655" cy="183" r="2"/>
+    <circle cx="665" cy="183" r="2"/>
+    <circle cx="675" cy="183" r="2"/>
+    <circle cx="685" cy="183" r="2"/>
+    <circle cx="695" cy="183" r="2"/>
+  </g>
+
+  <!-- Row 1: 12 note-labelled mini-sensors (C..B chromatic) -->
+  <g class="silk-tiny" text-anchor="middle">
+    <text x="395" y="253">C</text>
+    <text x="430" y="253">C#</text>
+    <text x="465" y="253">D</text>
+    <text x="500" y="253">D#</text>
+    <text x="535" y="253">E</text>
+    <text x="600" y="253">F</text>
+    <text x="635" y="253">F#</text>
+    <text x="670" y="253">G</text>
+    <text x="705" y="253">G#</text>
+    <text x="740" y="253">A</text>
+    <text x="775" y="253">A#</text>
+    <text x="810" y="253">B</text>
+  </g>
+  <g class="smd">
+    <rect x="389" y="258" width="12" height="6" rx="1"/>
+    <rect x="424" y="258" width="12" height="6" rx="1"/>
+    <rect x="459" y="258" width="12" height="6" rx="1"/>
+    <rect x="494" y="258" width="12" height="6" rx="1"/>
+    <rect x="529" y="258" width="12" height="6" rx="1"/>
+    <rect x="594" y="258" width="12" height="6" rx="1"/>
+    <rect x="629" y="258" width="12" height="6" rx="1"/>
+    <rect x="664" y="258" width="12" height="6" rx="1"/>
+    <rect x="699" y="258" width="12" height="6" rx="1"/>
+    <rect x="734" y="258" width="12" height="6" rx="1"/>
+    <rect x="769" y="258" width="12" height="6" rx="1"/>
+    <rect x="804" y="258" width="12" height="6" rx="1"/>
+  </g>
+
+  <!-- Row 2: 12 symbolic-labelled sensors (alternate scale modes) -->
+  <g class="silk-tiny" text-anchor="middle">
+    <text x="395" y="298">∪</text>
+    <text x="430" y="298">⌒</text>
+    <text x="465" y="298">⊃</text>
+    <text x="500" y="298">∼</text>
+    <text x="535" y="298">∧</text>
+    <text x="600" y="298">∨</text>
+    <text x="635" y="298">⊂</text>
+    <text x="670" y="298">α</text>
+    <text x="705" y="298">≡</text>
+    <text x="740" y="298">∇</text>
+    <text x="775" y="298">Σ</text>
+    <text x="810" y="298">∫</text>
+  </g>
+  <g class="smd">
+    <rect x="389" y="303" width="12" height="6" rx="1"/>
+    <rect x="424" y="303" width="12" height="6" rx="1"/>
+    <rect x="459" y="303" width="12" height="6" rx="1"/>
+    <rect x="494" y="303" width="12" height="6" rx="1"/>
+    <rect x="529" y="303" width="12" height="6" rx="1"/>
+    <rect x="594" y="303" width="12" height="6" rx="1"/>
+    <rect x="629" y="303" width="12" height="6" rx="1"/>
+    <rect x="664" y="303" width="12" height="6" rx="1"/>
+    <rect x="699" y="303" width="12" height="6" rx="1"/>
+    <rect x="734" y="303" width="12" height="6" rx="1"/>
+    <rect x="769" y="303" width="12" height="6" rx="1"/>
+    <rect x="804" y="303" width="12" height="6" rx="1"/>
+  </g>
+
+  <!-- Status LED above note rows, between mounting holes -->
+  <circle cx="600" cy="335" r="3" fill="#5c6bc0"/>
+  <circle cx="600" cy="335" r="4.5" class="stroke-thin"/>
+
+  <!-- Microcontroller chip — small QFN at center-bottom of the bridge -->
+  <rect x="588" y="345" width="24" height="24" class="chip" rx="2"/>
+  <g stroke="#fff" stroke-width="0.4" fill="none" opacity="0.5">
+    <path d="M 590 351 H 593 M 590 355 H 593 M 590 359 H 593 M 590 363 H 593"/>
+    <path d="M 607 351 H 610 M 607 355 H 610 M 607 359 H 610 M 607 363 H 610"/>
+    <path d="M 594 347 V 350 M 598 347 V 350 M 602 347 V 350 M 606 347 V 350"/>
+    <path d="M 594 366 V 369 M 598 366 V 369 M 602 366 V 369 M 606 366 V 369"/>
+  </g>
+
+  <!-- Cluster of SMD passives around the chip -->
+  <g class="smd">
+    <rect x="555" y="350" width="6" height="3"/>
+    <rect x="555" y="358" width="6" height="3"/>
+    <rect x="555" y="366" width="6" height="3"/>
+    <rect x="620" y="350" width="6" height="3"/>
+    <rect x="620" y="358" width="6" height="3"/>
+    <rect x="620" y="366" width="6" height="3"/>
+  </g>
+
+  <!-- Silkscreen tagline at far right of bridge bottom -->
+  <text x="940" y="385" class="silk-tiny" text-anchor="end">THINGS SHOULD SOUND</text>
+
+  <!-- ============ CALLOUTS ============ -->
+  <circle cx="120" cy="80" r="13" class="marker"/>
+  <text x="120" y="84" text-anchor="middle" class="marker-text">1</text>
+  <path d="M 132 88 L 180 195" class="leader"/>
+  <circle cx="180" cy="195" r="2" class="leader-dot"/>
+  <text x="142" y="75" class="label">Left conductive pad</text>
+  <text x="142" y="90" class="label-sub">grip with bare skin</text>
+
+  <circle cx="1080" cy="80" r="13" class="marker"/>
+  <text x="1080" y="84" text-anchor="middle" class="marker-text">2</text>
+  <path d="M 1068 88 L 1020 195" class="leader"/>
+  <circle cx="1020" cy="195" r="2" class="leader-dot"/>
+  <text x="1066" y="75" text-anchor="end" class="label">Right conductive pad</text>
+  <text x="1066" y="90" text-anchor="end" class="label-sub">grip with bare skin</text>
+
+  <circle cx="600" cy="55" r="13" class="marker"/>
+  <text x="600" y="59" text-anchor="middle" class="marker-text">3</text>
+  <path d="M 600 68 L 600 145" class="leader"/>
+  <circle cx="600" cy="145" r="2" class="leader-dot"/>
+  <text x="600" y="36" text-anchor="middle" class="label">USB-C connector</text>
+  <text x="600" y="49" text-anchor="middle" class="label-sub">class-compliant MIDI · no drivers</text>
+
+  <circle cx="320" cy="465" r="13" class="marker"/>
+  <text x="320" y="469" text-anchor="middle" class="marker-text">4</text>
+  <path d="M 332 458 L 388 312" class="leader"/>
+  <circle cx="388" cy="312" r="2" class="leader-dot"/>
+  <text x="320" y="490" text-anchor="middle" class="label">Note-labelled mini-sensors</text>
+  <text x="320" y="503" text-anchor="middle" class="label-sub">12 chromatic notes + 12 alt symbols</text>
+
+  <circle cx="600" cy="465" r="13" class="marker"/>
+  <text x="600" y="469" text-anchor="middle" class="marker-text">5</text>
+  <path d="M 600 452 L 600 372" class="leader"/>
+  <circle cx="600" cy="372" r="2" class="leader-dot"/>
+  <text x="600" y="490" text-anchor="middle" class="label">Microcontroller</text>
+  <text x="600" y="503" text-anchor="middle" class="label-sub">brains of the device</text>
+
+  <circle cx="880" cy="465" r="13" class="marker"/>
+  <text x="880" y="469" text-anchor="middle" class="marker-text">6</text>
+  <path d="M 870 458 L 800 312" class="leader"/>
+  <circle cx="800" cy="312" r="2" class="leader-dot"/>
+  <text x="880" y="490" text-anchor="middle" class="label">Mounting holes (×4)</text>
+  <text x="880" y="503" text-anchor="middle" class="label-sub">M2 holes for enclosures or rigs</text>
+
+  <circle cx="120" cy="465" r="13" class="marker"/>
+  <text x="120" y="469" text-anchor="middle" class="marker-text">7</text>
+  <path d="M 132 458 L 230 320" class="leader"/>
+  <circle cx="230" cy="320" r="2" class="leader-dot"/>
+  <text x="120" y="490" text-anchor="middle" class="label">Capacitive coil traces</text>
+  <text x="120" y="503" text-anchor="middle" class="label-sub">senses skin contact area</text>
+
+  <text x="600" y="510" text-anchor="middle" class="label-sub">touchme · top view · v6</text>
+</svg>

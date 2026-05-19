@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next.js
+.next
+out
+
+# pagefind generated
+public/_pagefind
+.next/static/_pagefind
+
+# typescript
+*.tsbuildinfo
+
+# env (never commit secrets, even though tracker IDs are public)
+.env*
+!.env.example
+
+# misc
+*.log
+.DS_Store

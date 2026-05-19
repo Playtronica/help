@@ -1,0 +1,28 @@
+# Cloudflare Pages redirects — old help.playtronica.com URLs → new ones.
+# Keeps Google rankings + bookmarks alive after the migration.
+
+# Old URL                       New URL                                 Status
+
+/orbita                         /devices/orbita/                        301
+/plant-sound                    /devices/biotron/                       301
+/biotron-advanced               /devices/biotron-advanced/              301
+/scales                         /devices/scales/                        301
+/first-steps                    /devices/touchme/                       301
+/tuning                         /devices/touchme-tuning/                301
+/clips                          /sound/objects-you-can-play/            301
+/grounding                      /sound/grounding/                       301
+/physics                        /sound/grounding/                       301
+/objects                        /sound/objects-you-can-play/            301
+/connecting                     /software/connecting/                   301
+/ableton                        /software/ableton/                      301
+/daws                           /software/fl-studio-and-other-daws/     301
+/mobile                         /software/mobile/                       301
+/hardware                       /software/hardware/                     301
+/online                         /software/online-synths/                301
+/synths                         /software/online-synths/                301
+/purchase                       /orders/track-your-order/               301
+/playtron                       /troubleshooting/playtron-faq/          301
+/touchme                        /troubleshooting/hub/                   301
+/safety                         /professionals/safety/                  301
+/different-devices              /getting-started/which-device/          301
+/accessories                    /getting-started/whats-in-the-box/      301

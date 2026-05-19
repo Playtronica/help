@@ -1,0 +1,35 @@
+{
+  "name": "playtronica-help-center",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Playtronica help center — Next.js + Markdown + Pagefind",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "NEXT_OUTPUT_MODE=export next build && pagefind --site out",
+    "build:dev": "next build && pagefind --site .next/server/app",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "indexing": "pagefind --site out"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "gray-matter": "4.0.3",
+    "remark": "15.0.1",
+    "remark-html": "16.0.1",
+    "remark-gfm": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.5",
+    "pagefind": "1.1.1",
+    "postcss": "8.4.41",
+    "tailwindcss": "3.4.10",
+    "typescript": "5.5.4"
+  }
+}

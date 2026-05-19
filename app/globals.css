@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Variable fonts, self-hosted (drop into public/fonts/ when ready).
+       Until the files exist, the system stack defined in tailwind.config.ts
+       takes over — site still loads instantly. */
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("/fonts/InterVariable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono"), url("/fonts/JetBrainsMono-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { color-scheme: light; }
+
+html, body {
+  background: theme("colors.bg");
+  color: theme("colors.ink");
+  font-family: theme("fontFamily.sans");
+  font-size: 17px;          /* mobile-first: comfortable read on small screens */
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+@media (min-width: 1024px) {
+  html, body { font-size: 16px; }   /* tighter on desktop where letterforms render bigger physically */
+}
+
+a { color: theme("colors.accent"); text-decoration: none; transition: color 150ms ease; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+a:focus-visible {
+  outline: 2px solid theme("colors.accent");
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+button, [role="button"], a, summary { -webkit-tap-highlight-color: transparent; }
+button {
+  transition: background-color 150ms ease, color 150ms ease,
+              border-color 150ms ease, box-shadow 150ms ease,
+              transform 150ms ease;
+}
+
+::selection { background: theme("colors.hl"); color: theme("colors.ink"); }
+
+/* ─── Article prose (rendered HTML from Markdown) */
+.prose-pl {
+  max-width: 64ch;
+  font-size: 17px;
+  line-height: 1.65;
+}
+@media (min-width: 1024px) { .prose-pl { font-size: 16px; } }
+
+.prose-pl h2 {
+  font-family: theme("fontFamily.sans");
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  margin: 2rem 0 0.5rem;
+  scroll-margin-top: 5rem;
+}
+.prose-pl h2::before {
+  content: "/ " counter(section-counter, decimal-leading-zero) " ";
+  counter-increment: section-counter;
+  font-family: theme("fontFamily.mono");
+  font-size: 0.7em;
+  letter-spacing: 0.08em;
+  color: theme("colors.ink-soft");
+  margin-right: 0.5em;
+  font-weight: 600;
+}
+.prose-pl { counter-reset: section-counter; }
+
+.prose-pl h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.005em;
+  margin: 1.4rem 0 0.4rem;
+}
+.prose-pl p { margin-bottom: 1rem; }
+.prose-pl ul, .prose-pl ol { margin: 0 0 1rem 1.3rem; padding: 0; }
+.prose-pl li { margin-bottom: 0.35rem; line-height: 1.6; }
+.prose-pl a {
+  color: theme("colors.accent");
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.prose-pl a:hover { text-decoration-thickness: 2px; }
+.prose-pl code {
+  font-family: theme("fontFamily.mono");
+  background: theme("colors.soft");
+  border: 1px solid theme("colors.rule-soft");
+  padding: 0.05rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.88em;
+}
+.prose-pl pre {
+  font-family: theme("fontFamily.mono");
+  background: theme("colors.soft");
+  border: 1.5px solid theme("colors.rule");
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.prose-pl pre code { border: 0; background: transparent; padding: 0; }
+.prose-pl strong { font-weight: 700; }
+.prose-pl hr {
+  border: 0;
+  border-top: 1.5px solid theme("colors.rule");
+  margin: 2rem 0;
+}
+
+/* ─── Callouts via leading emoji (postprocessor adds the class) */
+.prose-pl blockquote {
+  border-left: 3px solid theme("colors.ink");
+  padding: 0.7rem 1rem;
+  margin: 1rem 0;
+  background: #fff;
+  border-radius: 0 6px 6px 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.prose-pl blockquote.callout-warn {
+  border-left-color: #c62828;
+  background: #fff5f5;
+}
+.prose-pl blockquote.callout-tip {
+  border-left-color: theme("colors.accent");
+  background: theme("colors.accent-soft");
+}
+.prose-pl blockquote.callout-info {
+  border-left-color: #009688;
+  background: #e0f2f1;
+}
+.prose-pl blockquote.callout-success {
+  border-left-color: #2e7d32;
+  background: #e8f5e9;
+}
+
+/* ─── Tables wrapped in .table-wrap by postprocessor */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  border: 1.5px solid theme("colors.rule");
+}
+.table-wrap > table { width: 100%; border-collapse: collapse; }
+.prose-pl table thead th {
+  text-align: left;
+  background: theme("colors.soft");
+  border-bottom: 1.5px solid theme("colors.rule");
+  padding: 0.5rem 0.7rem;
+  font-weight: 700;
+  font-family: theme("fontFamily.mono");
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+.prose-pl table tbody tr { border-bottom: 1px solid theme("colors.rule-soft"); }
+.prose-pl table tbody tr:last-child { border-bottom: 0; }
+.prose-pl table td { padding: 0.5rem 0.7rem; vertical-align: top; font-size: 15px; }
+.prose-pl table td code { white-space: nowrap; }
+
+/* ─── Lite YouTube embed (placeholder + thumbnail). The full iframe loads on click. */
+.lite-yt {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000 center / cover no-repeat;
+  margin: 1.2rem 0;
+  border: 1.5px solid theme("colors.rule");
+  cursor: pointer;
+}
+.lite-yt::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(transparent 60%, rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+.lite-yt > .yt-play {
+  position: absolute; top: 50%; left: 50%;
+  width: 64px; height: 44px;
+  margin: -22px 0 0 -32px;
+  background: rgba(33,33,33,0.85);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+  transition: background 150ms ease, transform 150ms ease;
+}
+.lite-yt:hover > .yt-play { background: #cc0000; transform: scale(1.05); }
+.lite-yt > .yt-play::before {
+  content: "";
+  border-style: solid;
+  border-width: 9px 0 9px 14px;
+  border-color: transparent transparent transparent #fff;
+}
+.lite-yt > .yt-title {
+  position: absolute; left: 12px; right: 12px; bottom: 8px;
+  color: #fff;
+  font-family: theme("fontFamily.mono");
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ─── Skip link for keyboard users */
+.skip-link {
+  position: absolute; left: -9999px; top: -9999px;
+}
+.skip-link:focus {
+  left: 12px; top: 12px;
+  background: theme("colors.ink");
+  color: #fff;
+  padding: 8px 12px;
+  z-index: 100;
+}
+
+/* ─── View-mode override (controlled by ViewToggle component).
+       Lets the user flip between mobile and desktop layouts independent of viewport. */
+
+/* Force mobile layout on any viewport */
+html[data-force-view="mobile"] .md\:hidden { display: revert !important; }
+html[data-force-view="mobile"] .md\:block,
+html[data-force-view="mobile"] .md\:inline-block,
+html[data-force-view="mobile"] .md\:flex,
+html[data-force-view="mobile"] .md\:grid { display: none !important; }
+html[data-force-view="mobile"] aside.hidden.md\:block { display: none !important; }
+html[data-force-view="mobile"] .md\:grid-cols-2,
+html[data-force-view="mobile"] .md\:grid-cols-3,
+html[data-force-view="mobile"] .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
+html[data-force-view="mobile"] .md\:col-span-2,
+html[data-force-view="mobile"] .md\:col-span-3,
+html[data-force-view="mobile"] .md\:col-span-4,
+html[data-force-view="mobile"] .md\:col-span-6,
+html[data-force-view="mobile"] .md\:col-span-8,
+html[data-force-view="mobile"] .md\:col-span-12 { grid-column: span 1 !important; }
+html[data-force-view="mobile"] .md\:row-span-2,
+html[data-force-view="mobile"] .md\:row-span-3 { grid-row: auto !important; }
+html[data-force-view="mobile"] .md\:auto-rows-\[150px\] { grid-auto-rows: auto !important; }
+html[data-force-view="mobile"] .max-w-6xl,
+html[data-force-view="mobile"] .max-w-md,
+html[data-force-view="mobile"] body main { max-width: 420px !important; margin-inline: auto !important; }
+html[data-force-view="mobile"] body { padding-bottom: 72px !important; }
+
+/* Force desktop layout on a phone */
+html[data-force-view="desktop"] body { min-width: 1024px; }
+
+/* ─── Reduced motion safety */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

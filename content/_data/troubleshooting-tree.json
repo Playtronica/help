@@ -1,0 +1,344 @@
+{
+  "id": "root",
+  "title": "What's happening?",
+  "subtitle": "Pick the closest match — we'll walk it through.",
+  "branches": [
+    {
+      "id": "no-connect",
+      "label": "Device doesn't connect (LED off, or the computer doesn't see it)",
+      "emoji": "🔌",
+      "node": {
+        "id": "no-connect-q1",
+        "title": "Is the LED on when you plug the device into USB?",
+        "yes": {
+          "id": "no-connect-q2",
+          "title": "Does the device show up in your operating system's MIDI list?",
+          "subtitle": "Mac: Audio MIDI Setup. Windows: Device Manager → Sound, video, game controllers.",
+          "yes": {
+            "id": "no-connect-fix-browser",
+            "title": "Most likely a browser problem.",
+            "fix": [
+              "Open synth.playtronica.com in Chrome or Brave. Safari and Firefox don't speak MIDI.",
+              "Connect the device first, then open the browser tab. The page only scans for MIDI devices when it loads.",
+              "If you accidentally clicked Block on the MIDI permission popup, go to the browser's Site Settings → MIDI → set synth.playtronica.com to Allow."
+            ],
+            "links": [
+              { "label": "Device won't connect — full page", "href": "/troubleshooting/wont-connect/" }
+            ],
+            "stuck": "Send a short video showing: the device LED, your browser address bar, and the MIDI permission popup if it appears."
+          },
+          "no": {
+            "id": "no-connect-fix-driver",
+            "title": "Likely a cable or port issue.",
+            "fix": [
+              "Try a different USB cable (data cable, not a charge-only one).",
+              "Plug directly into the computer, not through a hub.",
+              "On Mac, open System Settings → Privacy & Security → check if any prompt is asking permission for the device."
+            ],
+            "links": [
+              { "label": "Firmware reset (last resort)", "href": "/troubleshooting/firmware-reset/" }
+            ],
+            "stuck": "Send the cable model + the port you're using + a screenshot of your OS's MIDI list (Mac: Audio MIDI Setup; Windows: Device Manager)."
+          }
+        },
+        "no": {
+          "id": "no-connect-fix-power",
+          "title": "USB power isn't reaching the device.",
+          "fix": [
+            "Try a different USB cable.",
+            "Plug into a different USB port — ideally directly on the computer, not a hub.",
+            "If you're on a thin laptop with USB-C only, make sure your adapter is a data adapter, not a charge-only one. Many cheap dongles are charge-only."
+          ],
+          "links": [
+            { "label": "Firmware reset (Nuke recovery)", "href": "/troubleshooting/firmware-reset/" }
+          ],
+          "stuck": "Send a photo of the device with the cable plugged in (showing the LED area) and the model of cable you're using."
+        }
+      }
+    },
+    {
+      "id": "no-sound",
+      "label": "Device connects but no sound",
+      "emoji": "🔇",
+      "node": {
+        "id": "no-sound-q1",
+        "title": "Are you in Chrome or Brave?",
+        "subtitle": "About 40% of 'no sound' cases resolve at this step.",
+        "yes": {
+          "id": "no-sound-q2",
+          "title": "Did you click Allow on the MIDI permission popup?",
+          "yes": {
+            "id": "no-sound-q3",
+            "title": "Which device do you have?",
+            "branches": [
+              {
+                "id": "playtron-ground",
+                "label": "🍉 Playtron",
+                "node": {
+                  "id": "playtron-ground-q",
+                  "title": "Are you grounded — bare skin on the gold ground pin?",
+                  "yes": {
+                    "id": "playtron-light",
+                    "title": "Does the LED blink when you touch a clipped object?",
+                    "yes": {
+                      "id": "playtron-synth-issue",
+                      "title": "Device works — the synth software is the problem.",
+                      "fix": [
+                        "Try a different synth at synth.playtronica.com (Dots Piano is a reliable starting point).",
+                        "Refresh the synth tab — sometimes the synth loses the MIDI connection after a few minutes.",
+                        "If you're using a DAW, make sure a track is armed to receive MIDI and the volume isn't muted."
+                      ]
+                    },
+                    "no": {
+                      "id": "playtron-object",
+                      "title": "Likely a poor connection at the object end.",
+                      "fix": [
+                        "Wet the object slightly — a damp finger across the surface usually helps.",
+                        "Move the alligator clip to a different spot on the object — more contact area = stronger signal.",
+                        "Try a known-good object (a banana, a piece of citrus) to confirm the device works, then go back to your original setup."
+                      ],
+                      "links": [
+                        { "label": "What objects can you play?", "href": "/sound/objects-you-can-play/" }
+                      ]
+                    }
+                  },
+                  "no": {
+                    "id": "playtron-ground-fix",
+                    "title": "Grounding is the most common 'no sound' cause on Playtron.",
+                    "fix": [
+                      "Put your bare hand on the gold ground pin in the corner of Playtron. Bare skin, not over clothing.",
+                      "Or clip a ground cable from the ground pin to a metal radiator, sink, or your laptop's metal body.",
+                      "Test again with a fresh object."
+                    ],
+                    "links": [
+                      { "label": "Grounding — how and why", "href": "/sound/grounding/" }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "biotron-channel",
+                "label": "🌿 Biotron",
+                "node": {
+                  "id": "biotron-q",
+                  "title": "Did Biotron calibrate?",
+                  "subtitle": "After connecting, leave it alone for 30 seconds. You should see a green LED blink then settle into a slow pulse.",
+                  "yes": {
+                    "id": "biotron-fix",
+                    "title": "Likely a plant or contact issue.",
+                    "fix": [
+                      "Make sure each leaf-pad is on a different branch or leaf, at least 2 cm apart.",
+                      "Water the plant. Dry plants give weak signals.",
+                      "Check that the synth's MIDI input is set to Channel 1 (the plant). Channel 2 is the light sensor — separate notes."
+                    ]
+                  },
+                  "no": {
+                    "id": "biotron-calib",
+                    "title": "Run calibration from scratch.",
+                    "fix": [
+                      "Unplug and replug the device. Move away. Wait 30 seconds.",
+                      "If still no calibration sound, update the firmware via settings.playtronica.com/#/biotron in Chrome.",
+                      "If calibration still fails after a firmware update, run the Nuke recovery."
+                    ],
+                    "links": [
+                      { "label": "Firmware reset (Nuke)", "href": "/troubleshooting/firmware-reset/" }
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "touchme-default",
+                "label": "👐 TouchMe",
+                "node": {
+                  "id": "touchme-q",
+                  "title": "Are you holding both gold pads with bare skin?",
+                  "yes": {
+                    "id": "touchme-fix-synth",
+                    "title": "Likely a synth issue.",
+                    "fix": [
+                      "Try a different synth — Dots Piano is reliable.",
+                      "Confirm the synth shows TouchMe in its MIDI device list.",
+                      "Test with a MIDI monitor (MorningStar online) to see if TouchMe is sending notes regardless of the synth."
+                    ]
+                  },
+                  "no": {
+                    "id": "touchme-grip",
+                    "title": "TouchMe needs both ends gripped to complete the circuit.",
+                    "fix": [
+                      "Hold it like a remote control — one hand on each conductive pad.",
+                      "Bare skin, not through a sleeve.",
+                      "If you're sharing with a friend, both of you grip one end and touch each other — that also completes the circuit."
+                    ]
+                  }
+                }
+              },
+              {
+                "id": "orbita-default",
+                "label": "🌀 Orbita",
+                "node": {
+                  "id": "orbita-q",
+                  "title": "Is Orbita rotating?",
+                  "yes": {
+                    "id": "orbita-fix-receiver",
+                    "title": "Orbita is sending notes — the receiver isn't hearing them.",
+                    "fix": [
+                      "Orbita doesn't make sound on its own. You need a synth or DAW receiving its MIDI.",
+                      "In your DAW, set Orbita as a MIDI input and arm a track to receive.",
+                      "Make sure the receiving track has a sound on it (instrument plugin or sample)."
+                    ]
+                  },
+                  "no": {
+                    "id": "orbita-power",
+                    "title": "Orbita isn't rotating — likely power.",
+                    "fix": [
+                      "Try a different USB cable and port.",
+                      "If the LED is on but the motor doesn't spin, run the firmware update."
+                    ],
+                    "links": [
+                      { "label": "Firmware reset", "href": "/troubleshooting/firmware-reset/" }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "no": {
+            "id": "no-sound-permission",
+            "title": "MIDI permission is the issue.",
+            "fix": [
+              "Open your browser's settings → Site Settings → MIDI.",
+              "Find synth.playtronica.com in the list.",
+              "Set it to Allow.",
+              "Reload the synth page. The permission popup may reappear — click Allow."
+            ]
+          }
+        },
+        "no": {
+          "id": "no-sound-browser",
+          "title": "Switch to Chrome or Brave.",
+          "fix": [
+            "Web MIDI is only supported in Chromium-based browsers — Chrome, Brave, Edge.",
+            "Open synth.playtronica.com in one of those.",
+            "Connect the device first, then open the browser tab."
+          ]
+        }
+      }
+    },
+    {
+      "id": "strange",
+      "label": "Strange behaviour — random notes, wrong note per pin, weird timing",
+      "emoji": "👻",
+      "node": {
+        "id": "strange-q1",
+        "title": "Which device?",
+        "branches": [
+          {
+            "id": "biotron-strange",
+            "label": "🌿 Biotron",
+            "node": {
+              "id": "biotron-strange-q",
+              "title": "Do notes fire even when you don't touch the plant?",
+              "yes": {
+                "id": "biotron-strange-light",
+                "title": "Channel 2 (light sensor) is being triggered.",
+                "fix": [
+                  "The light sensor on Channel 2 is picking up flicker from LED bulbs, fluorescent lights, or your monitor.",
+                  "Cover the light sensor with your hand to confirm — if the random notes stop, the light sensor is the cause.",
+                  "Disable Channel 2 in settings.playtronica.com/#/biotron, or set it to CC only."
+                ]
+              },
+              "no": {
+                "id": "biotron-firmware",
+                "title": "Likely an outdated firmware behaviour.",
+                "fix": [
+                  "Update the firmware via settings.playtronica.com/#/biotron in Chrome.",
+                  "After update, run a fresh calibration (leave the device alone for 30 seconds)."
+                ],
+                "links": [
+                  { "label": "Firmware reset (Nuke)", "href": "/troubleshooting/firmware-reset/" }
+                ]
+              }
+            }
+          },
+          {
+            "id": "playtron-strange",
+            "label": "🍉 Playtron",
+            "node": {
+              "id": "playtron-strange-q",
+              "title": "Does a specific pin send a wrong note?",
+              "yes": {
+                "id": "playtron-strange-mapping",
+                "title": "A custom mapping was pushed to the device.",
+                "fix": [
+                  "Open settings.playtronica.com/#/playtron in Chrome.",
+                  "Pick a preset (e.g. Major C) and click Send.",
+                  "Or, in Custom mode, manually re-map each pin."
+                ]
+              },
+              "no": {
+                "id": "playtron-strange-other",
+                "title": "Try a fresh ground and a fresh object.",
+                "fix": [
+                  "Re-ground yourself (bare skin on the gold pin).",
+                  "Replace your test object with a known-good one (a banana).",
+                  "If only certain pins act up, the alligator clips on those pins may be making poor contact — try wiggling them or swapping clips."
+                ]
+              }
+            }
+          },
+          {
+            "id": "other-strange",
+            "label": "👐 TouchMe / 🌀 Orbita / ⚖️ Scales",
+            "node": {
+              "id": "other-strange-fix",
+              "title": "First, run a firmware update.",
+              "fix": [
+                "Open settings.playtronica.com for your device in Chrome.",
+                "Update firmware to the latest version.",
+                "If the behaviour persists, run the Nuke recovery — it resets the device to a known state.",
+                "If it still persists after a Nuke, the issue is hardware. Email us with a video."
+              ],
+              "links": [
+                { "label": "Firmware reset (Nuke)", "href": "/troubleshooting/firmware-reset/" }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "damage",
+      "label": "Physical damage — USB connector loose, pin corroded, board cracked",
+      "emoji": "🔧",
+      "node": {
+        "id": "damage-fix",
+        "title": "Send us a photo — we'll sort it.",
+        "fix": [
+          "Take a clear photo of the damage in good light.",
+          "Email support@playtronica.com with subject 'Defective #[your order number]'.",
+          "Include: photo, brief description, and your order number if you have it.",
+          "For corrosion on Playtron pins specifically, see the Playtron FAQ — light corrosion is fixable at home."
+        ],
+        "links": [
+          { "label": "Playtron — common issues", "href": "/troubleshooting/playtron-faq/" },
+          { "label": "Warranty & repairs", "href": "/orders/warranty-repair/" }
+        ]
+      }
+    },
+    {
+      "id": "other",
+      "label": "Something else — describe in an email",
+      "emoji": "✉️",
+      "node": {
+        "id": "other-fix",
+        "title": "Email us with as much detail as you can.",
+        "fix": [
+          "Send a 30–60 second video showing the device, your screen, and what's not working.",
+          "Include: which device, your OS and browser, what you've already tried.",
+          "Email support@playtronica.com with subject 'Issue — [one-line description]'.",
+          "We reply in 1–3 business days."
+        ]
+      }
+    }
+  ]
+}
