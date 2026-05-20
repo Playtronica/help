@@ -1,8 +1,8 @@
 ---
-title: "Playtron — complete guide"
+title: "Playtron — the clip-anything MIDI instrument"
 slug: playtron
 section: devices
-summary: "How to use Playtron — clip the wires, touch anything that conducts."
+summary: "Clip the wires, ground yourself, touch anything that conducts."
 order: 2
 status: edited-2026-05
 emoji: 🍉
@@ -14,24 +14,54 @@ Playtron turns any conductive object into a piano key. Clip alligator wires to f
 
 > 🛠️ **Want to go deeper?** When you are past the basics, see the [Playtron deep dive](/devices/playtron-advanced/) for custom scales, per-pin mapping, and performance routing.
 
+{{ youtube: ibQuzjFUJd4 title="How to connect Playtron — Playtronica tutorial" }}
+
+## Grounding — the one thing to understand first
+
+**Without grounding, Playtron does not play.** This is the single most common reason new users think Playtron is broken. Grounding is not optional; it is how Playtron works.
+
+Playtron measures tiny electrical changes between the alligator-clip pins and a **reference point** called ground. The reference point completes the circuit. No reference point, no measurement, no note.
+
+You have four ways to ground yourself. Use whichever is easiest in your setup:
+
+1. **Hold the gold ground pin with bare skin.** The simplest method. Your body is the ground reference. Use your dominant hand to touch a note object; use the other hand to hold the gold pin.
+2. **Clip a wire to a ground pin, attach the other end to a metal radiator, a metal sink, or your laptop's metal body.** Use this when you cannot touch the device directly — for performances or installations.
+3. **Two-person ground.** Hand the ground pin to a friend. They hold it. You touch them. The circuit completes through both bodies.
+4. **Audience as ground.** At workshops, the audience holds the ground while one person touches the object. The circuit completes through the audience.
+
+**What does not work as ground:** dry rubber, dry wood, painted metal, anodised aluminium, plastic. Skin needs to be bare; no clothing between you and the metal.
+
+For the full physics, see [Grounding — how and why](/sound/grounding/).
+
 ## Quick start
 
-1. **Clip an alligator wire to a note pin on Playtron.** Clip the other end to a conductive object — fruit, plant, metal, or water. Repeat for each note, up to 16 objects.
-2. **Clip a wire to one of the ground pins**, or hold the gold ground pin directly. Playtron has two ground pins in the bottom corners. They are not labelled with note numbers.
-3. **Plug Playtron into your computer with the USB-C cable from the box.** Then open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome. Plug in the device first, then open the browser.
-4. **Hold the ground with one hand, touch a note object with the other.** Both hands must touch bare skin to the device. That completes the circuit and a note plays.
+You have read about grounding. Now plug in.
 
-> ⚠️ **Without grounding, Playtron will not play.** This is the most common reason new users think Playtron is broken. See [Grounding — how and why](/sound/grounding/) for four ways to ground.
+1. **Clip an alligator wire to a note pin on Playtron.** Clip the other end to a conductive object — fruit, plants, metal, or water. Repeat for each note, up to 16 objects.
+2. **Plug Playtron into your computer with the USB cable from the box.** Then open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome. Plug in the device first, then open the browser.
+3. **Ground yourself.** Hold the gold ground pin with one hand, or use one of the four methods above.
+4. **Touch a note object with your other hand.** A note plays. The LED on Playtron does **not** light up when you plug it in. This is normal and not a fault.
 
 ## If Playtron is not playing — 5-step checklist
 
 Go through every step before you conclude the device is faulty. This resolves 98% of cases.
 
-1. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI. This is the most common reason Playtron appears to not work.
-2. **Plug in Playtron first, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
-3. **Check the MIDI dropdown in the synth.** Most synths at synth.playtronica.com have a MIDI dropdown in the top right. Confirm Playtron is listed and selected.
-4. **Wet your hands slightly.** Wash your hands and dry them only partially, or apply hand cream. Playtron measures skin conductivity. Dry skin produces a weak signal.
-5. **Confirm grounding.** Playtron needs two skin contacts at the same time — one hand on a note object, the other on something connected to a ground pin. The LED on Playtron does **not** light up when you plug it in. This is normal and not a fault.
+1. **Confirm you are grounded.** See the grounding section above. This is the cause 70% of the time.
+2. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI.
+3. **Plug in Playtron first, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
+4. **Check the MIDI dropdown in the synth.** Most synths at synth.playtronica.com have a MIDI dropdown in the top right. Confirm Playtron is listed and selected.
+5. **Wet your hands slightly.** Wash your hands and dry them only partially, or apply hand cream. Playtron measures skin conductivity. Dry skin produces a weak signal.
+
+## Update the firmware
+
+Only **USB-C Playtron** devices (2026 and later) can update firmware via the web tool. Older Micro-USB devices do not support this process.
+
+1. **Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Brave or Chrome.**
+2. **Click "Update Firmware".** If a drive called `RPI-RP2` appears on your computer, skip to step 4.
+3. **Follow the on-screen instructions** to put Playtron into update mode (short the BOOT pins, plug in USB-C, release the pins after the drive appears).
+4. **Upload the latest firmware.** The device reboots automatically.
+
+For a full reset / Nuke recovery, see [Firmware reset (Nuke)](/troubleshooting/firmware-reset/).
 
 ## Test the MIDI signal with a monitor
 
@@ -62,7 +92,7 @@ Use the reset only if the firmware update will not start, or after a hardware fa
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

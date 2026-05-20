@@ -21,6 +21,8 @@ Biotron sends on two MIDI channels:
 
 > 🧬 **Want to go deeper?** See [Biotron Advanced — MIDI CC and SysEx](/devices/biotron-advanced/) for real-time MIDI control, presets, and firmware-level customisation.
 
+{{ youtube: EArNOal-ba0 title="Introducing the Biotron from Playtronica" }}
+
 ## Step 1 — Update the firmware (first time only)
 
 1. **Activate boot mode.** Short the two small BOOT contacts on the PCB with a paper clip or jumper wire. Connect the pins first, then plug in USB-C, then release the pins. The device appears on your computer as a drive called `RPI-RP2`.
@@ -30,15 +32,40 @@ Biotron sends on two MIDI channels:
 ## Step 2 — Set up and play
 
 1. **Clip the leaf-pads to your plant.** Clip one pad to a leaf or branch. Clip the other pad to a different leaf or branch. The pads must be **at least 2 cm apart**. The pads must never touch each other.
-2. **Plug Biotron into your computer with the USB-C cable from the box.** Then open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.
+2. **Plug Biotron into your computer with a USB cable** (not included — use any USB-C data cable). Then open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.
 3. **Move away from the device for 30 seconds.** The green LED blinks and you hear two short calibration tones. Wait until the LED pulses slowly and steadily. Calibration is required for the full musical range.
 4. **The plant plays on its own.** Touch a leaf for a strong change. Move your hand close to the plant without touching it for a softer change. Turn a light on or off — the light sensor on Channel 2 responds.
 
-## Best plants for Biotron
+## Picking the right plant
 
-**Recommended:** aloe vera, succulents, cacti, monstera, pothos, rubber plant — plants with moisture inside and long branches. Water the plant before a session for a stronger signal.
+Biotron measures the electrical conductivity of the plant. The signal strength depends on how much water moves through the plant and how big the active surface area is. Some plants make rich, varied music. Some make barely-audible drones. Some make nothing at all.
 
-**Avoid:** grass, dry or dead plants, very small plants. Keep Biotron away from your computer and phone. Electromagnetic interference affects the signal.
+### What makes a plant a good Biotron antenna
+
+Three properties matter. A plant that has all three is a strong instrument.
+
+1. **High water content** — the bio-electrical signal travels through water in the plant. Well-hydrated plants make richer music. Water the plant 30 minutes before a session.
+2. **Long branches or large leaves** — bigger surface area, longer signal paths, more variation. Long-branched plants act like better antennas.
+3. **Active stomata and respiration** — plants that breathe more (tropical species, kept warm and bright) produce more electrical variation than dormant or stressed plants.
+
+### Plants we know work well
+
+- **Monstera** — long branches, large leaves, high stomatal activity. Produces complex, arpeggiated phrases when well hydrated. Our default recommendation.
+- **Rubber plant (Ficus elastica)** — thick leaves, strong signal, very reliable.
+- **Pothos and Philodendron** — easy to clip to, long trailing branches, lots of leaves.
+- **Snake plant (Sansevieria)** — produces sparser, more resonant drones because it uses CAM photosynthesis (different from the plants above). Good for meditative pieces.
+- **Aloe vera and succulents** — work, but the music is sparser. Better for slow ambient sessions than for active play.
+
+### Plants to avoid
+
+- **Grass and very small leaves** — not enough surface area; the signal is weak.
+- **Dry, thirsty, or dying plants** — water is what carries the signal. A thirsty plant goes silent.
+- **Cut flowers in water** — they start working then fade as the cut stem dehydrates. Not stable.
+- **Plants right next to your laptop or phone** — electromagnetic interference distorts the signal. Move the plant at least one metre away from active electronics.
+
+### A small experiment to find your favourite plant
+
+Set up Biotron on three different plants on three consecutive days. Same scale, same synth, same time of day. Listen to how each plant phrases. You will quickly find which plant in your room has the most musical voice. It is not always the obvious one.
 
 ## MIDI channels
 
@@ -71,37 +98,58 @@ Biotron has two buttons.
 
 > **The same notes repeat when nothing is touching the plant.** The device did not calibrate. Unplug, plug back in, move away for the full 30 seconds, and wait for the steady green pulse.
 
+> **The plant is making barely any sound.** Either the plant is thirsty, or it is a low-signal species (succulent, cactus, snake plant). Water the plant and wait 30 minutes, then try again. If the music stays sparse, try a different plant.
+
 > **The device does not appear on the computer.** Make sure the firmware is updated. Un-updated devices are sometimes not recognised. Try a different USB cable — it must be a data cable, not a charge-only cable.
 
 > **Reset the device.** Short the BOOT pins, plug in USB-C, release the pins. The device appears as `RPI-RP2`. Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) and reflash the firmware.
 
 ## Frequently asked questions
 
-### How does Biotron convert plant signals to MIDI? Is it chromatic?
+<details>
+<summary><strong>How does Biotron convert plant signals to MIDI? Is it chromatic?</strong></summary>
 
 Biotron measures the bio-electrical conductivity of the plant. Changes in moisture, touch, light, and proximity change the resistance, and the firmware maps these changes to MIDI note or CC values. The default scale is C major across 4 octaves. You can switch to Chromatic mode at [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron).
 
-### Can I use multiple Biotrons together?
+</details>
+
+<details>
+<summary><strong>Can I use multiple Biotrons together?</strong></summary>
 
 Yes. Each Biotron appears as a separate MIDI device on your computer. Connect several, assign each to a different MIDI channel or instrument in your DAW, and each plant controls its own voice.
 
-### Can the plant play on its own, without my hands?
+</details>
+
+<details>
+<summary><strong>Can the plant play on its own, without my hands?</strong></summary>
 
 Yes. After calibration, leave the plant completely alone. The bio-electrical signals inside the plant continue to change from internal water movement, photosynthesis, and environmental factors. The plant plays the room. Leave it running for 30 minutes or more.
 
-### Does it really work? What is being measured?
+</details>
+
+<details>
+<summary><strong>Does it really work? What is being measured?</strong></summary>
 
 Yes. Biotron measures small changes in electrical conductivity across two points of contact on the plant. Living plants have real, measurable bio-electrical activity. This is the same principle used in plant electrophysiology research. The firmware maps the changes to MIDI, so you hear what is happening inside the plant.
 
-### Can I control Biotron with MIDI CC?
+</details>
+
+<details>
+<summary><strong>Can I control Biotron with MIDI CC?</strong></summary>
 
 Yes. Biotron sends and receives MIDI CC. Incoming CC controls sensitivity, scale, note length, and probability in real time from a hardware controller or DAW automation. See [Biotron Advanced](/devices/biotron-advanced/) for the full CC map.
 
-### What USB cable should I use?
+</details>
+
+<details>
+<summary><strong>What USB cable should I use?</strong></summary>
 
 Use a data cable, not a charge-only cable. Most cables that ship with phones are data cables. Charge-only cables carry power but no data, and the device will not appear on your computer.
 
-### I see "Denied access to MIDI" in the browser.
+</details>
+
+<details>
+<summary><strong>I see "Denied access to MIDI" in the browser.</strong></summary>
 
 The browser blocked MIDI access. To fix this:
 
@@ -110,11 +158,17 @@ The browser blocked MIDI access. To fix this:
 3. Find `settings.playtronica.com` or `synth.playtronica.com` and change the setting to **Allow**.
 4. Reload the page.
 
-### Can I make a Biotron myself?
+</details>
+
+<details>
+<summary><strong>Can I make a Biotron myself?</strong></summary>
 
 Yes. The firmware is open source on GitHub, and the hardware schematics are published. If you are comfortable with PCB design and RP2040 firmware, you can build your own. See the [Biotron firmware on GitHub](https://github.com/Playtronica/biotron-firmware).
 
-### The device suddenly stopped working.
+</details>
+
+<details>
+<summary><strong>The device suddenly stopped working.</strong></summary>
 
 Try these steps in order:
 
@@ -123,9 +177,11 @@ Try these steps in order:
 3. Use a different USB data cable.
 4. If the device still does not appear, do a firmware reset: short the BOOT pins, plug in USB-C, release the pins. The device appears as `RPI-RP2`. Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) and reflash the firmware. See [Firmware reset (Nuke)](/troubleshooting/firmware-reset/).
 
+</details>
+
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

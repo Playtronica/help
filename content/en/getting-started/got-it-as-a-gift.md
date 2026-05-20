@@ -3,7 +3,7 @@ title: "Got it as a gift?"
 slug: got-it-as-a-gift
 section: getting-started
 section_title: Getting Started
-summary: "Someone gave you a Playtronica. Here is how to hear your first note in five minutes — and what to do if it is not for you."
+summary: "Someone gave you a Playtronica. Here is how to hear your first note in five minutes."
 segment: ["gift-recipient"]
 deflection_target: 120
 order: 3
@@ -25,7 +25,7 @@ If you cannot identify your device, see [Which Playtronica do I have?](/getting-
 
 ## Make sound in five minutes
 
-1. Plug the device into your laptop with the USB-C cable from the box.
+1. Plug the device into your laptop with a USB cable.
 2. Open **Brave** or **Chrome** and go to [synth.playtronica.com](https://synth.playtronica.com).
 3. Pick one:
    - **TouchMe** — touch both gold pads with bare skin.
@@ -61,11 +61,11 @@ That is fine. Four options to consider first:
 - **Use it once.** Pull it out at a dinner. Plug it into a banana. Watch the room. Some people only need that one moment.
 - **Try it again in a week.** The first session is not always the one that lands. The synths at synth.playtronica.com are very different from each other.
 
-If none of those work, you have **30 days** to return the device. See [Returns and refunds](/orders/returns-refunds/) for the steps.
+If it still does not click for you, see [Returns and refunds](/orders/returns-refunds/) for what to do next.
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

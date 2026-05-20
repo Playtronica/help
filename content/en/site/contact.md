@@ -14,6 +14,10 @@ Email is the right channel for every situation. Pick the topic below — each li
 
 ## By topic
 
+#### 🤔 Thinking about buying?
+
+[support@playtronica.com](mailto:support@playtronica.com?subject=Pre-purchase%20question) — pick the right device, ask about accessories, ask how to use Playtronica with your specific setup, or anything else before you order. We reply within 1 business day with honest guidance — including telling you when a Playtronica device is not the right fit.
+
 #### 📦 Order, shipping, missing item
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Order%20%23%5Byour%20order%20number%5D) — please include your order number, what you're seeing, and any tracking link.

@@ -4,39 +4,25 @@ slug: community
 section: site
 summary: "Where to find other Playtronica makers — and where to ask for help first."
 order: 2
-status: new-2026-05
+status: edited-2026-05
 emoji: 🤝
 ---
 
-The Playtronica community is **the first place to ask for help**. Other users have hit your problem before, and the answers stay searchable for the next person.
-
-Before you email support, search and ask the community. Email support is for order, refund, warranty, and account questions — see the bottom of the page for what to email instead.
+The Playtronica community is the first place to ask for help. Other users have hit your problem before, and the answers stay searchable for the next person.
 
 ## Where to go
 
-### 🌐 Facebook group — Playtronica Friends
-
-[**facebook.com/groups/playtronica**](https://www.facebook.com/groups/playtronica) — public group, 4,400+ members. The main community hub. Search the group's history before posting (use the magnifying glass at the top of the group).
+[**facebook.com/groups/playtronica**](https://www.facebook.com/groups/playtronica) — public group, 4,400+ members. The Playtronica Friends community on Facebook.
 
 **Best for:** finding past answers, posting a new question that anyone can find later, sharing what you made, asking about creative use and installations.
 
-### 💬 WhatsApp community
+> ℹ️ **We are looking for a better long-term home for the community.** Facebook works for now, but if you have suggestions for a better platform, [email support@playtronica.com](mailto:support@playtronica.com) with the subject `Community suggestion`.
 
-Higher-engagement chat in smaller regional groups (Germany, France, UK, Italy, and a general group).
+## How to ask a good question
 
-**The WhatsApp invite link rotates** every few weeks to keep spam bots out. The current invite link lives in the **pinned post of the Facebook group**. Open the FB group, find the pinned post, copy the WhatsApp link from there.
+The same advice works for any channel.
 
-**Best for:** quick conversation, local events and meetups, early product updates, late-night creative questions.
-
-### 📷 Instagram broadcast chat
-
-A smaller broadcast chat for show-and-tell and product news. Find the link on [@playtronica on Instagram](https://www.instagram.com/playtronica/).
-
-## How to ask a good question in the community
-
-The same advice for any channel:
-
-1. **Search first.** In the FB group, click the magnifying glass and try terms like `playtron grounding`, `biotron calibration`, `touchme no sound`, `orbita firmware`, `scales sensitivity`.
+1. **Search first.** In the Facebook group, click the magnifying glass and try terms like `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`.
 2. **Add a `[Device]` prefix** to your post title. Example: `[Biotron] Same notes repeat without touching the plant`.
 3. **In the post body, include:**
    - Which device — TouchMe, Playtron, Biotron, Orbita, or Scales.

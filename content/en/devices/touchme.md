@@ -1,8 +1,8 @@
 ---
-title: "TouchMe — complete guide"
+title: "TouchMe — the touch-to-MIDI instrument"
 slug: touchme
 section: devices
-summary: "How to use TouchMe, from first connection to live performance."
+summary: "A small instrument that turns touch into music. Play alone, with a friend, or on water and flowers."
 order: 1
 status: edited-2026-05
 emoji: 👐
@@ -10,18 +10,51 @@ emoji: 👐
 
 <img src="/illustrations/touchme/touchme-top.svg" alt="TouchMe top view, labelled — gold conductive pads on both sides, status LED in the middle, USB-C at the bottom" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
 
-TouchMe is a small instrument with two gold pads. Hold the pads with bare skin and notes play. The device measures the conductivity of your skin and completes a circuit between the two pads. A larger contact area produces a louder, brighter sound.
+TouchMe is a small instrument with two gold pads. It turns **skin, water, or flowers into sound**. Touch both pads with bare skin and a note plays. The device measures the conductivity of whatever connects the two pads — your fingers, two people's hands, a glass of water, a wet leaf. A larger contact area produces a louder, brighter sound.
+
+**TouchMe is designed for shared play.** The most surprising moment is when two people each hold one pad and touch each other — the circuit completes through both bodies, and the touch between them plays the music.
 
 > ⚠️ **Handle only the parts shown in this guide.** Touch the gold conductive pads, the USB-C connector, and the electrode-patch clip points. Do not touch the narrow PCB bridge — it carries the microcontroller and surface-mount components. Even when the device is unplugged, do not touch solder joints, exposed chips, or the underside of the PCB. TouchMe is durable, but those areas can be damaged permanently.
 
+> ⚠️ **Not waterproof. Do not use with pacemakers.** TouchMe is safe at USB voltage but the device should not be submerged, and people with pacemakers or other implanted medical devices should not use it as a precaution.
+
 > 🛠️ **Want to go deeper?** When you are past the basics, see the [TouchMe deep dive](/devices/touchme-advanced/) for MIDI mapping, custom scales, hardware tuning, and performance tips. The [tuning page](/devices/touchme-tuning/) covers scale presets.
 
-## Quick start (2 minutes)
+## The two-person demo — the moment that defines TouchMe
 
-1. **Plug TouchMe into your computer with the USB-C cable from the box.** No drivers are required on Mac or Windows. If your computer has no USB-C port, use a USB-C to USB-A adapter.
+This is the demonstration we run at every workshop. It is the simplest way to understand what TouchMe is.
+
+1. Two people stand next to TouchMe.
+2. **Person A holds one gold pad with one hand.** Bare skin.
+3. **Person B holds the other gold pad with one hand.** Bare skin.
+4. **The two people touch each other** — palm to palm, fingertip to forearm, anywhere bare skin meets bare skin. A note plays.
+5. **The touch between the two people becomes the instrument.** A high-five plays a short note. A long handshake plays a sustained note. A hug plays a chord.
+
+The music does not come from the device. The music comes from the connection between two people. TouchMe just makes it audible.
+
+{{ youtube: lXe4WExMyeM title="TouchMe explained — official Playtronica demo" }}
+
+## Three ways to play
+
+**Alone.** Hold both pads with bare skin — one hand on each pad. A note plays as long as the circuit is complete. Move your fingers across the pads to change the volume and brightness.
+
+**With a friend.** The two-person demo above. The most common workshop demonstration.
+
+**With objects.** Clip an alligator wire from one of the pads to anything that conducts a small amount of electricity — a piece of fruit, a glass of water, a wet leaf, aluminium foil, a damp piece of paper. Touch the clipped object and the other pad simultaneously. The object becomes a key. See [Objects you can play](/sound/objects-you-can-play/) for the full list.
+
+## Quick start — first sound in 2 minutes
+
+1. **Plug TouchMe into your computer with the USB cable from the box.** No drivers are required on Mac or Windows. If your computer has only USB-A ports, see [Adapters](https://shop.playtronica.com/collections/additional-items).
 2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.** Safari and Firefox do not support Web MIDI. Open the browser **after** plugging in the device so the browser detects it on page load.
 3. **Choose a synth.** Avoid synths marked "Playtron only" (such as WebSID Commodore 64). The default Dots Piano is the most reliable starting point.
-4. **Hold both gold pads with bare skin.** A note plays. The harder you press, the louder the note.
+4. **Hold both gold pads with bare skin.** A note plays. Try the two-person demo above.
+
+## What is in the box
+
+- TouchMe device
+- USB cable
+- 2 alligator clips — for connecting to objects beyond your skin
+- Storage envelope
 
 ## Update the firmware
 
@@ -62,7 +95,7 @@ Steps:
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

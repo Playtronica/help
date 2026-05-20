@@ -1,13 +1,26 @@
 "use client";
 import { useState } from "react";
+import { copyAndOpen } from "@/lib/whatsapp-feedback";
 
+/**
+ * FeedbackWidget — in-article "Did this answer your question?" Yes / No.
+ *
+ *  - YES → POSTs a one-bit signal to /api/feedback for the deflection dashboard.
+ *  - NO  → opens a small textarea, then routes the typed note to Andrey on
+ *          WhatsApp via the shared copyAndOpen helper. Same path the global
+ *          WhatsAppFeedback widget uses; the message lands in WhatsApp with
+ *          the page URL + the article slug pre-filled.
+ *
+ * The YES analytics signal stays — we still want to count satisfied readers.
+ * Only the NO branch was rerouted to WhatsApp on 2026-05-19 (decision D50).
+ */
 export function FeedbackWidget({ slug }: { slug: string }) {
   const [state, setState] = useState<"idle" | "yes" | "no" | "submitted">("idle");
   const [note, setNote] = useState("");
+  const [toast, setToast] = useState<string | null>(null);
 
-  async function send(value: "yes" | "no", body: string) {
-    // Local dev: log to console. Production: POST to /api/feedback (Cloudflare Workers KV).
-    const payload = { slug, value, note: body, ts: new Date().toISOString() };
+  async function sendYes() {
+    const payload = { slug, value: "yes" as const, note: "", ts: new Date().toISOString() };
     if (typeof window !== "undefined") {
       try {
         await fetch("/api/feedback", {
@@ -15,17 +28,67 @@ export function FeedbackWidget({ slug }: { slug: string }) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
-      } catch { /* ignore in static build */ }
+      } catch {
+        /* ignore in static build */
+      }
       console.info("[feedback]", payload);
     }
     setState("submitted");
   }
 
+  async function sendNo() {
+    // 1. Lightweight analytics — POST the bare NO signal for the dashboard.
+    const payload = { slug, value: "no" as const, note: note.trim(), ts: new Date().toISOString() };
+    if (typeof window !== "undefined") {
+      try {
+        await fetch("/api/feedback", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch {
+        /* ignore in static build */
+      }
+      console.info("[feedback]", payload);
+    }
+
+    // 2. Open WhatsApp with the user's note + page context. Clipboard fallback
+    //    handles the Mac WhatsApp prefill quirk — see lib/whatsapp-feedback.ts.
+    const heading =
+      typeof document !== "undefined"
+        ? (document.querySelector("article h1, article h2")?.textContent?.trim() || "")
+        : "";
+    const copied = await copyAndOpen({
+      pageUrl: typeof window !== "undefined" ? window.location.href : "",
+      heading,
+      note: note.trim() || "[did not answer this page's question]",
+    });
+
+    setToast(
+      copied
+        ? "Copied to clipboard — paste in WhatsApp if it did not auto-fill."
+        : "Open WhatsApp and tap Send. If the message is empty, paste manually.",
+    );
+    window.setTimeout(() => setToast(null), 5000);
+    setState("submitted");
+  }
+
   if (state === "submitted") {
     return (
-      <p className="mt-8 border-[1.5px] border-rule bg-accent-soft px-4 py-3 text-[14px] text-ink">
-        Thanks — we read every one of these.
-      </p>
+      <>
+        <p className="mt-8 border-[1.5px] border-rule bg-accent-soft px-4 py-3 text-[14px] text-ink">
+          Thanks — we read every one of these.
+        </p>
+        {toast && (
+          <p
+            role="status"
+            aria-live="polite"
+            className="mt-2 border-[1.5px] border-rule bg-white px-4 py-2 text-[12px] text-ink-soft"
+          >
+            {toast}
+          </p>
+        )}
+      </>
     );
   }
 
@@ -35,7 +98,10 @@ export function FeedbackWidget({ slug }: { slug: string }) {
         <div className="flex flex-wrap items-center gap-3 text-[15px]">
           <span className="font-semibold">Did this answer your question?</span>
           <button
-            onClick={() => { setState("yes"); send("yes", ""); }}
+            onClick={() => {
+              setState("yes");
+              void sendYes();
+            }}
             className="min-h-[36px] border-[1.5px] border-ink bg-ink px-3 py-1 text-[14px] text-bg transition hover:bg-accent hover:border-accent"
           >
             Yes
@@ -50,19 +116,24 @@ export function FeedbackWidget({ slug }: { slug: string }) {
       )}
       {state === "no" && (
         <div className="space-y-2 text-[15px]">
-          <label className="block font-semibold">What were you looking for?</label>
+          <label className="block font-semibold">What is missing or wrong?</label>
           <textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
             rows={3}
+            autoFocus
             className="w-full border-[1.5px] border-rule bg-white p-2 text-[14px] outline-none focus:border-accent"
             placeholder="A sentence is fine."
           />
+          <p className="text-[12px] text-ink-soft">
+            Your note goes to Andrey on WhatsApp with the page URL attached. You confirm
+            before WhatsApp sends.
+          </p>
           <button
-            onClick={() => send("no", note)}
+            onClick={() => void sendNo()}
             className="min-h-[36px] border-[1.5px] border-ink bg-ink px-3 py-1 text-[14px] text-bg transition hover:bg-accent hover:border-accent"
           >
-            Send feedback
+            Send to WhatsApp
           </button>
         </div>
       )}

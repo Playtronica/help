@@ -8,36 +8,62 @@ status: edited-2026-05
 emoji: 🔧
 ---
 
-## Quick checklist before anything else
+Pick the symptom that matches your situation. Each row points to the right page or the fastest fix.
 
-Work through these in order. They resolve most issues.
+| What you are seeing | Most likely cause | Where to go |
+|---|---|---|
+| Computer does not see the device at all | Wrong cable, wrong port, wrong browser | [Device will not connect](/troubleshooting/wont-connect/) |
+| LED on, but no sound when I touch | MIDI permission, wrong browser, no grounding | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
+| Playtron specifically — lights up but nothing happens | Grounding | [Grounding — how and why](/sound/grounding/) |
+| Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
+| USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
+| Some objects play, others do not | Conductivity | [Objects you can play](/sound/objects-you-can-play/) |
+| Worked once, now broken | Firmware corruption | [Firmware reset (Nuke)](/troubleshooting/firmware-reset/) |
 
-1. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI.
-2. **Check the LED on the device.** The LED should light up when the device is plugged in. Playtron is the exception — its LED does not light up on plug-in.
-3. **Confirm MIDI permission.** You clicked **Allow** on the browser's MIDI permission prompt.
-4. **For Playtron, confirm grounding.** Bare skin must touch the gold ground pin, or a ground cable must connect to a metal radiator or sink.
-5. **Try a different USB cable.** The cable must be a data cable. Charge-only cables look identical but carry no data.
+## Quick checklist — works for 80% of "not working" cases
+
+Work through these in order. They resolve most issues without needing the deeper pages.
+
+1. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI. This is the single most common reason a Playtronica device appears to not work.
+2. **Plug in the device, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
+3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
+4. **For Playtron, confirm grounding.** Bare skin on the gold ground pin, or a ground cable to a metal radiator. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
+5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
 6. **Use a USB port directly on the computer.** Not a USB hub.
+
+If all six are confirmed and the device still does not work, go to the symptom-specific page above.
 
 ## LED status guide
 
 | LED behaviour | What it means |
 |---|---|
 | Solid on when plugged in | The device is powered and connected. |
-| Off when plugged in | USB power issue. Try another port or cable. (Playtron does not light up on plug-in.) |
+| Off when plugged in | USB power issue. Try another port or cable. (Playtron does not light up on plug-in — this is normal.) |
 | Flashing rapidly | The device is sending MIDI signals. This is correct. |
-| Solid on but no response to touch | Unplug and reconnect. If the problem continues, [email support](mailto:support@playtronica.com). |
+| All LEDs lit at once | Either calibration mode (Biotron, briefly) or a stuck state (Playtron — try a reset). |
+| Solid on but no response to touch | Unplug and reconnect. If the problem continues, see the symptom rows above. |
 
-## Specific issues
+## Spurious notes — device plays without anything touching it
 
-- **The device will not connect.** See [Device will not connect](/troubleshooting/wont-connect/).
-- **No sound or MIDI not detected.** See [No sound or MIDI not detected](/troubleshooting/no-sound/).
-- **Playtron-specific issues** — corrosion, grounding, weak signal. See [Playtron — common issues and fixes](/troubleshooting/playtron-faq/).
-- **The device is unresponsive after a failed update.** See [Firmware reset (Nuke)](/troubleshooting/firmware-reset/).
+This happens when the device cannot find a stable reference point.
+
+- **Biotron** — the device did not calibrate. Unplug, plug back in, move at least 1 metre away from the plant for 30 seconds, wait for the steady green pulse.
+- **Playtron** — the room has strong electromagnetic interference. Move the device away from your computer, phone charger, and Wi-Fi router. Try a different room as a quick test.
+- **All devices** — confirm grounding (Playtron) or that the plant pads are at least 2 cm apart and not touching each other (Biotron).
+
+## Hardware damage
+
+If the device is physically damaged — USB port loose, alligator pin broken off, PCB cracked — do not try to repair it yourself. [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Defective #[order number]` and a clear photo. The 1-year warranty covers manufacturing defects. See [Warranty and repairs](/orders/warranty-repair/) for the policy.
+
+## Specific device pages
+
+- [Playtron — common issues and fixes](/troubleshooting/playtron-faq/) — grounding, pin corrosion, intermittent triggers.
+- [Firmware reset (Nuke)](/troubleshooting/firmware-reset/) — when the device is unresponsive after a failed update.
+- [Device will not connect](/troubleshooting/wont-connect/) — Mac and Windows steps.
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

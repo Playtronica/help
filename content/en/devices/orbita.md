@@ -30,7 +30,7 @@ Orbita needs a sound source. Three options:
 
 <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/5d278695-a9f1-4ca7-80c0-ea538951c7b4/image/w=1920,quality=90,fit=scale-down" alt="Orbita labelled diagram — the four magnetic tracks, the R/B/I/T buttons, the A button, and the central O button" style="width:100%;border-radius:10px;margin:16px 0;display:block">
 
-1. **Plug Orbita into your sound source** with the USB-C cable from the box, or with a MIDI cable to a hardware synth.
+1. **Plug Orbita into your sound source** with the USB cable from the box, or with a MIDI cable to a hardware synth.
 2. **Place coloured magnets on the four tracks.** Each colour triggers a different MIDI note. Each track is a different octave by default.
 3. **Press Start.** Rotate the encoder to change the speed.
 4. **Press the R, B, I, T buttons to mute and unmute tracks.**
@@ -102,7 +102,7 @@ Orbita may have switched to MIDI CC mode by accident.
 
 ### Step 1 — clean the device
 
-1. Plug Orbita into your computer with USB-C.
+1. Plug Orbita into your computer with the USB cable from the box.
 2. While plugging in, **press and hold the button behind the USB-C port** on the bottom PCB.
 3. Keep holding the button until your computer detects Orbita as a removable drive.
 4. Drag the `flash_nuke` file onto the Orbita drive.
@@ -124,7 +124,7 @@ Orbita may have switched to MIDI CC mode by accident.
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

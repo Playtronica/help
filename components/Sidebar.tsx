@@ -4,7 +4,11 @@ import type { SectionGroup } from "@/lib/content";
 export function Sidebar({ nav }: { nav: SectionGroup[] }) {
   return (
     <aside className="hidden w-56 shrink-0 md:block">
-      <nav className="sticky top-[72px] space-y-5">
+      {/* sticky + max-height + overflow makes the nav a column that scrolls
+          independently of the article — long device lists no longer hang
+          below the fold. The pr-1 reserves space for the scrollbar so links
+          do not jiggle when it appears. */}
+      <nav className="sticky top-[72px] max-h-[calc(100vh-88px)] space-y-5 overflow-y-auto pr-1">
         {nav.map((g, i) => (
           <div key={g.section}>
             <div className="mb-2 flex items-baseline gap-2">

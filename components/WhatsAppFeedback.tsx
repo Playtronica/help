@@ -5,24 +5,21 @@
  * directly to Andrey's WhatsApp. Two modes:
  *
  *   A. Highlight-to-report — user selects any text on the page, a small
- *      "📍 Report this" tooltip appears near the selection. Tap → opens
- *      WhatsApp with: page URL + nearest heading + the selected text.
+ *      "📍 Help improve this" tooltip appears near the selection.
  *
- *   C. Floating "What's missing here?" button — bottom-right of every page.
- *      Tap → modal with a textarea. The user types what's missing, taps
- *      "Send to WhatsApp" → opens WhatsApp with: page URL + the currently
- *      visible heading + their note, pre-filled. The user taps Send in
- *      WhatsApp itself (one extra tap; this is also the anti-spam gate).
+ *   C. Floating "What's missing?" button — bottom-right of every page.
+ *
+ * Mac WhatsApp app sometimes drops the prefilled text from `wa.me` deeplinks.
+ * Workaround: always copy the full message to the clipboard before opening
+ * WhatsApp, then show a small toast — "Copied to clipboard, paste if needed."
+ * If the prefill worked the toast is just a reassurance; if it failed the
+ * user pastes from clipboard.
  *
  * To disable site-wide, remove the import + render from `app/layout.tsx`.
- *
- * The widget never POSTs to a server. The only network call is opening
- * the wa.me deeplink, which the user can cancel inside WhatsApp.
  */
 
 import { useEffect, useState } from "react";
-
-const WHATSAPP_NUMBER = "351937910673"; // Andrey personal — feedback channel only
+import { copyAndOpen } from "@/lib/whatsapp-feedback";
 
 type Anchor = {
   top: number;
@@ -31,33 +28,13 @@ type Anchor = {
   heading: string;
 };
 
-function buildWhatsAppLink(opts: {
-  pageUrl: string;
-  heading?: string;
-  selectedText?: string;
-  note?: string;
-}): string {
-  const lines: string[] = ["Help center feedback", "", `Page: ${opts.pageUrl}`];
-  if (opts.heading) lines.push(`Section: ${opts.heading}`);
-  if (opts.selectedText) {
-    const trimmed = opts.selectedText.slice(0, 240);
-    lines.push(`Selected: "${trimmed}${opts.selectedText.length > 240 ? "…" : ""}"`);
-  }
-  lines.push("", `My note: ${opts.note ?? ""}`);
-  const text = encodeURIComponent(lines.join("\n"));
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
-}
-
 function findNearestHeadingForRange(range: Range): string {
-  // Walk up from the selection start; for each element, check for an enclosing
-  // h2/h3 and otherwise the nearest preceding h2/h3 in document order.
   let node: Node | null = range.startContainer;
   while (node) {
     if (node.nodeType === Node.ELEMENT_NODE) {
       const el = node as HTMLElement;
       const enclosing = el.closest("h2, h3");
       if (enclosing) return enclosing.textContent?.trim() || "";
-      // walk previous siblings looking for a heading
       let sib: Element | null = el.previousElementSibling;
       while (sib) {
         if (sib.tagName === "H2" || sib.tagName === "H3") {
@@ -89,9 +66,10 @@ function getCurrentVisibleHeading(): string {
 }
 
 function isInsideArticle(range: Range): boolean {
-  const node = range.startContainer.nodeType === Node.ELEMENT_NODE
-    ? (range.startContainer as Element)
-    : range.startContainer.parentElement;
+  const node =
+    range.startContainer.nodeType === Node.ELEMENT_NODE
+      ? (range.startContainer as Element)
+      : range.startContainer.parentElement;
   return !!node?.closest("article");
 }
 
@@ -99,6 +77,7 @@ export function WhatsAppFeedback() {
   const [anchor, setAnchor] = useState<Anchor | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [note, setNote] = useState("");
+  const [toast, setToast] = useState<string | null>(null);
 
   useEffect(() => {
     function readSelection() {
@@ -118,7 +97,6 @@ export function WhatsAppFeedback() {
         return;
       }
       const rect = range.getBoundingClientRect();
-      // Place the tooltip just below the end of the selection. Clamp to viewport.
       const top = rect.bottom + window.scrollY + 6;
       const left = Math.max(8, Math.min(rect.left + window.scrollX, window.innerWidth - 160));
       setAnchor({
@@ -130,43 +108,60 @@ export function WhatsAppFeedback() {
     }
 
     function onSelectionChange() {
-      // selectionchange fires while the user is dragging; we want to commit
-      // only when they stop, so debounce a touch.
       window.clearTimeout((onSelectionChange as any)._t);
       (onSelectionChange as any)._t = window.setTimeout(readSelection, 120);
+    }
+
+    // Allow other components (e.g. FeedbackWidget "Did this answer? NO") to
+    // open the modal with a prefilled note.
+    function onOpenEvent(e: Event) {
+      const detail = (e as CustomEvent<{ note?: string }>).detail || {};
+      setNote(detail.note ?? "");
+      setModalOpen(true);
     }
 
     document.addEventListener("mouseup", readSelection);
     document.addEventListener("touchend", readSelection);
     document.addEventListener("selectionchange", onSelectionChange);
+    window.addEventListener("cowork:open-feedback", onOpenEvent);
     return () => {
       document.removeEventListener("mouseup", readSelection);
       document.removeEventListener("touchend", readSelection);
       document.removeEventListener("selectionchange", onSelectionChange);
+      window.removeEventListener("cowork:open-feedback", onOpenEvent);
     };
   }, []);
 
-  function reportSelection() {
+  function showCopiedToast(copied: boolean) {
+    setToast(
+      copied
+        ? "Copied to clipboard — paste in WhatsApp if it did not auto-fill."
+        : "Open WhatsApp and tap Send. If the message is empty, paste manually.",
+    );
+    window.setTimeout(() => setToast(null), 5000);
+  }
+
+  async function reportSelection() {
     if (!anchor) return;
-    const url = buildWhatsAppLink({
+    const copied = await copyAndOpen({
       pageUrl: window.location.href,
       heading: anchor.heading,
       selectedText: anchor.text,
     });
-    window.open(url, "_blank", "noopener,noreferrer");
     setAnchor(null);
     window.getSelection()?.removeAllRanges();
+    showCopiedToast(copied);
   }
 
-  function submitGeneral() {
-    const url = buildWhatsAppLink({
+  async function submitGeneral() {
+    const copied = await copyAndOpen({
       pageUrl: window.location.href,
       heading: getCurrentVisibleHeading(),
       note: note.trim(),
     });
-    window.open(url, "_blank", "noopener,noreferrer");
     setModalOpen(false);
     setNote("");
+    showCopiedToast(copied);
   }
 
   return (
@@ -187,11 +182,7 @@ export function WhatsAppFeedback() {
         </button>
       )}
 
-      {/* Floating "What's missing here?" button.
-          Stacks ABOVE the ViewToggle on both mobile and desktop so the two never
-          overlap. On mobile, MobileBottomNav at bottom: 0 + ViewToggle at bottom: 80
-          + this button at bottom: 136. On desktop, ViewToggle at bottom: 16 + this
-          button at bottom: 64. */}
+      {/* Floating "What's missing here?" button */}
       <button
         onClick={() => setModalOpen(true)}
         aria-label="What's missing here?"
@@ -245,6 +236,17 @@ export function WhatsAppFeedback() {
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Toast — fixed bottom-center; auto-dismisses */}
+      {toast && (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed bottom-[200px] left-1/2 z-50 max-w-[90vw] -translate-x-1/2 border-[1.5px] border-ink bg-white px-4 py-2 text-[13px] text-ink shadow-block-sm md:bottom-32"
+        >
+          {toast}
         </div>
       )}
     </>

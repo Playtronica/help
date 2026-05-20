@@ -28,6 +28,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen pb-[72px] md:pb-0">
         <a href="#main" className="skip-link">Skip to content</a>
 
+        {/* The .force-mobile-frame wrapper only changes anything when
+            ViewToggle sets html[data-force-view="mobile"]. In normal viewing
+            it is a pass-through div (no max-width, no positioning). In forced-
+            mobile mode globals.css turns it into a centered 420px column and a
+            containing block for position:fixed children, so the mobile drawer,
+            bottom nav, view toggle, and feedback widget stay inside the phone
+            frame instead of escaping to the full desktop viewport. */}
+        <div className="force-mobile-frame">
+
         <header className="sticky top-0 z-20 border-b-[1.5px] border-rule bg-bg/95 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 md:py-3">
             <MobileNavDrawer nav={nav} />
@@ -69,8 +78,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </footer>
 
         <MobileBottomNav />
-        <ViewToggle />
         <WhatsAppFeedback />
+
+        </div>{/* /.force-mobile-frame */}
+
+        {/* ViewToggle and Analytics live OUTSIDE the frame so the toggle is
+            always reachable (even in forced-mobile mode) and analytics is not
+            visually affected by the frame outline. */}
+        <ViewToggle />
         <Analytics />
       </body>
     </html>

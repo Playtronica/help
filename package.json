@@ -4,11 +4,14 @@
   "version": "0.1.0",
   "description": "Playtronica help center — Next.js + Markdown + Pagefind",
   "scripts": {
+    "predev": "node scripts/build-search-index.mjs",
     "dev": "next dev -p 3001",
+    "prebuild": "node scripts/build-search-index.mjs",
     "build": "NEXT_OUTPUT_MODE=export next build && pagefind --site out",
     "build:dev": "next build && pagefind --site .next/server/app",
     "start": "next start -p 3001",
     "lint": "next lint",
+    "search:index": "node scripts/build-search-index.mjs",
     "indexing": "pagefind --site out"
   },
   "dependencies": {

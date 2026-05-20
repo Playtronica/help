@@ -22,9 +22,21 @@ const BENTO_SPANS = [
   "md:col-span-6 md:row-span-2",
 ];
 
+// Pages that should not be surfaced on the homepage. They stay reachable via
+// the section index, the sidebar, and direct URLs — but we do not promote them
+// on the landing page.
+const HOME_HIDE = new Set<string>([
+  "orders/returns-refunds",
+]);
+
 export default function Home() {
   const nav = groupedNav();
-  const byKey = Object.fromEntries(nav.map((g) => [g.section, g]));
+  const byKey = Object.fromEntries(
+    nav.map((g) => [
+      g.section,
+      { ...g, pages: g.pages.filter((p) => !HOME_HIDE.has(`${p.section}/${p.slug}`)) },
+    ]),
+  );
 
   return (
     <div className="-mx-4 -mt-6 md:-mx-0">
@@ -44,7 +56,6 @@ export default function Home() {
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
           <QuickPill href="/orders/track-your-order/" label="📦 Track my order" />
-          <QuickPill href="/orders/returns-refunds/" label="↩ Returns" />
           <QuickPill href="/orders/invoice-vat/" label="🧾 Invoice & VAT" />
           <QuickPill href="/getting-started/got-it-as-a-gift/" label="🎁 Got it as a gift?" />
           <QuickPill href="/troubleshooting/hub/" label="🔧 Not working?" />

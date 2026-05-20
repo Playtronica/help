@@ -253,6 +253,28 @@ html[data-force-view="mobile"] .max-w-md,
 html[data-force-view="mobile"] body main { max-width: 420px !important; margin-inline: auto !important; }
 html[data-force-view="mobile"] body { padding-bottom: 72px !important; }
 
+/* The phone frame — a `.force-mobile-frame` wrapper inside body becomes a centered
+   420px column AND a containing block for position:fixed children. The drawer,
+   mobile bottom nav, and feedback widget all live inside the frame instead of
+   escaping to the full desktop viewport.
+   Three properties together establish the containing block reliably across
+   browsers: transform, will-change:transform, and contain:layout. Any one
+   should be enough, but together they survive HMR + browser optimisations. */
+html[data-force-view="mobile"] .force-mobile-frame {
+  max-width: 420px !important;
+  margin: 0 auto !important;
+  min-height: 100vh;
+  position: relative;
+  transform: translateZ(0);
+  will-change: transform;
+  contain: layout;
+  outline: 1px solid theme("colors.rule");
+  background: theme("colors.bg");
+}
+html[data-force-view="mobile"] {
+  background: theme("colors.soft");
+}
+
 /* Force desktop layout on a phone */
 html[data-force-view="desktop"] body { min-width: 1024px; }
 

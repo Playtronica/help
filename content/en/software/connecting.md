@@ -12,7 +12,7 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 
 ## On macOS
 
-1. **Plug in the device** with the USB-C cable from the box. Use a USB-C to USB-A adapter if your Mac has no USB-C port.
+1. **Plug in the device** with a USB cable. Use a USB-C to USB-A adapter if your Mac has no USB-C port.
 2. **Verify in Audio MIDI Setup.** Go to Applications → Utilities → Audio MIDI Setup. Click the MIDI Studio icon. Your Playtronica device should appear.
 3. **Open your synth or DAW.** The DAW detects the device automatically. In Ableton, check MIDI preferences. In Logic, the device appears automatically.
 
@@ -36,7 +36,7 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 

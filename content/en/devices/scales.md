@@ -18,7 +18,7 @@ Five modes use the same gesture in different ways — a chord, an arpeggio, a dr
 
 ## Quick start
 
-1. **Plug Scales into your laptop, tablet, or phone** with the USB-C cable from the box. Or connect Scales to a hardware synth with a TRS MIDI cable.
+1. **Plug Scales into your laptop, tablet, or phone** with a USB cable (not included — use any USB-C data cable). Or connect Scales to a hardware synth with a TRS MIDI cable.
 2. **Open a web synth or your DAW.** [synth.playtronica.com](https://synth.playtronica.com) works in Brave or Chrome. Ableton, Logic, and FL Studio see Scales as a MIDI input.
 3. **Place an object on the plate.** Any object up to 3 kg works — a piece of fruit, a glass of water, a stone, a coin, a phone. The note number tracks the weight.
 4. **Move, swap, or stack the objects.** Rearranging the objects changes the notes.
@@ -109,7 +109,7 @@ Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scal
 
 ## Ask the community
 
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there, what to email instead, and where to find the WhatsApp regional groups.
+> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 
