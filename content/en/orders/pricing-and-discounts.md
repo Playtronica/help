@@ -11,7 +11,7 @@ status: edited-2026-05
 emoji: 💸
 ---
 
-Current prices are always live at [shop.playtronica.com](https://shop.playtronica.com). This page covers discount codes, bundles, missed-code refunds, and B2B pricing.
+Current prices are always live at [shop.playtronica.com](https://shop.playtronica.com), shown in **EUR (€)** by default and converted to USD ($) at checkout for non-EU customers. This page covers discount codes, bundles, missed-code refunds, and B2B pricing.
 
 ## I forgot to use a discount code at checkout
 

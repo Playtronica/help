@@ -30,7 +30,7 @@ This is the demonstration we run at every workshop. It is the simplest way to un
 4. **The two people touch each other** — palm to palm, fingertip to forearm, anywhere bare skin meets bare skin. A note plays.
 5. **The touch between the two people becomes the instrument.** A high-five plays a short note. A long handshake plays a sustained note. A hug plays a chord.
 
-The music does not come from the device. The music comes from the connection between two people. TouchMe just makes it audible.
+The music does not come from the device. The music comes from the connection between two people. TouchMe makes it audible.
 
 {{ youtube: lXe4WExMyeM title="TouchMe explained — official Playtronica demo" }}
 

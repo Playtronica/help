@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { copyAndOpen } from "@/lib/whatsapp-feedback";
+import { copyAndOpen, WHATSAPP_ENABLED } from "@/lib/whatsapp-feedback";
 
 /**
  * FeedbackWidget — in-article "Did this answer your question?" Yes / No.
@@ -54,21 +54,36 @@ export function FeedbackWidget({ slug }: { slug: string }) {
 
     // 2. Open WhatsApp with the user's note + page context. Clipboard fallback
     //    handles the Mac WhatsApp prefill quirk — see lib/whatsapp-feedback.ts.
+    //    If the WhatsApp env var is unset (e.g. on a fork), fall back to an
+    //    email mailto: link with the same payload.
     const heading =
       typeof document !== "undefined"
         ? (document.querySelector("article h1, article h2")?.textContent?.trim() || "")
         : "";
-    const copied = await copyAndOpen({
-      pageUrl: typeof window !== "undefined" ? window.location.href : "",
-      heading,
-      note: note.trim() || "[did not answer this page's question]",
-    });
+    const pageUrl = typeof window !== "undefined" ? window.location.href : "";
+    const userNote = note.trim() || "[did not answer this page's question]";
 
-    setToast(
-      copied
-        ? "Copied to clipboard — paste in WhatsApp if it did not auto-fill."
-        : "Open WhatsApp and tap Send. If the message is empty, paste manually.",
-    );
+    if (WHATSAPP_ENABLED) {
+      const copied = await copyAndOpen({
+        pageUrl,
+        heading,
+        note: userNote,
+      });
+      setToast(
+        copied
+          ? "Copied to clipboard — paste in WhatsApp if it did not auto-fill."
+          : "Open WhatsApp and tap Send. If the message is empty, paste manually.",
+      );
+    } else if (typeof window !== "undefined") {
+      const subject = `Help center feedback — ${slug}`;
+      const body = `Page: ${pageUrl}\nSection: ${heading}\n\nMy note: ${userNote}`;
+      window.open(
+        `mailto:support@playtronica.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+        "_blank",
+        "noopener,noreferrer",
+      );
+      setToast("Opening your email app — send to finish.");
+    }
     window.setTimeout(() => setToast(null), 5000);
     setState("submitted");
   }

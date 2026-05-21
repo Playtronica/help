@@ -53,8 +53,7 @@ export function SearchBar() {
       .then((r) => {
         if (!r.ok) throw new Error("no pagefind");
         const url = "/_pagefind/pagefind.js";
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
+        // @ts-ignore — pagefind.js is a static asset, not a typed module.
         return import(/* webpackIgnore: true */ url);
       })
       .then(async (m: any) => {

@@ -12,7 +12,7 @@ The Playtronica community is the first place to ask for help. Other users have h
 
 ## Where to go
 
-[**facebook.com/groups/playtronica**](https://www.facebook.com/groups/playtronica) — public group, 4,400+ members. The Playtronica Friends community on Facebook.
+[**facebook.com/groups/playtronica**](https://www.facebook.com/groups/playtronica) — public group, **4400 members** active across 40+ countries. The Playtronica Friends community on Facebook.
 
 **Best for:** finding past answers, posting a new question that anyone can find later, sharing what you made, asking about creative use and installations.
 

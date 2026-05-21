@@ -1,0 +1,56 @@
+name: Bug report
+description: Something on the site does not work — broken link, broken layout, search not finding a known page, image not loading.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page does the bug appear on?
+      description: Paste the URL.
+      placeholder: https://help.playtronica.com/...
+  - type: textarea
+    id: description
+    attributes:
+      label: What is broken?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happens?
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Brave
+        - Safari
+        - Firefox
+        - Edge
+        - Other
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type
+      options:
+        - Desktop
+        - Tablet
+        - Phone
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or screen recording
+      description: Drag and drop here. Helpful for layout bugs.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmations
+      options:
+        - label: I tried a hard reload (Cmd-Shift-R / Ctrl-Shift-R) and the bug still happens.
+          required: true

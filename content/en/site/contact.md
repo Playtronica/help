@@ -14,41 +14,43 @@ Email is the right channel for every situation. Pick the topic below — each li
 
 ## By topic
 
-#### 🤔 Thinking about buying?
+### 🤔 Thinking about buying?
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Pre-purchase%20question) — pick the right device, ask about accessories, ask how to use Playtronica with your specific setup, or anything else before you order. We reply within 1 business day with honest guidance — including telling you when a Playtronica device is not the right fit.
 
-#### 📦 Order, shipping, missing item
+### 📦 Order, shipping, missing item
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Order%20%23%5Byour%20order%20number%5D) — please include your order number, what you're seeing, and any tracking link.
 
-#### 🔧 Device not working
+### 🔧 Device not working
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Device%20issue) — include which device, your operating system, browser/app, what the LED is doing, and 1–2 short videos if you can. Most issues are fixed before we need to send a replacement.
 
-#### ↩️ Return or refund
+### ↩️ Return or refund
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Return%20%23%5Byour%20order%20number%5D) — we send the right return address within 1 business day. 30-day return window, full guide [here](/orders/returns-refunds/).
 
-#### 🧾 Invoice or VAT receipt
+### 🧾 Invoice or VAT receipt
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Invoice%20%23%5Byour%20order%20number%5D) — include order number, company name, full address, VAT number if you have one. We issue within 1 business day.
 
-#### 🛡️ Warranty claim
+### 🛡️ Warranty claim
 
 [support@playtronica.com](mailto:support@playtronica.com?subject=Warranty%20%23%5Byour%20order%20number%5D) — 1-year warranty on manufacturing defects. Include order number + a photo or short video of the issue. [Full warranty page](/orders/warranty-repair/).
 
-#### 🏢 B2B, bulk, schools, museums
+### 🏢 B2B, bulk, schools, museums
 
 [collaboration@playtronica.com](mailto:collaboration@playtronica.com?subject=Quote%20%E2%80%94%20%5Byour%20organization%5D) — quotes for 10+ units, institutional purchase orders, custom configurations. Reply within 2 business days. See [B2B & Institutional](/professionals/b2b-bulk/).
 
-#### 📰 Press, partnerships, content creators
+### 📰 Press, partnerships, content creators
 
 [collaboration@playtronica.com](mailto:collaboration@playtronica.com?subject=Press%20%E2%80%94%20%5Byour%20publication%20or%20channel%5D) — review units, interviews, partnerships, brand collaborations.
 
 ## Response time
 
 We aim for **24 hours**, may take up to **3 business days**. Holiday periods (December, early January) can be slower.
+
+Every email is read by a real person on the Playtronica team — often by Andrey Manirko, who designs the devices. You are not writing to a ticket queue that nobody reads.
 
 ## Community
 
@@ -58,4 +60,4 @@ For non-urgent questions, the Facebook community often has the fastest answer �
 
 ## Urgent only
 
-If your situation is genuinely urgent and email is not getting a reply (a carrier-lost package, a time-sensitive workshop), [message Andrey on WhatsApp](https://wa.me/351937910673). Keep the message short and respectful. For everyday support, email is the right channel.
+If your situation is genuinely urgent and email is not getting a reply (a carrier-lost package, a time-sensitive workshop), [email support@playtronica.com](mailto:support@playtronica.com?subject=URGENT%20%23%5Border%20number%5D) with `URGENT` at the start of the subject line. We watch for that flag and move those to the front of the queue. For everyday support, a normal email is the right channel.

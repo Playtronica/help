@@ -9,10 +9,12 @@ status: edited-2026-05
 emoji: 🚚
 ---
 
+All orders ship within **1–2 business days** from one of two fulfilment centres. EU and North America orders ship from the Netherlands via UPS, DHL, or local post. Asia Pacific orders ship from Hong Kong via DHL or FedEx. Tracking is provided for every order.
+
 We ship globally from two fulfilment centres:
 
-- **Netherlands (ShipBob NL)** — for Europe and North America.
-- **Hong Kong (Floship)** — for Asia Pacific and the rest of the world.
+- **Netherlands (ShipBob NL)** — for Europe and North America. Carriers: UPS, DHL, PostNL.
+- **Hong Kong (Floship)** — for Asia Pacific and the rest of the world. Carriers: DHL, FedEx.
 
 ## Delivery times by region
 

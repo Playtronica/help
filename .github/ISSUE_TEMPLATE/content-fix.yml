@@ -1,0 +1,37 @@
+name: Content fix
+description: Report a typo, wrong instruction, broken link, or missing detail on a page.
+title: "[Content] "
+labels: ["content", "needs-triage"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      description: Paste the URL of the affected page, e.g. https://help.playtronica.com/devices/biotron/
+      placeholder: https://help.playtronica.com/...
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the exact sentence or section that is wrong, missing, or unclear.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What should it say instead?
+      description: Your suggested rewrite. A draft sentence is fine.
+  - type: input
+    id: device
+    attributes:
+      label: Which device, if relevant?
+      description: TouchMe, Playtron, Biotron, Orbita, Scales, or N/A.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues for a duplicate.
+          required: true

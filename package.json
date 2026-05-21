@@ -1,21 +1,64 @@
 {
   "name": "playtronica-help-center",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Playtronica help center — Next.js + Markdown + Pagefind",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Open-source documentation, troubleshooting, and creative guides for Playtronica MIDI devices — TouchMe, Playtron, Biotron, Orbita, Scales. Next.js + Markdown + Pagefind, deployed on Cloudflare Pages, with AI-search surfaces (llms.txt, JSON-LD).",
+  "keywords": [
+    "playtronica",
+    "help-center",
+    "documentation",
+    "midi",
+    "music-tech",
+    "capacitive-sensing",
+    "plant-music",
+    "nextjs",
+    "tailwindcss",
+    "pagefind",
+    "cloudflare-pages",
+    "llms-txt",
+    "ai-search",
+    "ecommerce-help"
+  ],
+  "homepage": "https://help.playtronica.com",
+  "bugs": {
+    "url": "https://github.com/Playtronica/help/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Playtronica/help.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Playtronica",
+    "url": "https://playtronica.com"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "predev": "node scripts/build-search-index.mjs",
+    "predev": "node scripts/build-search-index.mjs && node scripts/build-seo-files.mjs",
     "dev": "next dev -p 3001",
-    "prebuild": "node scripts/build-search-index.mjs",
+    "prebuild": "node scripts/build-search-index.mjs && node scripts/build-seo-files.mjs",
     "build": "NEXT_OUTPUT_MODE=export next build && pagefind --site out",
     "build:dev": "next build && pagefind --site .next/server/app",
     "start": "next start -p 3001",
     "lint": "next lint",
     "search:index": "node scripts/build-search-index.mjs",
+    "seo:files": "node scripts/build-seo-files.mjs",
+    "audit": "python3 scripts/audit-cross-references.py",
+    "links:check": "python3 scripts/check-external-links.py",
+    "links:check:live": "python3 scripts/check-external-links.py --live",
+    "i18n:status": "python3 scripts/check-translation-freshness.py",
+    "translate": "node scripts/translate-pages.mjs",
+    "review:1": "bash scripts/reviews/pass-1-mechanical.sh",
+    "review:2": "node scripts/reviews/pass-2-user-journeys.mjs",
+    "review:3": "python3 scripts/reviews/pass-3-ecommerce-friction.py",
+    "review:4": "python3 scripts/reviews/pass-4-trust-signals.py",
+    "review:all": "bash scripts/reviews/run-all.sh",
     "indexing": "pagefind --site out"
   },
   "dependencies": {
-    "next": "14.2.5",
+    "next": "14.2.35",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "gray-matter": "4.0.3",
@@ -29,9 +72,9 @@
     "@types/react-dom": "18.2.25",
     "autoprefixer": "10.4.20",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "14.2.35",
     "pagefind": "1.1.1",
-    "postcss": "8.4.41",
+    "postcss": "8.5.10",
     "tailwindcss": "3.4.10",
     "typescript": "5.5.4"
   }

@@ -1,0 +1,8 @@
+# Security contact for the Playtronica Help Center.
+# Format: https://securitytxt.org/ (RFC 9116)
+
+Contact: mailto:andrey@playtronica.com
+Preferred-Languages: en
+Canonical: https://help.playtronica.com/.well-known/security.txt
+Policy: https://github.com/Playtronica/help/blob/main/SECURITY.md
+Expires: 2027-05-21T00:00:00.000Z

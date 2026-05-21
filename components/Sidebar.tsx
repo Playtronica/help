@@ -1,13 +1,21 @@
+"use client";
 import Link from "next/link";
-import type { SectionGroup } from "@/lib/content";
+import { usePathname } from "next/navigation";
+import type { SlimNavGroup } from "@/lib/content";
+import { langFromPath, localizedPath, type Lang } from "@/lib/i18n";
 
-export function Sidebar({ nav }: { nav: SectionGroup[] }) {
+/**
+ * The sidebar receives the navigation tree for every language. It picks the
+ * tree matching the current URL's language prefix, so a reader on /de/... sees
+ * German section and page titles, and every link stays in German.
+ */
+export function Sidebar({ navByLang }: { navByLang: Record<Lang, SlimNavGroup[]> }) {
+  const pathname = usePathname() || "/";
+  const lang = langFromPath(pathname);
+  const nav = navByLang[lang] || navByLang.en;
+
   return (
     <aside className="hidden w-56 shrink-0 md:block">
-      {/* sticky + max-height + overflow makes the nav a column that scrolls
-          independently of the article — long device lists no longer hang
-          below the fold. The pr-1 reserves space for the scrollbar so links
-          do not jiggle when it appears. */}
       <nav className="sticky top-[72px] max-h-[calc(100vh-88px)] space-y-5 overflow-y-auto pr-1">
         {nav.map((g, i) => (
           <div key={g.section}>
@@ -23,7 +31,7 @@ export function Sidebar({ nav }: { nav: SectionGroup[] }) {
               {g.pages.map((p) => (
                 <li key={p.slug}>
                   <Link
-                    href={`/${p.section}/${p.slug}/`}
+                    href={localizedPath(lang, `/${p.section}/${p.slug}/`)}
                     className="block border-l-2 border-transparent px-2 py-1.5 text-[13px] text-ink-soft transition hover:border-l-ink hover:bg-soft hover:text-ink"
                   >
                     {p.emoji ? <span className="mr-1">{p.emoji}</span> : null}

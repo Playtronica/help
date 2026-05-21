@@ -1,0 +1,35 @@
+name: Missing topic
+description: A topic that should have a page in the help center but does not.
+title: "[Missing] "
+labels: ["content", "missing-topic", "needs-triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What question is not answered by the current help center?
+      description: Phrase it the way a user would search for it.
+      placeholder: "Example: How do I use Biotron on a tree outdoors?"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Where did the question come from?
+      description: Did this come up in a support email, in the Facebook community, on social, somewhere else?
+  - type: input
+    id: device
+    attributes:
+      label: Which device, if any?
+      description: TouchMe, Playtron, Biotron, Orbita, Scales, or N/A.
+  - type: textarea
+    id: section
+    attributes:
+      label: Where should the new page live?
+      description: getting-started, devices, software, sound, troubleshooting, orders, professionals, or site.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues and the current help center for this topic.
+          required: true

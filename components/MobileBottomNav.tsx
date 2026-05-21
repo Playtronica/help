@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { canonicalPath, langFromPath, localizedPath } from "@/lib/i18n";
 
 const tabs = [
   { href: "/",                       label: "Home",     icon: HomeIcon },
@@ -42,6 +43,8 @@ function WrenchIcon({ active }: { active: boolean }) {
 
 export function MobileBottomNav() {
   const pathname = usePathname() || "/";
+  const lang = langFromPath(pathname);
+  const canonical = canonicalPath(pathname);
   return (
     <nav
       aria-label="Quick navigation"
@@ -51,12 +54,14 @@ export function MobileBottomNav() {
       <ul className="mx-auto flex max-w-md items-stretch justify-between">
         {tabs.map((t) => {
           const active =
-            t.href === "/" ? pathname === "/" : pathname.startsWith(t.href.replace(/\/$/, ""));
+            t.href === "/"
+              ? canonical === "/"
+              : canonical.startsWith(t.href.replace(/\/$/, ""));
           const Icon = t.icon;
           return (
             <li key={t.href} className="flex-1">
               <Link
-                href={t.href}
+                href={localizedPath(lang, t.href)}
                 className={`flex min-h-[52px] flex-col items-center gap-0.5 px-2 py-2 font-mono text-[10px] uppercase tracking-[0.06em] transition-colors ${
                   active ? "font-bold text-ink" : "text-ink-soft"
                 }`}

@@ -13,7 +13,21 @@
  * Either way the data reaches WhatsApp.
  */
 
-export const WHATSAPP_NUMBER = "351937910673"; // Andrey personal
+/**
+ * WhatsApp destination number for feedback. Set via env var so the actual
+ * number is not in the public source tree. Falls back to an empty string,
+ * which makes the feedback widgets gracefully no-op if the env var is missing.
+ *
+ * Set `NEXT_PUBLIC_WHATSAPP_FEEDBACK_NUMBER` in `.env.local` for dev, and in
+ * Cloudflare Pages → Settings → Environment Variables for production. The
+ * value is a phone number in international format with no leading "+" or
+ * spaces (e.g. `351912345678`).
+ */
+export const WHATSAPP_NUMBER =
+  process.env.NEXT_PUBLIC_WHATSAPP_FEEDBACK_NUMBER ?? "";
+
+/** True only when the env var is set — callers should hide the widget otherwise. */
+export const WHATSAPP_ENABLED = WHATSAPP_NUMBER.length > 0;
 
 const MAX_SELECTED_CHARS = 240;
 const MAX_TOTAL_MESSAGE_CHARS = 1200; // Safe well below wa.me + WhatsApp UI limits

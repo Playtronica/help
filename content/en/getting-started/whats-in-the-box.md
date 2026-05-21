@@ -8,6 +8,8 @@ status: edited-2026-05
 emoji: 📦
 ---
 
+**Do I need a cable?** TouchMe, Playtron, and Orbita ship with the USB cable you need — open the box, plug it in, go. **Biotron and Scales do not include a USB cable** — you provide a USB-C data cable that matches your computer.
+
 Every Playtronica device ships in a small cardboard box with the parts the device needs and a quick-start card. No power adapter is included — every device is powered through USB. The cable depends on the device — see below.
 
 You will need a computer with **Brave** or **Chrome** installed to use any Playtronica device with the browser synth.

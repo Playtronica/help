@@ -1,14 +1,25 @@
 ---
-title: "Device will not connect to the computer"
+title: "Device will not connect — denied access to MIDI, USB not detected"
 slug: wont-connect
 section: troubleshooting
-summary: "Your computer does not see the device. Work through this checklist."
+summary: "Your computer does not see the device, or the browser shows 'denied access to MIDI'. Work through this checklist."
 order: 2
 status: edited-2026-05
 emoji: 🔌
 ---
 
-Your computer does not see the device. Work through this checklist in order.
+Your computer does not see the device. Work through this checklist in order. This page also covers **"denied access to MIDI"** errors in the browser, browser MIDI-permission resets, and USB-cable / USB-port issues.
+
+## "Denied access to MIDI" in the browser
+
+If the browser says **denied access to MIDI** or asks for permission every time, the site's MIDI permission was rejected once and is now cached. To fix:
+
+1. **Open browser settings** in Brave or Chrome.
+2. **Go to Privacy and Security → Site Settings → MIDI**.
+3. Find `synth.playtronica.com` and `settings.playtronica.com` and change each to **Allow**.
+4. **Reload the page.** The device should be detected within two seconds.
+
+If MIDI permission is correctly set to Allow and the device is still not detected, continue below.
 
 ## First — is the LED lit when the device is plugged in?
 

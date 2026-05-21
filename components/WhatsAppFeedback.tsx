@@ -19,7 +19,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { copyAndOpen } from "@/lib/whatsapp-feedback";
+import { copyAndOpen, WHATSAPP_ENABLED } from "@/lib/whatsapp-feedback";
 
 type Anchor = {
   top: number;
@@ -73,7 +73,16 @@ function isInsideArticle(range: Range): boolean {
   return !!node?.closest("article");
 }
 
+// The widget is opt-in: it only renders if NEXT_PUBLIC_WHATSAPP_FEEDBACK_NUMBER
+// is set. This keeps the public source tree free of any personal phone number
+// and lets self-hosted forks decide whether to enable WhatsApp feedback. The
+// branch is a build-time constant so hook order is preserved.
 export function WhatsAppFeedback() {
+  if (!WHATSAPP_ENABLED) return null;
+  return <WhatsAppFeedbackInner />;
+}
+
+function WhatsAppFeedbackInner() {
   const [anchor, setAnchor] = useState<Anchor | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [note, setNote] = useState("");

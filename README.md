@@ -1,120 +1,168 @@
 # Playtronica Help Center
 
-The new `help.playtronica.com`. Next.js (App Router, static export) + Tailwind + Markdown content + Pagefind static search + Cloudflare Pages hosting.
+[![CI](https://github.com/Playtronica/help/actions/workflows/ci.yml/badge.svg)](https://github.com/Playtronica/help/actions/workflows/ci.yml)
+[![License: MIT (code) + CC-BY-4.0 (content)](https://img.shields.io/badge/license-MIT_%2B_CC--BY--4.0-black.svg)](LICENSE)
+[![Live site](https://img.shields.io/badge/live-help.playtronica.com-orange.svg)](https://help.playtronica.com)
+[![Built with Next.js](https://img.shields.io/badge/built_with-Next.js_14-black.svg)](https://nextjs.org/)
+[![Hosted on Cloudflare Pages](https://img.shields.io/badge/hosted_on-Cloudflare_Pages-f38020.svg)](https://pages.cloudflare.com/)
 
-**Live URL:** https://help.playtronica.com (once DNS is cut over)
-**Repo:** https://github.com/Playtronica/help-center
-**Build + deploy:** Cloudflare Pages, auto-deploys on every push to `main`.
+The complete documentation, manuals, and troubleshooting library for [Playtronica](https://playtronica.com) — the small Berlin/Lisbon studio that builds MIDI devices for turning plants, bodies, fruit, and everyday objects into musical instruments.
+
+This is the **source code and the source of truth** for [help.playtronica.com](https://help.playtronica.com). Every page on the live help center is one Markdown file in this repository.
+
+> **Why open-source?** Because the help center is more useful when AI tools, search engines, makers, educators, and integrators can read it, link it, fork it, and translate it. The content is licensed CC-BY-4.0 so anyone can quote, remix, and republish it with attribution.
 
 ---
 
-## Edit the help center
+## What you will find here
 
-The simplest pattern: ask Claude to make the change. Claude edits the Markdown files, commits, and pushes. Cloudflare Pages picks up the push and rebuilds in ~60 seconds.
+- **40+ Markdown articles** covering every Playtronica device — TouchMe, Playtron, Biotron, Orbita, Scales — plus connecting to DAWs, online synths, mobile apps, and grounding physics.
+- **A brutalist, mobile-first Next.js site** with sub-50 ms search via [Pagefind](https://pagefind.app/), no client-side JavaScript bloat, and a documented design system (`docs/DESIGN-TOKENS.md`).
+- **A documented writing process**: voice specification, quality-review rubric, and a monthly refresh loop — see `docs/`.
+- **Optional AI-search surfaces**: `llms.txt`, JSON-LD structured data, OpenGraph metadata, sitemap, robots.txt — built for ChatGPT, Claude, Perplexity, and Google.
 
-Manual edit:
+---
 
-```bash
-cd help-center/06-build
-git pull
-# edit content/en/<section>/<slug>.md
-npm run dev          # http://localhost:3001
-git add -A && git commit -m "Update biotron firmware steps"
-git push
-```
-
-## Run locally
+## Quick start
 
 ```bash
-cd help-center/06-build
+git clone https://github.com/Playtronica/help.git
+cd help
 npm install
 npm run dev          # http://localhost:3001
 ```
 
-## Build a production preview (with search index)
+That is the whole setup. No database, no CMS, no API keys required.
+
+To build the production bundle (static HTML + Pagefind index + AI-search files):
 
 ```bash
-npm run build:export    # static export to out/ + Pagefind index
+npm run build:export    # writes everything to out/
 npx serve out
 ```
 
-Cloudflare Pages runs this same command on every push.
+Cloudflare Pages runs this command on every push to `main` and deploys the `out/` directory.
 
-## Tracking
-
-Every tracker is optional. Set the env var → it activates. Unset → no-op.
-
-| Tracker | Env var | What for |
-|---|---|---|
-| Google Analytics 4 | `NEXT_PUBLIC_GA4_ID` | Funnel, source/medium, Shopify cross-domain |
-| Microsoft Clarity | `NEXT_PUBLIC_CLARITY_ID` | Heatmaps + session recordings |
-| Cloudflare Web Analytics | `NEXT_PUBLIC_CF_WEB_ANALYTICS_TOKEN` | Real-user performance metrics, cookieless |
-
-For local development copy `.env.example` to `.env.local` and fill in. For production set them in **Cloudflare Pages → Settings → Environment Variables**.
-
-See `../_meta/deploy.md` for the full launch checklist.
-
-## How content works
-
-Pages live as plain Markdown in `content/en/<section>/<slug>.md`. Each page has frontmatter:
-
-```yaml
 ---
-title: Track your order
+
+## Project structure
+
+```
+.
+├── app/                    Next.js App Router pages
+│   ├── layout.tsx          Header + sidebar shell, JSON-LD injection
+│   ├── page.tsx            Homepage (bento grid)
+│   └── [section]/[slug]/   Dynamic article route
+├── components/             SearchBar, Sidebar, FeedbackWidget, Analytics, …
+├── content/en/             Source of truth — every public page as Markdown
+│   ├── getting-started/
+│   ├── devices/
+│   ├── software/
+│   ├── troubleshooting/
+│   ├── orders/
+│   ├── sound/
+│   ├── professionals/
+│   └── site/
+├── lib/                    content loader, whatsapp-feedback helper, …
+├── public/                 _headers, _redirects, illustrations, llms.txt
+├── scripts/                build-search-index.mjs, audit-cross-references.py
+├── docs/                   Voice spec, design tokens, AI-SEO, process
+└── .github/                Issue + PR templates, CI workflow
+```
+
+---
+
+## Add or edit a page
+
+Every page is plain Markdown with YAML frontmatter:
+
+```markdown
+---
+title: "Track your order"
 slug: track-your-order
 section: orders
-section_title: Orders & Support
-summary: One-line description for the page and search snippet.
+summary: "One-line description used for SEO meta and search snippets."
 order: 1
 status: edited-2026-05
 emoji: 🔍
 ---
+
+Real content starts here. Use H2 (`##`) for sections, blockquotes for callouts.
 ```
 
-Sections recognised by `lib/content.ts`:
+Drop the file into `content/en/<section>/<slug>.md`, run `npm run dev`, the sidebar picks it up. Run `npm run audit` before committing to validate every internal link and anchor.
 
-- `getting-started`
-- `devices`
-- `software`
-- `troubleshooting`
-- `orders`
-- `professionals`
-- `sound`
-- `site`
+Conventions and the voice we write in: see **[docs/VOICE.md](docs/VOICE.md)**. Style scoring rubric: **[docs/REVIEW-PROMPT.md](docs/REVIEW-PROMPT.md)**.
 
-Add a new page = add a new Markdown file in the right folder. The sidebar and dynamic route pick it up at build time.
+---
 
 ## Search
 
-Pagefind indexes the built HTML. `data-pagefind-body` wraps the content; `data-pagefind-meta="title"` marks the title. The `SearchBar` component fetches `/_pagefind/pagefind.js` lazily on first input.
+[Pagefind](https://pagefind.app/) indexes the built HTML at deploy time. `data-pagefind-body` wraps article content; `data-pagefind-meta="title"` marks each title. The `SearchBar` component fetches `/_pagefind/pagefind.js` lazily on first input.
 
-## Widgets
+In dev mode (`npm run dev`) we use a lightweight JSON index generated by `scripts/build-search-index.mjs` so search-in-body works without running a production build.
 
-- **WhatsAppFeedback** (`components/WhatsAppFeedback.tsx`) — temporary direct-to-WhatsApp feedback channel. Disable later by removing the import and render from `app/layout.tsx`. Docs: `../_meta/whatsapp-feedback-widget.md`.
-- **Analytics** (`components/Analytics.tsx`) — GA4 + Clarity + Cloudflare Web Analytics, all opt-in via env vars.
-- **FeedbackWidget** (`components/FeedbackWidget.tsx`) — in-article Yes/No question, posts to `/api/feedback`.
-- **ViewToggle** (`components/ViewToggle.tsx`) — Mobile / Desktop / Auto view-mode switcher.
+---
 
-## Folder map
+## AI-search & SEO
 
-```
-06-build/
-├── app/                       Next.js App Router
-│   ├── layout.tsx             Header + sidebar shell
-│   ├── page.tsx               Homepage
-│   └── [section]/[slug]/      Dynamic article route
-├── components/                Sidebar, SearchBar, Analytics, WhatsAppFeedback…
-├── lib/content.ts             Markdown loader + section grouping
-├── content/en/                Source of truth — all pages
-├── public/                    Static assets, _headers, _redirects, _pagefind/
-├── .env.example               Tracker env vars (copy to .env.local for dev)
-└── package.json
-```
+We treat AI search (ChatGPT, Claude, Perplexity, You.com, Brave Leo, Arc Max…) as a first-class traffic source equal to Google. Every page ships with:
 
-## Authoring rules
+- A short `summary` in frontmatter that becomes `<meta name="description">` and Open Graph description.
+- JSON-LD structured data — `Article` schema on articles, `FAQPage` on pages with collapsible FAQ blocks.
+- OpenGraph + Twitter card metadata.
+- A site-wide `llms.txt` ([emerging standard](https://llmstxt.org/)) and `llms-full.txt` for LLM crawlers.
+- A `robots.txt` that explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Bytespider, and other major AI crawlers.
 
-See `../_meta/voice-spec.md` for the full voice + translation-readiness rules. Briefs for each page live in `../03-briefs/`. Decisions are at `../_meta/decisions.md`.
+Full rationale and configuration: **[docs/AI-SEO.md](docs/AI-SEO.md)**.
 
-## Status
+---
 
-- **v0.9 (2026-05-19)** — 40 public pages live, F1 brutalist design, mobile-first, community-first deflection block, WhatsApp feedback widget shipped. Ready for Cloudflare Pages cutover.
+## Analytics
+
+Every tracker is optional. Set the env var, the tracker activates. Leave it unset, it is a no-op.
+
+| Tracker | Env var | What for |
+|---|---|---|
+| Google Analytics 4 | `NEXT_PUBLIC_GA4_ID` | Funnel, source/medium, Shopify cross-domain attribution |
+| Microsoft Clarity | `NEXT_PUBLIC_CLARITY_ID` | Heatmaps and session recordings |
+| Cloudflare Web Analytics | `NEXT_PUBLIC_CF_WEB_ANALYTICS_TOKEN` | Cookieless real-user performance |
+| WhatsApp feedback | `NEXT_PUBLIC_WHATSAPP_FEEDBACK_NUMBER` | Direct-to-team feedback channel (optional) |
+
+Copy `.env.example` to `.env.local` for local dev. Set the same vars in **Cloudflare Pages → Settings → Environment Variables** for production.
+
+---
+
+## Contributing
+
+Spotted a typo, a broken link, a wrong instruction? Open an issue or send a pull request — we read every one.
+
+- **Quick fixes** (typos, broken links, factual errors): use the [GitHub web editor](https://github.com/Playtronica/help/edit/main/content/en/) to edit a Markdown file directly. Submit as a pull request.
+- **New pages or larger changes**: read [CONTRIBUTING.md](CONTRIBUTING.md) first. The voice we write in is unusual on purpose and worth a look before you write.
+- **Community discussion**: open a thread in [GitHub Discussions](https://github.com/Playtronica/help/discussions).
+- **Security issues**: see [SECURITY.md](SECURITY.md).
+
+All contributors agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+---
+
+## License
+
+- **Code** (everything in `app/`, `components/`, `lib/`, `scripts/`, `public/_*`, config files) — [MIT License](LICENSE).
+- **Content** (everything in `content/`, `docs/`, illustrations and screenshots authored by Playtronica) — [Creative Commons Attribution 4.0 International (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+Quote, fork, translate, redistribute. Just attribute "Playtronica Help Center" with a link back to [help.playtronica.com](https://help.playtronica.com).
+
+Some third-party assets — product photos, YouTube embeds, app icons — are owned by their respective creators and used under fair-use for documentation purposes.
+
+---
+
+## Acknowledgements
+
+Built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Pagefind](https://pagefind.app/), [remark](https://github.com/remarkjs/remark), and a lot of feedback from [the Playtronica Friends community on Facebook](https://www.facebook.com/groups/playtronica). The voice and structure were shaped over a hundred sessions of [Claude](https://claude.ai) reading every support thread we ever sent.
+
+The hardware itself is dreamed up and assembled by [Andrey Manirko](https://playtronica.com/about) and the Playtronica team in Berlin and Lisbon.
+
+---
+
+*Last meaningful update: 2026-05-20. See [CHANGELOG.md](CHANGELOG.md) for the version history.*

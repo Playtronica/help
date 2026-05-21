@@ -1,10 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import type { SectionGroup } from "@/lib/content";
+import { usePathname } from "next/navigation";
+import type { SlimNavGroup } from "@/lib/content";
+import { langFromPath, localizedPath, type Lang } from "@/lib/i18n";
 
-export function MobileNavDrawer({ nav }: { nav: SectionGroup[] }) {
+export function MobileNavDrawer({ navByLang }: { navByLang: Record<Lang, SlimNavGroup[]> }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname() || "/";
+  const lang = langFromPath(pathname);
+  const nav = navByLang[lang] || navByLang.en;
 
   // Lock body scroll when drawer is open
   useEffect(() => {
@@ -54,7 +59,7 @@ export function MobileNavDrawer({ nav }: { nav: SectionGroup[] }) {
       >
         <div className="flex items-center justify-between border-b-[1.5px] border-rule px-4 py-3">
           <Link
-            href="/"
+            href={localizedPath(lang, "/")}
             onClick={() => setOpen(false)}
             className="font-mono text-[15px] font-bold tracking-tight text-ink"
           >
@@ -87,7 +92,7 @@ export function MobileNavDrawer({ nav }: { nav: SectionGroup[] }) {
                 {g.pages.map((p) => (
                   <li key={p.slug}>
                     <Link
-                      href={`/${p.section}/${p.slug}/`}
+                      href={localizedPath(lang, `/${p.section}/${p.slug}/`)}
                       onClick={() => setOpen(false)}
                       className="block min-h-[44px] border-l-2 border-transparent px-2 py-2 text-[15px] text-ink active:bg-soft hover:border-l-ink hover:bg-soft"
                     >
