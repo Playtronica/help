@@ -38,19 +38,23 @@ function ogTwitter(title: string, description: string, url: string, lang: Lang) 
   };
 }
 
+// The root layout sets a title template "%s — Playtronica Help". So the page
+// `title` field must be the BARE page name — the template adds the suffix.
+// OpenGraph/Twitter titles are NOT templated, so they carry the full form.
+const SUFFIX = "Playtronica Help";
+
 /** Metadata for an article page. */
 export function articleMetadata(lang: Lang, section: string, slug: string): Metadata {
   const p = getPage(section, slug, lang);
   if (!p) return {};
   const canonical = `/${section}/${slug}/`;
   const url = `${SITE_URL}${localizedPath(lang, canonical)}`;
-  const title = `${p.title} — Playtronica Help`;
   const description = p.summary || "";
   return {
-    title,
+    title: p.title,
     description,
     alternates: { canonical: url, languages: languageAlternates(canonical) },
-    ...ogTwitter(title, description, url, lang),
+    ...ogTwitter(`${p.title} — ${SUFFIX}`, description, url, lang),
   };
 }
 
@@ -60,13 +64,12 @@ export function sectionMetadata(lang: Lang, section: string): Metadata {
   if (!sec) return {};
   const canonical = `/${section}/`;
   const url = `${SITE_URL}${localizedPath(lang, canonical)}`;
-  const title = `${sec.title} — Playtronica Help`;
   const description = `Browse all ${sec.title.toLowerCase()} articles.`;
   return {
-    title,
+    title: sec.title,
     description,
     alternates: { canonical: url, languages: languageAlternates(canonical) },
-    ...ogTwitter(title, description, url, lang),
+    ...ogTwitter(`${sec.title} — ${SUFFIX}`, description, url, lang),
   };
 }
 
@@ -74,13 +77,12 @@ export function sectionMetadata(lang: Lang, section: string): Metadata {
 export function hubMetadata(lang: Lang): Metadata {
   const canonical = "/troubleshooting/hub/";
   const url = `${SITE_URL}${localizedPath(lang, canonical)}`;
-  const title = "Troubleshooting hub — Playtronica Help";
   const description = "Interactive checklist that walks you through fixing your Playtronica device.";
   return {
-    title,
+    title: "Troubleshooting hub",
     description,
     alternates: { canonical: url, languages: languageAlternates(canonical) },
-    ...ogTwitter(title, description, url, lang),
+    ...ogTwitter(`Troubleshooting hub — ${SUFFIX}`, description, url, lang),
   };
 }
 
