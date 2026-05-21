@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { SlimNavGroup } from "@/lib/content";
@@ -7,9 +8,14 @@ import { langFromPath, localizedPath, type Lang } from "@/lib/i18n";
 
 export function MobileNavDrawer({ navByLang }: { navByLang: Record<Lang, SlimNavGroup[]> }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname() || "/";
   const lang = langFromPath(pathname);
   const nav = navByLang[lang] || navByLang.en;
+
+  // The overlay + drawer are portaled to <body> (see below). The portal only
+  // works after mount, when document.body exists.
+  useEffect(() => setMounted(true), []);
 
   // Lock body scroll when drawer is open
   useEffect(() => {
@@ -27,20 +33,13 @@ export function MobileNavDrawer({ navByLang }: { navByLang: Record<Lang, SlimNav
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  return (
+  // The overlay and the sliding panel. These are position:fixed and MUST be
+  // rendered at <body> level via a portal — if they stayed nested inside the
+  // <header>, any header style that establishes a containing block (transform,
+  // filter, backdrop-filter) would trap them to the header's box instead of
+  // the viewport. Portaling makes the drawer immune to that class of bug.
+  const drawer = (
     <>
-      <button
-        type="button"
-        aria-label="Open menu"
-        aria-expanded={open}
-        onClick={() => setOpen(true)}
-        className="inline-flex h-10 w-10 items-center justify-center border-[1.5px] border-rule bg-white text-ink active:bg-soft md:hidden"
-      >
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-        </svg>
-      </button>
-
       <div
         className={`fixed inset-0 z-40 bg-ink/30 transition-opacity duration-150 md:hidden ${
           open ? "opacity-100" : "pointer-events-none opacity-0"
@@ -111,6 +110,24 @@ export function MobileNavDrawer({ navByLang }: { navByLang: Record<Lang, SlimNav
           <a href="mailto:support@playtronica.com" className="text-accent normal-case">contact</a>
         </div>
       </aside>
+    </>
+  );
+
+  return (
+    <>
+      <button
+        type="button"
+        aria-label="Open menu"
+        aria-expanded={open}
+        onClick={() => setOpen(true)}
+        className="inline-flex h-10 w-10 items-center justify-center border-[1.5px] border-rule bg-white text-ink active:bg-soft md:hidden"
+      >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+        </svg>
+      </button>
+
+      {mounted && createPortal(drawer, document.body)}
     </>
   );
 }

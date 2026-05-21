@@ -136,7 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">Skip to content</a>
         <HtmlLang />
 
-        <header className="sticky top-0 z-20 border-b-[1.5px] border-rule bg-bg/95 backdrop-blur">
+        <header className="sticky top-0 z-20 border-b-[1.5px] border-rule bg-bg">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 md:py-3">
             <MobileNavDrawer navByLang={navByLang} />
 
