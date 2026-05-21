@@ -226,58 +226,6 @@ button {
   z-index: 100;
 }
 
-/* ─── View-mode override (controlled by ViewToggle component).
-       Lets the user flip between mobile and desktop layouts independent of viewport. */
-
-/* Force mobile layout on any viewport */
-html[data-force-view="mobile"] .md\:hidden { display: revert !important; }
-html[data-force-view="mobile"] .md\:block,
-html[data-force-view="mobile"] .md\:inline-block,
-html[data-force-view="mobile"] .md\:flex,
-html[data-force-view="mobile"] .md\:grid { display: none !important; }
-html[data-force-view="mobile"] aside.hidden.md\:block { display: none !important; }
-html[data-force-view="mobile"] .md\:grid-cols-2,
-html[data-force-view="mobile"] .md\:grid-cols-3,
-html[data-force-view="mobile"] .md\:grid-cols-12 { grid-template-columns: 1fr !important; }
-html[data-force-view="mobile"] .md\:col-span-2,
-html[data-force-view="mobile"] .md\:col-span-3,
-html[data-force-view="mobile"] .md\:col-span-4,
-html[data-force-view="mobile"] .md\:col-span-6,
-html[data-force-view="mobile"] .md\:col-span-8,
-html[data-force-view="mobile"] .md\:col-span-12 { grid-column: span 1 !important; }
-html[data-force-view="mobile"] .md\:row-span-2,
-html[data-force-view="mobile"] .md\:row-span-3 { grid-row: auto !important; }
-html[data-force-view="mobile"] .md\:auto-rows-\[150px\] { grid-auto-rows: auto !important; }
-html[data-force-view="mobile"] .max-w-6xl,
-html[data-force-view="mobile"] .max-w-md,
-html[data-force-view="mobile"] body main { max-width: 420px !important; margin-inline: auto !important; }
-html[data-force-view="mobile"] body { padding-bottom: 72px !important; }
-
-/* The phone frame — a `.force-mobile-frame` wrapper inside body becomes a centered
-   420px column AND a containing block for position:fixed children. The drawer,
-   mobile bottom nav, and feedback widget all live inside the frame instead of
-   escaping to the full desktop viewport.
-   Three properties together establish the containing block reliably across
-   browsers: transform, will-change:transform, and contain:layout. Any one
-   should be enough, but together they survive HMR + browser optimisations. */
-html[data-force-view="mobile"] .force-mobile-frame {
-  max-width: 420px !important;
-  margin: 0 auto !important;
-  min-height: 100vh;
-  position: relative;
-  transform: translateZ(0);
-  will-change: transform;
-  contain: layout;
-  outline: 1px solid theme("colors.rule");
-  background: theme("colors.bg");
-}
-html[data-force-view="mobile"] {
-  background: theme("colors.soft");
-}
-
-/* Force desktop layout on a phone */
-html[data-force-view="desktop"] body { min-width: 1024px; }
-
 /* ─── Reduced motion safety */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
