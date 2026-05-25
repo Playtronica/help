@@ -61,35 +61,19 @@ export function buildWhatsAppLink(text: string): string {
 }
 
 /**
- * Opens the wa.me deeplink and copies the full message to the clipboard.
- * Resolves to `true` if the clipboard copy succeeded — the caller can use
- * this to show a "copied — paste if needed" toast.
+ * Best-effort clipboard copy — the fallback for the Mac WhatsApp prefill bug,
+ * where the desktop app sometimes drops the pre-filled `wa.me` text.
  *
- * ORDER MATTERS. The wa.me link is opened FIRST, synchronously, before any
- * `await`. Mobile browsers — iOS Safari especially — only honour
- * `window.open` while the call stack is still inside the user-gesture
- * (the click). An `await` before the open loses the gesture and Safari
- * silently blocks it. That is why feedback worked on desktop but not on
- * iPhone. The clipboard write — the Mac WhatsApp prefill-bug fallback —
- * runs afterwards as best-effort.
+ * The actual WhatsApp open is NOT done here. It is a native `<a href>` in the
+ * UI components: a real link tap opens the deeplink reliably on every platform,
+ * including iOS Safari, where a JavaScript `window.open` is blocked once the
+ * user-gesture call stack is lost. This copy runs as a side-effect of that tap
+ * and is intentionally fire-and-forget — it must never block the navigation.
  */
-export async function copyAndOpen(opts: FeedbackPayload): Promise<boolean> {
-  const text = buildMessageText(opts);
-
-  // 1. Open WhatsApp — synchronous, inside the gesture. Do this before await.
-  if (typeof window !== "undefined") {
-    window.open(buildWhatsAppLink(text), "_blank", "noopener,noreferrer");
-  }
-
-  // 2. Copy to clipboard — best-effort fallback for the Mac prefill quirk.
-  let copied = false;
+export function copyMessage(text: string): void {
   if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
-    try {
-      await navigator.clipboard.writeText(text);
-      copied = true;
-    } catch {
-      copied = false;
-    }
+    navigator.clipboard.writeText(text).catch(() => {
+      /* clipboard permission denied — the wa.me prefill still carries the text */
+    });
   }
-  return copied;
 }
