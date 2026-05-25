@@ -37,25 +37,10 @@ export function FeedbackWidget({ slug }: { slug: string }) {
   }
 
   async function sendNo() {
-    // 1. Lightweight analytics — POST the bare NO signal for the dashboard.
-    const payload = { slug, value: "no" as const, note: note.trim(), ts: new Date().toISOString() };
-    if (typeof window !== "undefined") {
-      try {
-        await fetch("/api/feedback", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-      } catch {
-        /* ignore in static build */
-      }
-      console.info("[feedback]", payload);
-    }
-
-    // 2. Open WhatsApp with the user's note + page context. Clipboard fallback
-    //    handles the Mac WhatsApp prefill quirk — see lib/whatsapp-feedback.ts.
-    //    If the WhatsApp env var is unset (e.g. on a fork), fall back to an
-    //    email mailto: link with the same payload.
+    // Open WhatsApp / email FIRST, synchronously — before any await. Mobile
+    // browsers (iOS Safari) only honour window.open inside the click gesture;
+    // an await before it loses the gesture and the open is blocked. The
+    // analytics POST below must therefore run AFTER, not before.
     const heading =
       typeof document !== "undefined"
         ? (document.querySelector("article h1, article h2")?.textContent?.trim() || "")
@@ -84,6 +69,21 @@ export function FeedbackWidget({ slug }: { slug: string }) {
       );
       setToast("Opening your email app — send to finish.");
     }
+
+    // Analytics — fire-and-forget AFTER the user-facing action, never awaited
+    // before it. No-op in the static build (no /api/feedback endpoint).
+    const payload = { slug, value: "no" as const, note: note.trim(), ts: new Date().toISOString() };
+    if (typeof window !== "undefined") {
+      fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {
+        /* ignore in static build */
+      });
+      console.info("[feedback]", payload);
+    }
+
     window.setTimeout(() => setToast(null), 5000);
     setState("submitted");
   }

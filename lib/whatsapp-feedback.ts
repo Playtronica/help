@@ -61,16 +61,27 @@ export function buildWhatsAppLink(text: string): string {
 }
 
 /**
- * Copies the full message to the clipboard, then opens the wa.me deeplink in
- * a new tab. Resolves to `true` if the clipboard copy succeeded — caller can
- * use this to show a "copied — paste if needed" toast.
+ * Opens the wa.me deeplink and copies the full message to the clipboard.
+ * Resolves to `true` if the clipboard copy succeeded — the caller can use
+ * this to show a "copied — paste if needed" toast.
  *
- * The clipboard is the safety net: even if the wa.me prefill fails (Mac
- * WhatsApp quirk), the message is already on the clipboard and the user can
- * paste it into the chat.
+ * ORDER MATTERS. The wa.me link is opened FIRST, synchronously, before any
+ * `await`. Mobile browsers — iOS Safari especially — only honour
+ * `window.open` while the call stack is still inside the user-gesture
+ * (the click). An `await` before the open loses the gesture and Safari
+ * silently blocks it. That is why feedback worked on desktop but not on
+ * iPhone. The clipboard write — the Mac WhatsApp prefill-bug fallback —
+ * runs afterwards as best-effort.
  */
 export async function copyAndOpen(opts: FeedbackPayload): Promise<boolean> {
   const text = buildMessageText(opts);
+
+  // 1. Open WhatsApp — synchronous, inside the gesture. Do this before await.
+  if (typeof window !== "undefined") {
+    window.open(buildWhatsAppLink(text), "_blank", "noopener,noreferrer");
+  }
+
+  // 2. Copy to clipboard — best-effort fallback for the Mac prefill quirk.
   let copied = false;
   if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
     try {
@@ -79,9 +90,6 @@ export async function copyAndOpen(opts: FeedbackPayload): Promise<boolean> {
     } catch {
       copied = false;
     }
-  }
-  if (typeof window !== "undefined") {
-    window.open(buildWhatsAppLink(text), "_blank", "noopener,noreferrer");
   }
   return copied;
 }
