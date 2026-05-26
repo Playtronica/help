@@ -5,6 +5,7 @@ section: devices
 summary: "Note-mapping JSON, encoder and button MIDI CC, sync, and firmware tricks."
 order: 13
 segment: ["music-producer", "b2b"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🌀

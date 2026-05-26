@@ -5,6 +5,7 @@ section: troubleshooting
 summary: "Your computer does not see the device, or the browser shows 'denied access to MIDI'. Work through this checklist."
 order: 2
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 180
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🔌
@@ -43,6 +44,12 @@ If MIDI permission is correctly set to Allow and the device is still not detecte
 2. **Check for a yellow warning icon next to the device.** If you see one, right-click the device, select **Update driver**, and then **Search automatically for drivers**. If that does not work, uninstall the device and reconnect it.
 3. **Use a USB port directly on the computer.** Avoid USB hubs.
 4. **Try a different USB cable.** The cable must be a data cable, not charge-only.
+
+## Related pages
+
+- [No sound](/troubleshooting/no-sound/) — once connected, this is the next-most-common issue.
+- [Troubleshooting hub](/troubleshooting/hub/) — interactive walkthrough if you are not sure where to start.
+- [Firmware reset](/troubleshooting/firmware-reset/) — last resort for stubborn cases.
 
 ## Ask the community
 

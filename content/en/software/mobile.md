@@ -5,6 +5,7 @@ section: software
 summary: "iOS and Android apps that work with Playtronica devices."
 order: 6
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 50
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 📱
@@ -91,6 +92,12 @@ More advanced FM synthesis. For users who want to explore sound design on Androi
 ## A note about links
 
 We try to keep these app links current. Apps come and go; storefronts change URLs. If a link is broken when you click it, tell us via the **What's missing?** widget at the bottom of the page and we will fix it on the next refresh.
+
+## Related pages
+
+- [Online synths](/software/online-synths/) — synth.playtronica.com works in mobile browsers too.
+- [Connect your device](/software/connecting/) — adapter and cable choices for iPhone, iPad, and Android.
+- [Accessories](/getting-started/accessories/) — iPhone Lightning adapter, USB-C to C cable.
 
 ## Ask the community
 

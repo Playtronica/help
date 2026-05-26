@@ -5,6 +5,7 @@ section: getting-started
 summary: "From box to first sound, in five minutes."
 order: 2
 segment: ["gift-recipient", "music-producer"]
+deflection_target: 100
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🔌

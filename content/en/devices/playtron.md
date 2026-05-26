@@ -5,6 +5,7 @@ section: devices
 summary: "Clip the wires, ground yourself, touch anything that conducts."
 order: 2
 segment: ["music-producer", "gift-recipient", "creator"]
+deflection_target: 90
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🍉
@@ -15,6 +16,8 @@ Playtron turns any conductive object into a piano key. Clip alligator wires to f
 > ⚠️ **Handle only the parts shown in this guide.** Touch the 16 alligator-clip pins, the gold ground pin, and the USB-C connector. Even when nothing is plugged in, do not touch solder joints, exposed chips, or the back of the PCB. Playtron is durable, but those areas can be damaged permanently. Treat the rest of the board the way you would treat the back of a phone screen.
 
 > 🛠️ **Want to go deeper?** When you are past the basics, see the [Playtron deep dive](/devices/playtron-advanced/) for custom scales, per-pin mapping, and performance routing.
+
+> 🛒 **Don't have one yet?** [Buy Playtron on shop.playtronica.com](https://shop.playtronica.com/products/playtron) — White or Black (Limited). The box ships with the USB cable and 8 alligator-clip cables.
 
 {{ youtube: ibQuzjFUJd4 title="How to connect Playtron — Playtronica tutorial" }}
 

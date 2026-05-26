@@ -6,6 +6,7 @@ section_title: Getting Started
 summary: "A 60-second overview. Everything can sing."
 order: 1
 segment: ["gift-buyer", "music-producer"]
+deflection_target: 40
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: ⭐

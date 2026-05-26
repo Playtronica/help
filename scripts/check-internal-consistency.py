@@ -29,12 +29,24 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EN = REPO_ROOT / "content" / "en"
+CONTENT = REPO_ROOT / "content"
+EN = CONTENT / "en"
 
 CANONICAL_SETTINGS = "settings.playtronica.com"
 LEGACY_SETTINGS_OK = {"playtronica.github.io/WebMidiOrbita"}
 
 CANONICAL_SLA = "We aim for 24 hours, but a reply may take up to 3 business days."
+
+# Title/meta length budgets — Latin scripts measure in characters; CJK scripts
+# render about twice as wide per glyph in search snippets, so we use half the
+# character budget. These are recommendations, not hard limits — the check
+# emits S6 warnings at 120%, not errors.
+TITLE_LIMITS = {  # max characters in <title> / frontmatter.title
+    "en": 60, "de": 60, "es": 60, "fr": 60, "ja": 30,
+}
+SUMMARY_LIMITS = {  # max characters in frontmatter.summary (used for meta description)
+    "en": 155, "de": 155, "es": 155, "fr": 155, "ja": 75,
+}
 
 # These specific shorter-window SLAs are intentional for categories that promise
 # faster turnaround (returns address, invoices, "which device am I holding").
@@ -52,8 +64,42 @@ HARDCODED_DATE_PATTERNS = [
 ]
 
 
+FM_TITLE_RE = re.compile(r'^title:\s*"?([^"\n]+?)"?\s*$', re.MULTILINE)
+FM_SUMMARY_RE = re.compile(r'^summary:\s*"?([^"\n]+?)"?\s*$', re.MULTILINE)
+
+
+def check_length_budget(text: str, lang: str, file_rel: str):
+    """Yield S6 issues for title/summary exceeding the per-language budget."""
+    title_limit = TITLE_LIMITS.get(lang, 60)
+    summary_limit = SUMMARY_LIMITS.get(lang, 155)
+    m = FM_TITLE_RE.search(text)
+    if m:
+        title = m.group(1).strip()
+        if len(title) > int(title_limit * 1.2):
+            yield (
+                file_rel,
+                "S6",
+                f"title is {len(title)} chars ({lang} budget {title_limit}) — Google snippets truncate at ~{title_limit}",
+            )
+    m = FM_SUMMARY_RE.search(text)
+    if m:
+        summary = m.group(1).strip()
+        if len(summary) > int(summary_limit * 1.2):
+            yield (
+                file_rel,
+                "S6",
+                f"summary is {len(summary)} chars ({lang} budget {summary_limit}) — meta description truncated at ~{summary_limit}",
+            )
+
+
 def issues_iter():
     en_pages = sorted(EN.rglob("*.md"))
+    # Also check translated pages' lengths
+    other_lang_pages = []
+    for lang in ("de", "es", "fr", "ja"):
+        d = CONTENT / lang
+        if d.exists():
+            other_lang_pages.extend((p, lang) for p in sorted(d.rglob("*.md")))
     # Collect all valid slugs for internal-link resolution
     slugs = set()
     for p in en_pages:
@@ -64,6 +110,9 @@ def issues_iter():
     for p in en_pages:
         rel = str(p.relative_to(REPO_ROOT))
         text = p.read_text(encoding="utf-8")
+
+        # 6. Length budget (EN)
+        yield from check_length_budget(text, "en", rel)
 
         # 1. Settings URL — flag anything that isn't canonical (or whitelisted legacy)
         for m in re.finditer(r"https?://([a-z0-9.-]+\.playtronica\.com[^\s)]*)", text):
@@ -135,6 +184,12 @@ def issues_iter():
                     f"Stale status: edited-{year}-{month:02d} ({age_days} days ago) — review or update",
                 )
 
+    # 6 (translated pages) — length budget for non-EN pages
+    for p, lang in other_lang_pages:
+        rel = str(p.relative_to(REPO_ROOT))
+        text = p.read_text(encoding="utf-8")
+        yield from check_length_budget(text, lang, rel)
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -161,6 +216,7 @@ def main():
         "S3": "Hard-coded calendar date",
         "S4": "Broken internal link",
         "S5": "Stale status: edited-YYYY-MM marker",
+        "S6": "title/summary length exceeds locale budget",
     }
     for code in sorted(by_code):
         print(f"--- {code} — {code_names.get(code, code)} ({len(by_code[code])}) ---")

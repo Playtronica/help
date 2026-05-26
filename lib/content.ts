@@ -14,8 +14,18 @@ export type Frontmatter = {
   summary?: string;
   segment?: string | string[];
   deflection_target?: number;
+  /** Date of the last meaningful content edit (YYYY-MM-DD). Drives the
+   *  90-day hypothesis-log review and CI staleness checks. */
+  last_edited?: string;
+  /** Priority next-step links from this page — slugs like `/devices/compare/`
+   *  that the reader is most likely to want after they finish this page.
+   *  Used by the audit to flag orphan pages and by future UI to render a
+   *  "you might also need" card. */
+  links_out?: string[];
   order?: number;
-  status?: "draft" | "ready-for-build" | "live";
+  /** Free-form publication status. Common values: "edited-YYYY-MM", "new-YYYY-MM",
+   *  "draft", "ready-for-build", "live". Pair with last_edited for exact dates. */
+  status?: string;
   emoji?: string;
   /** Hide from main sidebar. Page is still routable + searchable + linkable. */
   hide_from_nav?: boolean;

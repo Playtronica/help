@@ -5,6 +5,7 @@ section: devices
 summary: "Pick a scale, pick a key, save it to the device. Settings sync over the browser."
 order: 14
 segment: ["music-producer"]
+deflection_target: 15
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🎼

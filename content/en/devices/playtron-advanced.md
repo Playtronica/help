@@ -5,6 +5,7 @@ section: devices
 summary: "Per-pin mapping, custom scales, performance routing, and a conductive material guide."
 order: 12
 segment: ["music-producer", "b2b"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🍉

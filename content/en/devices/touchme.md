@@ -5,6 +5,7 @@ section: devices
 summary: "A small instrument that turns touch into music. Play alone, with a friend, or on water and flowers."
 order: 1
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 80
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 👐
@@ -21,6 +22,8 @@ TouchMe is a small instrument with two gold pads. It turns **skin, water, or flo
 > ⚠️ **Not waterproof. Do not use with pacemakers.** TouchMe is safe at USB voltage but the device should not be submerged, and people with pacemakers or other implanted medical devices should not use it as a precaution.
 
 > 🛠️ **Want to go deeper?** When you are past the basics, see the [TouchMe deep dive](/devices/touchme-advanced/) for MIDI mapping, custom scales, hardware tuning, and performance tips. The [tuning page](/devices/touchme-tuning/) covers scale presets.
+
+> 🛒 **Don't have one yet?** [Buy TouchMe on shop.playtronica.com](https://shop.playtronica.com/products/touchme) — White or Black (Limited).
 
 ## The two-person demo — the moment that defines TouchMe
 

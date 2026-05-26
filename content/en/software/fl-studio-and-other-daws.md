@@ -5,6 +5,7 @@ section: software
 summary: "Setup steps for FL Studio, Reaper, Cubase, Studio One, Bitwig, and Reason."
 order: 5
 segment: ["music-producer"]
+deflection_target: 25
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🖥️
@@ -35,6 +36,12 @@ Any DAW that accepts MIDI input works with Playtronica devices. Look for "MIDI I
 1. Open Preferences → MIDI.
 2. Add your Playtronica device as a Master Keyboard input.
 3. Create a Combinator or instrument track to receive notes.
+
+## Related pages
+
+- [Ableton Live setup](/software/ableton/) — the most-asked-for DAW path.
+- [Logic and GarageBand](/software/logic-garageband/) — for Mac users.
+- [Won't connect](/troubleshooting/wont-connect/) — if the DAW does not see the device.
 
 ## Ask the community
 

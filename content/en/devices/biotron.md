@@ -5,6 +5,7 @@ section: devices
 summary: "Clip the leaf-pads to a houseplant and let it play itself."
 order: 3
 segment: ["music-producer", "creator"]
+deflection_target: 70
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🌿
@@ -22,6 +23,8 @@ Biotron sends on two MIDI channels:
 > 🛠️ **New user?** Update the firmware before your first session. The device ships ready to use, but the latest firmware has major improvements. This takes about 3 minutes.
 
 > 🧬 **Want to go deeper?** See [Biotron Advanced — MIDI CC and SysEx](/devices/biotron-advanced/) for real-time MIDI control, presets, and firmware-level customisation.
+
+> 🛒 **Don't have one yet?** [Buy Biotron on shop.playtronica.com](https://shop.playtronica.com/products/biotron). Biotron ships without a USB cable — see [Accessories](/getting-started/accessories/) for the matching part, or grab the [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) which includes it.
 
 {{ youtube: EArNOal-ba0 title="Introducing the Biotron from Playtronica" }}
 

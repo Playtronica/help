@@ -5,6 +5,7 @@ section: professionals
 summary: "How to bring Playtronica into classrooms and workshops."
 order: 2
 segment: ["b2b", "education"]
+deflection_target: 15
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🏫

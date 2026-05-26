@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Hypothesis log — each help-center page is a hypothesis that addressing this topic for this audience reduces support tickets. Every 90 days we review whether the page is doing its job.",
+  "description": "Hypothesis log — each help-center page is a hypothesis that addressing this topic for this audience reduces support tickets. Every 90 days we review whether the page is doing its job. See docs/HYPOTHESIS-LOG.md.",
   "generated_at": "2026-05-26",
   "pages": [
     {
@@ -11,7 +11,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'biotron-advanced' for music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -25,7 +25,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'biotron' for music-producer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 70,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -40,7 +40,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'compare' for gift-buyer, music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 30,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -54,7 +54,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'orbita-advanced' for music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -68,7 +68,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'orbita' for music-producer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 40,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -82,7 +82,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'playtron-advanced' for music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -97,7 +97,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'playtron' for music-producer, gift-recipient, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 90,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -111,7 +111,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'scales' for music-producer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 20,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -125,7 +125,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'touchme-advanced' for music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -138,7 +138,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'touchme-tuning' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 15,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -152,7 +152,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'touchme' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 80,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -167,7 +167,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'accessories' for music-producer, gift-buyer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 30,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -194,7 +194,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'what-is-playtronica' for gift-buyer, music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 40,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -208,7 +208,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'whats-in-the-box' for gift-recipient, music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 60,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -222,7 +222,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'which-device' for gift-buyer, music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 50,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -236,7 +236,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'your-first-5-minutes' for gift-recipient, music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 100,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -293,7 +293,7 @@
         "international"
       ],
       "what_we_hope": "Address topic 'shipping-delivery' for gift-buyer, international readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 110,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -321,7 +321,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'warranty-repair' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 60,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -334,7 +334,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'b2b-bulk' for b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 25,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -348,7 +348,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'creative-installations' for b2b, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -362,7 +362,7 @@
         "education"
       ],
       "what_we_hope": "Address topic 'education' for b2b, education readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 15,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -376,7 +376,7 @@
         "gift-buyer"
       ],
       "what_we_hope": "Address topic 'safety' for b2b, gift-buyer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 30,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -390,7 +390,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'community' for music-producer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 10,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -405,7 +405,7 @@
         "b2b"
       ],
       "what_we_hope": "Address topic 'contact' for gift-buyer, music-producer, b2b readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 50,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -418,7 +418,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'ableton' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 35,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -432,7 +432,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'connecting' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 80,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -445,7 +445,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'fl-studio-and-other-daws' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 25,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -458,7 +458,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'hardware' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 20,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -472,7 +472,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'logic-garageband' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 35,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -486,7 +486,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'mobile' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 50,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -500,7 +500,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'online-synths' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 25,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -513,7 +513,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'grounding' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 20,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -527,7 +527,7 @@
         "creator"
       ],
       "what_we_hope": "Address topic 'objects-you-can-play' for music-producer, creator readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 15,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -540,7 +540,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'firmware-reset' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 60,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -554,7 +554,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'hub' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 80,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -568,7 +568,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'no-sound' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 200,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -581,7 +581,7 @@
         "music-producer"
       ],
       "what_we_hope": "Address topic 'playtron-faq' for music-producer readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 40,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,
@@ -595,7 +595,7 @@
         "gift-recipient"
       ],
       "what_we_hope": "Address topic 'wont-connect' for music-producer, gift-recipient readers, reduce support tickets and self-serve their question.",
-      "deflection_target_per_month": null,
+      "deflection_target_per_month": 180,
       "first_published": "2026-05-26",
       "next_check_in": "2026-08-24",
       "outcome": null,

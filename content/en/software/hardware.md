@@ -5,6 +5,7 @@ section: software
 summary: "Every Playtronica device speaks class-compliant MIDI. This page covers connecting to hardware synths, drum machines, and sound modules."
 order: 7
 segment: ["music-producer"]
+deflection_target: 20
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 📻

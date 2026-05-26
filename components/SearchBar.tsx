@@ -84,13 +84,16 @@ export function SearchBar() {
           (res.results || []).slice(0, 8).map((r: any) => r.data()),
         )) as Hit[];
         setHits(top);
+        logQuery(v, top.length);
         return;
       } catch {
         /* fall through to JSON / DOM fallback */
       }
     }
     if (jsonIndex) {
-      setHits(searchJson(jsonIndex, v));
+      const matches = searchJson(jsonIndex, v);
+      setHits(matches);
+      logQuery(v, matches.length);
       return;
     }
     // Final fallback — sidebar link text. Only fires if both Pagefind and the
@@ -106,6 +109,7 @@ export function SearchBar() {
         excerpt: "",
       }));
     setHits(matches);
+    logQuery(v, matches.length);
   }
 
   useEffect(() => {
@@ -213,4 +217,85 @@ function makeExcerpt(entry: JsonEntry, terms: string[], firstBodyMatch: number):
 
 function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/* ─── Search query analytics ───────────────────────────────────────────────
+ *
+ * Logs every search query the reader runs, debounced to avoid storing every
+ * keystroke. No PII — just the query string, the hit count, and a timestamp.
+ *
+ * Stored client-side in localStorage under `playtronica.search.log` as an
+ * array of {q, hits, ts}. Rolling window of 500 entries (older entries
+ * dropped automatically), 90-day retention.
+ *
+ * The list is exposed at `window.__playtronicaSearchLog` for the monthly
+ * export — see `scripts/extract-search-log.mjs` (run from the user's browser
+ * once a month, or call the export function via DevTools / a bookmarklet).
+ *
+ * Use it to answer the question: which searches DON'T find anything? Those
+ * are missing-topic signals — the content roadmap, written by readers.
+ */
+const LOG_KEY = "playtronica.search.log";
+const LOG_MAX = 500;
+const LOG_TTL_MS = 90 * 24 * 60 * 60 * 1000;
+
+type LogEntry = { q: string; hits: number; ts: number };
+
+let debounceTimer: ReturnType<typeof setTimeout> | undefined;
+let lastLoggedQuery: string | undefined;
+
+function logQuery(q: string, hits: number) {
+  if (typeof window === "undefined") return;
+  // Debounce — store the final query after 800ms of no-typing, not every keystroke.
+  if (debounceTimer) clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    const trimmed = q.trim();
+    if (!trimmed || trimmed.length < 2) return;
+    if (lastLoggedQuery === trimmed) return; // avoid logging the same query twice in a row
+    lastLoggedQuery = trimmed;
+    try {
+      const raw = localStorage.getItem(LOG_KEY);
+      let entries: LogEntry[] = raw ? JSON.parse(raw) : [];
+      const cutoff = Date.now() - LOG_TTL_MS;
+      entries = entries.filter((e) => e.ts > cutoff);
+      entries.push({ q: trimmed, hits, ts: Date.now() });
+      if (entries.length > LOG_MAX) entries = entries.slice(-LOG_MAX);
+      localStorage.setItem(LOG_KEY, JSON.stringify(entries));
+      // Expose for export
+      (window as any).__playtronicaSearchLog = entries;
+    } catch {
+      /* localStorage blocked — best-effort logging only */
+    }
+  }, 800);
+}
+
+// Bookmarklet-friendly export function. From the browser console:
+//     copy(JSON.stringify(window.__playtronicaSearchExport()))
+// or call from a scheduled task that opens the help center in Chrome.
+if (typeof window !== "undefined") {
+  (window as any).__playtronicaSearchExport = function () {
+    try {
+      const raw = localStorage.getItem(LOG_KEY);
+      const entries: LogEntry[] = raw ? JSON.parse(raw) : [];
+      const byQuery: Record<string, { count: number; zeroHits: number; lastTs: number }> = {};
+      for (const e of entries) {
+        const key = e.q.toLowerCase();
+        if (!byQuery[key]) byQuery[key] = { count: 0, zeroHits: 0, lastTs: 0 };
+        byQuery[key].count += 1;
+        if (e.hits === 0) byQuery[key].zeroHits += 1;
+        byQuery[key].lastTs = Math.max(byQuery[key].lastTs, e.ts);
+      }
+      const ranked = Object.entries(byQuery)
+        .map(([q, v]) => ({ q, ...v }))
+        .sort((a, b) => b.count - a.count);
+      return {
+        total: entries.length,
+        unique: ranked.length,
+        zeroHitQueries: ranked.filter((r) => r.zeroHits === r.count),
+        topQueries: ranked.slice(0, 20),
+      };
+    } catch {
+      return null;
+    }
+  };
 }

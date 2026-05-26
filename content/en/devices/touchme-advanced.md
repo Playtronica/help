@@ -5,6 +5,7 @@ section: devices
 summary: "MIDI mapping, custom scales, hardware tuning, and performance tips."
 order: 11
 segment: ["music-producer", "b2b"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 👐

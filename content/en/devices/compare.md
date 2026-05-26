@@ -5,6 +5,7 @@ section: devices
 summary: "Side-by-side comparison of TouchMe, Playtron, Biotron, Orbita, and Scales — what each one senses, what is in the box, what software it talks to, and how to pick."
 order: 0
 segment: ["gift-buyer", "music-producer", "b2b"]
+deflection_target: 30
 status: new-2026-05
 last_edited: 2026-05-26
 emoji: 📊
@@ -50,6 +51,9 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 
 ## Full spec matrix
 
+<details>
+<summary><strong>Open the full spec matrix</strong> — sensor, polyphony, output, grounding, dimensions, software, price.</summary>
+
 | | TouchMe | Playtron | Biotron | Orbita | Scales |
 |---|---|---|---|---|---|
 | **What it senses** | Skin conductivity between two gold pads | Conductivity through 16 alligator clips | Bio-signals from a plant + ambient light | Coloured magnets passing under a sensor on a rotating disc | Weight on a load cell (0–3 kg) |
@@ -66,6 +70,8 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 | **Price (from)** | €92.93 | €101.64 | €110.00 | €494.76 | TBA — coming soon |
 | **Deep dive** | [Open](/devices/touchme-advanced/) | [Open](/devices/playtron-advanced/) | [Open](/devices/biotron-advanced/) | [Open](/devices/orbita-advanced/) | [Open](/devices/scales/) |
 
+</details>
+
 ## What is in each box
 
 | Device | USB cable | Other contents |
@@ -80,7 +86,10 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 
 ## Software it works with
 
-Every device is class-compliant USB MIDI — they appear as a MIDI device to any operating system without a driver. The "specific software" column is where each one shines.
+Every device is class-compliant USB MIDI — they appear as a MIDI device to any operating system without a driver.
+
+<details>
+<summary><strong>Open the software compatibility matrix</strong> — macOS / Windows / iOS / Android, plus the best app for each device.</summary>
 
 | Device | macOS | Windows | iOS / iPadOS | Android | Best apps |
 |---|---|---|---|---|---|
@@ -89,6 +98,8 @@ Every device is class-compliant USB MIDI — they appear as a MIDI device to any
 | **Biotron** | ✅ | ✅ | ✅ | ✅ | [synth.playtronica.com](https://synth.playtronica.com), Ableton, plant-music apps |
 | **Orbita** | ✅ | ✅ | ✅ | ✅ | Any DAW, sampler app, hardware synth via 5-pin DIN |
 | **Scales** | ✅ | ✅ | ✅ | ✅ | Any CoreMIDI app, DAWs |
+
+</details>
 
 Detailed software notes live on the dedicated pages: [Ableton](/software/ableton/), [Logic and GarageBand](/software/logic-garageband/), [FL Studio and other DAWs](/software/fl-studio-and-other-daws/), [iPad and iPhone](/software/mobile/), [online synths](/software/online-synths/), [hardware synths](/software/hardware/).
 

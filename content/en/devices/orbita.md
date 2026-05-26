@@ -5,6 +5,7 @@ section: devices
 summary: "Orbita is a rotating MIDI sequencer with coloured magnets and four tracks."
 order: 5
 segment: ["music-producer", "creator"]
+deflection_target: 40
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🌀
@@ -13,6 +14,8 @@ emoji: 🌀
 > ⚠️ **Orbita does not produce sound on its own.** Orbita is a MIDI sequencer. It sends MIDI signals to a sound source — a synth, a DAW, or a music app. Without a sound source you will not hear anything.
 
 > 🛠️ **Want to go deeper?** See the [Orbita deep dive](/devices/orbita-advanced/) for note-mapping JSON, encoder and button MIDI CC, sync, and firmware tricks.
+
+> 🛒 **Don't have one yet?** [Buy Orbita on shop.playtronica.com](https://shop.playtronica.com/products/orbita). The box ships with the USB cable and a set of coloured magnets.
 
 Each colour magnet triggers a different MIDI note as the disc spins. Place and move the magnets on the four tracks to build rhythms and melodies you can see, touch, and hear — once connected to your sound source.
 

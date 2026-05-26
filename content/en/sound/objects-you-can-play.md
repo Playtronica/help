@@ -5,6 +5,7 @@ section: sound
 summary: "Anything that conducts a little electricity. Each device favours different objects. Plus the world of conductive materials you can buy."
 order: 2
 segment: ["music-producer", "creator"]
+deflection_target: 15
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🍊

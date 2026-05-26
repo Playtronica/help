@@ -5,6 +5,7 @@ section: getting-started
 summary: "What you find inside the box, and what each piece does."
 order: 4
 segment: ["gift-recipient", "music-producer"]
+deflection_target: 60
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 📦

@@ -5,6 +5,7 @@ section: devices
 summary: "Place objects on the plate. Heavier objects play higher notes. Five modes turn the same gesture into melodies, drones, and arpeggios."
 order: 6
 segment: ["music-producer", "creator"]
+deflection_target: 20
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: ⚖️
@@ -17,6 +18,8 @@ Five modes use the same gesture in different ways — a chord, an arpeggio, a dr
 > ⚠️ **Handle only the parts shown in this guide.** Touch the weight plate, the three buttons, the TRS MIDI output, and the USB-C connector. Do not touch the solder joints, the exposed chips, or the underside of the PCB — even when the device is unplugged. Scales is durable, but those areas can be damaged permanently. Treat the rest of the device the way you would treat the back of a phone screen.
 
 > 🛠️ **Note for power users.** The full MIDI map, chaining details, and per-mode CC are below. Scales rewards exploration more than most instruments.
+
+> 🛒 **Don't have one yet?** [Buy Scales on shop.playtronica.com](https://shop.playtronica.com/products/midi-controller-scales) — four colour variants. Scales ships without a USB cable; see [Accessories](/getting-started/accessories/) for the matching part.
 
 ## Quick start
 

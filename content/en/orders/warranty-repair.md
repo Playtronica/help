@@ -6,6 +6,7 @@ section_title: Orders & Support
 summary: "1-year warranty, the repair flow, and what is covered."
 order: 6
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 60
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🛠️
@@ -36,6 +37,12 @@ Every Playtronica device has a **1-year warranty** against manufacturing defects
 ## Out-of-warranty repairs
 
 The device is more than a year old, or the damage is not covered by warranty. We still want to help. [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Out-of-warranty repair #[order number]`. In many cases we can offer repair guidance, spare parts, or a discounted replacement.
+
+## Related pages
+
+- [Returns and refunds](/orders/returns-refunds/) — 30-day return window, separate from the warranty path.
+- [Firmware reset](/troubleshooting/firmware-reset/) — many "the device is broken" cases are resolved by a firmware reflash.
+- [Won't connect](/troubleshooting/wont-connect/) — connection problems that look like hardware faults but are not.
 
 ## Ask the community
 

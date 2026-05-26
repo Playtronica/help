@@ -5,6 +5,7 @@ section: troubleshooting
 summary: "Wipe and reinstall the firmware when the device is unresponsive."
 order: 5
 segment: ["music-producer"]
+deflection_target: 60
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: ⚡
@@ -40,6 +41,12 @@ You will need a paper clip, tweezers, or a short piece of wire, and your USB-C c
 5. **Release the pins.**
 6. **Download `flash_nuke.uf2` and drag it onto the `RPI-RP2` drive.** The device disconnects and reboots. This wipes the firmware completely.
 7. **Open [settings.playtronica.com/#/[your device]](https://settings.playtronica.com) in Brave or Chrome and click "Update Firmware".** Upload the latest firmware. The device reboots again and appears as a working MIDI device.
+
+## Related pages
+
+- [Troubleshooting hub](/troubleshooting/hub/) — start here if you do not know which troubleshooting path applies.
+- [No sound](/troubleshooting/no-sound/) — most common follow-up after a firmware reset.
+- [Won't connect](/troubleshooting/wont-connect/) — if the device still does not appear after a reset.
 
 ## Ask the community
 

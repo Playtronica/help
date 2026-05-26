@@ -5,6 +5,7 @@ section: troubleshooting
 summary: "The device is plugged in but you do not hear anything. Work through this checklist."
 order: 3
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 200
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🔇

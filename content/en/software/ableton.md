@@ -5,6 +5,7 @@ section: software
 summary: "Set up a Playtronica device as a MIDI input in Ableton Live."
 order: 3
 segment: ["music-producer"]
+deflection_target: 35
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🎛️
@@ -18,6 +19,12 @@ emoji: 🎛️
 4. **Set the MIDI input on the track.** In the track's **MIDI From** dropdown, select your Playtronica device. Set the channel to **All Channels**.
 5. **Arm the track** by clicking the record button on the track header.
 6. **Touch the device.** The notes play through the instrument you chose.
+
+## Related pages
+
+- [Logic and GarageBand](/software/logic-garageband/) — same idea, slightly different setup.
+- [FL Studio and other DAWs](/software/fl-studio-and-other-daws/) — Reaper, Cubase, Studio One, Bitwig, Reason.
+- [Online synths](/software/online-synths/) — browser-based sound sources that need no DAW.
 
 ## Ask the community
 

@@ -5,6 +5,7 @@ section: site
 summary: "Where to find other Playtronica makers — and where to ask for help first."
 order: 2
 segment: ["music-producer", "creator"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🤝
@@ -48,6 +49,12 @@ The community is great for many things but it cannot help with these. **Email [s
 For business and bulk orders, use [collaboration@playtronica.com](mailto:collaboration@playtronica.com).
 
 We aim for 24 hours, but a reply may take up to 3 business days.
+
+## Related pages
+
+- [Contact](/site/contact/) — every email address we use, and which question goes where.
+- [Compare devices](/devices/compare/) — for community members helping someone pick their first Playtronica.
+- [Which device do I have?](/getting-started/which-device/) — identify a board from a photo.
 
 ## How the community works
 

@@ -5,6 +5,7 @@ section: site
 summary: "How to reach us — by email, by topic. Most answers are already on this site."
 order: 1
 segment: ["gift-buyer", "music-producer", "b2b"]
+deflection_target: 50
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 💬

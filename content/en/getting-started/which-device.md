@@ -5,6 +5,7 @@ section: getting-started
 summary: "Five Playtronica devices exist. This page helps you tell them apart and explains what each one does."
 order: 1
 segment: ["gift-buyer", "music-producer"]
+deflection_target: 50
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🤔

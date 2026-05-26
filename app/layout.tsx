@@ -11,6 +11,7 @@ import { Analytics } from "@/components/Analytics";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { BrandLink } from "@/components/BrandLink";
 import { HtmlLang } from "@/components/HtmlLang";
+import { LanguageBanner } from "@/components/LanguageBanner";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://help.playtronica.com";
@@ -127,6 +128,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        {/*
+          Set <html lang> before first paint so screen readers and any crawler
+          that doesn't run our React hydration see the right language. This
+          mirrors the post-hydration correction done by <HtmlLang />. hreflang
+          alternates remain the strongest SEO signal — this is belt-and-braces
+          for accessibility tools and naive crawlers.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var p=location.pathname,langs=['de','es','fr','ja'];for(var i=0;i<langs.length;i++){if(p.indexOf('/'+langs[i]+'/')===0||p==='/'+langs[i]){document.documentElement.lang=langs[i];break;}}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
@@ -135,6 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen pb-[72px] md:pb-0">
         <a href="#main" className="skip-link">Skip to content</a>
         <HtmlLang />
+        <LanguageBanner />
 
         <header className="sticky top-0 z-20 border-b-[1.5px] border-rule bg-bg">
           <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 md:py-3">

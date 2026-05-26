@@ -8,6 +8,7 @@ segment: ["b2b", "international"]
 deflection_target: 140
 order: 2
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🧾
 ---
 
@@ -62,6 +63,12 @@ Common ranges we see:
 - **Argentina, Brazil, India:** duties of 15 to 40% are routine
 
 We cannot predict the exact charge for your country. If you want certainty before ordering, check your country's customs website.
+
+## Related pages
+
+- [Pricing and discounts](/orders/pricing-and-discounts/) — base prices, bundles, missed-code refunds.
+- [B2B and institutional orders](/professionals/b2b-bulk/) — bulk pricing, formal quotes, VAT-exempt purchases.
+- [Contact](/site/contact/) — when each address is the right one.
 
 ## Ask the community
 

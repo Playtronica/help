@@ -5,6 +5,7 @@ section: professionals
 summary: "Bulk pricing and formal quotes for schools, museums, studios, festivals, and corporate buyers."
 order: 1
 segment: ["b2b"]
+deflection_target: 25
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🏢
@@ -36,6 +37,12 @@ Drop us a line at **collaboration@playtronica.com** (subject: `Quote — [your o
 - Where it is going and when you need it.
 
 We reply within **2 business days** with a quote and answers to anything that is still open.
+
+## Related pages
+
+- [Education and schools](/professionals/education/) — programmes we have run with music teachers, SEND, arts faculties.
+- [Creative installations](/professionals/creative-installations/) — Sónar, CTM, museum work — what we provide.
+- [Invoice and VAT](/orders/invoice-vat/) — formal VAT invoices, EU tax-exempt purchases, purchase orders.
 
 ## Ask the community
 

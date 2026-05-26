@@ -8,6 +8,7 @@ segment: ["gift-buyer", "music-producer"]
 deflection_target: 320
 order: 1
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🔍
 ---
 
@@ -54,6 +55,12 @@ Search your inbox for `Playtronica` and `shipped`. If you bought as a guest and 
 We can edit the shipping address while the order is still in our warehouse. The window is short — usually a few hours after checkout. Write to **support@playtronica.com** immediately with the subject `Change address #[order number]` and the new address.
 
 If the package has already shipped, some carriers allow rerouting mid-transit. Email us and we will try.
+
+## Related pages
+
+- [Shipping and delivery](/orders/shipping-delivery/) — origin warehouses, transit times by region, customs.
+- [Returns and refunds](/orders/returns-refunds/) — 30-day window, how to start a return, when the refund arrives.
+- [Warranty and repairs](/orders/warranty-repair/) — what's covered, how to claim.
 
 ## Ask the community
 

@@ -5,6 +5,7 @@ section: devices
 summary: "Deep MIDI mapping for Biotron — CC, SysEx, per-channel routing."
 order: 4
 segment: ["music-producer", "b2b"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🧬

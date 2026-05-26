@@ -5,6 +5,7 @@ section: professionals
 summary: "Playtronica devices are safe for typical creative use. This page explains the limits."
 order: 4
 segment: ["b2b", "gift-buyer"]
+deflection_target: 30
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🦺

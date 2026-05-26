@@ -122,7 +122,7 @@ ${body}`;
 }
 
 // ─── Claude API ──────────────────────────────────────────────────────────────
-async function callClaude(prompt) {
+async function callClaude(prompt, attempt = 1) {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -132,12 +132,24 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 8192,
+      // 16k tokens — covers any page in the help center even when the target
+      // language expands (German, Japanese full-width). 8k was tight on big
+      // pages like biotron.md.
+      max_tokens: 16384,
       messages: [{ role: "user", content: prompt }],
     }),
   });
   if (!res.ok) {
     const text = await res.text();
+    // Retry once on 429 (rate limit) or 5xx with a short backoff. Sequential
+    // calls of 168 pages × 4 langs occasionally trip the limiter even with
+    // good keys.
+    if ((res.status === 429 || res.status >= 500) && attempt < 3) {
+      const waitMs = 2000 * attempt;
+      console.log(`    retry after ${waitMs}ms (status ${res.status})`);
+      await new Promise((r) => setTimeout(r, waitMs));
+      return callClaude(prompt, attempt + 1);
+    }
     throw new Error(`API ${res.status}: ${text.slice(0, 300)}`);
   }
   const data = await res.json();
@@ -230,7 +242,15 @@ async function main() {
   }
 
   console.log(`\nDone: ${done} translated, ${failed} failed, ${jobs.length - todo.length} skipped.`);
-  process.exit(failed > 0 ? 1 : 0);
+  // Exit 1 only when EVERY job failed. If even one succeeded we want the
+  // workflow to continue and open a PR — partial translations are useful and
+  // can be filled in on the next run when the staleness check picks up the
+  // still-missing files.
+  if (done === 0 && failed > 0) {
+    console.error("No translations succeeded — failing the run.");
+    process.exit(1);
+  }
+  process.exit(0);
 }
 
 main();

@@ -5,12 +5,35 @@ section: professionals
 summary: "Art installations, exhibitions, and performance pieces."
 order: 3
 segment: ["b2b", "creator"]
+deflection_target: 10
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🎨
 ---
 
 Playtronica devices have appeared in art installations, contemporary performance, sound art exhibitions, and generative music projects since 2014. This page covers the patterns we see most.
+
+## Where Playtronica has shown up
+
+Selected institutional and brand work from the last decade — the kinds of partners we have built bespoke setups for.
+
+### Museums and festivals
+
+- **Centre Pompidou (Paris)** — *MИR: A Journey into Space and Sound*, summer 2018. A month-long sound installation built around touch, with a public version of TouchMe in the foyer. [Coverage on FactMag](https://www.factmag.com/2018/06/28/playtronica-centre-pompidou-exhibition/).
+- **Palais de Tokyo (Paris)** — workshops and performance, ongoing collaboration with the contemporary arts programme.
+- **Garage Museum of Contemporary Art (Moscow)** — *The Rhythm of Color* workshop series with Orbita prototypes.
+- **Tretyakov Gallery (Moscow)** — sound installation in dialogue with the permanent collection.
+- **Exploratorium (San Francisco)** — interactive science-and-music station.
+- **Sónar+D (Barcelona)** — the festival's innovation wing. Playtronica was founded in 2014 by Sasha Pas after seeing the first Sónar+D, so the relationship runs deep.
+
+### Brand performances and installations
+
+- **Hermès** — a live performance inside the Manhattan flagship; Hermès accessories became the instruments for a three-hour Playtronica improvisation.
+- **Issey Miyake** — a Tokyo collaboration tying sound to the raw materials of the garments, honoring the ancestral link between music and nature.
+- **IKEA** — interactive product launches and pop-ups.
+- **Nike** — event activations.
+
+If your project sits in any of these adjacent categories — museum acquisition, festival commission, brand activation, university research — we are happy to talk early.
 
 ## Use multiple devices at once
 

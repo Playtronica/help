@@ -53,12 +53,12 @@ export function TroubleshootingWalker({ tree }: { tree: Root }) {
         </div>
         <div className="flex gap-2">
           {path.length > 1 && (
-            <button onClick={back} className="min-h-[32px] border-[1.5px] border-rule px-2 py-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-soft transition hover:bg-soft hover:text-ink">
+            <button onClick={back} className="min-h-[44px] border-[1.5px] border-rule px-2 py-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-soft transition hover:bg-soft hover:text-ink">
               ← Back
             </button>
           )}
           {path.length > 1 && (
-            <button onClick={reset} className="min-h-[32px] border-[1.5px] border-rule px-2 py-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-soft transition hover:bg-soft hover:text-ink">
+            <button onClick={reset} className="min-h-[44px] border-[1.5px] border-rule px-2 py-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-soft transition hover:bg-soft hover:text-ink">
               Start over
             </button>
           )}

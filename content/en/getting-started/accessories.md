@@ -5,6 +5,7 @@ section: getting-started
 summary: "Every non-device product Playtronica makes — what each one is for, when you need it, and which device it pairs with."
 order: 5
 segment: ["music-producer", "gift-buyer", "creator"]
+deflection_target: 30
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 🧰
@@ -164,6 +165,12 @@ A digital gift card in €50, €100, €200, and €500 denominations. Delivere
 | Protect Playtron's pin row in a bag | [Playtron case](https://shop.playtronica.com/products/case-for-midi-controller-playtron) |
 | Buy "everything I might need" in one click | [Accessory Kit](https://shop.playtronica.com/products/playtronica-accessory-kit) |
 | Gift Playtronica without picking the device | [e-Gift card](https://shop.playtronica.com/products/playtronica-gift-card-1) |
+
+## Related pages
+
+- [Compare devices](/devices/compare/) — what's in each box (some ship without a cable, this matters when buying accessories).
+- [What is in the box?](/getting-started/whats-in-the-box/) — what you already have before buying more.
+- [Connect your device](/software/connecting/) — which cable / adapter you actually need for your specific computer or phone.
 
 ## Ask the community
 

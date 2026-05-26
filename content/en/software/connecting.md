@@ -5,6 +5,7 @@ section: software
 summary: "Plug a Playtronica device into a Mac, Windows PC, iPhone, iPad, or Android phone."
 order: 2
 segment: ["music-producer", "gift-recipient"]
+deflection_target: 80
 status: edited-2026-05
 last_edited: 2026-05-26
 emoji: 💻
@@ -35,6 +36,12 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 1. **Use a USB-C OTG adapter.** Most modern Android phones support USB Host Mode through OTG. Check your phone's specifications.
 2. **Connect the Playtronica device through the USB-C OTG adapter.**
 3. **Open a MIDI-compatible app.** Koala Sampler (Android) and MIDI+BTLE are good starting points. Allow the app to access USB devices when prompted.
+
+## Related pages
+
+- [Won't connect](/troubleshooting/wont-connect/) — what to try when the device does not show up.
+- [Online synths](/software/online-synths/) — what to play with once the device is connected.
+- [Hardware synths](/software/hardware/) — connecting via 5-pin MIDI DIN instead of USB.
 
 ## Ask the community
 
