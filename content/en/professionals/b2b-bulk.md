@@ -8,32 +8,32 @@ status: edited-2026-05
 emoji: 🏢
 ---
 
-We work with institutional buyers every week. This page covers the four common cases and the email path for getting a quote.
+Schools, museums, festivals, studios — we work with institutional buyers every week and we love it. This page covers the four most common cases and how to get a quote.
 
 ## Who we work with
 
-- **Schools and universities.** Music teachers, SEND programmes, arts faculties, and coding or maker courses. Typical order: 5 to 30 devices. Volume pricing is available.
-- **Museums and festivals.** Interactive installations, workshops, and participatory events. We have supplied Sónar, CTM, and museums across Europe. Setup advice is included.
-- **Studios and labels.** Playtronica as a production or performance tool. Volume orders, specific configurations, and workshop support.
-- **Corporate and events.** Team building, brand activations, and launch events. We can supply devices and sometimes facilitate workshops.
+- **Schools and universities.** Music teachers, SEND programmes, arts faculties, coding and maker courses. Typical orders run 5 to 30 devices.
+- **Museums and festivals.** Interactive installations, workshops, and participatory events. We have supplied Sónar, CTM, and museums across Europe — setup advice comes with the order.
+- **Studios and labels.** Playtronica as a production or performance tool. Larger orders, specific configurations, and workshop support are all on the table.
+- **Corporate and events.** Team building, brand activations, launch events. We can supply devices and sometimes facilitate the workshop too.
 
-## What we offer for institutional buyers
+## What we can put together for you
 
-- **Volume pricing** for orders of 5 units or more.
-- **A formal VAT invoice and purchase order** for your accounting team.
-- **EU tax-exempt purchases** for registered EU VAT businesses.
-- **Setup consultation** — we advise on which devices fit your use case.
-- **Bulk shipping** — a single consolidated shipment to one address.
+- Bulk pricing on orders of 5 units or more.
+- A proper VAT invoice and purchase order for your accounting team.
+- EU tax-exempt purchases for registered EU VAT businesses.
+- A short consultation on which devices fit what you are planning.
+- One consolidated shipment to a single address.
 
 ## How to get a quote
 
-[Email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with the subject `Quote — [your organization]`. Include:
+Drop us a line at **collaboration@playtronica.com** (subject: `Quote — [your organization]`). A few sentences are plenty — tell us:
 
-- What you are planning (classroom, installation, event, and so on).
-- Which devices you want and how many.
-- Your delivery country and your timeline.
+- What you are planning (a classroom, an installation, an event, and so on).
+- Which devices you are considering and roughly how many.
+- Where it is going and when you need it.
 
-We reply within **2 business days** with a quote and answers to your questions.
+We reply within **2 business days** with a quote and answers to anything that is still open.
 
 ## Ask the community
 

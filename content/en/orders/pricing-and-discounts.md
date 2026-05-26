@@ -15,13 +15,7 @@ Current prices are always live at [shop.playtronica.com](https://shop.playtronic
 
 ## I forgot to use a discount code at checkout
 
-We honour any code that was **active on the day of your purchase**, for up to **7 days** after payment. There is no order limit.
-
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Missed code #[your order number]` and tell us the code. We refund the difference within 3 business days.
-
-## The price dropped right after I bought
-
-Same policy. If the price dropped **within 7 days** of your order, we refund the difference. [Email us](mailto:support@playtronica.com) with the subject `Price match #[your order number]` and a link to the lower price.
+If a discount code was active on the day of your purchase and you forgot to enter it, [email support@playtronica.com](mailto:support@playtronica.com) with the subject `Missed code #[your order number]` and tell us the code. We review case by case.
 
 ## What is in each bundle?
 
@@ -43,9 +37,9 @@ You do not need to install software. [synth.playtronica.com](https://synth.playt
 
 ## B2B and bulk orders
 
-For orders of **10 units or more**, we issue formal quotes and offer institutional pricing. Schools, studios, museums, festivals, and therapy centres qualify.
+Buying for a school, a studio, a museum, a festival, or a therapy centre? We work with institutional buyers every week and we are happy to put together a quote that fits what you are doing — bulk pricing, VAT-friendly invoicing, and setup advice all included.
 
-[Email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with the subject `Quote — [your organization]`. We reply within 2 business days. See also: [B2B and Institutional](/professionals/b2b-bulk/).
+Tell us a bit about your project at **collaboration@playtronica.com** (subject: `Quote — [your organization]`). We get back within 2 business days. More detail on the [B2B and institutional page](/professionals/b2b-bulk/).
 
 ## What is included in the checkout price?
 

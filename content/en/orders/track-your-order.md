@@ -24,7 +24,7 @@ The first 24 to 48 hours after we ship can show no updates. The carrier may not 
 
 Open your tracking link. If the last update is within the past **5 business days**, the package is moving normally. Packages routinely wait at customs or for the next regional hub scan.
 
-If the tracking shows no movement for more than 5 business days, [email us](mailto:support@playtronica.com) with your order number. We will contact the carrier the same day. Use this subject line: `Tracking #[your order number]`.
+If the tracking shows no movement for more than 5 business days, write to **support@playtronica.com** with the subject line `Tracking #[your order number]`. We will contact the carrier the same day.
 
 > ⚠️ **Holiday and Black Friday notice.** December orders can take a few extra days, especially in the EU. If your tracking pauses between December 15 and January 10, the most likely reason is high carrier volume.
 
@@ -35,21 +35,23 @@ Two common reasons:
 - **First-scan delay.** Up to 48 hours can pass between our handover and the first public tracking event. Reload the tracking page the next day.
 - **Customs.** Border processing can add 1 to 3 business days with no public updates.
 
-If neither applies — five business days of silence is the trigger to contact us. [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Tracking #[your order number]`. Attach a screenshot of the tracking page if you have one.
+If neither applies — five business days of silence is the trigger to contact us.
+
+Write to **support@playtronica.com** with the subject `Tracking #[your order number]`. Attach a screenshot of the tracking page if you have one.
 
 ## It says delivered but I do not have the package
 
 1. **Wait 24 hours.** About 1 in 50 packages marked "delivered" actually arrive the next day. Drivers sometimes scan ahead.
 2. **Check obvious locations:** front desk, neighbour, building reception, parcel locker. Carriers in the EU often leave packages with the closest available person if the recipient is not home.
-3. **If the package is still missing the next day**, [email us](mailto:support@playtronica.com) with the subject `Lost #[your order number]`. We open a carrier claim within 24 hours. If the carrier cannot locate the package, we ship a replacement.
+3. **If the package is still missing the next day**, write to **support@playtronica.com** with the subject `Lost #[your order number]`. We open a carrier claim within 24 hours. If the carrier cannot locate the package, we ship a replacement.
 
 ## I lost my tracking number
 
-Search your inbox for `Playtronica` and `shipped`. If you bought as a guest and the email is missing, [email us](mailto:support@playtronica.com) with the email address you used at checkout. We will resend the tracking link.
+Search your inbox for `Playtronica` and `shipped`. If you bought as a guest and the email is missing, write to **support@playtronica.com** with the email address you used at checkout. We will resend the tracking link.
 
 ## I want to change my shipping address
 
-We can edit the shipping address while the order is still in our warehouse. The window is short — usually a few hours after checkout. [Email support@playtronica.com](mailto:support@playtronica.com) immediately with the subject `Change address #[order number]` and the new address.
+We can edit the shipping address while the order is still in our warehouse. The window is short — usually a few hours after checkout. Write to **support@playtronica.com** immediately with the subject `Change address #[order number]` and the new address.
 
 If the package has already shipped, some carriers allow rerouting mid-transit. Email us and we will try.
 

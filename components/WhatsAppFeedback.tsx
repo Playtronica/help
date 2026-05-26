@@ -172,16 +172,37 @@ function WhatsAppFeedbackInner() {
         </a>
       )}
 
-      {/* Floating "What's missing here?" button */}
-      <button
-        type="button"
-        onClick={() => setModalOpen(true)}
-        aria-label="What's missing here?"
-        className="fixed right-3 bottom-[136px] z-40 flex h-10 items-center gap-2 rounded-full border-[1.5px] border-ink bg-white px-3 font-mono text-[11px] uppercase tracking-[0.06em] text-ink shadow-block-sm transition hover:border-accent hover:bg-accent hover:text-bg md:bottom-16 md:h-11 md:px-4"
-      >
-        <span aria-hidden="true">📝</span>
-        <span>What&rsquo;s missing?</span>
-      </button>
+      {/* Floating button — selection-aware.
+          When the user has selected text, this becomes a direct WhatsApp link
+          carrying that selection. The tooltip over the selection is the desktop-
+          friendly path; the floating button is the mobile-reliable path because
+          it sits far from the selection and iOS does not eat the tap. */}
+      {anchor ? (
+        <a
+          href={buildWhatsAppLink(tooltipMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            copyMessage(tooltipMessage);
+            setAnchor(null);
+          }}
+          aria-label="Send the selected text to WhatsApp"
+          className="fixed right-3 bottom-[136px] z-40 inline-flex h-10 items-center gap-2 rounded-full border-[1.5px] border-ink bg-ink px-3 font-mono text-[11px] uppercase tracking-[0.06em] text-bg no-underline shadow-block-sm transition hover:border-accent hover:bg-accent md:bottom-16 md:h-11 md:px-4"
+        >
+          <span aria-hidden="true">📍</span>
+          <span>Send selection</span>
+        </a>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setModalOpen(true)}
+          aria-label="What's missing here?"
+          className="fixed right-3 bottom-[136px] z-40 flex h-10 items-center gap-2 rounded-full border-[1.5px] border-ink bg-white px-3 font-mono text-[11px] uppercase tracking-[0.06em] text-ink shadow-block-sm transition hover:border-accent hover:bg-accent hover:text-bg md:bottom-16 md:h-11 md:px-4"
+        >
+          <span aria-hidden="true">📝</span>
+          <span>What&rsquo;s missing?</span>
+        </button>
+      )}
 
       {/* Modal */}
       {modalOpen && (

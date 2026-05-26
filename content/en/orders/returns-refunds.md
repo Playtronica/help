@@ -19,9 +19,11 @@ You have **30 days** from the delivery date to return any Playtronica device for
 
 ## How to start a return
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Return #[your order number]`. Tell us what you are returning and why.
+Write to **support@playtronica.com** with the subject `Return #[your order number]`. Tell us what you are returning and why.
 
 We reply within 1 business day with the correct shipping address. We do not publish a single address because we route returns by region and product.
+
+> ⚠️ **Do not ship returns to Estonia or to any address you find online.** Always wait for our confirmation email with the correct return address. Packages sent before we confirm may be lost in transit and we cannot refund them.
 
 ## If the device was a gift
 

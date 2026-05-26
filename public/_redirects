@@ -1,28 +1,99 @@
 # Cloudflare Pages redirects — old help.playtronica.com URLs → new ones.
 # Keeps Google rankings + bookmarks alive after the migration.
+# Each rule is a 301 (permanent) so search engines transfer rank to the new URL.
 
 # Old URL                       New URL                                 Status
 
+# Devices
 /orbita                         /devices/orbita/                        301
+/orbita-advanced                /devices/orbita-advanced/               301
 /plant-sound                    /devices/biotron/                       301
+/biotron                        /devices/biotron/                       301
 /biotron-advanced               /devices/biotron-advanced/              301
 /scales                         /devices/scales/                        301
 /first-steps                    /devices/touchme/                       301
+/touchme-advanced               /devices/touchme-advanced/              301
 /tuning                         /devices/touchme-tuning/                301
+/touchme-tuning                 /devices/touchme-tuning/                301
+/playtron-advanced              /devices/playtron-advanced/             301
+
+# Sound
 /clips                          /sound/objects-you-can-play/            301
 /grounding                      /sound/grounding/                       301
 /physics                        /sound/grounding/                       301
 /objects                        /sound/objects-you-can-play/            301
+/objects-you-can-play           /sound/objects-you-can-play/            301
+
+# Software
 /connecting                     /software/connecting/                   301
 /ableton                        /software/ableton/                      301
 /daws                           /software/fl-studio-and-other-daws/     301
+/fl-studio                      /software/fl-studio-and-other-daws/     301
+/logic                          /software/logic-garageband/             301
+/garageband                     /software/logic-garageband/             301
+/logic-garageband               /software/logic-garageband/             301
 /mobile                         /software/mobile/                       301
 /hardware                       /software/hardware/                     301
 /online                         /software/online-synths/                301
 /synths                         /software/online-synths/                301
+/online-synths                  /software/online-synths/                301
+
+# Orders / support
 /purchase                       /orders/track-your-order/               301
+/track-your-order               /orders/track-your-order/               301
+/shipping                       /orders/shipping-delivery/              301
+/shipping-delivery              /orders/shipping-delivery/              301
+/delivery                       /orders/shipping-delivery/              301
+/returns                        /orders/returns-refunds/                301
+/refunds                        /orders/returns-refunds/                301
+/returns-refunds                /orders/returns-refunds/                301
+/warranty                       /orders/warranty-repair/                301
+/repair                         /orders/warranty-repair/                301
+/warranty-repair                /orders/warranty-repair/                301
+/invoice                        /orders/invoice-vat/                    301
+/vat                            /orders/invoice-vat/                    301
+/invoice-vat                    /orders/invoice-vat/                    301
+/pricing                        /orders/pricing-and-discounts/          301
+/discounts                      /orders/pricing-and-discounts/          301
+/pricing-and-discounts          /orders/pricing-and-discounts/          301
+
+# Troubleshooting
 /playtron                       /troubleshooting/playtron-faq/          301
+/playtron-faq                   /troubleshooting/playtron-faq/          301
 /touchme                        /troubleshooting/hub/                   301
+/hub                            /troubleshooting/hub/                   301
+/no-sound                       /troubleshooting/no-sound/              301
+/firmware                       /troubleshooting/firmware-reset/        301
+/firmware-reset                 /troubleshooting/firmware-reset/        301
+/reset                          /troubleshooting/firmware-reset/        301
+/wont-connect                   /troubleshooting/wont-connect/          301
+/troubleshooting                /troubleshooting/hub/                   301
+
+# Professionals
 /safety                         /professionals/safety/                  301
+/b2b                            /professionals/b2b-bulk/                301
+/b2b-bulk                       /professionals/b2b-bulk/                301
+/bulk                           /professionals/b2b-bulk/                301
+/education                      /professionals/education/               301
+/schools                        /professionals/education/               301
+/installations                  /professionals/creative-installations/  301
+/creative-installations         /professionals/creative-installations/  301
+
+# Getting started
 /different-devices              /getting-started/which-device/          301
+/which-device                   /getting-started/which-device/          301
 /accessories                    /getting-started/whats-in-the-box/      301
+/whats-in-the-box               /getting-started/whats-in-the-box/      301
+/whats-in-box                   /getting-started/whats-in-the-box/      301
+/gift                           /getting-started/got-it-as-a-gift/      301
+/got-it-as-a-gift               /getting-started/got-it-as-a-gift/      301
+/first-5-minutes                /getting-started/your-first-5-minutes/  301
+/your-first-5-minutes           /getting-started/your-first-5-minutes/  301
+/what-is-playtronica            /getting-started/what-is-playtronica/   301
+
+# Site
+/community                      /site/community/                        301
+/facebook                       /site/community/                        301
+/contact                        /site/contact/                          301
+/support                        /site/contact/                          301
+/help                           /                                       301

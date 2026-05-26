@@ -133,20 +133,22 @@ Then submit the sitemap to:
 
 ## 7. Old URL redirects (verify)
 
-`public/_redirects` already has the 301s from the old super.so URLs (e.g. `/biotron` → `/devices/biotron/`). After cut-over, hit each old URL once and confirm it 301s to the new path.
+`public/_redirects` has 70+ 301 rules from the old super.so URLs (e.g. `/biotron` → `/devices/biotron/`). After cut-over, hit each old URL once and confirm it 301s to the new path.
 
-A one-liner to test on macOS:
+A one-liner to test on macOS — the most important "external link in the wild" paths:
 
 ```bash
 for path in /orbita /plant-sound /biotron-advanced /scales /first-steps /tuning \
             /clips /grounding /physics /objects /connecting /ableton /daws \
-            /mobile /hardware /online /synths /purchase /playtron /touchme \
-            /safety /different-devices /accessories; do
+            /logic /garageband /mobile /hardware /online /synths /purchase \
+            /playtron /touchme /safety /different-devices /accessories \
+            /shipping /returns /refunds /warranty /pricing /b2b /education \
+            /installations /community /contact /support; do
   echo "$path -> $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' https://help.playtronica.com$path)"
 done
 ```
 
-All should print `301 https://help.playtronica.com/<new-path>/`.
+All should print `301 https://help.playtronica.com/<new-path>/`. The full list of mapped paths is in `public/_redirects`.
 
 ---
 

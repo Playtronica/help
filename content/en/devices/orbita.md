@@ -10,8 +10,6 @@ emoji: 🌀
 
 > ⚠️ **Orbita does not produce sound on its own.** Orbita is a MIDI sequencer. It sends MIDI signals to a sound source — a synth, a DAW, or a music app. Without a sound source you will not hear anything.
 
-> ⚠️ **Handle only the parts shown in this guide.** Touch the orbit ring, the central encoder, the side buttons, and the USB-C connector. Do not touch the underside of the PCB, the solder joints, or the exposed chips — even when the device is unplugged. The board is durable, but those areas can be damaged permanently. Treat the rest of the device the way you would treat the back of a phone screen.
-
 > 🛠️ **Want to go deeper?** See the [Orbita deep dive](/devices/orbita-advanced/) for note-mapping JSON, encoder and button MIDI CC, sync, and firmware tricks.
 
 <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/1c0b6a18-c429-4d7b-a503-b11d0de0bd9f/untitled/w=1920,quality=90,fit=scale-down" alt="Orbita rotating MIDI sequencer — top view of the round device with coloured magnets on its tracks" style="width:100%;border-radius:10px;margin:16px 0;display:block">
@@ -32,11 +30,11 @@ Orbita needs a sound source. Three options:
 
 1. **Plug Orbita into your sound source** with the USB cable from the box, or with a MIDI cable to a hardware synth.
 2. **Place coloured magnets on the four tracks.** Each colour triggers a different MIDI note. Each track is a different octave by default.
-3. **Press Start.** Rotate the encoder to change the speed.
+3. **Touch the turntable** to spin it by hand, or press Start to use the motor. Rotate the encoder to change the speed.
 4. **Press the R, B, I, T buttons to mute and unmute tracks.**
 5. **Long-press the A button to record your mute states and speed changes.** Press A again to play the recording. Press A a third time to reset.
 
-{{ youtube: kk6ud9xuAy0 title="Getting started with Orbita Color Sequencer" }}
+{{ youtube: SC3FL1LeRVM title="Getting started with Orbita Color Sequencer" }}
 
 ## Note mapping
 
@@ -60,7 +58,7 @@ You can turn the motor on and off, and change its speed. Both controls can be op
 
 ## Web settings page
 
-Open [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) in Brave or Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets.
+Open [synth.playtronica.com/settings](https://synth.playtronica.com/settings) in Brave or Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets. (The older [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) page also works and exposes the same options.)
 
 <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/5a4c994a-0425-4372-a849-5728aa91c32d/image/w=1920,quality=90,fit=scale-down" alt="Orbita web settings page — colour-to-note mapping and per-track parameters" style="width:100%;border-radius:10px;margin:16px 0;display:block">
 
@@ -100,16 +98,13 @@ Orbita may have switched to MIDI CC mode by accident.
 
 [Download the latest firmware from this Google Drive folder](https://drive.google.com/drive/folders/1QQiIqX-KBK7CpjOTCoDgI7TUjMP48XjU?usp=drive_link).
 
-### Step 1 — clean the device
+**Clean the device, then install the new firmware:**
 
 1. Plug Orbita into your computer with the USB cable from the box.
 2. While plugging in, **press and hold the button behind the USB-C port** on the bottom PCB.
 3. Keep holding the button until your computer detects Orbita as a removable drive.
 4. Drag the `flash_nuke` file onto the Orbita drive.
 5. Wait for the device to reset and reappear as a drive.
-
-### Step 2 — install the new firmware
-
 6. Drag the new firmware file onto the Orbita drive.
 7. Once the transfer finishes, Orbita reboots automatically with the updated firmware.
 
@@ -121,6 +116,10 @@ Orbita may have switched to MIDI CC mode by accident.
 - **[Elastic OSC](https://mominstruments.com/elasticosc/)** — paid, made by friends of Playtronica, very good sound.
 - **[Dots Piano](https://dotpiano.com/)** — web piano in Brave or Chrome.
 - **[synth.playtronica.com](https://synth.playtronica.com)** — our curated library of web synths.
+
+## Handling and care
+
+> ⚠️ **Handle only the parts shown in this guide.** Touch the orbit ring, the central encoder, the side buttons, and the USB-C connector. Do not touch the underside of the PCB, the solder joints, or the exposed chips — even when the device is unplugged. The board is durable, but those areas can be damaged permanently. Treat the rest of the device the way you would treat the back of a phone screen.
 
 ## Ask the community
 

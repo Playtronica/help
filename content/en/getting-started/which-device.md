@@ -69,6 +69,8 @@ Playtronica makes five devices. They all turn something physical into MIDI, but 
 | Orbita | Nothing — it is a sequencer | Yes | No |
 | Scales | Weight on a load cell | No | No |
 
+> 📊 **Looking to choose between devices, not identify one?** See the [full comparison page](/devices/compare/) — spec matrix, software compatibility, what's in each box, prices, and a decision tree by use case.
+
 ## Still not sure?
 
 [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Which device do I have?` and a photo of what you have. We reply within 1 business day with the right setup link.
