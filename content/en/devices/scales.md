@@ -4,7 +4,9 @@ slug: scales
 section: devices
 summary: "Place objects on the plate. Heavier objects play higher notes. Five modes turn the same gesture into melodies, drones, and arpeggios."
 order: 6
+segment: ["music-producer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: ⚖️
 ---
 
@@ -106,6 +108,11 @@ Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scal
 > **No tempo response in Mode 5.** Confirm that Mode 2 has notes in its sequence. Mode 5 plays back the Mode 2 sequence. An empty sequence has nothing to drive.
 
 > **Notes do not save.** Long-press the **O** button to zero the plate. Most stuck states clear after a calibration.
+
+## Related pages
+
+- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what Scales senses vs the other four devices.
+- [Accessories and add-ons](/getting-started/accessories/) — USB-C cables (Scales ships without one), patches, copper tape.
 
 ## Ask the community
 

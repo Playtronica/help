@@ -4,7 +4,9 @@ slug: orbita-advanced
 section: devices
 summary: "Note-mapping JSON, encoder and button MIDI CC, sync, and firmware tricks."
 order: 13
+segment: ["music-producer", "b2b"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🌀
 parent: orbita
 hide_from_nav: true
@@ -18,7 +20,7 @@ This page is for power users — DAW-heavy producers, installation artists, and 
 
 ## Note-mapping JSON
 
-Orbita's mapping (which note plays at each step) is editable in the WebMidiOrbita configurator at [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/). The configurator lets you:
+Orbita's mapping (which note plays at each step) is editable at [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita). The legacy [WebMidiOrbita configurator](https://playtronica.github.io/WebMidiOrbita/) still works as a fallback and exposes the same options. Either lets you:
 
 - Change the note for each step (each petal position).
 - Set per-step velocity, length, and probability.
@@ -36,7 +38,7 @@ Orbita can sync to incoming MIDI clock. Set the source clock to your DAW's trans
 
 ## Firmware
 
-The firmware update flow is the same as for TouchMe, Playtron, and Biotron. The web settings page is at [settings.playtronica.com](https://settings.playtronica.com).
+The firmware update flow is the same as for TouchMe, Playtron, and Biotron. Update at [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Brave or Chrome.
 
 If the device is unresponsive, follow the [Firmware reset guide](/troubleshooting/firmware-reset/). The BOOT-pin and `flash_nuke.uf2` flow applies.
 

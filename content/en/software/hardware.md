@@ -4,7 +4,9 @@ slug: hardware
 section: software
 summary: "Every Playtronica device speaks class-compliant MIDI. This page covers connecting to hardware synths, drum machines, and sound modules."
 order: 7
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 📻
 ---
 
@@ -65,4 +67,4 @@ Playtronica devices output MIDI, not CV. To play a Eurorack rig, use a MIDI-to-C
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Hardware setup` and a description of your gear. If your setup is a common one, we will write it up as its own guide.
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Hardware setup` and a description of your gear. If your setup is a common one, we will write it up as its own guide. We aim for 24 hours, but a reply may take up to 3 business days.

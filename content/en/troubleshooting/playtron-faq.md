@@ -4,7 +4,9 @@ slug: playtron-faq
 section: troubleshooting
 summary: "Common Playtron problems — pin corrosion, USB, missing MIDI signal, weak grounding."
 order: 4
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🍉
 ---
 

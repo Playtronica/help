@@ -4,7 +4,9 @@ slug: wont-connect
 section: troubleshooting
 summary: "Your computer does not see the device, or the browser shows 'denied access to MIDI'. Work through this checklist."
 order: 2
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🔌
 ---
 

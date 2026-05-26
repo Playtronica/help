@@ -4,11 +4,13 @@ slug: whats-in-the-box
 section: getting-started
 summary: "What you find inside the box, and what each piece does."
 order: 4
+segment: ["gift-recipient", "music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 📦
 ---
 
-**Do I need a cable?** TouchMe, Playtron, and Orbita ship with the USB cable you need — open the box, plug it in, go. **Biotron and Scales do not include a USB cable** — you provide a USB-C data cable that matches your computer.
+**Do I need a cable?** TouchMe, Playtron, and Orbita ship with the USB cable you need — open the box, plug it in, go. **Biotron and Scales do not include a USB cable** — you provide a USB-C data cable that matches your computer. See [Accessories](/getting-started/accessories/) for the matching part, or [Compare devices](/devices/compare/) for the full "what is in the box" table.
 
 Every Playtronica device ships in a small cardboard box with the parts the device needs and a quick-start card. No power adapter is included — every device is powered through USB. The cable depends on the device — see below.
 

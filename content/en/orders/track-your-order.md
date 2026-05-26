@@ -26,7 +26,7 @@ Open your tracking link. If the last update is within the past **5 business days
 
 If the tracking shows no movement for more than 5 business days, write to **support@playtronica.com** with the subject line `Tracking #[your order number]`. We will contact the carrier the same day.
 
-> ⚠️ **Holiday and Black Friday notice.** December orders can take a few extra days, especially in the EU. If your tracking pauses between December 15 and January 10, the most likely reason is high carrier volume.
+> ⚠️ **Holiday and Black Friday notice.** December orders can take a few extra days, especially in the EU. Between late December and early January, the most likely reason for a paused tracking event is high carrier volume after Black Friday and the holidays.
 
 ## Tracking has not updated in days
 

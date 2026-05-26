@@ -5,7 +5,9 @@ section: orders
 section_title: Orders & Support
 summary: "How long shipping takes, by region and carrier."
 order: 5
+segment: ["gift-buyer", "international"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🚚
 ---
 

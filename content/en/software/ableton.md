@@ -4,7 +4,9 @@ slug: ableton
 section: software
 summary: "Set up a Playtronica device as a MIDI input in Ableton Live."
 order: 3
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🎛️
 ---
 

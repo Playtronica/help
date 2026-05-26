@@ -4,7 +4,9 @@ slug: logic-garageband
 section: software
 summary: "Use Playtronica devices with Logic Pro and GarageBand."
 order: 4
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🎵
 ---
 

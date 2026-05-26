@@ -4,7 +4,9 @@ slug: creative-installations
 section: professionals
 summary: "Art installations, exhibitions, and performance pieces."
 order: 3
+segment: ["b2b", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🎨
 ---
 

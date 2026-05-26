@@ -4,7 +4,9 @@ slug: touchme
 section: devices
 summary: "A small instrument that turns touch into music. Play alone, with a friend, or on water and flowers."
 order: 1
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 👐
 ---
 
@@ -92,6 +94,11 @@ Steps:
 3. **If TouchMe does not appear in the device list**, close Brave or Chrome completely. Wait 5 seconds. Reopen the browser, reload MorningStar, and click the "Devices" button in the top right.
 4. **If the device is listed but no messages appear**, open Settings in MorningStar and confirm "Note On" is enabled. TouchMe sends only Note On and Note Off.
 5. **If still no messages, try another computer.** If no messages appear on any computer with any cable, the device is likely faulty. [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Defective #[order number]`.
+
+## Related pages
+
+- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box, software compatibility, prices.
+- [Accessories and add-ons](/getting-started/accessories/) — cables, adapters, patches, copper tape, and bundles.
 
 ## Ask the community
 

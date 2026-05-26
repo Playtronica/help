@@ -4,7 +4,9 @@ slug: touchme-advanced
 section: devices
 summary: "MIDI mapping, custom scales, hardware tuning, and performance tips."
 order: 11
+segment: ["music-producer", "b2b"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 👐
 parent: touchme
 hide_from_nav: true

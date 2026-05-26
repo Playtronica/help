@@ -4,15 +4,15 @@ slug: orbita
 section: devices
 summary: "Orbita is a rotating MIDI sequencer with coloured magnets and four tracks."
 order: 5
+segment: ["music-producer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🌀
 ---
 
 > ⚠️ **Orbita does not produce sound on its own.** Orbita is a MIDI sequencer. It sends MIDI signals to a sound source — a synth, a DAW, or a music app. Without a sound source you will not hear anything.
 
 > 🛠️ **Want to go deeper?** See the [Orbita deep dive](/devices/orbita-advanced/) for note-mapping JSON, encoder and button MIDI CC, sync, and firmware tricks.
-
-<img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/1c0b6a18-c429-4d7b-a503-b11d0de0bd9f/untitled/w=1920,quality=90,fit=scale-down" alt="Orbita rotating MIDI sequencer — top view of the round device with coloured magnets on its tracks" style="width:100%;border-radius:10px;margin:16px 0;display:block">
 
 Each colour magnet triggers a different MIDI note as the disc spins. Place and move the magnets on the four tracks to build rhythms and melodies you can see, touch, and hear — once connected to your sound source.
 
@@ -58,7 +58,7 @@ You can turn the motor on and off, and change its speed. Both controls can be op
 
 ## Web settings page
 
-Open [synth.playtronica.com/settings](https://synth.playtronica.com/settings) in Brave or Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets. (The older [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) page also works and exposes the same options.)
+Open [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Brave or Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets. (The older [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) configurator still works as a fallback.)
 
 <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/5a4c994a-0425-4372-a849-5728aa91c32d/image/w=1920,quality=90,fit=scale-down" alt="Orbita web settings page — colour-to-note mapping and per-track parameters" style="width:100%;border-radius:10px;margin:16px 0;display:block">
 
@@ -120,6 +120,11 @@ Orbita may have switched to MIDI CC mode by accident.
 ## Handling and care
 
 > ⚠️ **Handle only the parts shown in this guide.** Touch the orbit ring, the central encoder, the side buttons, and the USB-C connector. Do not touch the underside of the PCB, the solder joints, or the exposed chips — even when the device is unplugged. The board is durable, but those areas can be damaged permanently. Treat the rest of the device the way you would treat the back of a phone screen.
+
+## Related pages
+
+- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, software compatibility, prices, bundles.
+- [Accessories and add-ons](/getting-started/accessories/) — cables, the Playtronica scarf, the Orbita+Scarf bundle.
 
 ## Ask the community
 

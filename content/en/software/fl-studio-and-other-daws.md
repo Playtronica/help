@@ -4,7 +4,9 @@ slug: fl-studio-and-other-daws
 section: software
 summary: "Setup steps for FL Studio, Reaper, Cubase, Studio One, Bitwig, and Reason."
 order: 5
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🖥️
 ---
 

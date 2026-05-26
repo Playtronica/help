@@ -6,7 +6,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Dat
 
 ## [Unreleased]
 
-### Added
+### Added — self-improving system layer
+- **`scripts/audit-help-system.py`** — reproducible 5-method system audit (GAP / Bottlenecks / Staleness / SO Patterns / Leverage Points). Outputs JSON or human-readable text. Runs in CI as an informational check, and from the monthly Cowork scheduled task.
+- **`scripts/check-internal-consistency.py`** — blocking CI gate. Catches non-canonical service URLs, SLA-phrase drift in "Still stuck" footers, hard-coded calendar dates, broken internal links, and stale `status:` markers.
+- **`scripts/rebuild-hypothesis-log.py`** + **`content/_data/hypotheses.json`** — every help-center page registered as a hypothesis with a `next_check_in` 90 days out. Failed hypotheses are the system's most valuable output.
+- **`scripts/classify-feedback.py`** — takes a WhatsApp export or email digest, classifies each message via Claude API into `broken-link / missing-topic / unclear-writing / wrong-device / bug-report / question-not-feedback / praise / off-topic`, outputs ranked top-5 actionable categories. Closes the P5.1 Antifragility loop for the help center.
+- **`scripts/check-deflection-vs-tickets.py`** — compares `deflection_target` from frontmatter with real Freshdesk ticket volume, labels each page GREEN / YELLOW / RED / UNKNOWN.
+- **`docs/SELF-IMPROVING-SYSTEM.md`** — master architecture doc for the four loops.
+- **`docs/HYPOTHESIS-LOG.md`** — how the 90-day review of each page works.
+- **Cowork monthly scheduled task** `help-center-system-audit` runs the audit on the 1st of each month, generates a fresh HTML report, surfaces P0 items in chat.
+
+### Added — content
 - **Devices comparison page** at `/devices/compare/` — side-by-side spec matrix, in-the-box comparison, software compatibility, decision tree, prices, and bundles. Pulled from live Shopify catalog data so prices and SKUs are real.
 - **Accessories page rewrite** at `/getting-started/accessories/` — full catalog of cables, adapters, conductive materials, patches, clips, cases, wearables, bundles, and the IO-Lights third-party device. Each item is described by purpose and pairing, not just listed.
 - **Selection-aware WhatsApp button** — when the reader highlights text on a page, the floating feedback button changes from "What's missing?" to "📍 Send selection" and becomes a direct `<a href>` to the wa.me deeplink carrying the highlighted text. Solves the iOS-Safari tap-on-tooltip-over-selection bug where the first tap was eaten by the OS selection-dismiss.

@@ -4,7 +4,9 @@ slug: online-synths
 section: software
 summary: "The web synths that work with TouchMe, Playtron, and Biotron."
 order: 1
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🎹
 ---
 

@@ -4,7 +4,9 @@ slug: grounding
 section: sound
 summary: "Why Playtron needs you to be grounded, and four ways to ground yourself. A short physics explanation for anyone curious."
 order: 1
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 💡
 ---
 

@@ -4,7 +4,9 @@ slug: biotron-advanced
 section: devices
 summary: "Deep MIDI mapping for Biotron — CC, SysEx, per-channel routing."
 order: 4
+segment: ["music-producer", "b2b"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🧬
 parent: biotron
 hide_from_nav: true
@@ -118,4 +120,4 @@ Create several configurations for different contexts — "Calm Ambient", "High E
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Biotron Advanced #[order number]`. For firmware-level questions, the source is open on GitHub: [Playtronica/biotron-firmware](https://github.com/Playtronica/biotron-firmware).
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Biotron Advanced #[order number]`. For firmware-level questions, the source is open on GitHub: [Playtronica/biotron-firmware](https://github.com/Playtronica/biotron-firmware). We aim for 24 hours, but a reply may take up to 3 business days.

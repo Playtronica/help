@@ -4,7 +4,9 @@ slug: b2b-bulk
 section: professionals
 summary: "Bulk pricing and formal quotes for schools, museums, studios, festivals, and corporate buyers."
 order: 1
+segment: ["b2b"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🏢
 ---
 

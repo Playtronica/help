@@ -38,6 +38,12 @@ jobs:
       - name: Cross-reference audit
         run: npm run audit
 
+      - name: Internal consistency check
+        run: python3 scripts/check-internal-consistency.py
+
+      - name: System audit (informational)
+        run: python3 scripts/audit-help-system.py --human
+
       - name: User-journey simulator
         run: |
           node scripts/build-search-index.mjs

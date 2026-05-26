@@ -4,7 +4,9 @@ slug: biotron
 section: devices
 summary: "Clip the leaf-pads to a houseplant and let it play itself."
 order: 3
+segment: ["music-producer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🌿
 ---
 
@@ -178,6 +180,11 @@ Try these steps in order:
 4. If the device still does not appear, do a firmware reset: short the BOOT pins, plug in USB-C, release the pins. The device appears as `RPI-RP2`. Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) and reflash the firmware. See [Firmware reset (Nuke)](/troubleshooting/firmware-reset/).
 
 </details>
+
+## Related pages
+
+- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box (note: Biotron ships without a cable), software compatibility, prices.
+- [Accessories and add-ons](/getting-started/accessories/) — USB-C cables, patches, conductive materials.
 
 ## Ask the community
 

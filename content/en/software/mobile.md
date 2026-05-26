@@ -4,7 +4,9 @@ slug: mobile
 section: software
 summary: "iOS and Android apps that work with Playtronica devices."
 order: 6
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 📱
 ---
 

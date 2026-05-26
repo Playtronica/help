@@ -4,7 +4,9 @@ slug: connecting
 section: software
 summary: "Plug a Playtronica device into a Mac, Windows PC, iPhone, iPad, or Android phone."
 order: 2
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 💻
 ---
 

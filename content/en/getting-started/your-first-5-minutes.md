@@ -4,13 +4,15 @@ slug: your-first-5-minutes
 section: getting-started
 summary: "From box to first sound, in five minutes."
 order: 2
+segment: ["gift-recipient", "music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🔌
 ---
 
 Pick your device below. The instructions below take five minutes or less.
 
-If you do not know which device you have, see [Which Playtronica do I have?](/getting-started/which-device/).
+If you do not know which device you have, see [Which Playtronica do I have?](/getting-started/which-device/). If you are choosing between devices, see the [comparison page](/devices/compare/).
 
 ## 👐 TouchMe
 

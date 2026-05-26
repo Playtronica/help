@@ -4,7 +4,9 @@ slug: compare
 section: devices
 summary: "Side-by-side comparison of TouchMe, Playtron, Biotron, Orbita, and Scales — what each one senses, what is in the box, what software it talks to, and how to pick."
 order: 0
+segment: ["gift-buyer", "music-producer", "b2b"]
 status: new-2026-05
+last_edited: 2026-05-26
 emoji: 📊
 ---
 
@@ -59,7 +61,7 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 | **Needs grounding?** | No | Yes — gold ground pin | No | No | No |
 | **Needs a sound source?** | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW |
 | **Form factor** | Credit-card-sized PCB with gold pads | Long PCB, 16 pin row + ground | Black PCB, 2 probe sockets, light sensor | Round disc with central encoder | Flat plate with buttons and LEDs |
-| **Web settings page** | No | No | No | [synth.playtronica.com/settings](https://synth.playtronica.com/settings) | No |
+| **Web settings page** | [touchme](https://settings.playtronica.com/#/touchme) | [playtron](https://settings.playtronica.com/#/playtron) | [biotron](https://settings.playtronica.com/#/biotron) | [orbita](https://settings.playtronica.com/#/orbita) | No |
 | **Firmware updatable** | Yes (BOOT pin + .uf2) | Yes | Yes | Yes | Yes |
 | **Price (from)** | €92.93 | €101.64 | €110.00 | €494.76 | TBA — coming soon |
 | **Deep dive** | [Open](/devices/touchme-advanced/) | [Open](/devices/playtron-advanced/) | [Open](/devices/biotron-advanced/) | [Open](/devices/orbita-advanced/) | [Open](/devices/scales/) |

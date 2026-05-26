@@ -4,7 +4,9 @@ slug: firmware-reset
 section: troubleshooting
 summary: "Wipe and reinstall the firmware when the device is unresponsive."
 order: 5
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: ⚡
 ---
 

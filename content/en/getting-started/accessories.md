@@ -4,7 +4,9 @@ slug: accessories
 section: getting-started
 summary: "Every non-device product Playtronica makes — what each one is for, when you need it, and which device it pairs with."
 order: 5
+segment: ["music-producer", "gift-buyer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🧰
 ---
 

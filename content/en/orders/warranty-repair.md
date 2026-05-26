@@ -5,7 +5,9 @@ section: orders
 section_title: Orders & Support
 summary: "1-year warranty, the repair flow, and what is covered."
 order: 6
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🛠️
 ---
 

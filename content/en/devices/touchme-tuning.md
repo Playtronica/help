@@ -4,7 +4,9 @@ slug: touchme-tuning
 section: devices
 summary: "Pick a scale, pick a key, save it to the device. Settings sync over the browser."
 order: 14
+segment: ["music-producer"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🎼
 parent: touchme
 hide_from_nav: true
@@ -68,4 +70,4 @@ For deep-dive options like CC routing and performance setups, see [TouchMe deep 
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `TouchMe tuning` and a screenshot of the settings page.
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `TouchMe tuning` and a screenshot of the settings page. We aim for 24 hours, but a reply may take up to 3 business days.

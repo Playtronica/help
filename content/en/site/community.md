@@ -4,7 +4,9 @@ slug: community
 section: site
 summary: "Where to find other Playtronica makers — and where to ask for help first."
 order: 2
+segment: ["music-producer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🤝
 ---
 
@@ -45,7 +47,7 @@ The community is great for many things but it cannot help with these. **Email [s
 
 For business and bulk orders, use [collaboration@playtronica.com](mailto:collaboration@playtronica.com).
 
-The Playtronica team aims to reply to email within 1 business day. Allow up to 3 business days at busy times.
+We aim for 24 hours, but a reply may take up to 3 business days.
 
 ## How the community works
 

@@ -4,7 +4,9 @@ slug: objects-you-can-play
 section: sound
 summary: "Anything that conducts a little electricity. Each device favours different objects. Plus the world of conductive materials you can buy."
 order: 2
+segment: ["music-producer", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🍊
 ---
 
@@ -145,4 +147,4 @@ If you hear notes, the mystery object is conducting. If you hear silence, the ob
 
 ## Still stuck
 
-For specific creative builds — sculptures, custom instruments, choreographed setups — [email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with the subject `Creative build question`. We have helped many people choose the right materials.
+For specific creative builds — sculptures, custom instruments, choreographed setups — [email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with the subject `Creative build question`. We have helped many people choose the right materials. We aim for 24 hours, but a reply may take up to 3 business days.

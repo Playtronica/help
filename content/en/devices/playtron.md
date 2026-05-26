@@ -4,7 +4,9 @@ slug: playtron
 section: devices
 summary: "Clip the wires, ground yourself, touch anything that conducts."
 order: 2
+segment: ["music-producer", "gift-recipient", "creator"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🍉
 ---
 
@@ -89,6 +91,11 @@ Use the reset only if the firmware update will not start, or after a hardware fa
 3. **Wait for the `RPI-RP2` drive to appear on your computer, then release the pins.** The window is brief. If the drive does not appear, try again.
 4. **Drag `flash_nuke.uf2` onto the `RPI-RP2` drive.** Wait for the device to reboot.
 5. **Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) and upload the latest firmware.**
+
+## Related pages
+
+- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box, software compatibility, prices.
+- [Accessories and add-ons](/getting-started/accessories/) — extra alligator clips, copper tape, patches, cables, bundles.
 
 ## Ask the community
 

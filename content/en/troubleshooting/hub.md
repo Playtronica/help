@@ -4,7 +4,9 @@ slug: hub
 section: troubleshooting
 summary: "Something is not working. Start here."
 order: 1
+segment: ["music-producer", "gift-recipient"]
 status: edited-2026-05
+last_edited: 2026-05-26
 emoji: 🔧
 ---
 
