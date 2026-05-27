@@ -9,7 +9,6 @@ order: 4
 status: new-2026-05
 last_edited: 2026-05-27
 emoji: 🌀
-hide_from_nav: true
 ---
 
 > **Grade Band:** 6-8 · **Duration:** 60 min · **Device:** Orbita · **Standards:** NCAS MU:Cr1.1.7a + MU:Cr2.1.7b, UK MMC KS3, ISTE 1.4

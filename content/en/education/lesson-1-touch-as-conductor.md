@@ -9,7 +9,6 @@ order: 1
 status: new-2026-05
 last_edited: 2026-05-27
 emoji: 👐
-hide_from_nav: true
 ---
 
 > **Grade Band:** K-2 · **Duration:** 30 min · **Device:** TouchMe · **Standards:** NCAS MU:Cn10.1.Ka, UK MMC KS1, ISTE 1.4

@@ -9,7 +9,6 @@ order: 2
 status: new-2026-05
 last_edited: 2026-05-27
 emoji: 🍉
-hide_from_nav: true
 ---
 
 > **Grade Band:** 3-5 · **Duration:** 45 min · **Device:** Playtron · **Standards:** NCAS MU:Cr2.1.4a, UK MMC KS2, NGSS 4-PS3-2

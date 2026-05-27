@@ -9,7 +9,6 @@ order: 5
 status: new-2026-05
 last_edited: 2026-05-27
 emoji: 🤲
-hide_from_nav: true
 ---
 
 > **Grade Band:** 6-12 · **Duration:** 45 min · **Devices:** TouchMe + skin patches · **Standards:** NCAS MU:Cn11.1.8a, UK MMC KS3-4, ISTE 1.5

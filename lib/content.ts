@@ -186,8 +186,9 @@ export const SECTION_TITLES: Record<string, { title: string; emoji?: string; ord
   troubleshooting: { title: "Not Working?", emoji: "🔧", order: 4 },
   orders: { title: "Orders & Support", emoji: "📦", order: 5 },
   professionals: { title: "For Professionals", emoji: "🎨", order: 6 },
-  sound: { title: "Sound & Materials", emoji: "🌿", order: 7 },
-  site: { title: "Contact & Info", emoji: "💬", order: 8 },
+  education: { title: "For Educators", emoji: "🎓", order: 7 },
+  sound: { title: "Sound & Materials", emoji: "🌿", order: 8 },
+  site: { title: "Contact & Info", emoji: "💬", order: 9 },
 };
 
 export function groupedNav(lang: Lang = DEFAULT_LANG): SectionGroup[] {
