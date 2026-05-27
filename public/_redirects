@@ -74,7 +74,11 @@
 /b2b                            /professionals/b2b-bulk/                301
 /b2b-bulk                       /professionals/b2b-bulk/                301
 /bulk                           /professionals/b2b-bulk/                301
-/education                      /professionals/education/               301
+# /education was historically a redirect to /professionals/education/.
+# Removed 2026-05-27 — /education/ is now the dedicated education-platform
+# landing (app/education/page.tsx). The Super.so legacy URL is preserved
+# under /schools instead, plus we keep the /professionals/education/
+# section page intact for the in-help-center context.
 /schools                        /professionals/education/               301
 /installations                  /professionals/creative-installations/  301
 /creative-installations         /professionals/creative-installations/  301
