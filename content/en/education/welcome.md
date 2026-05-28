@@ -17,6 +17,7 @@ The full experience for music teachers, STEAM coordinators, school IT, and procu
 
 ## Quick links
 
+- **[Music Technology in K-12 Classrooms — The Complete Guide](/education/guide-music-technology-k12-classrooms/)** — 28-min comprehensive guide. Lesson design, standards, equipment, classroom management, procurement, accessibility. **Start here if you're new to music tech.**
 - **[Program landing](/education/)** — hero, pricing, pilot CTA, FAQ, contact.
 - **[Pricing tiers](/education/#pricing)** — €390 Single Teacher / €1,380 Class Pack 10 / €3,690 Class Pack 30 / €15K+ District.
 - **[Free pilot program](/education/pilot/)** — 5 schools, free Class Pack 10, Fall 2026 cohort, applications close 31 August.

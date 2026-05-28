@@ -2,10 +2,33 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Playtronica for Education — Music tech for K-12 classrooms",
+  title:
+    "Music technology for K-12, conservatories + museums — Playtronica for Education",
   description:
-    "Music tech your students can use in five minutes — and that works on the Chromebooks your district already bought. Standards-aligned curriculum, classroom bundles, and a free pilot program.",
+    "Standards-aligned music technology for K-12 classrooms, conservatories, museums, and special-ed programs. NCAS / UK MMC / NGSS / ISTE-aligned lessons, classroom bundles from €390, free Lesson 1 PDF download.",
   robots: { index: true, follow: true },
+  keywords: [
+    "music technology lesson plans",
+    "K-12 music tech",
+    "classroom music technology",
+    "STEAM music curriculum",
+    "NCAS-aligned music lessons",
+    "music tech for schools",
+    "alternative to Makey Makey",
+    "music tech for Chromebooks",
+    "sensory room music equipment",
+    "conservatory MIDI hardware",
+    "interactive music exhibit",
+    "music for autism classroom",
+  ],
+  openGraph: {
+    title: "Playtronica for Education — Standards-aligned music tech for K-12",
+    description:
+      "Music tech your students can use in five minutes. NCAS / UK MMC / NGSS / ISTE-aligned. Used by Lincoln Center, Stanford d.school, Berklee, Hochschule Trossingen.",
+    url: "https://education.playtronica.com/",
+    type: "website",
+  },
+  alternates: { canonical: "https://education.playtronica.com/" },
 };
 
 const PRICING = [
@@ -147,9 +170,88 @@ const FAQ = [
   },
 ];
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://help.playtronica.com";
+
+function buildSchemaJsonLd() {
+  const pageUrl = `${SITE_URL}/education/`;
+
+  const educationalOrgLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": `${pageUrl}#org`,
+    name: "Playtronica for Education",
+    description:
+      "Music technology for K-12 classrooms, conservatories, museums, and special-education programs. Standards-aligned curriculum with hands-on hardware kits.",
+    url: pageUrl,
+    sameAs: ["https://playtronica.com", "https://github.com/Playtronica"],
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Playtronica",
+      url: "https://playtronica.com",
+    },
+  };
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: FAQ.map((it) => ({
+      "@type": "Question",
+      name: it.q,
+      acceptedAnswer: { "@type": "Answer", text: it.a },
+    })),
+  };
+
+  // Single ItemList that wraps all pricing tiers as Offer objects. Cleanest
+  // shape Google can parse without ambiguity. Each price-tier Offer has a
+  // category and itemOffered set to a generic Product (the bundle).
+  const offerCatalogLd = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": `${pageUrl}#pricing`,
+    name: "Playtronica Education — Classroom bundles",
+    url: `${pageUrl}#pricing`,
+    itemListElement: PRICING.map((tier) => {
+      const numericPrice = tier.price.replace(/[^0-9]/g, "");
+      return {
+        "@type": "Offer",
+        name: tier.name,
+        description: tier.students,
+        category: "Educational classroom bundle",
+        priceCurrency: "EUR",
+        ...(numericPrice && { price: numericPrice }),
+        availability: "https://schema.org/InStock",
+        url: `${SITE_URL}${tier.href}`,
+        itemOffered: {
+          "@type": "Product",
+          name: `Playtronica — ${tier.name}`,
+          description: tier.contents.join("; "),
+          brand: { "@type": "Brand", name: "Playtronica" },
+        },
+      };
+    }),
+  };
+
+  return { educationalOrgLd, faqLd, offerCatalogLd };
+}
+
 export default function EducationLanding() {
+  const { educationalOrgLd, faqLd, offerCatalogLd } = buildSchemaJsonLd();
   return (
     <article className="-mx-4 -mt-6 md:-mx-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogLd) }}
+      />
       {/* ──── Hero ──── */}
       <section className="border-b-[1.5px] border-rule bg-bg px-4 py-10 md:px-0 md:py-16">
         <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-soft">

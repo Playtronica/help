@@ -10,6 +10,14 @@ status: new-2026-05
 last_edited: 2026-05-27
 hide_from_nav: true
 emoji: 🌿
+grade_band: "3-8"
+duration_min: 60
+device: "Biotron"
+standards:
+  - "NCAS MU:Re7.1.5a"
+  - "NGSS 4-LS1-1"
+  - "NGSS MS-LS1-3"
+  - "ISTE 1.5"
 ---
 
 > **Grade Band:** 3-8 · **Duration:** 60 min · **Device:** Biotron · **Standards:** NCAS MU:Re7.1.5a, NGSS 4-LS1-1, NGSS MS-LS1-3, ISTE 1.5

@@ -36,6 +36,15 @@ export type Frontmatter = {
   source_sha?: string;
   translated_at?: string;
   mt?: boolean;
+  /** Education-specific fields (lesson pages). Used to emit Course + HowTo JSON-LD. */
+  grade_band?: string;
+  duration_min?: number;
+  device?: string;
+  standards?: string[];
+  /** Case-study fields. Used to emit Review JSON-LD. */
+  case_study_subject?: string;
+  case_study_location?: string;
+  case_study_sector?: string;
 };
 
 export type Page = Frontmatter & {

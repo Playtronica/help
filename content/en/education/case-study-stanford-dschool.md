@@ -10,6 +10,9 @@ status: new-2026-05
 last_edited: 2026-05-27
 hide_from_nav: true
 emoji: 🎓
+case_study_subject: "Hasso Plattner Institute of Design at Stanford"
+case_study_location: "Palo Alto, CA, USA"
+case_study_sector: "Higher education + design-thinking"
 ---
 
 > **At a glance.** Institution: Hasso Plattner Institute of Design at Stanford ("the d.school"), Palo Alto, CA. Sector: higher education, design thinking + interdisciplinary maker programs. Devices: full mixed kit — TouchMe, Playtron, Biotron, Orbita, plus accessories. Single order, €1,802.

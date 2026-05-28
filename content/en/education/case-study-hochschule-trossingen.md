@@ -10,6 +10,9 @@ status: new-2026-05
 last_edited: 2026-05-27
 hide_from_nav: true
 emoji: 🎻
+case_study_subject: "Hochschule für Musik Trossingen"
+case_study_location: "Trossingen, Baden-Württemberg, Germany"
+case_study_sector: "Conservatory + music-technology research"
 ---
 
 > **At a glance.** Institution: Hochschule für Musik Trossingen, Baden-Württemberg, Germany. Sector: conservatory + music-technology research. Devices: TouchMe, Playtron, Biotron and accessories across two orders. Total: €1,580. Lecturer + research-lab use. Procurement-led ordering through dedicated MIDI research support account.

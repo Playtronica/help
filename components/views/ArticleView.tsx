@@ -52,6 +52,101 @@ function buildFaqJsonLd(html: string, pageUrl: string) {
   };
 }
 
+/** Course schema for education lesson pages. Triggers Google Courses rich results. */
+function buildCourseJsonLd(p: Page, pageUrl: string) {
+  if (!p.grade_band || !p.duration_min || !p.device) return null;
+  const isoDuration = `PT${p.duration_min}M`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": `${pageUrl}#course`,
+    name: p.title,
+    description: p.summary || "",
+    url: pageUrl,
+    inLanguage: "en",
+    provider: {
+      "@type": "Organization",
+      name: "Playtronica",
+      sameAs: "https://playtronica.com",
+    },
+    educationalLevel: p.grade_band,
+    teaches: p.standards || [],
+    timeRequired: isoDuration,
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "teacher",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "Onsite",
+      courseWorkload: isoDuration,
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+      url: pageUrl,
+      category: "Free lesson plan",
+    },
+    license: "https://creativecommons.org/licenses/by/4.0/",
+  };
+}
+
+/** HowTo schema for education lesson pages — Google sometimes surfaces step-rich results. */
+function buildHowToJsonLd(p: Page, pageUrl: string) {
+  if (!p.grade_band || !p.duration_min) return null;
+  // Extract H2/H3 step-like headings from rendered HTML.
+  const headingRe = /<(h2|h3)[^>]*>([\s\S]*?)<\/(h2|h3)>/g;
+  const steps: string[] = [];
+  for (const m of p.html.matchAll(headingRe)) {
+    const text = m[2].replace(/<[^>]+>/g, "").trim();
+    // Skip non-step headings.
+    if (/^(related|footnotes|sources|further reading|standards)$/i.test(text)) continue;
+    steps.push(text);
+  }
+  if (steps.length < 2) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${pageUrl}#howto`,
+    name: p.title,
+    description: p.summary || "",
+    totalTime: `PT${p.duration_min}M`,
+    tool: p.device ? [{ "@type": "HowToTool", name: p.device }] : undefined,
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s,
+    })),
+  };
+}
+
+/** Review schema for case-study pages. */
+function buildReviewJsonLd(p: Page, pageUrl: string) {
+  if (!p.case_study_subject) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "@id": `${pageUrl}#review`,
+    itemReviewed: {
+      "@type": "Product",
+      name: "Playtronica for Education",
+      brand: { "@type": "Brand", name: "Playtronica" },
+      url: `${SITE_URL}/education/`,
+    },
+    author: {
+      "@type": "Organization",
+      name: p.case_study_subject,
+      ...(p.case_study_location && {
+        location: { "@type": "Place", name: p.case_study_location },
+      }),
+    },
+    reviewBody: p.summary || "",
+    url: pageUrl,
+  };
+}
+
 export function ArticleView({
   lang,
   section,
@@ -68,6 +163,9 @@ export function ArticleView({
   const pageUrl = `${SITE_URL}${lp(`/${p.section}/${p.slug}/`)}`;
   const articleLd = buildArticleJsonLd(p, lang);
   const faqLd = buildFaqJsonLd(p.html, pageUrl);
+  const courseLd = buildCourseJsonLd(p, pageUrl);
+  const howToLd = buildHowToJsonLd(p, pageUrl);
+  const reviewLd = buildReviewJsonLd(p, pageUrl);
 
   return (
     <article data-pagefind-body>
@@ -79,6 +177,24 @@ export function ArticleView({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
+      {courseLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseLd) }}
+        />
+      )}
+      {howToLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }}
+        />
+      )}
+      {reviewLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewLd) }}
         />
       )}
 

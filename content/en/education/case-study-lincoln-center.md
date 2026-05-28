@@ -10,6 +10,9 @@ status: new-2026-05
 last_edited: 2026-05-27
 hide_from_nav: true
 emoji: 🏛️
+case_study_subject: "Lincoln Center for the Performing Arts"
+case_study_location: "New York, NY, USA"
+case_study_sector: "Cultural institution + K-12 arts education"
 ---
 
 > **At a glance.** Institution: Lincoln Center for the Performing Arts, New York. Sector: cultural institution + K-12 arts-education partnerships. Started with Playtronica: 2023. Devices owned: TouchMe, Playtron, Biotron + accessories across three purchases. Used in: classroom programs, family days, and performing-artist workshops.
