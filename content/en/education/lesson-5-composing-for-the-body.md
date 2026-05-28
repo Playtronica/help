@@ -8,6 +8,7 @@ deflection_target: 0
 order: 5
 status: new-2026-05
 last_edited: 2026-05-27
+hide_from_nav: true
 emoji: 🤲
 ---
 

@@ -21,7 +21,7 @@ These are **warm leads**, not cold. Each person on this list already paid us mon
 - `[LAST_ORDER_DESCRIPTION]` — one-line summary of their last order
 - `[OUR_REPLY_TIME]` = "within one business day"
 
-Send-from: `collaboration@playtronica.com` (Andrey).
+Send-from: `manirko@playtronica.com` (Andrey).
 Reply-to: same.
 
 ---
@@ -446,7 +446,7 @@ Applications close 31 August 2026. 15-minute Zoom to see if this fits your fall 
 
 — Andrey
 Playtronica founder
-collaboration@playtronica.com
+manirko@playtronica.com
 
 ### B — EU university / conservatory
 

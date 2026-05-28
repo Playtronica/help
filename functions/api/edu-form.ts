@@ -30,7 +30,7 @@ interface Env {
   NOTIFY_TO?: string;
 }
 
-const NOTIFY_DEFAULT = "collaboration@playtronica.com";
+const NOTIFY_DEFAULT = "manirko@playtronica.com";
 const NOTIFY_FROM = "Playtronica Education <noreply@playtronica.com>";
 
 const SUBJECT_PREFIX: Record<FormType, string> = {
@@ -129,7 +129,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     );
   } catch (e) {
     console.error("[edu-form] handler error:", e);
-    return new Response("Submission failed. Please email collaboration@playtronica.com directly.", {
+    return new Response("Submission failed. Please email manirko@playtronica.com directly.", {
       status: 500,
     });
   }

@@ -179,14 +179,18 @@ export type SectionGroup = {
   pages: Page[];
 };
 
-export const SECTION_TITLES: Record<string, { title: string; emoji?: string; order: number }> = {
+export const SECTION_TITLES: Record<
+  string,
+  { title: string; emoji?: string; order: number; mergeInto?: string }
+> = {
   "getting-started": { title: "Getting Started", emoji: "🚀", order: 1 },
   devices: { title: "Your Device", emoji: "🎛️", order: 2 },
   software: { title: "Sound & Software", emoji: "🎵", order: 3 },
   troubleshooting: { title: "Not Working?", emoji: "🔧", order: 4 },
   orders: { title: "Orders & Support", emoji: "📦", order: 5 },
-  professionals: { title: "For Professionals", emoji: "🎨", order: 6 },
-  education: { title: "For Educators", emoji: "🎓", order: 7 },
+  professionals: { title: "For Pros & Educators", emoji: "🎨", order: 6 },
+  // education merges into professionals for sidebar display; URLs stay /education/*
+  education: { title: "For Educators", emoji: "🎓", order: 7, mergeInto: "professionals" },
   sound: { title: "Sound & Materials", emoji: "🌿", order: 8 },
   site: { title: "Contact & Info", emoji: "💬", order: 9 },
 };
@@ -197,15 +201,18 @@ export function groupedNav(lang: Lang = DEFAULT_LANG): SectionGroup[] {
   for (const p of pages) {
     if (p.hide_from_nav) continue;
     const sec = SECTION_TITLES[p.section] || { title: p.section, order: 99 };
-    if (!groups[p.section]) {
-      groups[p.section] = {
-        section: p.section,
-        section_title: sec.title,
-        emoji: sec.emoji,
+    // If this section is configured to merge into another, route its pages there.
+    const displaySection = sec.mergeInto ?? p.section;
+    const displaySec = SECTION_TITLES[displaySection] || sec;
+    if (!groups[displaySection]) {
+      groups[displaySection] = {
+        section: displaySection,
+        section_title: displaySec.title,
+        emoji: displaySec.emoji,
         pages: [],
       };
     }
-    groups[p.section].pages.push(p);
+    groups[displaySection].pages.push(p);
   }
   return Object.values(groups).sort(
     (a, b) => (SECTION_TITLES[a.section]?.order ?? 99) - (SECTION_TITLES[b.section]?.order ?? 99),

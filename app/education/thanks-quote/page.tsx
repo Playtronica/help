@@ -53,10 +53,10 @@ export default function ThanksQuote() {
         <p className="mt-10 text-[12px] text-ink-soft">
           For anything urgent, write directly to{" "}
           <a
-            href="mailto:collaboration@playtronica.com"
+            href="mailto:manirko@playtronica.com"
             className="text-accent hover:underline"
           >
-            collaboration@playtronica.com
+            manirko@playtronica.com
           </a>
           .
         </p>

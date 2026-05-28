@@ -533,10 +533,10 @@ export default function EducationLanding() {
               <div>
                 <span className="font-mono text-[11px] uppercase text-ink-soft">Email</span>{" "}
                 <a
-                  href="mailto:collaboration@playtronica.com?subject=Education%20enquiry"
+                  href="mailto:manirko@playtronica.com?subject=Education%20enquiry"
                   className="text-accent hover:underline"
                 >
-                  collaboration@playtronica.com
+                  manirko@playtronica.com
                 </a>
               </div>
               <div>

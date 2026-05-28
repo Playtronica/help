@@ -134,14 +134,14 @@ None of these endpoints exist yet. They'll be Cloudflare Pages Functions at:
 - `functions/api/edu-quote.ts`
 - `functions/api/edu-lesson-download.ts`
 
-Each accepts POST, writes a Klaviyo profile (with `edu-segment` tag), notifies `collaboration@playtronica.com`, and (for the lesson download) returns a signed URL to the PDF.
+Each accepts POST, writes a Klaviyo profile (with `edu-segment` tag), notifies `manirko@playtronica.com`, and (for the lesson download) returns a signed URL to the PDF.
 
 Phase 1 task — for now the forms will submit and 404. The visible form is the value; the wiring is the Phase 1 follow-up. We can also use a stop-gap: Formspree / Tally as a free intermediary for the first 100 submissions.
 
 ## What's outside this doc
 
 - Domain DNS purchase / transfer — already handled, education.playtronica.com is part of the existing zone.
-- Email forwarding (collaboration@playtronica.com) — already routes correctly.
+- Email forwarding (manirko@playtronica.com) — already routes correctly.
 - Translation (DE / JP) — Phase 2, triggered after the translation pipeline runs cleanly.
 - Subscription / paywall — none at launch. Future C5-style if we add a curriculum subscription.
 

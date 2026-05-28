@@ -38,10 +38,10 @@ export default function ThanksDownload() {
           <li>
             If you teach this lesson and it works, drop us a note —{" "}
             <a
-              href="mailto:collaboration@playtronica.com?subject=I%20taught%20Lesson%201"
+              href="mailto:manirko@playtronica.com?subject=I%20taught%20Lesson%201"
               className="text-accent hover:underline"
             >
-              collaboration@playtronica.com
+              manirko@playtronica.com
             </a>
             . We collect classroom stories to help other teachers.
           </li>

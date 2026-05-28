@@ -44,6 +44,6 @@ Browse them below in the sidebar, or jump straight to one:
 
 ## Contact
 
-Andrey Manirko (founder) replies to every quote request and pilot application within 1 business day. Email **collaboration@playtronica.com** with the subject `Education — [your school]`.
+Andrey Manirko (founder) replies to every quote request and pilot application within 1 business day. Email **manirko@playtronica.com** with the subject `Education — [your school]`.
 
 Used by music programs at Lincoln Center for the Performing Arts, Stanford d.school, Berklee College of Music, Hochschule für Musik Trossingen, Centre Pompidou, Garage Museum, Filharmonia Opolska, Singapore Ministry of Education, and many others.

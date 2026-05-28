@@ -45,4 +45,4 @@ Schools and educational institutions qualify for volume pricing and a formal pur
 
 ## Still stuck
 
-[Email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with the subject `Education — [your school]` and tell us about your programme. We reply within 2 business days.
+[Email manirko@playtronica.com](mailto:manirko@playtronica.com) with the subject `Education — [your school]` and tell us about your programme. We reply within 2 business days.

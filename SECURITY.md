@@ -4,7 +4,7 @@
 
 If you find a security issue in this repository, please do NOT open a public GitHub issue.
 
-Instead, email **andrey@playtronica.com** with the subject line `Security — [short description]`.
+Instead, email **manirko@playtronica.com** with the subject line `Security — [short description]`.
 
 What to include:
 
