@@ -67,7 +67,7 @@ Higher-ed buyers should consider:
 
 1. **Skip the single-teacher tier** unless you're truly testing alone. The Class Pack 10 (€1,380) maps cleanly to a 12-18 student graduate seminar.
 2. **Mix devices.** The d.school deliberately bought across our entire line — TouchMe + Playtron + Biotron + Orbita — because their teaching ranges across many use cases. Most universities should do the same.
-3. **Request the procurement packet.** We send W-9, COI, DPA, safety certs, and warranty terms together — saves a back-and-forth with your finance office.
+3. **Request the procurement packet.** We send W-9, COI, DPA, and any other supporting documents together — saves a back-and-forth with your finance office.
 
 ## Related
 

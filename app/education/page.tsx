@@ -195,7 +195,6 @@ export default function EducationLanding() {
           <span>NGSS · Cross-curricular</span>
           <span>ISTE · 1.4 + 1.5</span>
           <span>UK Model Music Curriculum</span>
-          <span>FCC + UKCA · Compliant</span>
         </div>
       </section>
 
@@ -220,12 +219,12 @@ export default function EducationLanding() {
             <div className="text-2xl">🛠️</div>
             <h3 className="mt-2 font-mono text-[16px] font-bold uppercase tracking-tight">IT admin</h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
-              You configure devices. Class-compliant USB MIDI — no drivers, no app installs, no
-              network egress, no student-account creation, FERPA-friendly.
+              You configure devices. Plug-and-play USB — no drivers, no app installs, no network
+              egress, no student-account creation.
             </p>
             <p className="mt-3 text-[13px] text-ink">
               <strong>Read:</strong>{" "}
-              <Link href="/education/standards/" className="text-accent hover:underline">privacy + compliance</Link>
+              <Link href="/education/standards/" className="text-accent hover:underline">standards alignment</Link>
             </p>
           </div>
           <div className="border-[1.5px] border-rule bg-white p-6">
@@ -244,8 +243,8 @@ export default function EducationLanding() {
             <div className="text-2xl">📋</div>
             <h3 className="mt-2 font-mono text-[16px] font-bold uppercase tracking-tight">Procurement</h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
-              You process the order. We accept POs, issue VAT invoices, have W-9 + COI on file,
-              FCC + UKCA + CE certifications, 1-2 year institutional warranty.
+              You process the order. We accept POs, issue VAT invoices, and have W-9 + COI on file.
+              Procurement packet bundled on request within 1 business day.
             </p>
             <p className="mt-3 text-[13px] text-ink">
               <strong>Get:</strong>{" "}

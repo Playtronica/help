@@ -24,7 +24,7 @@ For an institution like Trossingen, a piece of music-tech hardware needs to clea
 2. **Repairable / supportable.** A conservatory plans equipment lifecycles in 5-10 year horizons. Devices that can't be re-flashed or maintained get rejected at procurement.
 3. **Standards-aligned to the broader European MIDI literature.** Trossingen lecturers cite Curtis Roads, Miller Puckette, Robert Henke. A device that doesn't play well with Max/MSP, Pd, SuperCollider, or Ableton fails.
 
-Playtronica clears all three. Devices are class-compliant USB MIDI — they show up as a MIDI device to any DAW or programming environment. Firmware is reflashable from the browser. And we ship to EU institutions with the 2-year extended warranty that German Verbraucherschutz law expects.
+Playtronica clears all three. Devices are class-compliant USB MIDI — they show up as a MIDI device to any DAW or programming environment. Firmware is reflashable from the browser. EU institutional orders are invoiced in German on request.
 
 ## What they ordered
 
@@ -49,7 +49,7 @@ Two patterns are clear from how Trossingen ordered:
 
 European music-tech research has specific procurement and pedagogical needs that US conservatories don't share:
 
-- **Verbraucherschutz-compliant warranty.** EU buyers expect 2-year warranty by default. We provide it for institutional orders.
+
 - **Invoice + DPA / AVV in German.** Available on request, signed within 1 business day.
 - **GEMA / IRCAM-tradition pedagogical credibility.** Devices need to fit a tradition of serious music-tech, not toy-maker culture. Playtronica's collaboration history with Centre Pompidou, Palais de Tokyo, and Sónar+D gives that credibility.
 
@@ -68,6 +68,6 @@ If you're a European conservatory or music-tech department:
 
 - **Lesson 4 — [Pattern, pulse, sequence](/education/lesson-4-pattern-pulse-orbita/)** — the composition / Orbita module that fits Trossingen's MIDI applied-research curriculum.
 - **Lesson 5 — [Composing for the body](/education/lesson-5-composing-for-the-body/)** — adaptive instrument design, fits accessibility / inclusive design modules.
-- **[Standards alignment](/education/standards/)** — full FCC + CE + UKCA + (Q3 2026) PSE certs + 2-year EU warranty terms.
-- **[Institutional quote](/education/quote/)** — EU procurement-friendly. Request VAT invoice, DPA / AVV, safety certs in one packet.
+- **[Standards alignment](/education/standards/)** — lesson-by-lesson NCAS / UK MMC / NGSS / ISTE mapping.
+- **[Institutional quote](/education/quote/)** — EU procurement-friendly. Request VAT invoice + DPA / AVV in one packet.
 - **[Devices comparison](/devices/compare/)** — pick the kit shape that matches your specific seminar (Trossingen ordered mixed; some conservatories prefer single-device-class-pack).

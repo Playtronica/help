@@ -20,8 +20,8 @@ The full experience for music teachers, STEAM coordinators, school IT, and procu
 - **[Program landing](/education/)** — hero, pricing, pilot CTA, FAQ, contact.
 - **[Pricing tiers](/education/#pricing)** — €390 Single Teacher / €1,380 Class Pack 10 / €3,690 Class Pack 30 / €15K+ District.
 - **[Free pilot program](/education/pilot/)** — 5 schools, free Class Pack 10, Fall 2026 cohort, applications close 31 August.
-- **[Institutional quote](/education/quote/)** — POs accepted, W-9 / DPA / safety certs included on request.
-- **[Standards alignment](/education/standards/)** — NCAS, UK MMC, NGSS, ISTE per lesson + FERPA / GDPR posture.
+- **[Institutional quote](/education/quote/)** — POs accepted, W-9 / DPA included on request.
+- **[Standards alignment](/education/standards/)** — NCAS, UK MMC, NGSS, ISTE per lesson.
 - **[Full curriculum library](/education/curriculum/)** — 15 lessons; 5 free, 10 in the Class Pack bundle.
 - **[Download free Lesson 1 PDF](/education/playtronica-lesson-1.pdf)** — ready-to-print K-2 lesson on touch and conductivity.
 
@@ -39,8 +39,8 @@ Browse them below in the sidebar, or jump straight to one:
 
 - **Music teachers** — five free lesson plans you can teach tomorrow, plus ten more in the bundle.
 - **STEAM coordinators and makerspace leads** — Playtronica's hardware crosses music + science + accessibility + design thinking. Standards-aligned to NCAS, NGSS, and ISTE.
-- **Principals and procurement** — open pricing, W-9 / COI / safety certs available, POs accepted, 1-2 year institutional warranty.
-- **IT admins** — class-compliant USB MIDI, no driver installs, no student accounts, FERPA-friendly architecture.
+- **Principals and procurement** — open pricing, W-9 / COI available on request, POs accepted.
+- **IT admins** — plug-and-play USB, no driver installs, no student accounts, no network egress.
 
 ## Contact
 

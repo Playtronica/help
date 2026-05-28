@@ -19,8 +19,7 @@ export default function ThanksQuote() {
         </h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
           Andrey reads each quote request personally. The reply will include a quote PDF and any
-          procurement documents you flagged (W-9, COI, DPA, safety certifications, warranty
-          terms).
+          procurement documents you flagged.
         </p>
         <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
           If your timeline is urgent, reply to the email when it arrives and we'll prioritise.
@@ -32,9 +31,9 @@ export default function ThanksQuote() {
         <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-ink">
           <li>
             <Link href="/education/standards/" className="text-accent hover:underline">
-              Review standards alignment + compliance
+              Review standards alignment
             </Link>{" "}
-            — useful to share with your IT or procurement lead.
+            — useful to share with your music department or curriculum lead.
           </li>
           <li>
             <Link href="/education/playtronica-lesson-1.pdf" className="text-accent hover:underline">

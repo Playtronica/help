@@ -460,7 +460,7 @@ We're opening a Fall 2026 pilot — free Class Pack 10 (€1,380 value, multi-de
 
 We just launched **education.playtronica.com** — full curriculum library, standards alignment (NCAS, UK MMC, ISTE), procurement-friendly docs (VAT invoice, DPA / AVV available).
 
-For EU institutions we ship with 2-year warranty and can issue invoices in German, French, Dutch.
+For EU institutions we can issue invoices in German, French, Dutch.
 
 15 minutes on Zoom?
 

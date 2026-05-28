@@ -215,13 +215,10 @@ export default function QuotePage() {
                 <input type="checkbox" name="needs_dpa" /> DPA / AVV (EU privacy)
               </label>
               <label className="flex items-center gap-2">
-                <input type="checkbox" name="needs_warranty_terms" /> Extended warranty terms
-              </label>
-              <label className="flex items-center gap-2">
-                <input type="checkbox" name="needs_safety_certs" /> Safety certs (FCC, CE, UKCA)
-              </label>
-              <label className="flex items-center gap-2">
                 <input type="checkbox" name="needs_w8ben" /> W-8BEN (we're outside the US)
+              </label>
+              <label className="flex items-center gap-2 md:col-span-2">
+                <input type="checkbox" name="needs_other" /> Other — tell us in the notes field below
               </label>
             </div>
           </label>
