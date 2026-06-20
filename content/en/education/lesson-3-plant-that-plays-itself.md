@@ -114,3 +114,7 @@ Close with the Essential Question: "If we measured a different thing — say, br
 - The plant takes about 90 seconds to calibrate when you first plug Biotron in — quiet during that time is normal, don't panic.
 - Bio-electric signals are not dangerous. Voltages are millivolts — far below anything you'd feel. Reassure anxious parents in advance with a one-paragraph note.
 - The plant doesn't get harmed by Biotron. Leaf-pads don't pierce the leaf. Reusable.
+
+---
+
+**→ [Lesson 4 — Pattern, Pulse, and Orbita](/education/lesson-4-pattern-pulse-orbita/)** · [Back to Education Hub](/education/)

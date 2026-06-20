@@ -105,3 +105,7 @@ Each group performs their melody for the class. After every performance, two stu
 - Citrus dries out quickly — wipe the pins after class. Sticky residue blocks future signals.
 - Battery-powered Bluetooth speakers help if you have an open-plan room. Group conflict over sound rises fast.
 - Common mistake: students hold the ground pin too lightly. Push for firm contact.
+
+---
+
+**→ [Lesson 3 — The Plant That Plays Itself](/education/lesson-3-plant-that-plays-itself/)** · [Back to Education Hub](/education/)

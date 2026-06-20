@@ -16,8 +16,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Dat
 - **`docs/HYPOTHESIS-LOG.md`** — how the 90-day review of each page works.
 - **Cowork monthly scheduled task** `help-center-system-audit` runs the audit on the 1st of each month, generates a fresh HTML report, surfaces P0 items in chat.
 
-### Added — content
-- **Devices comparison page** at `/devices/compare/` — side-by-side spec matrix, in-the-box comparison, software compatibility, decision tree, prices, and bundles. Pulled from live Shopify catalog data so prices and SKUs are real.
+### Added — content (2026-06-20)
+- **"Works great with Biotron" section** on `/devices/biotron/` — upsell block with patches, Orbita+Biotron Duo, USB-C data cable, and Starter Kit. Biotron is the #1 traffic page and ships without a cable; the section serves both as sales enablement and practical help.
+- **USB data-cable warning** at the top of `/software/connecting/` — most common reason a device isn't recognised. Also added `settings.playtronica.com` to Related pages.
+- **"Next Lesson" navigation** on education lessons 1–4 and "Back to Education Hub" on lesson 5 — lessons were dead ends with no onward path after finishing.
+
+### Added — content — side-by-side spec matrix, in-the-box comparison, software compatibility, decision tree, prices, and bundles. Pulled from live Shopify catalog data so prices and SKUs are real.
 - **Accessories page rewrite** at `/getting-started/accessories/` — full catalog of cables, adapters, conductive materials, patches, clips, cases, wearables, bundles, and the IO-Lights third-party device. Each item is described by purpose and pairing, not just listed.
 - **Selection-aware WhatsApp button** — when the reader highlights text on a page, the floating feedback button changes from "What's missing?" to "📍 Send selection" and becomes a direct `<a href>` to the wa.me deeplink carrying the highlighted text. Solves the iOS-Safari tap-on-tooltip-over-selection bug where the first tap was eaten by the OS selection-dismiss.
 - **Legacy URL preservation in `public/_redirects`** — extended from 23 to 70+ rules so every old Super.so help center path (e.g. `/orbita`, `/playtron-faq`, `/returns`, `/community`) 301s to its new sectioned URL. Protects Google rankings and any external links pointing to old paths.

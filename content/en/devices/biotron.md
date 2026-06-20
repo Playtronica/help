@@ -184,6 +184,15 @@ Try these steps in order:
 
 </details>
 
+## Works great with Biotron
+
+Biotron ships without a USB-C cable. Once you have it running, these extend what it can do.
+
+- **[Patches for skin and plants](https://shop.playtronica.com/products/patches-for-skin-and-plants)** — stick-on electrodes for leaves with waxy or narrow surfaces, or for running Biotron on skin instead of a plant. From €16.
+- **[Orbita + Biotron Duo](https://shop.playtronica.com/products/next-gen-playtronica-duo-orbita-biotron)** — Orbita's turntable drives the rhythm while Biotron's plant drives the melody. Designed to play together out of the box. €520.
+- **[USB-C to USB-A cable — 1 m](https://shop.playtronica.com/products/usb-c-cable-1m)** — the cable Playtronica devices are built for. Braided, data cable, not charge-only. €9.98.
+- **[Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit)** — Biotron + cable + accessories as a gift-ready bundle. €122.
+
 ## Related pages
 
 - [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box (note: Biotron ships without a cable), software compatibility, prices.

@@ -99,3 +99,7 @@ Whole-class: "Name one thing in this room — not on the table — that you thin
 - If a student is nervous about being touched as part of a chain, never force it — they can be the one who touches the fruit while another student is the chain.
 - TouchMe needs a USB *data* cable, not a charge-only cable. Test the cable, not just the device.
 - Latency on Chromebooks can be 100-200 ms; tell students "the sound is a little shy, it comes a moment after you touch."
+
+---
+
+**→ [Lesson 2 — Fruit Orchard](/education/lesson-2-fruit-orchard/)** · [Back to Education Hub](/education/)

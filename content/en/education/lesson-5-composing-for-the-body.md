@@ -117,3 +117,7 @@ Close with: "If our music room was designed by someone who couldn't see — what
 - Be ready for emotional weight. Lesson 5 surfaces real student experience of disability. Make space for it; don't perform empathy.
 - If a pair finishes early, ask them to design a *third* piece for a third constraint — sustains the cognitive challenge.
 - Patches re-stick about 3-5 times before they lose adhesion. Class Pack 10 ships with two packs per device — for this lesson, expect to use 4-6 patches per pair.
+
+---
+
+**[← Back to Education Hub](/education/)** · [Lesson 1 — Start again](/education/lesson-1-touch-as-conductor/)

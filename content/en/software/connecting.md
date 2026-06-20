@@ -13,6 +13,8 @@ emoji: 💻
 
 Every Playtronica device is a class-compliant USB MIDI device. No drivers are required on Mac or Windows. Plug in the device and the operating system recognises it automatically.
 
+> ⚠️ **Use a data cable, not a charge-only cable.** This is the most common reason a device is not recognised. If your Playtronica device does not appear on your computer, try a different USB cable before anything else. Most cables that ship with phones are data cables. Cables that come with wall chargers, docks, or cheap accessory packs are often charge-only. If you need a confirmed data cable, [USB cables in the Playtronica shop](https://shop.playtronica.com/products/usb-c-cable-1m) are data cables.
+
 ## On macOS
 
 1. **Plug in the device** with a USB cable. Use a USB-C to USB-A adapter if your Mac has no USB-C port.
@@ -42,6 +44,7 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 - [Won't connect](/troubleshooting/wont-connect/) — what to try when the device does not show up.
 - [Online synths](/software/online-synths/) — what to play with once the device is connected.
 - [Hardware synths](/software/hardware/) — connecting via 5-pin MIDI DIN instead of USB.
+- [Device settings](https://settings.playtronica.com) — change MIDI channels, sensitivity, scales, and presets. Open in Brave or Chrome.
 
 ## Ask the community
 

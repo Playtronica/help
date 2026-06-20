@@ -116,3 +116,7 @@ Close: ask "Whose loop made you want to dance? Whose made you want to listen?" �
 - Magnets sometimes fall off the track during rotation — slow the speed if it's distracting.
 - For acoustically sensitive rooms, route Orbita through headphone amps and provide one set of headphones per group.
 - Encourage students to listen with their eyes closed at some point. The visual of rotating magnets is hypnotic; closing eyes reveals what their ears actually hear.
+
+---
+
+**→ [Lesson 5 — Composing for the Body](/education/lesson-5-composing-for-the-body/)** · [Back to Education Hub](/education/)
