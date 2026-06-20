@@ -112,6 +112,14 @@ Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scal
 
 > **Notes do not save.** Long-press the **O** button to zero the plate. Most stuck states clear after a calibration.
 
+## Get Scales connected
+
+Scales ships without a USB cable — that is the one part you will need on day one.
+
+- **[USB-C to A cable (1 m)](https://shop.playtronica.com/products/usb-c-cable-1m)** — for laptops with a standard USB-A port. Braided data cable, not charge-only. €9.98.
+- **[USB-C to C cable (1 m)](https://shop.playtronica.com/products/usb-c-cable)** — for laptops, tablets, and phones with a USB-C port. €9.98.
+- **[iPhone Lightning adapter](https://shop.playtronica.com/products/iphone-adapter)** — play Scales into GarageBand or any MIDI app on iPhone and iPad. €21.
+
 ## Related pages
 
 - [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what Scales senses vs the other four devices.

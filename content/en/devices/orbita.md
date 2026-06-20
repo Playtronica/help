@@ -2,7 +2,7 @@
 title: "Orbita — rotating MIDI sequencer"
 slug: orbita
 section: devices
-summary: "Orbita is a rotating MIDI sequencer with coloured magnets and four tracks."
+summary: "A rotating MIDI sequencer with coloured magnets and four tracks. How to connect a sound source, map notes, use the looper, and update firmware."
 order: 5
 segment: ["music-producer", "creator"]
 deflection_target: 40
@@ -123,6 +123,14 @@ Orbita may have switched to MIDI CC mode by accident.
 ## Handling and care
 
 > ⚠️ **Handle only the parts shown in this guide.** Touch the orbit ring, the central encoder, the side buttons, and the USB-C connector. Do not touch the underside of the PCB, the solder joints, or the exposed chips — even when the device is unplugged. The board is durable, but those areas can be damaged permanently. Treat the rest of the device the way you would treat the back of a phone screen.
+
+## Works great with Orbita
+
+Orbita is a sequencer — it needs a sound source, and it loves company.
+
+- **[Orbita + Biotron Duo](https://shop.playtronica.com/products/next-gen-playtronica-duo-orbita-biotron)** — Orbita locks the rhythm while a living plant drives the melody through Biotron. Designed to play together out of the box. €520.
+- **[Orbita + TouchMe bundle](https://shop.playtronica.com/products/orbita-touchme-bundle)** — Orbita's sequence under TouchMe's touch. Limited-edition black TouchMe included. €506.
+- **[Playtronica scarf](https://shop.playtronica.com/products/playtronica-scarf)** — knitted in Germany, dedicated to Orbita's colour sequencer. Also sold as an [Orbita + scarf bundle](https://shop.playtronica.com/products/orbita-scarf-bundle). €26.
 
 ## Related pages
 

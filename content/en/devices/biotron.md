@@ -2,7 +2,7 @@
 title: "Biotron — your plant as a MIDI instrument"
 slug: biotron
 section: devices
-summary: "Clip the leaf-pads to a houseplant and let it play itself."
+summary: "Clip the leaf-pads to a houseplant and let it play itself. Setup, wiring, firmware updates, and the fix for when there's no sound."
 order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70

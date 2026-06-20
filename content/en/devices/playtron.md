@@ -2,7 +2,7 @@
 title: "Playtron — the clip-anything MIDI instrument"
 slug: playtron
 section: devices
-summary: "Clip the wires, ground yourself, touch anything that conducts."
+summary: "Clip the wires, ground yourself, touch anything that conducts. Setup, the grounding fix, the no-sound checklist, and firmware updates."
 order: 2
 segment: ["music-producer", "gift-recipient", "creator"]
 deflection_target: 90
@@ -94,6 +94,15 @@ Use the reset only if the firmware update will not start, or after a hardware fa
 3. **Wait for the `RPI-RP2` drive to appear on your computer, then release the pins.** The window is brief. If the drive does not appear, try again.
 4. **Drag `flash_nuke.uf2` onto the `RPI-RP2` drive.** Wait for the device to reboot.
 5. **Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) and upload the latest firmware.**
+
+## Works great with Playtron
+
+Playtron ships with a USB cable and eight alligator clips. To map all 16 notes and play more surfaces, add these.
+
+- **[10 extra alligator clips](https://shop.playtronica.com/products/10-extra-alligator-clips)** — Playtron maps up to 16 objects, but the box includes 8 clips. This set covers the rest. €9.
+- **[Patches for skin and plants](https://shop.playtronica.com/products/patches-for-skin-and-plants)** — stick-on electrodes for playing skin, leaves, and awkward surfaces without clipping. From €16.
+- **[Copper tape](https://shop.playtronica.com/products/copper-tape)** — turn any flat surface into a key. Stick it down, clip to it, play it. €9.
+- **[Playtron + TouchMe bundle](https://shop.playtronica.com/products/playtron-touchme-bundle)** — pair Playtron with TouchMe for clip-play and touch-play together. €163.
 
 ## Related pages
 
