@@ -27,6 +27,7 @@ import {
   buildMessageText,
   buildWhatsAppLink,
   copyMessage,
+  trackFeedback,
   WHATSAPP_ENABLED,
 } from "@/lib/whatsapp-feedback";
 
@@ -96,6 +97,10 @@ function WhatsAppFeedbackInner() {
   const hideTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
+    // Impression — the floating button is on screen for this page view. This is
+    // the funnel denominator: fab_shown vs fab_open vs modal_send.
+    trackFeedback("fab_shown");
+
     // Show the tooltip when the user finishes a selection. We listen to
     // mouseup / touchend only — NOT selectionchange — so the tooltip is not
     // torn down the instant iOS collapses the selection on the next tap.
@@ -110,6 +115,7 @@ function WhatsAppFeedbackInner() {
       const top = rect.bottom + window.scrollY + 8;
       const left = Math.max(8, Math.min(rect.left + window.scrollX, window.innerWidth - 190));
       setAnchor({ top, left, text, heading: findNearestHeadingForRange(range) });
+      trackFeedback("highlight_shown");
       // Linger 12s — long enough to tap even after iOS eats the first tap.
       if (hideTimer.current) clearTimeout(hideTimer.current);
       hideTimer.current = setTimeout(() => setAnchor(null), 12000);
@@ -157,6 +163,7 @@ function WhatsAppFeedbackInner() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => {
+            trackFeedback("highlight_send");
             copyMessage(tooltipMessage);
             setAnchor(null);
           }}
@@ -183,6 +190,7 @@ function WhatsAppFeedbackInner() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => {
+            trackFeedback("highlight_send");
             copyMessage(tooltipMessage);
             setAnchor(null);
           }}
@@ -195,7 +203,10 @@ function WhatsAppFeedbackInner() {
       ) : (
         <button
           type="button"
-          onClick={() => setModalOpen(true)}
+          onClick={() => {
+            trackFeedback("fab_open");
+            setModalOpen(true);
+          }}
           aria-label="What's missing here?"
           className="fixed right-3 bottom-[136px] z-40 flex h-10 items-center gap-2 rounded-full border-[1.5px] border-ink bg-white px-3 font-mono text-[11px] uppercase tracking-[0.06em] text-ink shadow-block-sm transition hover:border-accent hover:bg-accent hover:text-bg md:bottom-16 md:h-11 md:px-4"
         >
@@ -246,6 +257,7 @@ function WhatsAppFeedbackInner() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
+                  trackFeedback("modal_send");
                   copyMessage(modalMessage);
                   setModalOpen(false);
                   setNote("");

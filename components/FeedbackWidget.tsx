@@ -4,6 +4,7 @@ import {
   buildMessageText,
   buildWhatsAppLink,
   copyMessage,
+  trackFeedback,
   WHATSAPP_ENABLED,
 } from "@/lib/whatsapp-feedback";
 
@@ -70,6 +71,7 @@ export function FeedbackWidget({ slug }: { slug: string }) {
           <button
             type="button"
             onClick={() => {
+              trackFeedback("inline_yes");
               logFeedback("yes", "");
               setState("submitted");
             }}
@@ -79,7 +81,10 @@ export function FeedbackWidget({ slug }: { slug: string }) {
           </button>
           <button
             type="button"
-            onClick={() => setState("no")}
+            onClick={() => {
+              trackFeedback("inline_no");
+              setState("no");
+            }}
             className="min-h-[36px] border-[1.5px] border-rule bg-white px-3 py-1 text-[14px] transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-block-sm"
           >
             No
@@ -106,6 +111,7 @@ export function FeedbackWidget({ slug }: { slug: string }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
+              trackFeedback("inline_send");
               copyMessage(message);
               logFeedback("no", note.trim());
               setState("submitted");

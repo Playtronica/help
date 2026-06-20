@@ -77,3 +77,78 @@ export function copyMessage(text: string): void {
     });
   }
 }
+
+/* ─── Feedback funnel instrumentation ──────────────────────────────────────
+ *
+ * The whole point: a month with zero WhatsApp messages tells us nothing on its
+ * own. We cannot tell apart "nobody clicks" from "people click but the wa.me
+ * hand-off / number is broken". This counts every step of the funnel so the
+ * drop-off is visible.
+ *
+ * Funnel: shown → open → send. Read it as:
+ *   - high `*_shown`, ~0 `*_open`  → discovery problem (button ignored)
+ *   - `*_open` > 0, ~0 `*_send`    → form/intent friction
+ *   - `*_send` > 0 but no messages → delivery problem (wrong number / wa.me)
+ *
+ * Three sinks, all best-effort and non-blocking:
+ *   1. Microsoft Clarity custom event + tag — works TODAY (Clarity is live).
+ *      Lets us both COUNT events and FILTER session recordings by them — i.e.
+ *      watch the actual recording of someone who tapped "Send" and see what
+ *      happened next. This is the debug surface.
+ *   2. GA4 event — activates automatically once NEXT_PUBLIC_GA4_ID is set.
+ *   3. localStorage rolling log — instant local debug via
+ *      `window.__playtronicaFeedbackLog` (counts + last 200 events), same
+ *      pattern as the SearchBar query log.
+ */
+export type FeedbackEvent =
+  | "fab_shown" // floating "What's missing?" button rendered (impression / denominator)
+  | "fab_open" // floating button tapped → modal opened
+  | "modal_send" // "Send to WhatsApp" tapped inside the modal
+  | "highlight_shown" // selection tooltip appeared
+  | "highlight_send" // selection → WhatsApp tapped
+  | "inline_yes" // in-article "Did this answer?" → Yes
+  | "inline_no" // in-article → No (textarea opened)
+  | "inline_send"; // in-article → Send tapped
+
+const FB_LOG_KEY = "playtronica.feedback.log";
+const FB_LOG_MAX = 200;
+
+export function trackFeedback(event: FeedbackEvent, detail?: Record<string, unknown>): void {
+  if (typeof window === "undefined") return;
+  const w = window as any;
+  const page = typeof location !== "undefined" ? location.pathname : "";
+
+  // 1. Clarity — custom event (counts) + tag (filter recordings). Live today.
+  try {
+    w.clarity?.("event", `feedback_${event}`);
+    w.clarity?.("set", "feedback_action", event);
+  } catch {
+    /* Clarity not loaded — non-fatal */
+  }
+
+  // 2. GA4 — no-op until the tag is configured.
+  try {
+    w.gtag?.("event", `feedback_${event}`, {
+      event_category: "whatsapp_feedback",
+      page_path: page,
+      ...detail,
+    });
+  } catch {
+    /* gtag not loaded — non-fatal */
+  }
+
+  // 3. localStorage rolling log — instant debug, no backend required.
+  try {
+    const raw = localStorage.getItem(FB_LOG_KEY);
+    const log: { counts: Record<string, number>; events: unknown[] } = raw
+      ? JSON.parse(raw)
+      : { counts: {}, events: [] };
+    log.counts[event] = (log.counts[event] || 0) + 1;
+    log.events.push({ event, page, ts: Date.now(), ...detail });
+    if (log.events.length > FB_LOG_MAX) log.events = log.events.slice(-FB_LOG_MAX);
+    localStorage.setItem(FB_LOG_KEY, JSON.stringify(log));
+    w.__playtronicaFeedbackLog = log;
+  } catch {
+    /* localStorage blocked — best-effort only */
+  }
+}
