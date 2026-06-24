@@ -157,3 +157,5 @@ Email **support@playtronica.com** with:
 - A short video showing the full connection and what happens when you touch the plant
 - Your operating system and DAW name
 - Whether the self-test (fingerprint button) produces notes in your MIDI monitor
+
+We aim for 24 hours, but a reply may take up to 3 business days.

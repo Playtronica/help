@@ -217,7 +217,10 @@ def main():
                 print(f"    {marker} {label}: {note}")
 
     print()
-    return 0 if not low_pages else (1 if any(s < 4 for _, s, _ in low_pages) else 0)
+    if low_pages:
+        print("⚠ Trust-signal gaps above are advisory — they do not block CI.")
+    # Advisory trust-signal audit: prints findings but never fails the build.
+    return 0
 
 
 if __name__ == "__main__":

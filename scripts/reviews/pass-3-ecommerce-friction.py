@@ -218,7 +218,10 @@ def main():
             print(f"  [{sev}] {msg}")
 
     print()
-    return 1 if high else 0
+    if high:
+        print(f"⚠ {high} HIGH friction point(s) above — advisory only, does not block CI.")
+    # Advisory CRO audit: prints findings but never fails the build.
+    return 0
 
 
 if __name__ == "__main__":

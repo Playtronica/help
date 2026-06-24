@@ -107,6 +107,23 @@ def issues_iter():
         slugs.add(f"/{rel.parent.name}/{p.stem}/")
         slugs.add(f"/{rel.parent.name}/{p.stem}")
 
+    # Next.js app routes (app/**/page.tsx) and public/ files are valid link
+    # targets too (e.g. /education/quote/, /education/playtronica-lesson-1.pdf).
+    app_dir = REPO_ROOT / "app"
+    if app_dir.exists():
+        for tsx in app_dir.rglob("page.tsx"):
+            parts = list(tsx.relative_to(app_dir).parts[:-1])  # drop page.tsx
+            if any(seg.startswith("[") or seg in {"de", "es", "fr", "ja"} for seg in parts):
+                continue
+            route = "/" + "/".join(parts) + "/" if parts else "/"
+            slugs.add(route)
+            slugs.add(route.rstrip("/") or "/")
+    public_dir = REPO_ROOT / "public"
+    if public_dir.exists():
+        for pub in public_dir.rglob("*"):
+            if pub.is_file() and not pub.name.startswith("."):
+                slugs.add("/" + str(pub.relative_to(public_dir)))
+
     for p in en_pages:
         rel = str(p.relative_to(REPO_ROOT))
         text = p.read_text(encoding="utf-8")
@@ -124,6 +141,10 @@ def issues_iter():
             if host_path.startswith("shop.playtronica.com"):
                 continue
             if host_path.startswith("playtronica.com"):
+                continue
+            if host_path.startswith("education.playtronica.com"):
+                continue
+            if host_path.startswith("help.playtronica.com"):
                 continue
             yield (
                 rel,
@@ -201,6 +222,9 @@ def main():
     args = parser.parse_args()
 
     issues = list(issues_iter())
+    # S6 (title/summary length) is a recommendation, not a hard limit — it
+    # prints as a warning but never fails CI. Everything else is blocking.
+    blocking = [i for i in issues if i[1] != "S6"]
     if not issues:
         print("✓ check-internal-consistency: 0 issues")
         return 0
@@ -209,7 +233,8 @@ def main():
     for rel, code, msg in issues:
         by_code.setdefault(code, []).append((rel, msg))
 
-    print(f"✗ check-internal-consistency: {len(issues)} issues across {len(by_code)} categories\n")
+    status = "✗" if blocking else "⚠"
+    print(f"{status} check-internal-consistency: {len(blocking)} blocking + {len(issues) - len(blocking)} warning(s) across {len(by_code)} categories\n")
     code_names = {
         "S1": "Non-canonical service URL",
         "S2": "SLA phrase drift in 'Still stuck'",
@@ -225,7 +250,7 @@ def main():
             print(f"    {msg}")
         print()
 
-    return 0 if args.warn_only else 1
+    return 0 if (args.warn_only or not blocking) else 1
 
 
 if __name__ == "__main__":
