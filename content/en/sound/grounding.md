@@ -2,12 +2,12 @@
 title: "Grounding — how and why"
 slug: grounding
 section: sound
-summary: "Why Playtron needs you to be grounded, and four ways to ground yourself. A short physics explanation for anyone curious."
+summary: "Why Playtron needs you to be grounded, four ways to ground yourself, and why TouchMe sometimes plays on one hand. A short physics explanation for anyone curious."
 order: 1
 segment: ["music-producer"]
 deflection_target: 20
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-06
+last_edited: 2026-06-24
 emoji: 💡
 ---
 
@@ -59,6 +59,24 @@ If grounding is weak, the symptoms are: notes only fire on some objects, notes f
 - **Biotron** measures the bio-electrical signal of the plant. The plant is the source. Your body is not in the circuit unless you touch a leaf to change the signal.
 - **Scales** measures weight on a load cell. There is no conductive circuit involved.
 
+## TouchMe playing on one hand — "ground leaking"
+
+TouchMe is meant to need **both** pads at once — one hand on each, or two people touching. If a single hand on one pad already plays notes, your setup has a second, unintended path to ground. We call this **ground leaking**.
+
+**Why it happens.** When the computer powering TouchMe is plugged into the mains, its USB ground is tied to the building's earth ground. Your body is also loosely coupled to earth — through your feet, your chair, a metal desk, or anything earthed you happen to touch. So when you touch one pad, the loop can complete through *you → earth → the mains → back to TouchMe's ground*, instead of through the second pad. The device sees a finished circuit and fires a note. Earth ground has "leaked" in and is doing the job the second pad should do.
+
+This is ordinary physics, not a fault. It is the same reason [Playtron](/devices/playtron/) triggers more easily when you hold its gold ground pin: a cleaner path to ground makes a single touch enough.
+
+**When it matters.** One-hand play is fine if that is what you want. It only becomes a problem when you are showing the two-person moment and notes fire *before* the two people touch, or when stray contact triggers notes you did not intend.
+
+**How to get the two-pad behaviour back** — remove the earth path, from easiest to most thorough:
+
+1. **Run on battery.** Unplug the laptop charger, or play from a phone or tablet (with the [iPhone adapter](https://shop.playtronica.com/products/iphone-adapter)). A battery-powered host floats free of earth ground, so TouchMe needs both pads again. This alone fixes most cases.
+2. **Move away from earthed objects.** Step off a metal floor, let go of the radiator or metal desk frame, wear shoes with insulating soles. The looser your own coupling to earth, the less leaks in.
+3. **Use a USB isolator.** If the host must stay plugged in — a desktop, a stage rig — a galvanic USB isolator between the computer and TouchMe breaks the ground loop while passing the MIDI data through untouched.
+
+> 💡 If you *want* easy one-hand play — for a solo performance or an installation — leave it grounded on purpose. Ground leaking is only "wrong" when it gets in the way of two-pad or two-person play.
+
 ## The physics (optional reading)
 
 If you do not need the technical details, you can stop here. The four methods above are all you need.
@@ -72,6 +90,8 @@ This is the same physics behind touchscreens. Your phone detects a capacitance c
 The current involved is **picoamps** — billionths of an amp. There is no risk from this current.
 
 ## Troubleshooting
+
+> **TouchMe fires on just one hand.** Earth ground is leaking in through the mains. Run the host on battery, or add a USB isolator, to bring back two-pad play — see the ground-leaking section above.
 
 > **Notes fire weakly or only sometimes.** Use bare skin on the gold pin instead of a ground cable.
 

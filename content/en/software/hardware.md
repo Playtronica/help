@@ -6,8 +6,8 @@ summary: "Every Playtronica device speaks class-compliant MIDI. This page covers
 order: 7
 segment: ["music-producer"]
 deflection_target: 20
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-06
+last_edited: 2026-06-24
 emoji: 📻
 ---
 
@@ -25,12 +25,26 @@ Many modern hardware synths have a USB host port. The port is often labelled **U
 
 ## USB-host adapter — when the synth has only DIN MIDI
 
-If your synth has only a 5-pin DIN MIDI input, use a USB-host-to-DIN converter. Two reliable options:
+If your synth has only a 5-pin DIN MIDI input, use a USB-host-to-DIN converter. Reliable options:
 
 - **Doremidi UMH-10** or similar — small, USB-powered, around €40. Plug the Playtronica device into the USB side. Plug a MIDI cable from the DIN side into your synth's MIDI input.
 - **Kenton USB MIDI Host** — slightly more expensive, more flexible. Handles multiple Playtronica devices in series.
 
 The signal path is: Playtronica device → USB-host adapter → MIDI cable → synth's MIDI input. The synth sees a regular MIDI keyboard.
+
+## No computer at all — the CME H4MIDI WC
+
+The adapters above get a Playtronica device into a DIN synth. The **[CME H4MIDI WC](https://www.cme-pro.com/h4midi-wc-usb-host-midi-interface/)** (around $53 / €50) does the same job in one small standalone box, and adds routing, filtering and channel remapping. A Playtronica community member confirmed it works **device-to-device, with no computer or DAW**.
+
+How it connects:
+
+- **USB-A host port** — plug your Playtronica device in here. The port powers it (up to 1 A) *and* reads its MIDI, so no laptop is involved.
+- **5-pin DIN out** — carries that MIDI straight to a hardware synth, drum machine or groovebox: a Digitakt, a classic Volca, or anything with a DIN MIDI input.
+- **USB-C port** — only needed to configure the box or connect a computer or iPad with the free HxMIDI Tools app (4 presets, plus router, filter and mapper). Ignore it for pure device-to-device use.
+- **Standalone power** — runs off any 5 V USB source or a 9 V DC adapter, so it works on a pedalboard with nothing else attached. Optional Bluetooth MIDI is available through the WIDI Core add-on.
+
+**Worked example — TouchMe → Digitakt, no computer:**
+TouchMe → USB-C-to-USB-A cable → H4MIDI WC (USB-A host port) → 5-pin MIDI cable → Digitakt's MIDI IN. Power the H4MIDI from any phone charger or USB battery, and set the Digitakt to receive on MIDI channel 1 (TouchMe's default). The same chain feeds an OP-Z or any other groovebox — for gear that uses TRS MIDI instead of DIN, such as the **Dirtywave M8**, add a DIN-to-TRS adapter on the output.
 
 ## TRS MIDI (the Scales path)
 

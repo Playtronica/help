@@ -6,8 +6,8 @@ summary: "Turns touch, skin, water, and flowers into music — alone or with a f
 order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-06
+last_edited: 2026-06-24
 emoji: 👐
 ---
 
@@ -46,6 +46,8 @@ The music does not come from the device. The music comes from the connection bet
 **With a friend.** The two-person demo above. The most common workshop demonstration.
 
 **With objects.** Clip an alligator wire from one of the pads to anything that conducts a small amount of electricity — a piece of fruit, a glass of water, a wet leaf, aluminium foil, a damp piece of paper. Touch the clipped object and the other pad simultaneously. The object becomes a key. See [Objects you can play](/sound/objects-you-can-play/) for the full list.
+
+> 💡 **TouchMe playing on just one hand?** When your computer is plugged into the mains, earth ground can "leak" into the circuit, so a single pad is enough to complete it. To restore the deliberate two-pad and two-person play, run on battery or add a USB isolator. Full explanation: [Grounding — ground leaking](/sound/grounding/).
 
 ## Quick start — first sound in 2 minutes
 
