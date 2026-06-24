@@ -94,6 +94,27 @@ def main() -> int:
             "content": content,
         }
 
+    # Also register Next.js app routes as valid URL targets.
+    # headings=None means "app route — skip anchor verification" (can't parse TSX headings).
+    APP = ROOT / "app"
+    LOCALE_PREFIXES = {"de", "es", "fr", "ja"}
+    for tsx in sorted(APP.rglob("page.tsx")):
+        parts = list(tsx.relative_to(APP).parts[:-1])  # drop "page.tsx"
+        # Skip dynamic routes ([section], [slug]) and locale routes
+        if any(p.startswith("[") or p in LOCALE_PREFIXES for p in parts):
+            continue
+        route = "/" + "/".join(parts) + "/" if parts else "/"
+        if route not in pages:
+            pages[route] = {"file": tsx.relative_to(ROOT), "fm": {}, "headings": None, "content": ""}
+
+    # Also register public/ files as valid link targets (e.g. PDFs).
+    PUBLIC = ROOT / "public"
+    for pub_file in sorted(PUBLIC.rglob("*")):
+        if pub_file.is_file() and not pub_file.name.startswith("."):
+            route = "/" + str(pub_file.relative_to(PUBLIC)) + "/"
+            if route not in pages:
+                pages[route] = {"file": pub_file.relative_to(ROOT), "fm": {}, "headings": None, "content": ""}
+
     # Second pass — verify every link.
     dead_links: list[str] = []
     bad_subjects: list[str] = []
@@ -103,7 +124,8 @@ def main() -> int:
     slug_owners: dict[tuple, list[Path]] = defaultdict(list)
     for url, p in pages.items():
         key = (p["fm"].get("section"), p["fm"].get("slug"))
-        slug_owners[key].append(p["file"])
+        if key[0] and key[1]:  # only index markdown pages with proper frontmatter
+            slug_owners[key].append(p["file"])
 
     for key, owners in slug_owners.items():
         if len(owners) > 1:
@@ -132,8 +154,8 @@ def main() -> int:
                     f"- `{rel}` → `{target}` — target page does not exist"
                 )
                 continue
-            # Anchor check
-            if anchor and anchor not in pages[path_part]["headings"]:
+            # Anchor check (skip for app routes / public files where headings=None)
+            if anchor and pages[path_part]["headings"] is not None and anchor not in pages[path_part]["headings"]:
                 dead_anchors.append(
                     f"- `{rel}` → `{target}` — heading `#{anchor}` not found on target page"
                 )

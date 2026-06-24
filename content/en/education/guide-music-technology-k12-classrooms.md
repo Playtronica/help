@@ -216,7 +216,7 @@ If your district is iPad-only and explicitly blocks USB host mode on the iPads �
 
 Makey Makey is the most-cited K-12 invention kit. It's great. It's also general-purpose: the same kit can be used for arts, science, coding, anything. Its **music** content is shallow — most Makey Makey music lessons are "make a banana piano" demos, not full standards-aligned units.
 
-If your program is invention-literacy-led (Makey Makey's framing) — buy Makey Makey. If your program is music-led — buy music-specific hardware. Playtronica is purpose-built for music. We cover the differences in detail in our [Playtronica vs Makey Makey comparison guide](/education/playtronica-vs-makey-makey/) (forthcoming).
+If your program is invention-literacy-led (Makey Makey's framing) — buy Makey Makey. If your program is music-led — buy music-specific hardware. Playtronica is purpose-built for music. We cover the differences in detail in our Playtronica vs Makey Makey comparison guide (forthcoming).
 
 ---
 
@@ -300,7 +300,7 @@ This is the section principals and finance officers will read most carefully.
 
 ### US funding sources
 
-- **Title IV-A (Student Support and Academic Enrichment Grants)** — federal funds, distributed through states, can be used for music technology under the "Well-rounded education" pillar. Most under-claimed source. We have a forthcoming [Title IV-A music technology guide](/education/title-iv-a-music-grant-template/) with example language.
+- **Title IV-A (Student Support and Academic Enrichment Grants)** — federal funds, distributed through states, can be used for music technology under the "Well-rounded education" pillar. Most under-claimed source. We have a forthcoming Title IV-A music technology guide with example language.
 - **ESSER (Elementary and Secondary School Emergency Relief)** — COVID-era funds, deadlines for use vary by state. Many districts have unspent allocations that can be redirected.
 - **Title I** — for schools with high low-income enrolment. Music tech qualifies as supplemental instructional materials.
 - **Local PTA / PTO** — varies widely. Smaller, but fast.
