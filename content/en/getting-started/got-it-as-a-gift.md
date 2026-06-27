@@ -26,30 +26,33 @@ If you cannot identify your device, see [Which Playtronica do I have?](/getting-
 
 ## Make sound in five minutes
 
-1. Plug the device into your laptop with a USB cable.
-2. Open **Brave** or **Chrome** and go to [synth.playtronica.com](https://synth.playtronica.com).
-3. Pick one:
-   - **TouchMe** — touch both gold pads with bare skin.
-   - **Playtron** — clip one alligator wire to a piece of fruit. Hold the gold ground pin with one hand. Touch the fruit with the other hand.
+1. Plug the device into your laptop with a USB cable. Use the cable from the box — a charge-only cable looks identical but carries no data, and the device will not be detected.
+2. Open **Chrome** and go to [dotpiano.com](https://dotpiano.com/) — it is the simplest web instrument and the easiest place to hear your first note. Our own synth library is at [synth.playtronica.com](https://synth.playtronica.com) if you want to explore further.
+3. Click **Allow** on the MIDI permission popup that appears in the browser.
+4. Pick one:
+   - **TouchMe** — touch both gold pads with bare skin. The LED stays dark when you plug in — that is normal; it blinks when you touch the pads.
+   - **Playtron** — clip one alligator wire to a piece of fruit. Hold the pointed corner of the device with one hand (that sharp corner is the ground). Touch the fruit with the other hand. Playtron's LED stays dark when you plug it in — that's normal. It blinks each time you complete the circuit and a note plays, which is how you know it's working.
    - **Biotron** — clip both leaf-pads to a houseplant. Wait 30 seconds for calibration.
    - **Scales** — place an object up to 3 kg on the weight plate.
    - **Orbita** — open a DAW or music app first (Orbita needs a sound source), then place a coloured magnet on a track and press Start.
 
 You should hear a note. If not, see "No sound" below.
 
-> 💡 **Why this browser?** Playtronica devices talk to your laptop through a feature called Web MIDI. Brave and Chrome support it. Safari and Firefox do not yet.
+> 💡 **Why Chrome?** Playtronica devices talk to your laptop through a feature called Web MIDI. Chrome supports it. Safari and Firefox do not yet. **Use a computer, not a phone** — Web MIDI does not work in any mobile browser.
 
 ## What to try next
 
 - **Try everyday objects.** Anything that conducts a small amount of electricity works: fruit, water, aluminium foil, your skin, a damp leaf, a coin. See [Objects you can play](/sound/objects-you-can-play/).
 - **Connect to music software.** Ableton, Logic, GarageBand, and FL Studio see the device as a MIDI keyboard. See [Connecting to a computer](/software/connecting/).
-- **Try different synths.** [synth.playtronica.com](https://synth.playtronica.com) has a small library. See [our picks](/software/online-synths/).
+- **Try different synths.** [dotpiano.com](https://dotpiano.com/) is the simplest starting point. [synth.playtronica.com](https://synth.playtronica.com) has a larger library of sounds. See [our full picks](/software/online-synths/).
 
 ## No sound — quick check
 
-- **Browser:** are you in Brave or Chrome? Safari and Firefox do not support MIDI.
+- **Browser:** are you in Chrome? Safari and Firefox do not support MIDI.
 - **Permission:** did you click **Allow** on the MIDI permission popup? If you clicked Block, see [No sound or MIDI not detected](/troubleshooting/no-sound/).
 - **Order of operations:** the device must be plugged in **before** the browser opens the synth page. If you plugged in after, close the synth tab and open it again.
+- **Cable:** the device ships with a USB data cable. A charge-only cable looks identical but carries no data — if you are using a different cable, swap in the one from the box.
+- **Playtron only:** are you holding the pointed corner of the device with bare skin? Without that contact (the ground), Playtron makes no sound at all.
 
 If none of that works, open the [troubleshooting hub](/troubleshooting/hub/), or email [support@playtronica.com](mailto:support@playtronica.com). We read every email.
 

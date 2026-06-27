@@ -31,13 +31,13 @@ Biotron sends on two MIDI channels:
 ## Step 1 — Update the firmware (first time only)
 
 1. **Activate boot mode.** Short the two small BOOT contacts on the PCB with a paper clip or jumper wire. Connect the pins first, then plug in USB-C, then release the pins. The device appears on your computer as a drive called `RPI-RP2`.
-2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Brave or Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
+2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
 3. **Drag the downloaded file onto the `RPI-RP2` drive.** The drive disappears. Done. When the device reconnects, it appears as a MIDI device called "Biotron" instead of a drive.
 
 ## Step 2 — Set up and play
 
 1. **Clip the leaf-pads to your plant.** Clip one pad to a leaf or branch. Clip the other pad to a different leaf or branch. The pads must be **at least 2 cm apart**. The pads must never touch each other.
-2. **Plug Biotron into your computer with a USB cable** (not included — use any USB-C data cable). Then open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.
+2. **Plug Biotron into your computer with a USB cable** (not included — use any USB-C data cable). Then open [synth.playtronica.com](https://synth.playtronica.com) in Chrome.
 3. **Move away from the device for 30 seconds.** The green LED blinks and you hear two short calibration tones. Wait until the LED pulses slowly and steadily. Calibration is required for the full musical range.
 4. **The plant plays on its own.** Touch a leaf for a strong change. Move your hand close to the plant without touching it for a softer change. Turn a light on or off — the light sensor on Channel 2 responds.
 
@@ -79,7 +79,7 @@ Set up Biotron on three different plants on three consecutive days. Same scale, 
 | 🌿 Plant sensor | Channel 1 | Note and CC data from plant conductivity (touch or proximity) |
 | 💡 Light sensor | Channel 2 | Note and CC data from light intensity changes |
 
-Biotron works with any DAW, online synth, or iOS music app that supports MIDI. For web synths, use Brave or Chrome at [synth.playtronica.com](https://synth.playtronica.com).
+Biotron works with any DAW, online synth, or iOS music app that supports MIDI. For web synths, use Chrome at [synth.playtronica.com](https://synth.playtronica.com).
 
 ## Web settings and presets
 

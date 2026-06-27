@@ -61,7 +61,7 @@ You can turn the motor on and off, and change its speed. Both controls can be op
 
 ## Web settings page
 
-Open [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Brave or Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets. (The older [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) configurator still works as a fallback.)
+Open [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Chrome to configure Orbita: colour-to-note mapping, track parameters, MIDI channels, and saved presets. (The older [playtronica.github.io/WebMidiOrbita](https://playtronica.github.io/WebMidiOrbita/) configurator still works as a fallback.)
 
 <img src="https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/5a4c994a-0425-4372-a849-5728aa91c32d/image/w=1920,quality=90,fit=scale-down" alt="Orbita web settings page — colour-to-note mapping and per-track parameters" style="width:100%;border-radius:10px;margin:16px 0;display:block">
 
@@ -117,7 +117,7 @@ Orbita may have switched to MIDI CC mode by accident.
 - **[Dawnbeat](https://www.dawnbeat.com/)** — iPad and iPhone DAW.
 - **[King of FM](https://apps.apple.com/us/app/king-of-fm-dx-synth-e-piano/id1672644102)** — DX-style FM synth on iOS.
 - **[Elastic OSC](https://mominstruments.com/elasticosc/)** — paid, made by friends of Playtronica, very good sound.
-- **[Dots Piano](https://dotpiano.com/)** — web piano in Brave or Chrome.
+- **[Dots Piano](https://dotpiano.com/)** — web piano in Chrome.
 - **[synth.playtronica.com](https://synth.playtronica.com)** — our curated library of web synths.
 
 ## Handling and care

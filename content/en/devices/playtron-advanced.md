@@ -21,7 +21,7 @@ This page is for makers and musicians who already have Playtron playing and want
 
 ## Custom scales and per-pin mapping
 
-Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Brave or Chrome. Each of the 16 alligator pins can be mapped to:
+Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Chrome. Each of the 16 alligator pins can be mapped to:
 
 - A specific MIDI note (0–127).
 - A specific MIDI channel (1–16). Useful for routing pins to different instruments in a DAW.
@@ -44,9 +44,9 @@ Materials to avoid: dry wood, dry plastic, dry stones, paint, and painted cerami
 
 ## Three ways to ground Playtron
 
-The ground pin is the most-misunderstood part of Playtron. Three patterns that work:
+Grounding is the most-misunderstood part of Playtron. Three patterns that work:
 
-- **You are the ground.** Place bare skin on the gold ground pin. Your body completes the circuit. This is the most reliable method for solo play.
+- **You are the ground.** Place bare skin on the pointed corner of the device — that sharp corner is the ground. Your body completes the circuit. This is the most reliable method for solo play.
 - **The room is the ground.** Clip a ground cable to a metal radiator, a metal sink, or your laptop's metal body. Useful for performances where you cannot touch the device directly.
 - **The audience is the ground.** At workshops, the audience holds the ground while one person touches the object. The circuit completes through the audience.
 

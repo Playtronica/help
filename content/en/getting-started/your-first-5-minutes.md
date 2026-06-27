@@ -6,36 +6,40 @@ summary: "From box to first sound, in five minutes."
 order: 2
 segment: ["gift-recipient", "music-producer"]
 deflection_target: 100
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-06
+last_edited: 2026-06-27
 emoji: 🔌
 ---
 
-Pick your device below. The instructions below take five minutes or less.
+These instructions take about five minutes. Find your device below and follow the steps — you will be making sound by the end.
 
-If you do not know which device you have, see [Which Playtronica do I have?](/getting-started/which-device/). If you are choosing between devices, see the [comparison page](/devices/compare/).
+> 🔌 **Two things before you start:**
+> - **Your device sends MIDI — it makes no sound on its own.** You open a free web instrument (like [dotpiano.com](https://dotpiano.com/)) and *that* makes the sound. The steps below show you how.
+> - **Use a computer, not a phone.** Web MIDI does not work in any mobile browser — iPhone, Android, or iPad. For phones and tablets, see [Mobile apps](/software/mobile/).
+
+**Not sure which device you have?** [Find it here — with photos](/getting-started/which-device/). Choosing between devices? See the [comparison page](/devices/compare/).
 
 ## 👐 TouchMe
 
 > **How it works:** the two gold pads sense the conductivity of your skin. Bare skin in contact with both pads completes a circuit. The larger the skin contact area, the louder and brighter the sound.
 
-1. **Open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.** Safari and Firefox do not support Web MIDI.
-2. **Plug TouchMe into your computer with the USB cable from the box.** The LED on the device should light up.
-3. **When the browser asks for MIDI permission, click Allow.** You only see this prompt once.
-4. **Touch both gold pads with bare fingers.** You should hear a note.
+1. **Plug TouchMe into your computer with the USB cable from the box.** Use the cable from the box — charge-only cables look identical but carry no data. The LED stays dark when you plug in — that is normal; it blinks when you touch the pads, which is how you know it is working.
+2. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/) — it is the simplest. You can also use our own [synth.playtronica.com](https://synth.playtronica.com) ([more synths](/software/online-synths/)). Plug the device in *before* opening the browser — if the tab was already open, reload it. Safari and Firefox do not support Web MIDI.
+3. **Click Allow on the MIDI permission popup.** You only see this prompt once. Missed it, or clicked Block? In Chrome go to Settings → Privacy → Site Settings → MIDI, set the synth site to **Allow**, then reload.
+4. **Touch both gold pads with bare fingers.** You should hear a note — that is it, you are playing. If the sound is faint, press more firmly: dry skin conducts weakly.
 5. **Try two people.** Each person holds one pad. Touch the other person on bare skin. The circuit completes through both bodies.
 
 ## 🍉 Playtron
 
-> **How it works:** Playtron senses the conductivity of any object you clip an alligator wire to. You complete the circuit by holding the gold ground pin and touching the clipped object.
+> **How it works:** Playtron senses the conductivity of any object you clip an alligator wire to. You complete the circuit by holding the device's pointed corner — that corner is the ground — and touching the clipped object.
 
-1. **Plug Playtron into your computer with the USB cable from the box.** The LED should light up.
-2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.** Click **Allow** on the MIDI permission popup.
+> ⚠️ **Grounding is not optional — it is how Playtron works.** Hold the pointed corner of the device the whole time you play. Without it, Playtron makes no sound, and this is the single most common reason it appears not to work. See [Grounding — how and why](/sound/grounding/) for four ways to ground.
+
+1. **Plug Playtron into your computer with the USB cable from the box.** Use the cable from the box — charge-only cables look identical but carry no data. Playtron's LED stays dark when you plug it in — that's normal. It blinks each time you complete the circuit and a note plays, which is how you know it's working.
+2. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/) — it is the simplest. You can also use our own [synth.playtronica.com](https://synth.playtronica.com). Click **Allow** on the MIDI permission popup.
 3. **Clip one alligator wire to an object** — a banana, a glass of water, aluminium foil, a plant.
-4. **Hold the gold ground pin with one hand.** Bare skin only.
+4. **Hold the pointed corner of the device with one hand.** Bare skin only — that corner is the ground.
 5. **Touch the clipped object with your other hand.** You should hear a note.
-
-> ⚠️ **Without grounding, Playtron will not play.** This is the most common reason Playtron appears not to work. See [Grounding — how and why](/sound/grounding/) for four ways to ground.
 
 ## 🌿 Biotron
 
@@ -43,21 +47,28 @@ If you do not know which device you have, see [Which Playtronica do I have?](/ge
 
 1. **Clip both leaf-pads to a houseplant.** Use different leaves or different points on the same branch. The pads must not touch each other.
 2. **Plug Biotron into your computer with a USB cable.**
-3. **Move away from the plant and wait 30 seconds.** The device calibrates during this time. You will hear two short calibration tones. The LED will pulse slowly.
-4. **Open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.** Click **Allow** on the MIDI permission popup.
+3. **Move away from the plant and wait 30 seconds.** Biotron calibrates to the plant's baseline signal during this time — standing close would interfere with the reading. You will hear two short calibration tones, and the LED will pulse slowly once it is ready.
+4. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/), or use our own [synth.playtronica.com](https://synth.playtronica.com). Click **Allow** on the MIDI permission popup.
 5. **Listen.** The plant is now playing. You can also touch a leaf, change the room lighting, or move your hand near the plant — each changes the signal.
 
 ## 🌀 Orbita
 
-Orbita is a self-playing step sequencer. It does not sense touch or conductivity. It needs a sound source — a synth, a DAW, or another MIDI device — to make audible sound. See [Orbita — rotating MIDI sequencer](/devices/orbita/) for setup.
+Orbita is a self-playing step sequencer. It does not sense touch or conductivity — it needs a sound source (a synth, a DAW, or another MIDI device) to be heard. **Quick start:** plug Orbita in, open a synth in Chrome, then follow [Orbita — rotating MIDI sequencer](/devices/orbita/) for the full setup.
 
 ## ⚖️ Scales
 
-Scales is a weight-to-MIDI device. Place objects on the plate to produce notes. Heavier objects produce higher notes. See [Scales — the weight-to-MIDI instrument](/devices/scales/) for setup.
+Scales is a weight-to-MIDI device — place objects on the plate to produce notes, and heavier objects produce higher notes. **Quick start:** plug Scales in, open a synth in Chrome, then follow [Scales — the weight-to-MIDI instrument](/devices/scales/) for the full setup.
 
 ## If you do not hear a note
 
-See [No sound or MIDI not detected](/troubleshooting/no-sound/), or open the [troubleshooting hub](/troubleshooting/hub/) for an interactive walkthrough.
+Quick checks first — these resolve most cases:
+
+- **Are you in Chrome?** Safari and Firefox do not support Web MIDI.
+- **Did you click Allow** on the MIDI permission popup?
+- **Did you plug the device in before opening the synth tab?** If not, reload the tab.
+- **On Playtron:** are you holding the pointed corner (the ground) with bare skin?
+
+Still nothing? See [No sound or MIDI not detected](/troubleshooting/no-sound/), or open the [troubleshooting hub](/troubleshooting/hub/) for an interactive walkthrough.
 
 ## Ask the community
 

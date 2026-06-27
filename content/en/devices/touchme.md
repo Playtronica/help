@@ -51,10 +51,10 @@ The music does not come from the device. The music comes from the connection bet
 
 ## Quick start — first sound in 2 minutes
 
-1. **Plug TouchMe into your computer with the USB cable from the box.** No drivers are required on Mac or Windows. If your computer has only USB-A ports, see [Adapters](https://shop.playtronica.com/collections/additional-items).
-2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Brave or Chrome.** Safari and Firefox do not support Web MIDI. Open the browser **after** plugging in the device so the browser detects it on page load.
+1. **Plug TouchMe into your computer with the USB cable from the box.** No drivers are required on Mac or Windows. The LED stays dark when you plug in — that is normal. If your computer has only USB-A ports, see [Adapters](https://shop.playtronica.com/collections/additional-items).
+2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Chrome.** Safari and Firefox do not support Web MIDI. Open the browser **after** plugging in the device so the browser detects it on page load.
 3. **Choose a synth.** Avoid synths marked "Playtron only" (such as WebSID Commodore 64). The default Dots Piano is the most reliable starting point.
-4. **Hold both gold pads with bare skin.** A note plays. Try the two-person demo above.
+4. **Hold both gold pads with bare skin.** A note plays, and the LED blinks each time you complete the circuit — that is how you know it is working. Try the two-person demo above.
 
 ## What is in the box
 
@@ -67,7 +67,7 @@ The music does not come from the device. The music comes from the connection bet
 
 Update the firmware once per quarter, or when we ship a new release.
 
-1. **Open [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Brave or Chrome.**
+1. **Open [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Chrome.**
 2. **Click "Update Firmware".** If a drive called `RPI-RP2` appears on your computer, skip to step 4.
 3. **Follow the on-screen instructions** to put TouchMe into update mode.
 4. **Upload the latest firmware.** The device reboots automatically.
@@ -88,15 +88,15 @@ A MIDI monitor shows whether TouchMe is sending any signal. Use it when you cann
 
 Compatible monitors:
 
-- [MorningStar MIDI Monitor](https://www.morningstar.io/midi-monitor) — online, runs in Brave or Chrome on any operating system.
+- [MorningStar MIDI Monitor](https://www.morningstar.io/midi-monitor) — online, runs in Chrome on any operating system.
 - [MIDI Monitor by Snoize](https://www.snoize.com/MIDIMonitor/) — macOS only.
 - Pocket MIDI — Mac, Windows, or iOS.
 
 Steps:
 
-1. **Plug in TouchMe first, then open MorningStar in Brave or Chrome.** The browser scans for MIDI devices when the page loads. If you open the browser first, the device will not appear.
+1. **Plug in TouchMe first, then open MorningStar in Chrome.** The browser scans for MIDI devices when the page loads. If you open the browser first, the device will not appear.
 2. **Touch both pads and watch for messages on screen.** You should see message type **Note On** and **Note Off**, a MIDI channel, a note number, and velocity **127**. If messages appear, TouchMe is working. The problem is in your synth or browser.
-3. **If TouchMe does not appear in the device list**, close Brave or Chrome completely. Wait 5 seconds. Reopen the browser, reload MorningStar, and click the "Devices" button in the top right.
+3. **If TouchMe does not appear in the device list**, close Chrome completely. Wait 5 seconds. Reopen the browser, reload MorningStar, and click the "Devices" button in the top right.
 4. **If the device is listed but no messages appear**, open Settings in MorningStar and confirm "Note On" is enabled. TouchMe sends only Note On and Note Off.
 5. **If still no messages, try another computer.** If no messages appear on any computer with any cable, the device is likely faulty. [Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Defective #[order number]`.
 

@@ -13,16 +13,18 @@ emoji: 🔇
 
 The device is connected but you cannot hear anything. Work through this checklist in order.
 
-## First — is the LED on the device lit?
+## First — does the device have power?
+
+> ℹ️ **Note for Playtron and TouchMe.** These devices do **not** light up an LED when you plug them in. A dark device is normal — do not treat it as a fault. Their LED blinks each time you complete the circuit and a note plays, which confirms the device is receiving signal. Skip straight to the checklist below.
+
+For devices that do have a status LED (Scales, Biotron, Orbita):
 
 - **No LED.** Go to [Device will not connect](/troubleshooting/wont-connect/).
 - **LED is on.** Continue below.
 
-> ℹ️ **Note for Playtron.** The LED on Playtron does **not** light up when you plug it in. This is normal. Use the checklist below.
-
 ## Using the online synth at synth.playtronica.com
 
-1. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI. This is the most common cause of no sound.
+1. **Use Chrome.** Safari and Firefox do not support Web MIDI. This is the most common cause of no sound.
 2. **Confirm MIDI permission.** If you clicked Block on the MIDI popup, the browser remembers. Open the browser settings → Site Settings → MIDI → find `synth.playtronica.com` → set to **Allow**.
 3. **Confirm your computer audio works.** Play any YouTube video. If you hear audio, the issue is MIDI routing, not audio output.
 4. **Unplug and reconnect the device, then reload the page.**

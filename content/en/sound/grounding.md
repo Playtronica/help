@@ -28,13 +28,13 @@ The loop needs to end at a stable reference point called "ground". Your body alo
 
 Listed from most reliable to least. All four work.
 
-### 1. Bare skin on the gold ground pin
+### 1. Bare skin on the pointed corner
 
-The gold pin in the corner of Playtron is the ground reference. Touch it with bare skin — a finger, a palm, the side of your hand. This is the simplest and most reliable method. No accessories required.
+The pointed corner of Playtron is the ground reference — that sharp corner is the ground. Touch it with bare skin — a finger, a palm, the side of your hand. This is the simplest and most reliable method. No accessories required.
 
 ### 2. Ground cable to a metal radiator, sink, or pipe
 
-Clip one alligator cable to the ground pin on Playtron. Clip the other end to a real ground — a metal radiator, a metal sink, or a copper pipe. Real ground here means a metal object connected to the earth. This is the method used in installations where the player cannot touch the device.
+Clip one alligator cable to the pointed corner of Playtron. Clip the other end to a real ground — a metal radiator, a metal sink, or a copper pipe. Real ground here means a metal object connected to the earth. This is the method used in installations where the player cannot touch the device.
 
 ### 3. Ground cable to your laptop's metal body
 
@@ -42,7 +42,7 @@ Most laptops have a USB ground that connects through the chassis. Clip the groun
 
 ### 4. Two-person ground
 
-Hand the ground pin to a friend. The friend holds it with bare skin. You touch the friend through a high-five, a hand-hold, or an elbow. The circuit completes through both bodies. This is the most common workshop demonstration.
+A friend holds the pointed corner of the device with bare skin. You touch the friend through a high-five, a hand-hold, or an elbow. The circuit completes through both bodies. This is the most common workshop demonstration.
 
 ## What does not work as ground
 
@@ -65,7 +65,7 @@ TouchMe is meant to need **both** pads at once — one hand on each, or two peop
 
 **Why it happens.** When the computer powering TouchMe is plugged into the mains, its USB ground is tied to the building's earth ground. Your body is also loosely coupled to earth — through your feet, your chair, a metal desk, or anything earthed you happen to touch. So when you touch one pad, the loop can complete through *you → earth → the mains → back to TouchMe's ground*, instead of through the second pad. The device sees a finished circuit and fires a note. Earth ground has "leaked" in and is doing the job the second pad should do.
 
-This is ordinary physics, not a fault. It is the same reason [Playtron](/devices/playtron/) triggers more easily when you hold its gold ground pin: a cleaner path to ground makes a single touch enough.
+This is ordinary physics, not a fault. It is the same reason [Playtron](/devices/playtron/) triggers more easily when you hold its pointed corner: a cleaner path to ground makes a single touch enough.
 
 **When it matters.** One-hand play is fine if that is what you want. It only becomes a problem when you are showing the two-person moment and notes fire *before* the two people touch, or when stray contact triggers notes you did not intend.
 
@@ -83,7 +83,7 @@ If you do not need the technical details, you can stop here. The four methods ab
 
 Playtron uses **capacitive sensing**. Each alligator-clip input is monitored for tiny changes in the local electric field, called capacitance. Your body has a measurable capacitance to the surrounding environment — a few hundred picofarads on a normal day. When you touch a connected object, your capacitance becomes part of the circuit's total capacitance, and the device measures the change.
 
-For the device to detect that change, it needs a stable reference — a ground against which to measure. If both you and the device are floating relative to ground, the measurement is noisy. If one of you is connected to a clean reference (the gold pin, or a real ground), the noise drops and the notes fire reliably.
+For the device to detect that change, it needs a stable reference — a ground against which to measure. If both you and the device are floating relative to ground, the measurement is noisy. If one of you is connected to a clean reference (the pointed corner, or a real ground), the noise drops and the notes fire reliably.
 
 This is the same physics behind touchscreens. Your phone detects a capacitance change at the spot you touch. The difference is that your phone has a built-in ground reference (its own enclosure), so it does not need you to do anything. Playtron is deliberately bare and exposed and asks you to be part of the circuit.
 
@@ -93,11 +93,11 @@ The current involved is **picoamps** — billionths of an amp. There is no risk 
 
 > **TouchMe fires on just one hand.** Earth ground is leaking in through the mains. Run the host on battery, or add a USB isolator, to bring back two-pad play — see the ground-leaking section above.
 
-> **Notes fire weakly or only sometimes.** Use bare skin on the gold pin instead of a ground cable.
+> **Notes fire weakly or only sometimes.** Use bare skin on the pointed corner instead of a ground cable.
 
 > **Some objects play, others do not.** The objects that do not play are weak conductors. Try wetting them, or use more contact area. See [Objects you can play](/sound/objects-you-can-play/).
 
-> **Nothing plays at all.** Confirm that USB is firmly connected, the LED is on, you are using Brave or Chrome, and MIDI permission is allowed. See [No sound or MIDI not detected](/troubleshooting/no-sound/).
+> **Nothing plays at all.** Confirm that USB is firmly connected (Playtron's LED stays dark when you plug it in — that is normal; it blinks when you complete the circuit and a note plays), you are using Chrome, and MIDI permission is allowed. See [No sound or MIDI not detected](/troubleshooting/no-sound/).
 
 > **Live performance setup.** See the [Playtron deep dive](/devices/playtron-advanced/) for stage-tested grounding patterns.
 

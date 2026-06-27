@@ -62,7 +62,7 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 | **Polyphony** | Up to 12 notes | Up to 16 simultaneous notes | 2 channels (plant + light) | Up to 4 tracks of mono | 1 note at a time (5 modes) |
 | **Output** | USB MIDI (class-compliant) | USB MIDI | USB MIDI | USB MIDI + 5-pin MIDI DIN | USB MIDI |
 | **Power** | USB | USB | USB | USB | USB |
-| **Needs grounding?** | No | Yes — gold ground pin | No | No | No |
+| **Needs grounding?** | No | Yes — hold the pointed corner | No | No | No |
 | **Needs a sound source?** | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW |
 | **Form factor** | Credit-card-sized PCB with gold pads | Long PCB, 16 pin row + ground | Black PCB, 2 probe sockets, light sensor | Round disc with central encoder | Flat plate with buttons and LEDs |
 | **Web settings page** | [touchme](https://settings.playtronica.com/#/touchme) | [playtron](https://settings.playtronica.com/#/playtron) | [biotron](https://settings.playtronica.com/#/biotron) | [orbita](https://settings.playtronica.com/#/orbita) | No |

@@ -24,7 +24,7 @@ Pin corrosion is the most common physical issue with Playtron. Acidic or wet obj
 
 This is almost always a grounding problem. Two things to check:
 
-- Your bare skin is touching the **gold ground pin** on the device. There must be no clothing or material between your skin and the pin.
+- Your bare skin is touching the **pointed corner** of the device — that sharp corner is the ground. There must be no clothing or material between your skin and the corner.
 - Or a ground cable is clipped to a real ground — a metal radiator, a metal sink, or your laptop's metal body.
 
 If grounding is correct, unplug the USB cable and reconnect it.
@@ -43,7 +43,7 @@ See the full DAW guides: [FL Studio and other DAWs](/software/fl-studio-and-othe
 
 The cause is one of three:
 
-- **Grounding is too weak.** Your bare skin is not touching the gold ground pin, or your ground cable is not on a real ground (metal radiator, sink, or laptop body). See [Grounding — how and why](/sound/grounding/).
+- **Grounding is too weak.** Your bare skin is not touching the pointed corner of the device, or your ground cable is not on a real ground (metal radiator, sink, or laptop body). See [Grounding — how and why](/sound/grounding/).
 - **The object is too dry.** Dry fruit and dead plants give weak signals. Add moisture, or use a different object.
 - **The clip contact is poor.** Reposition the alligator clip so the metal teeth grip the object firmly.
 

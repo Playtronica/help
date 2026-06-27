@@ -22,7 +22,7 @@ The Nuke reset completely wipes and reinstalls the firmware on your device. Use 
 
 ## First — try the simple update
 
-1. **Open the settings page for your device in Brave or Chrome.**
+1. **Open the settings page for your device in Chrome.**
    - TouchMe: [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme)
    - Playtron: [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron)
    - Biotron: [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron)
@@ -40,7 +40,7 @@ You will need a paper clip, tweezers, or a short piece of wire, and your USB-C c
 4. **Wait for the `RPI-RP2` drive to appear on your computer.** Only release the pins **after** the drive appears. The window is brief. If you miss it, unplug and try again.
 5. **Release the pins.**
 6. **Download `flash_nuke.uf2` and drag it onto the `RPI-RP2` drive.** The device disconnects and reboots. This wipes the firmware completely.
-7. **Open [settings.playtronica.com/#/[your device]](https://settings.playtronica.com) in Brave or Chrome and click "Update Firmware".** Upload the latest firmware. The device reboots again and appears as a working MIDI device.
+7. **Open [settings.playtronica.com/#/[your device]](https://settings.playtronica.com) in Chrome and click "Update Firmware".** Upload the latest firmware. The device reboots again and appears as a working MIDI device.
 
 ## Related pages
 

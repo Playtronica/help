@@ -17,7 +17,7 @@ Pick the symptom that matches your situation. Each row points to the right page 
 |---|---|---|
 | Computer does not see the device at all | Wrong cable, wrong port, wrong browser | [Device will not connect](/troubleshooting/wont-connect/) |
 | LED on, but no sound when I touch | MIDI permission, wrong browser, no grounding | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
-| Playtron specifically — lights up but nothing happens | Grounding | [Grounding — how and why](/sound/grounding/) |
+| Playtron specifically — plugged in but silent | Grounding | [Grounding — how and why](/sound/grounding/) |
 | Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
 | USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
 | Some objects play, others do not | Conductivity | [Objects you can play](/sound/objects-you-can-play/) |
@@ -27,10 +27,10 @@ Pick the symptom that matches your situation. Each row points to the right page 
 
 Work through these in order. They resolve most issues without needing the deeper pages.
 
-1. **Use Brave or Chrome.** Safari and Firefox do not support Web MIDI. This is the single most common reason a Playtronica device appears to not work.
+1. **Use Chrome.** Safari and Firefox do not support Web MIDI. This is the single most common reason a Playtronica device appears to not work.
 2. **Plug in the device, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
 3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
-4. **For Playtron, confirm grounding.** Bare skin on the gold ground pin, or a ground cable to a metal radiator. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
+4. **For Playtron, confirm grounding.** Bare skin on the pointed corner of the device, or a ground cable to a metal radiator. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
 5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
 6. **Use a USB port directly on the computer.** Not a USB hub.
 
@@ -41,7 +41,7 @@ If all six are confirmed and the device still does not work, go to the symptom-s
 | LED behaviour | What it means |
 |---|---|
 | Solid on when plugged in | The device is powered and connected. |
-| Off when plugged in | USB power issue. Try another port or cable. (Playtron does not light up on plug-in — this is normal.) |
+| Off when plugged in | USB power issue. Try another port or cable. (Playtron and TouchMe stay dark when you plug them in — that is normal; their LED blinks when you complete the circuit and a note plays.) |
 | Flashing rapidly | The device is sending MIDI signals. This is correct. |
 | All LEDs lit at once | Either calibration mode (Biotron, briefly) or a stuck state (Playtron — try a reset). |
 | Solid on but no response to touch | Unplug and reconnect. If the problem continues, see the symptom rows above. |

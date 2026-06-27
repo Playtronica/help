@@ -20,7 +20,7 @@ TouchMe ships with a chromatic scale that starts at MIDI note 48. A chromatic sc
 ## Open the tuning page
 
 1. Plug TouchMe into your computer.
-2. Open [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Brave or Chrome.
+2. Open [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Chrome.
 3. Click **Allow** on the MIDI permission prompt.
 
 If your device does not appear in the device dropdown, close the tab, plug in the device, and open a new tab. The browser scans for MIDI devices when the page loads.
@@ -60,7 +60,7 @@ For deep-dive options like CC routing and performance setups, see [TouchMe deep 
 
 ## If the page does not see the device
 
-- **Use the right browser.** Brave or Chrome only. Safari and Firefox do not support Web MIDI.
+- **Use the right browser.** Chrome only. Safari and Firefox do not support Web MIDI.
 - **Plug in the device first, then open the page.** Not the other way around.
 - **Check MIDI permission.** If you clicked Block on the MIDI prompt earlier, the browser remembers. Open browser settings → Site Settings → MIDI → find `settings.playtronica.com` → set to **Allow**.
 - **If nothing works**, see the [firmware reset guide](/troubleshooting/firmware-reset/). The Nuke recovery brings the device back to a known state.

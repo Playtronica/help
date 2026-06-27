@@ -34,7 +34,7 @@ How does the same idea of "melody" survive when the instrument is a banana?
 **Students will be able to:**
 
 1. Compose a short melody of 4-8 notes using fruits as keys.
-2. Explain why grounding (holding the gold ground pin) is required for Playtron to sense touch.
+2. Explain why grounding (holding the pointed corner of the device) is required for Playtron to sense touch.
 3. Iterate the composition based on at least one peer comment.
 
 **Student-facing "I Can" statements:**
@@ -54,7 +54,7 @@ How does the same idea of "melody" survive when the instrument is a banana?
 - One Playtron per group of 4 students (plan for 7-8 groups in a 30-student class — see Class Pack 30 bundle).
 - 6-10 fruits per group: bananas, apples, lemons, oranges, pears, kiwis.
 - Alligator clips (Playtron ships with 8; for full pin coverage use the [10 extra alligator clips](https://shop.playtronica.com/products/10-extra-alligator-clips) accessory).
-- Browser piano open in Brave or Chrome on each group's laptop or tablet.
+- Browser piano open in Chrome on each group's laptop or tablet.
 - One whiteboard per group to sketch the composition.
 - **Teacher prep (10 min):** clip a fruit to each pin on one demo Playtron. Confirm grounding works before students enter. Wipe table dry.
 
@@ -62,11 +62,11 @@ How does the same idea of "melody" survive when the instrument is a banana?
 
 ### 1. Engage — the silent fruit (5 min)
 
-Teacher places a banana on the table. "Make this banana play." Volunteers try touching it. Nothing happens. "Why not?" Discuss: there's no circuit yet. Teacher clips one alligator to the banana, touches the ground pin, then the banana — sound. "What changed?"
+Teacher places a banana on the table. "Make this banana play." Volunteers try touching it. Nothing happens. "Why not?" Discuss: there's no circuit yet. Teacher clips one alligator to the banana, holds the pointed corner of the device, then touches the banana — sound. "What changed?"
 
 ### 2. Explore — grounding revealed (10 min)
 
-Whole class: Teacher demos that touching fruit without holding the ground pin produces no sound; touching with ground produces sound. Vocabulary card up: **ground**. Pair-share for 90 seconds: "Why do you think your body needs to be part of the loop?"
+Whole class: Teacher demos that touching fruit without holding the pointed corner produces no sound; touching with ground produces sound. Vocabulary card up: **ground**. Pair-share for 90 seconds: "Why do you think your body needs to be part of the loop?"
 
 ### 3. Create — fruit melodies (20 min)
 
@@ -74,7 +74,7 @@ Groups of 4. Each group clips 4-6 fruits, then composes a 4-8 note melody. They 
 
 - **Composer** — decides the order.
 - **Player** — touches the fruit.
-- **Grounder** — holds the ground pin throughout.
+- **Grounder** — holds the pointed corner of the device throughout.
 - **Critic** — gives one piece of feedback after the first play.
 
 After the first play, groups iterate once based on the critic's note.
@@ -104,7 +104,7 @@ Each group performs their melody for the class. After every performance, two stu
 
 - Citrus dries out quickly — wipe the pins after class. Sticky residue blocks future signals.
 - Battery-powered Bluetooth speakers help if you have an open-plan room. Group conflict over sound rises fast.
-- Common mistake: students hold the ground pin too lightly. Push for firm contact.
+- Common mistake: students hold the pointed corner too lightly. Push for firm contact.
 
 ---
 

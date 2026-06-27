@@ -24,7 +24,7 @@ Five modes use the same gesture in different ways — a chord, an arpeggio, a dr
 ## Quick start
 
 1. **Plug Scales into your laptop, tablet, or phone** with a USB cable (not included — use any USB-C data cable). Or connect Scales to a hardware synth with a TRS MIDI cable.
-2. **Open a web synth or your DAW.** [synth.playtronica.com](https://synth.playtronica.com) works in Brave or Chrome. Ableton, Logic, and FL Studio see Scales as a MIDI input.
+2. **Open a web synth or your DAW.** [synth.playtronica.com](https://synth.playtronica.com) works in Chrome. Ableton, Logic, and FL Studio see Scales as a MIDI input.
 3. **Place an object on the plate.** Any object up to 3 kg works — a piece of fruit, a glass of water, a stone, a coin, a phone. The note number tracks the weight.
 4. **Move, swap, or stack the objects.** Rearranging the objects changes the notes.
 
@@ -90,7 +90,7 @@ Rules:
 
 ## Web settings
 
-Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scales) in Brave or Chrome. The web page lets you tune sensitivity curves, set custom scale mappings, and update the firmware.
+Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scales) in Chrome. The web page lets you tune sensitivity curves, set custom scale mappings, and update the firmware.
 
 ## Technical specifications
 
@@ -104,7 +104,7 @@ Open [settings.playtronica.com/#/scales](https://settings.playtronica.com/#/scal
 
 ## Troubleshooting
 
-> **No sound from the synth.** Confirm you are in Brave or Chrome. Confirm MIDI permission is allowed. Confirm the LED on Scales lights up when you plug in.
+> **No sound from the synth.** Confirm you are in Chrome. Confirm MIDI permission is allowed. Confirm the LED on Scales lights up when you plug in.
 
 > **The pitch jumps wildly.** You are probably in Mode 4 (Sensitivity). Change the weight range to match the weight of the object on the plate.
 

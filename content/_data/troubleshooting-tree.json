@@ -5,11 +5,12 @@
   "branches": [
     {
       "id": "no-connect",
-      "label": "Device doesn't connect (LED off, or the computer doesn't see it)",
+      "label": "Device doesn't connect (the computer doesn't see it)",
       "emoji": "🔌",
       "node": {
         "id": "no-connect-q1",
         "title": "Is the LED on when you plug the device into USB?",
+        "subtitle": "Playtron and TouchMe do not light an LED when plugged in — a dark device is normal, so answer \"Yes\" for them. Scales, Biotron, and Orbita do have a status LED.",
         "yes": {
           "id": "no-connect-q2",
           "title": "Does the device show up in your operating system's MIDI list?",
@@ -25,7 +26,7 @@
             "links": [
               { "label": "Device won't connect — full page", "href": "/troubleshooting/wont-connect/" }
             ],
-            "stuck": "Send a short video showing: the device LED, your browser address bar, and the MIDI permission popup if it appears."
+            "stuck": "Send a short video showing: the device, your browser address bar, and the MIDI permission popup if it appears."
           },
           "no": {
             "id": "no-connect-fix-driver",
@@ -52,7 +53,7 @@
           "links": [
             { "label": "Firmware reset (Nuke recovery)", "href": "/troubleshooting/firmware-reset/" }
           ],
-          "stuck": "Send a photo of the device with the cable plugged in (showing the LED area) and the model of cable you're using."
+          "stuck": "Send a photo of the device with the cable plugged in and the model of cable you're using."
         }
       }
     },
@@ -76,7 +77,7 @@
                 "label": "🍉 Playtron",
                 "node": {
                   "id": "playtron-ground-q",
-                  "title": "Are you grounded — bare skin on the gold ground pin?",
+                  "title": "Are you grounded — bare skin on the pointed corner of the device?",
                   "yes": {
                     "id": "playtron-light",
                     "title": "Does the LED blink when you touch a clipped object?",
@@ -106,8 +107,8 @@
                     "id": "playtron-ground-fix",
                     "title": "Grounding is the most common 'no sound' cause on Playtron.",
                     "fix": [
-                      "Put your bare hand on the gold ground pin in the corner of Playtron. Bare skin, not over clothing.",
-                      "Or clip a ground cable from the ground pin to a metal radiator, sink, or your laptop's metal body.",
+                      "Put your bare hand on the pointed corner of Playtron — that sharp corner is the ground. Bare skin, not over clothing.",
+                      "Or clip a ground cable from the pointed corner to a metal radiator, sink, or your laptop's metal body.",
                       "Test again with a fresh object."
                     ],
                     "links": [
@@ -279,7 +280,7 @@
                 "id": "playtron-strange-other",
                 "title": "Try a fresh ground and a fresh object.",
                 "fix": [
-                  "Re-ground yourself (bare skin on the gold pin).",
+                  "Re-ground yourself (bare skin on the pointed corner).",
                   "Replace your test object with a known-good one (a banana).",
                   "If only certain pins act up, the alligator clips on those pins may be making poor contact — try wiggling them or swapping clips."
                 ]

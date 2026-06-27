@@ -28,7 +28,7 @@ If both a bundle and its single items are sold out, the next batch usually arriv
 
 The minimum gear for each device:
 
-- **TouchMe** — TouchMe, the USB cable from the box, a laptop with Brave or Chrome. Touch the pads.
+- **TouchMe** — TouchMe, the USB cable from the box, a laptop with Chrome. Touch the pads.
 - **Playtron** — Playtron, the USB cable from the box, at least **2 alligator clips** (in the box), a laptop. Clip the wires to fruit, water, or a friend.
 - **Biotron** — Biotron, a USB cable, leaf-pads (in the box), a houseplant, a laptop. The plant plays.
 - **Orbita** — Orbita, the USB cable from the box, a laptop. Self-playing sequencer.

@@ -15,25 +15,14 @@ emoji: 🎹
 
 ## Where to find synths
 
-[synth.playtronica.com](https://synth.playtronica.com) is our curated library of web synths that work with MIDI. Open the site in Brave or Chrome, plug in your device, and choose a synth. No installation is required.
+[synth.playtronica.com](https://synth.playtronica.com) is our curated library of web synths that work with MIDI. Open the site in Chrome, plug in your device, and choose a synth. No installation is required.
 
 ## How to get sound
 
-1. **Plug in your device first, then open Brave or Chrome.** The browser scans for MIDI devices when the page loads. If you open the browser first, you will need to reload the page after plugging in.
+1. **Plug in your device first, then open Chrome.** The browser scans for MIDI devices when the page loads. If you open the browser first, you will need to reload the page after plugging in.
 2. **Go to [synth.playtronica.com](https://synth.playtronica.com).**
 3. **Click Allow on the MIDI permission prompt.** The prompt appears once. If you clicked Block by mistake, open the browser settings → Privacy and Security → Site Settings → MIDI → find `synth.playtronica.com` → set to **Allow**.
 4. **Open a synth and check the MIDI dropdown in the top right.** Most synths have this menu. Confirm your device is selected.
-
-## Browser compatibility
-
-| Browser | Works? | Notes |
-|---|---|---|
-| Brave | Yes | Recommended |
-| Chrome | Yes | Recommended |
-| Edge | Yes | Chromium-based |
-| Safari | No | No Web MIDI support |
-| Firefox | No | No Web MIDI support |
-| Mobile Chrome and Safari | No | Web MIDI is not available on mobile browsers. Use mobile apps instead — see [Mobile apps](/software/mobile/). |
 
 ## Recommended synths
 
@@ -54,6 +43,19 @@ Powerful synth. Some users report stability issues. Try it. Skip it if it behave
 Any synth without a "Playtron only" label works with both TouchMe and Playtron. Explore — the library has many small gems.
 
 > ℹ️ **About play.playtronica.com.** This older synth site stopped working with current browsers in April 2023, after a browser API change. It will not be fixed. Use [synth.playtronica.com](https://synth.playtronica.com) instead.
+
+## Web MIDI and browser support
+
+The web synths talk to your device through **Web MIDI**, a browser feature that lets a web page send and receive MIDI. Not every browser supports it. We recommend **Chrome**. Other Chromium-based browsers (Brave, Edge) also work; Safari and Firefox do not.
+
+| Browser | Works? | Notes |
+|---|---|---|
+| Chrome | Yes | Recommended |
+| Brave | Yes | Chromium-based |
+| Edge | Yes | Chromium-based |
+| Safari | No | No Web MIDI support |
+| Firefox | No | No Web MIDI support |
+| Mobile Chrome and Safari | No | Web MIDI is not available on mobile browsers. Use mobile apps instead — see [Mobile apps](/software/mobile/). |
 
 ## Ask the community
 

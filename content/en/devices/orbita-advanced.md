@@ -39,7 +39,7 @@ Orbita can sync to incoming MIDI clock. Set the source clock to your DAW's trans
 
 ## Firmware
 
-The firmware update flow is the same as for TouchMe, Playtron, and Biotron. Update at [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Brave or Chrome.
+The firmware update flow is the same as for TouchMe, Playtron, and Biotron. Update at [settings.playtronica.com/#/orbita](https://settings.playtronica.com/#/orbita) in Chrome.
 
 If the device is unresponsive, follow the [Firmware reset guide](/troubleshooting/firmware-reset/). The BOOT-pin and `flash_nuke.uf2` flow applies.
 

@@ -28,7 +28,7 @@ Playtronica devices connect the human body, objects, and sound through touch and
 
 All Playtronica devices run on low-voltage USB power. Do not connect them to unverified power supplies. Do not handle the devices with wet hands or while standing in water. Disconnect the device immediately if you feel any tingling sensation or notice unusual behaviour.
 
-> ⚠️ **Touch only the contacts shown in the device manuals.** Each device has clearly defined contact points: the TouchMe pads, the Playtron alligator pins and the gold ground pin, the Biotron leaf-pad cables and light sensor face, the Orbita orbit ring, the central encoder, the side buttons, and every device's USB-C connector. Even when the device is unplugged, do not touch solder joints, exposed chips, or the underside of the PCB. Playtronica devices are durable, but touching those internal areas can cause permanent damage. Treat the surfaces you are not using like the inside of an open laptop — it is fine to know they are there, but there is no reason to touch them.
+> ⚠️ **Touch only the contacts shown in the device manuals.** Each device has clearly defined contact points: the TouchMe pads, the Playtron alligator pins and its pointed ground corner, the Biotron leaf-pad cables and light sensor face, the Orbita orbit ring, the central encoder, the side buttons, and every device's USB-C connector. Even when the device is unplugged, do not touch solder joints, exposed chips, or the underside of the PCB. Playtronica devices are durable, but touching those internal areas can cause permanent damage. Treat the surfaces you are not using like the inside of an open laptop — it is fine to know they are there, but there is no reason to touch them.
 
 ## Environment
 

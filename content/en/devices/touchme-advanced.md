@@ -21,7 +21,7 @@ This page is for musicians and developers who already have TouchMe playing and w
 
 ## Custom scales and tunings
 
-TouchMe ships with a default chromatic-scale mapping. You can change the scale at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Brave or Chrome).
+TouchMe ships with a default chromatic-scale mapping. You can change the scale at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Chrome).
 
 Common presets:
 
@@ -58,7 +58,7 @@ See the DAW setup pages:
 
 ## Firmware
 
-Update the firmware at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Brave or Chrome. The full firmware update flow and the Nuke recovery procedure are on the [main guide](/devices/touchme/) and the [Firmware reset page](/troubleshooting/firmware-reset/).
+Update the firmware at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) in Chrome. The full firmware update flow and the Nuke recovery procedure are on the [main guide](/devices/touchme/) and the [Firmware reset page](/troubleshooting/firmware-reset/).
 
 ## Want more?
 

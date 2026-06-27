@@ -2,7 +2,7 @@
 title: "TouchMe not recognized on Mac or Windows"
 slug: touchme-not-recognized
 section: troubleshooting
-summary: "TouchMe lights up but your computer doesn't detect it as a MIDI device. This covers the four fixes that resolve almost every case: data cable, plug-in order, Web MIDI browser, and macOS permission."
+summary: "TouchMe is plugged in but your computer doesn't detect it as a MIDI device. This covers the four fixes that resolve almost every case: data cable, plug-in order, Web MIDI browser, and macOS permission."
 segment: ["music-producer", "creator"]
 deflection_target: 40
 status: new-2026-06
@@ -12,7 +12,7 @@ emoji: 🔌
 
 # TouchMe not recognized on Mac or Windows
 
-The device powers on — LEDs light up, the arpeggiator moves — but your computer sees nothing. This is the most common setup question we receive. Work through the steps below in order. Most people are sorted by step 1 or 2.
+The device powers on — the arpeggiator moves — but your computer sees nothing. This is the most common setup question we receive. Work through the steps below in order. Most people are sorted by step 1 or 2.
 
 ---
 
@@ -30,21 +30,21 @@ This is the single most common cause. Many USB cables only carry power; they do 
 
 ## Step 2 — Plug in the device before opening the browser
 
-Web MIDI has to detect the device at startup. If you open Chrome or Brave first and then plug in TouchMe, the browser often misses it.
+Web MIDI has to detect the device at startup. If you open Chrome first and then plug in TouchMe, the browser often misses it.
 
 **Do this:**
 
 1. Unplug TouchMe.
-2. Close Chrome or Brave completely (Quit, not just close the tab).
-3. Plug in TouchMe. Wait for the LEDs to come on.
-4. Open Chrome or Brave.
+2. Close Chrome completely (Quit, not just close the tab).
+3. Plug in TouchMe. The LED stays dark until you touch a pad — that is normal, it is not a sign the device is off.
+4. Open Chrome.
 5. Navigate to your synth or the settings page.
 
 ---
 
-## Step 3 — Use Chrome or Brave (not Safari, not Firefox)
+## Step 3 — Use Chrome (not Safari, not Firefox)
 
-TouchMe uses Web MIDI. Web MIDI is supported in **Chrome** and **Brave** only. Safari does not support it. Firefox does not support it.
+TouchMe uses Web MIDI. Web MIDI is supported in **Chrome** only. Safari does not support it. Firefox does not support it.
 
 If you are on Safari or Firefox, nothing will work regardless of your cable or connection.
 
@@ -52,7 +52,6 @@ If you are on Safari or Firefox, nothing will work regardless of your cable or c
 
 **Chrome:** Address bar → click the lock icon → Site settings → MIDI → Allow.
 
-**Brave:** Same as Chrome. Also check `brave://settings/content/midi` if the lock icon is missing.
 
 After changing the permission, refresh the page with the device already plugged in.
 
@@ -91,7 +90,7 @@ Windows users sometimes see the TouchMe in Device Manager under "Sound, video an
 
 **Do this:**
 
-1. Open Chrome or Brave (not Edge, not Internet Explorer).
+1. Open Chrome (not Edge, not Internet Explorer).
 2. Go to [settings.playtronica.com](https://settings.playtronica.com/#/touchme).
 3. If the page connects to your device, the hardware is working. The issue is DAW recognition — check your DAW's MIDI input list and enable the TouchMe port there.
 4. If the settings page also cannot connect, try a different USB cable first, then a different USB port.
@@ -101,7 +100,7 @@ Windows users sometimes see the TouchMe in Device Manager under "Sound, video an
 ## Still not working after all four steps
 
 Before contacting support, send us a short video showing:
-- The device plugged in with LEDs active.
+- The device plugged in, and the LED blinking when you touch a pad.
 - The Audio MIDI Setup window (Mac) or Device Manager (Windows).
 - Your browser attempting to connect.
 
@@ -115,9 +114,9 @@ Contact: [support@playtronica.com](mailto:support@playtronica.com)
 
 | Symptom | First thing to check |
 |---|---|
-| No LEDs at all | USB cable is not delivering power — try a different port or cable |
-| LEDs on, nothing in browser | Plug in before opening browser; check MIDI permission in browser |
-| LEDs on, not in Audio MIDI Setup | Cable is charge-only; try the included cable |
+| No LED even when you touch a pad | USB cable is charge-only or not delivering power — try the included cable or a different port |
+| LED blinks on touch, nothing in browser | Plug in before opening browser; check MIDI permission in browser |
+| LED blinks on touch, not in Audio MIDI Setup | Cable is charge-only; try the included cable |
 | Works in Audio MIDI Setup, not in DAW | Enable TouchMe MIDI input inside your DAW settings |
 | Only works on Windows, not Mac | Adapter is charge-only; use a data adapter directly into a USB-C port |
 | Worked before, stopped after macOS update | Open Audio MIDI Setup → MIDI Studio and rescan; try direct USB connection without hub |

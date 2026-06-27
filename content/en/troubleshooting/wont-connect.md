@@ -17,7 +17,7 @@ Your computer does not see the device. Work through this checklist in order. Thi
 
 If the browser says **denied access to MIDI** or asks for permission every time, the site's MIDI permission was rejected once and is now cached. To fix:
 
-1. **Open browser settings** in Brave or Chrome.
+1. **Open browser settings** in Chrome.
 2. **Go to Privacy and Security → Site Settings → MIDI**.
 3. Find `synth.playtronica.com` and `settings.playtronica.com` and change each to **Allow**.
 4. **Reload the page.** The device should be detected within two seconds.
@@ -26,10 +26,12 @@ If MIDI permission is correctly set to Allow and the device is still not detecte
 
 ## First — is the LED lit when the device is plugged in?
 
+> ℹ️ **Note for Playtron and TouchMe.** These devices do **not** light up an LED when you plug them in. A dark device is normal — skip straight to the platform steps below. Their LED blinks each time you complete the circuit and a note plays, so if you can trigger a note the device is working correctly.
+
+For devices that do have a status LED (Scales, Biotron, Orbita):
+
 - **The LED is on.** The device has power. The problem is in the software or the driver. Go to "No sound" if MIDI is not detected at the app level.
 - **The LED is off.** The problem is the USB connection itself. Continue below.
-
-> ℹ️ **Note for Playtron.** The LED on Playtron does not light up when you plug it in. This is normal. Skip to the platform steps below.
 
 ## On macOS
 

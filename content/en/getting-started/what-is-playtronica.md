@@ -28,7 +28,7 @@ Every device works with the music software you probably already have: Ableton, L
 
 ## Two things to know first
 
-- You need **Brave** or **Chrome** for the browser synth and our settings tools. Safari and Firefox do not support Web MIDI yet.
+- You need **Chrome** for the browser synth and our settings tools. Safari and Firefox do not support Web MIDI yet.
 - Each device is a bare circuit board. It is durable, but the metal pins can corrode if you leave them in contact with wet objects for a long time. Wipe the pins dry after sessions with water or fruit.
 
 ## If you just received one
