@@ -7,7 +7,7 @@ order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-07-06
 emoji: 🔧
 ---
 
@@ -16,6 +16,7 @@ Pick the symptom that matches your situation. Each row points to the right page 
 | What you are seeing | Most likely cause | Where to go |
 |---|---|---|
 | Computer does not see the device at all | Wrong cable, wrong port, wrong browser | [Device will not connect](/troubleshooting/wont-connect/) |
+| Old **Micro-USB** TouchMe/Playtron — nothing on a new Mac | New Mac is too strict; needs a USB hub | [Device will not connect](/troubleshooting/wont-connect/) |
 | LED on, but no sound when I touch | MIDI permission, wrong browser, no grounding | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
 | Playtron specifically — plugged in but silent | Grounding | [Grounding — how and why](/sound/grounding/) |
 | Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
@@ -32,7 +33,7 @@ Work through these in order. They resolve most issues without needing the deeper
 3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
 4. **For Playtron, confirm grounding.** Bare skin on the pointed corner of the device, or a ground cable to a metal radiator. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
 5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
-6. **Use a USB port directly on the computer.** Not a USB hub.
+6. **Use a USB port directly on the computer, not a hub** — *except* an old Micro-USB TouchMe or Playtron on a new Mac, which often needs a hub. See [Device will not connect](/troubleshooting/wont-connect/).
 
 If all six are confirmed and the device still does not work, go to the symptom-specific page above.
 

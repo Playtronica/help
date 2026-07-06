@@ -70,7 +70,7 @@ This confirms whether the problem is the cable/connection or the browser.
 
 **If TouchMe appears here but not in your browser:** the issue is browser permissions (see Step 3).
 
-**If TouchMe does not appear here at all:** the Mac is not seeing the device at the hardware level. Try a different USB cable (Step 1) and a different USB port. On the **newer USB-C TouchMe**, remove any hub or adapter and connect directly. On the **older Micro-USB TouchMe** with a recent Apple-silicon Mac, try the opposite — add a real USB hub (see "Old Micro-USB TouchMe: nothing at all on a newer Mac?" below).
+**If TouchMe does not appear here at all:** the Mac is not seeing the device at the hardware level. Try a different USB cable (Step 1) and a different USB port. On the **newer USB-C TouchMe**, remove any hub or adapter and connect directly. The **older Micro-USB TouchMe (v1)** on a new Mac is the opposite — it often needs a hub added; see "Old Micro-USB TouchMe not seen at all on a new Mac" below.
 
 ---
 
@@ -84,40 +84,11 @@ Customers with new MacBook Pros (M1, M2, M5, running Sequoia or Sonoma) using th
 
 ---
 
-## Old Micro-USB TouchMe: nothing at all on a newer Mac? Try a USB hub
+## Old Micro-USB TouchMe not seen at all on a new Mac
 
-This applies **only** to the older **Micro-USB TouchMe (v1)** on a recent Apple-silicon Mac (M1/M2/M3 and later). If the device powers on and reacts to touch, but the Mac shows **nothing** in Audio MIDI Setup even with a known-good data cable plugged directly into a port — try adding a USB hub. (The old Playtron behaves the same way — see [Playtron — common issues](/troubleshooting/playtron-faq/).)
+If your **Micro-USB TouchMe (v1)** shows **nothing** in Audio MIDI Setup on a recent Apple-silicon Mac even with a good data cable, it usually needs a **real USB hub** between the device and the Mac (not a passive adapter). This is the opposite of removing the hub — which is right for the newer USB-C TouchMe (v2).
 
-**Why:** the older device uses an early USB design that newer Macs treat very strictly and often refuse during setup. The unit is not broken — the connection just needs help.
-
-**Try this:**
-
-1. Use a **real USB hub** — a small box with its own chip and several ports. A plain USB-C-to-USB-A adapter is just a wire and will **not** help.
-2. Plug the hub into your Mac.
-3. Plug TouchMe into the hub, not directly into the Mac.
-4. Open Audio MIDI Setup and check whether TouchMe now appears.
-
-A simple, inexpensive **USB 2.0** hub tends to work best. If your Mac has only USB-C ports, use a USB-C hub that provides regular USB-A ports for the TouchMe cable. If you have a powered hub (one with its own adapter), that is the most reliable.
-
-**Suitable hubs (examples — any similar simple 4-port hub works):**
-
-*Macs with USB-A ports (or older Macs):*
-- Anker 4-Port USB 3.0 Ultra Slim Data Hub
-- UGREEN 4-Port USB 3.0 Ultra Slim Hub
-- Amazon Basics 4-Port USB 3.0 Hub
-- Sabrent 4-Port USB 2.0 Hub
-
-*New MacBooks (USB-C only) — choose one with USB-A ports:*
-- [UGREEN USB-C to 4× USB-A Hub](https://www.amazon.com/dp/B07PY87TBD)
-- [Anker USB-C Hub, 4 Ports (USB-A)](https://www.amazon.com/dp/B0CCDMR66Y)
-
-These are inexpensive (about €8–15). Search the model name on your local Amazon (.com / .de / .co.uk) or any electronics shop. **Avoid passive USB-C-to-USB-A adapters** — they are not hubs and will not help.
-
-**If one hub does not help,** it is usually the wrong type — some cheap "SuperSpeed" USB 3.0 hubs, and all passive adapters, will not work. A basic USB 2.0 hub is the safest thing to try.
-
-> 💬 **Trying this? Message us on WhatsApp and we'll work it out together:** [chat with us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20TouchMe%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20). Tell us your Mac model, the hub you used, and what Audio MIDI Setup shows — the more detail, the faster we solve it.
-
-> This is the opposite of the general advice elsewhere on this page (remove the hub). Removing the hub is right for the **newer USB-C** TouchMe. For the **older Micro-USB** TouchMe on a new Mac, adding a hub is what often gets it seen.
+Full steps, hub models and the decision table: **[Device will not connect → Old Micro-USB device on a new Mac](/troubleshooting/wont-connect/)**.
 
 ---
 

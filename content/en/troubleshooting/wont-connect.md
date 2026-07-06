@@ -36,7 +36,7 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 ## On macOS
 
 1. **Open Audio MIDI Setup.** Go to Applications → Utilities → Audio MIDI Setup. Click the MIDI Studio button in the top right. Confirm whether your Playtronica device appears in the window.
-2. **If the device is not visible, try a different USB port.** For most devices, USB hubs can cause connection issues — connect directly to a USB port on the Mac. **Exception:** an older **Micro-USB** Playtron or TouchMe on a recent Apple-silicon Mac (M1/M2/M3 and later) often needs the opposite — a real USB hub added between the device and the Mac (not a passive adapter). See [TouchMe not recognized](/troubleshooting/touchme-not-recognized/), or 💬 [message us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20device%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20) and we'll work it out together.
+2. **If the device is not visible, try a different USB port.** For most devices a USB hub causes issues — connect directly. **Older Micro-USB TouchMe (v1) and Playtron are the exception** — on a new Mac they often need a hub added; see "Old Micro-USB device on a new Mac?" below.
 3. **Try a different USB cable.** USB cables can fail silently. Use any other data cable of the same type. Charge-only cables will not work.
 4. **Restart the Core Audio daemon.** Open Terminal and run `sudo pkill -9 coreaudiod`. Then plug the device back in.
 
@@ -46,6 +46,27 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 2. **Check for a yellow warning icon next to the device.** If you see one, right-click the device, select **Update driver**, and then **Search automatically for drivers**. If that does not work, uninstall the device and reconnect it.
 3. **Use a USB port directly on the computer.** Avoid USB hubs.
 4. **Try a different USB cable.** The cable must be a data cable, not charge-only.
+
+## Old Micro-USB device on a new Mac? Add a USB hub
+
+For the older **Micro-USB TouchMe (v1)** and **Micro-USB Playtron** on a recent Apple-silicon Mac (M1/M2/M3 and later): the device powers on and reacts to touch, but the Mac shows **nothing** in Audio MIDI Setup — even with a good data cable straight into a port.
+
+These devices use an early USB design that new Macs treat very strictly and refuse during setup. The device is fine — a USB hub re-times the connection so the Mac accepts it.
+
+| Your device | On a new Mac |
+|---|---|
+| Older **Micro-USB** (TouchMe v1, Playtron) | **Add** a real USB hub between device and Mac |
+| Newer **USB-C** (TouchMe v2) | Connect **directly**, no hub |
+
+**Add a hub:**
+
+1. Use a **real USB hub** — a box with its own chip and ports. A plain USB-C-to-USB-A adapter is only a wire and will **not** help.
+2. Plug the hub into the Mac, then the device into the hub.
+3. Open Audio MIDI Setup and check whether the device appears.
+
+A simple, inexpensive **USB 2.0** hub works best; a powered one (with its own adapter) is most reliable. On a USB-C-only Mac, pick a USB-C hub with regular USB-A ports. Examples, about €8–15: Anker, UGREEN, Amazon Basics or Sabrent 4-port hubs — for USB-C Macs, a [UGREEN USB-C→USB-A hub](https://www.amazon.com/dp/B07PY87TBD) or [Anker USB-C hub](https://www.amazon.com/dp/B0CCDMR66Y). **Avoid passive USB-C-to-USB-A adapters — they are not hubs.** If one hub does not help, it is usually the wrong type; a basic USB 2.0 hub is the safest.
+
+> 💬 **Trying this? Message us on WhatsApp and we'll work it out together:** [chat with us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20device%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20). Tell us your Mac model, the hub you used, and what Audio MIDI Setup shows.
 
 ## Related pages
 
