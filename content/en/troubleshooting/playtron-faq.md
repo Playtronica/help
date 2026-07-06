@@ -7,7 +7,7 @@ order: 4
 segment: ["music-producer"]
 deflection_target: 40
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-07-06
 emoji: 🍉
 ---
 
@@ -38,6 +38,16 @@ Playtron is a class-compliant MIDI device. Check the following:
 3. A track in the DAW is armed to receive MIDI.
 
 See the full DAW guides: [FL Studio and other DAWs](/software/fl-studio-and-other-daws/), [Ableton Live](/software/ableton/), [Logic Pro and GarageBand](/software/logic-garageband/).
+
+## Old Playtron not detected at all on a newer Mac
+
+If your Playtron powers on and blinks when you complete a note, but a recent Apple-silicon Mac (M1/M2/M3 and later) shows **nothing** in Audio MIDI Setup — even with a known-good data cable plugged directly into a port — try adding a **USB hub** between the device and the Mac.
+
+The older Micro-USB Playtron uses an early USB design that newer Macs treat very strictly. The device is fine; the connection just needs help. Use a **real USB hub** (a small box with its own chip and several ports), **not** a passive USB-C-to-USB-A adapter — a passive adapter is only a wire and will not help. A simple, inexpensive USB 2.0 hub works best; on a USB-C-only Mac, use a USB-C hub that has regular USB-A ports.
+
+Full steps and details are on the TouchMe page — the fix is identical: [Old Micro-USB device: nothing at all on a newer Mac](/troubleshooting/touchme-not-recognized/).
+
+> 💬 **Trying this? Message us on WhatsApp and we'll work it out together:** [chat with us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20Playtron%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20). Tell us your Mac model, the hub you used, and what Audio MIDI Setup shows — the more detail, the faster we solve it.
 
 ## Objects barely trigger, or the response is inconsistent
 

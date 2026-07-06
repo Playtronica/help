@@ -7,7 +7,7 @@ order: 2
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 180
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-07-06
 emoji: 🔌
 ---
 
@@ -36,7 +36,7 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 ## On macOS
 
 1. **Open Audio MIDI Setup.** Go to Applications → Utilities → Audio MIDI Setup. Click the MIDI Studio button in the top right. Confirm whether your Playtronica device appears in the window.
-2. **If the device is not visible, try a different USB port.** USB hubs can cause connection issues. Connect the device directly to a USB port on the Mac.
+2. **If the device is not visible, try a different USB port.** For most devices, USB hubs can cause connection issues — connect directly to a USB port on the Mac. **Exception:** an older **Micro-USB** Playtron or TouchMe on a recent Apple-silicon Mac (M1/M2/M3 and later) often needs the opposite — a real USB hub added between the device and the Mac (not a passive adapter). See [TouchMe not recognized](/troubleshooting/touchme-not-recognized/), or 💬 [message us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20device%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20) and we'll work it out together.
 3. **Try a different USB cable.** USB cables can fail silently. Use any other data cable of the same type. Charge-only cables will not work.
 4. **Restart the Core Audio daemon.** Open Terminal and run `sudo pkill -9 coreaudiod`. Then plug the device back in.
 
