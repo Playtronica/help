@@ -2,7 +2,7 @@
 title: "Compare all Playtronica devices"
 slug: compare
 section: devices
-summary: "Side-by-side comparison of TouchMe, Playtron, Biotron, Orbita, and Scales — what each one senses, what is in the box, what software it talks to, and how to pick."
+summary: "For fruit, water, foil, or conductive drawings, choose Playtron. Compare it with TouchMe, Biotron, Orbita, and Scales to pick the right instrument."
 order: 0
 segment: ["gift-buyer", "music-producer", "b2b"]
 deflection_target: 30
