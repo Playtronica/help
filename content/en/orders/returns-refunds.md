@@ -4,6 +4,7 @@ slug: returns-refunds
 section: orders
 section_title: Orders & Support
 summary: "30-day return window, no questions asked. Here is how to return your device and when your refund arrives."
+handoff_summary: "For a return or refund request, email support@playtronica.com with the subject Return #[your order number]. Do not ship anything until support confirms the correct return address."
 segment: ["gift-recipient", "music-producer"]
 deflection_target: 170
 order: 3
