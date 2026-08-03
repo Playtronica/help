@@ -83,7 +83,7 @@ What works in your room depends heavily on grade band. Here's what we've learned
 
 **Cognitive reality:** five-year-olds can't read music notation, can barely operate a mouse, but can absolutely touch a fruit and hear a sound. Their first encounter with "music technology" should be **purely tactile**.
 
-**What works:** TouchMe-style capacitive sensing (touch anything, hear sound). Playtron with alligator clips to bananas, water glasses, and aluminum foil. The lesson is: **everything is an instrument**. Set up four stations with different objects, rotate students through, time-budget 30 minutes total. Done.
+**What works:** TouchMe-style conductive touch sensing (touch anything, hear sound). Playtron with alligator clips to bananas, water glasses, and aluminum foil. The lesson is: **everything is an instrument**. Set up four stations with different objects, rotate students through, time-budget 30 minutes total. Done.
 
 **What doesn't work:** Notation apps. DAW interfaces. Anything with a menu deeper than two layers. The cognitive load of "find the right button" eats the music-making time.
 
@@ -140,7 +140,7 @@ The four strands: Create, Perform, Respond, Connect. Each strand has process com
 **Music technology naturally hits:**
 - **MU:Cr1.1** (generate ideas) — any device that lets students improvise hits this
 - **MU:Cr2.1** (organise + develop ideas) — sequencing software, looper hardware
-- **MU:Cn10.1** (relate music to personal experience) — capacitive-touch lessons that use student-brought objects
+- **MU:Cn10.1** (relate music to personal experience) — conductive-touch lessons that use student-brought objects
 - **MU:Cn11.1** (relate music to other contexts) — STEAM cross-curricular lessons
 
 **Practical move:** every lesson plan you write should explicitly cite the NCAS code in the standards section. Curriculum directors love this. Document review goes faster. Our [standards page](/education/standards/) has the lesson-by-lesson mapping for Lessons 1-5.
@@ -150,7 +150,7 @@ The four strands: Create, Perform, Respond, Connect. Each strand has process com
 Issued by the Department for Education. Less prescriptive than NCAS — it's a non-statutory framework — but adopted by most state schools in England. Names music technology specifically in KS2 and beyond.
 
 **Music technology naturally hits:**
-- **KS1 Listen + Experiment** — capacitive sensing as experiment
+- **KS1 Listen + Experiment** — conductive touch as experiment
 - **KS2 Compose** — DAW + hardware composition
 - **KS3 Compose** — pattern-based + sequencer composition
 - **KS4 Connect** — students relating their music to traditions and technologies
@@ -278,7 +278,7 @@ Music technology is most under-used and most transformative in special-education
 
 A traditional piano keyboard is designed for one body type: an adult with two hands, ten fingers, and the cognitive ability to associate keys with sounds. Many students don't match that template. They might have one functional hand. They might be non-verbal. They might be cognitively younger than their physical age. The traditional keyboard turns those students into observers.
 
-Music technology with capacitive sensing — like TouchMe — does not assume that body. **Any conductor works:** a hand, a foot, an elbow, an extended arm. **Any object works:** a foam ball, a soft fabric, a hand-warmer pad. **Any latency works:** the student can take ten seconds between gestures; the device waits.
+Music technology with conductive touch sensing — like TouchMe — does not assume that body. **Any conductor works:** a hand, a foot, an elbow, an extended arm. **Any object works:** a foam ball, a soft fabric, a hand-warmer pad. **Any latency works:** the student can take ten seconds between gestures; the device waits.
 
 What this means practically: a student who has never made a sound on a piano can make a meaningful musical phrase on TouchMe within a five-minute introduction. We've seen this in sensory-room contexts, in music-therapy settings, and in cross-categorical SPED classrooms.
 
@@ -360,7 +360,7 @@ Hardware breaks. Software updates break things. **Avoid by:** budgeting 10-15% p
 
 We made four music-technology devices because the existing options didn't solve the four problems we cared about.
 
-**TouchMe** is a small USB MIDI capacitive-sensing device. Touch any conductive object; a MIDI note plays. We made it because the cheapest way for a student to play their first note was to touch a banana. That's the equity moment.
+**TouchMe** is a small USB MIDI conductive-touch device. Touch any conductive object; a MIDI note plays. We made it because the cheapest way for a student to play their first note was to touch a banana. That's the equity moment.
 
 **Playtron** is an alligator-clip-equipped MIDI input. Students wire it to fruit, foil, water glasses, themselves, each other. We made it because composition-by-clipping-stuff is a fundamentally different cognitive task from composition-by-typing. The hands are involved.
 

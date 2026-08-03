@@ -27,18 +27,23 @@ Playtron turns any conductive object into a piano key. Clip alligator wires to f
 
 **Without grounding, Playtron does not play.** This is the single most common reason new users think Playtron is broken. Grounding is not optional; it is how Playtron works.
 
-Playtron measures tiny electrical changes between the alligator-clip pins and a **reference point** called ground. The reference point completes the circuit. No reference point, no measurement, no note.
+Playtron is an electrical circuit with two ends. The **16 alligator-clip pins** are one end, and the **two golden ground pins on the pointed corner** are the other. Your body closes the loop between them: one hand on ground, the other hand on the object. No closed loop, no note.
 
-You have four ways to ground yourself. Use whichever is easiest in your setup:
+**The ground has to reach your skin.** Ground clipped to a radiator, a pipe, or your laptop leaves you outside the circuit, and nothing plays.
 
-1. **Hold the pointed corner of the device with bare skin.** The simplest method. That sharp corner is the ground, and your body is the ground reference. Use your dominant hand to touch a note object; use the other hand to hold the corner.
-2. **Clip a wire to the pointed corner, attach the other end to a metal radiator, a metal sink, or your laptop's metal body.** Use this when you cannot touch the device directly — for performances or installations.
-3. **Two-person ground.** A friend holds the pointed corner. You touch them. The circuit completes through both bodies.
-4. **Audience as ground.** At workshops, the audience holds the ground while one person touches the object. The circuit completes through the audience.
+You have five ways to ground yourself. Use whichever is easiest in your setup:
 
-**What does not work as ground:** dry rubber, dry wood, painted metal, anodised aluminium, plastic. Skin needs to be bare; no clothing between you and the metal.
+1. **Hold the pointed corner with bare skin.** The simplest method. Touch a note object with your other hand.
+2. **Hold a ground cable.** Clip a wire to the pointed corner and keep the metal end in your hand. Use this when the device sits out of reach.
+3. **Wear the ground.** Clip the wire to a metal ring, a metal wristband, or the edge of your clothing where it touches skin. The cable stays hidden — the pattern for live performance.
+4. **Hold a second object.** Clip the wire to another conductive object — an orange, a spoon, a glass of water — and hold that object while you play the rest.
+5. **Another person.** A friend holds the ground and touches your skin. At workshops the whole group holds hands while one person plays.
 
-For the full physics, see [Grounding — how and why](/sound/grounding/).
+**What does not work as ground:** your laptop's metal body (it is already the same ground through the USB cable), a radiator or a pipe (the circuit goes to the wall instead of to you), dry rubber, dry wood, painted metal, anodised aluminium, plastic. Skin needs to be bare; no clothing between you and the metal.
+
+For installation patterns and the full explanation, see [Grounding — how and why](/sound/grounding/).
+
+{{ youtube: ixZ_ac3A47Q title="How to ground Playtron — Playtronica tutorial" }}
 
 ## Quick start
 
@@ -46,7 +51,7 @@ You have read about grounding. Now plug in.
 
 1. **Clip an alligator wire to a note pin on Playtron.** Clip the other end to a conductive object — fruit, plants, metal, or water. Repeat for each note, up to 16 objects.
 2. **Plug Playtron into your computer with the USB cable from the box.** Then open [synth.playtronica.com](https://synth.playtronica.com) in Chrome. Plug in the device first, then open the browser.
-3. **Ground yourself.** Hold the pointed corner of the device with one hand, or use one of the four methods above.
+3. **Ground yourself.** Hold the pointed corner of the device with one hand, or use one of the five methods above.
 4. **Touch a note object with your other hand.** A note plays. Playtron's LED stays dark when you plug it in — that is normal and not a fault. It blinks each time you complete the circuit and a note plays, which is how you know the circuit is working.
 
 ## If Playtron is not playing — 5-step checklist

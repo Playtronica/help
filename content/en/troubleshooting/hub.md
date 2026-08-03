@@ -31,7 +31,7 @@ Work through these in order. They resolve most issues without needing the deeper
 1. **Use Chrome.** Safari and Firefox do not support Web MIDI. This is the single most common reason a Playtronica device appears to not work.
 2. **Plug in the device, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
 3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
-4. **For Playtron, confirm grounding.** Bare skin on the pointed corner of the device, or a ground cable to a metal radiator. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
+4. **For Playtron, confirm grounding.** Bare skin on the pointed corner of the device, or a ground cable that touches your skin. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
 5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
 6. **Use a USB port directly on the computer, not a hub** — *except* an old Micro-USB TouchMe or Playtron on a new Mac, which often needs a hub. See [Device will not connect](/troubleshooting/wont-connect/).
 
