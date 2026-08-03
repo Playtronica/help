@@ -13,7 +13,7 @@ emoji: 🦺
 
 Playtronica devices connect the human body, objects, and sound through touch and low-voltage electricity. They are designed for artistic and educational use only. They are not medical or therapeutic devices. Read this page before using any Playtronica hardware.
 
-> ⚠️ **Do not use Playtronica devices if you have a pacemaker or an implanted medical device.** Capacitive sensing and electromagnetic signals may interfere with such devices. If you are pregnant, avoid prolonged direct physical contact with Playtronica hardware. If in doubt, consult a healthcare professional.
+> ⚠️ **Do not use Playtronica devices if you have a pacemaker or an implanted medical device.** These devices pass a small current through the body, and electromagnetic signals may interfere with such devices. If you are pregnant, avoid prolonged direct physical contact with Playtronica hardware. If in doubt, consult a healthcare professional.
 
 ## General safety
 

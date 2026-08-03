@@ -42,15 +42,17 @@ Conductivity matters more than mass. Reliable choices:
 
 Materials to avoid: dry wood, dry plastic, dry stones, paint, and painted ceramics. They look conductive but do not work.
 
-## Three ways to ground Playtron
+## Grounding patterns for stage and installations
 
-Grounding is the most-misunderstood part of Playtron. Three patterns that work:
+Grounding is the most-misunderstood part of Playtron. The rule never changes: **the ground contact has to touch the player's skin.** Only the form changes.
 
-- **You are the ground.** Place bare skin on the pointed corner of the device — that sharp corner is the ground. Your body completes the circuit. This is the most reliable method for solo play.
-- **The room is the ground.** Clip a ground cable to a metal radiator, a metal sink, or your laptop's metal body. Useful for performances where you cannot touch the device directly.
+- **You are the ground.** Bare skin on the pointed corner of the device. The most reliable method for solo play.
+- **The hidden ground.** Clip the ground cable to a metal ring, a metal wristband, a belt buckle, or the edge of your clothing where it touches skin. Your hands stay free and the cable is invisible from the audience. This is the stage pattern.
+- **A ground surface.** Clip the ground cable to aluminium foil, a metal plate, or copper tape on the plinth. The visitor rests a hand on it or stands on it barefoot. This is the installation pattern when nobody can hold a cable.
+- **A held object.** One object on ground, the rest on the pins. The player takes the ground object in one hand and plays with the other.
 - **The audience is the ground.** At workshops, the audience holds the ground while one person touches the object. The circuit completes through the audience.
 
-Methods that do not work: ground clipped to dry rubber, dry wood, or painted metal.
+Methods that do not work: ground clipped to a radiator, a pipe, or a laptop body — none of those put the player in the circuit, and the laptop is already on the same ground through the USB cable. Ground clipped to dry rubber, dry wood, painted metal, or anodised aluminium does not work either.
 
 ## Route Playtron in a DAW
 
