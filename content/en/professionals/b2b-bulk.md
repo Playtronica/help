@@ -3,6 +3,7 @@ title: "B2B and institutional orders"
 slug: b2b-bulk
 section: professionals
 summary: "Bulk pricing and formal quotes for schools, museums, studios, festivals, and corporate buyers."
+handoff_summary: "For schools, museums, studios, festivals, or orders of 5 or more devices, email collaboration@playtronica.com with the subject Quote — [your organization]."
 order: 1
 segment: ["b2b"]
 deflection_target: 25
