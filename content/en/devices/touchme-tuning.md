@@ -2,7 +2,7 @@
 title: "TouchMe — tuning"
 slug: touchme-tuning
 section: devices
-summary: "Pick a scale, pick a key, save it to the device. Settings sync over the browser."
+summary: "Pick a scale and a key — with the touch rings on the device or in the browser. The symbols on the back explained."
 order: 14
 segment: ["music-producer"]
 deflection_target: 15
@@ -15,7 +15,17 @@ hide_from_nav: true
 
 > **Parent page:** [TouchMe — complete guide](/devices/touchme/). Start there if you have not done the first-time setup.
 
-TouchMe ships tuned to **C major**, playing notes from C3 (MIDI note 48) up to C6 (MIDI note 84). The web settings page lets you pick one of 12 scale presets and move the root note. The choice is saved on the device.
+TouchMe ships tuned to **C major**, playing notes from C3 (MIDI note 48) up to C6 (MIDI note 84). You can pick one of 12 scale presets and move the root note in two ways: with the touch rings on the back of the device, or on the web settings page. Either way, the choice is saved on the device.
+
+## Change the scale on the device
+
+You do not need a computer to change the scale or the key.
+
+The back of the device has two touch rings labelled **SCALE** and two labelled **KEY**. Tap one **SCALE** ring to step forward through the 12 scales, the other to step back. The **KEY** rings move the root note the same way. Every tap is saved immediately.
+
+The two rows of small windows between the rings show the current state. The top row sits next to the note names **C** to **B** and shows the key. The bottom row sits next to the printed symbols and shows the scale — one symbol per preset, in the table below. While you play, the windows light up following the pitch; lift your hands and they return to showing the key and the scale.
+
+When **Custom range** is on (set on the web settings page), the KEY rings are disabled — the range you set replaces the key.
 
 ## Open the tuning page
 
@@ -27,22 +37,24 @@ If your device does not appear in the device dropdown, close the tab, plug in th
 
 ## Pick a scale
 
-A scale is a set of notes that work together. TouchMe has 12 scale presets. The table lists every preset in the order it appears in the **Scale** dropdown, with the notes each one plays in the key of C. The list comes from the device firmware, so this is exactly what the device plays.
+A scale is a set of notes that work together. TouchMe has 12 scale presets. The table lists every preset in order, with the symbol printed on the back of the device and the notes each preset plays in the key of C. The list comes from the device firmware, so this is exactly what the device plays.
 
-| # | Preset | Notes in the key of C | Feel |
-|---|--------|----------------------|------|
-| 1 | **Major** | C D E F G A B | bright, predictable, classic |
-| 2 | **Minor** (natural minor) | C D Eb F G Ab Bb | moodier, still familiar |
-| 3 | **Chrom** (chromatic) | all 12 semitones | maximum freedom, hardest to control |
-| 4 | **Dorian** | C D Eb F G A Bb | minor with a lift; fits jazz |
-| 5 | **Mixolydian** | C D E F G A Bb | major with a soft edge; fits rock and blues |
-| 6 | **Lydian** | C D E F F# G A B | floating, dreamy major; this preset plays both the fourth and the raised fourth |
-| 7 | **Wholetone** (whole tone) | C D E F# G# A# | eerie and dreamlike |
-| 8 | **Minblues** (minor blues) | C Eb F F# G Bb | the classic blues sound |
-| 9 | **Majblues** (major blues) | C D Eb E G A | brighter blues |
-| 10 | **Minpen** (minor pentatonic) | C Eb F G Bb | five notes, darker mood |
-| 11 | **Majpen** (major pentatonic) | C D E G A | five notes, every touch sounds intentional. **Best choice for first-time players.** |
-| 12 | **Diminished** | C D Eb F F# G# A B | tense, cinematic |
+| # | Preset | Symbol on the device | Notes in the key of C | Feel |
+|---|--------|---------------------|----------------------|------|
+| 1 | **Major** | ∃! | C D E F G A B | bright, predictable, classic |
+| 2 | **Minor** (natural minor) | ∩ | C D Eb F G Ab Bb | moodier, still familiar |
+| 3 | **Chrom** (chromatic) | ⊕ | all 12 semitones | maximum freedom, hardest to control |
+| 4 | **Dorian** | three linked dots | C D Eb F G A Bb | minor with a lift; fits jazz |
+| 5 | **Mixolydian** | ∿ | C D E F G A Bb | major with a soft edge; fits rock and blues |
+| 6 | **Lydian** | ∀ | C D E F F# G A B | floating, dreamy major; this preset plays both the fourth and the raised fourth |
+| 7 | **Wholetone** (whole tone) | ∝ | C D E F# G# A# | eerie and dreamlike |
+| 8 | **Minblues** (minor blues) | ⊃ | C Eb F F# G Bb | the classic blues sound |
+| 9 | **Majblues** (major blues) | ≡ | C D Eb E G A | brighter blues |
+| 10 | **Minpen** (minor pentatonic) | ∇ | C Eb F G Bb | five notes, darker mood |
+| 11 | **Majpen** (major pentatonic) | Σ | C D E G A | five notes, every touch sounds intentional. **Best choice for first-time players.** |
+| 12 | **Diminished** | ∫ | C D Eb F F# G# A B | tense, cinematic |
+
+The numbers match the order in the **Scale** dropdown on the settings page and the order of the symbols on the device. On the back, the symbols run left to right under the note names: **∃!** (Major) sits under **C**, **∫** (Diminished) sits under **B**. The lit window next to a symbol marks the active scale.
 
 TouchMe does not have a Phrygian preset or a custom scale editor. To play notes outside these presets, use the custom note range (below) or remap incoming notes in your DAW.
 

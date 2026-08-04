@@ -21,7 +21,7 @@ This page is for musicians and developers who already have TouchMe playing and w
 
 ## Scales and tunings
 
-TouchMe ships tuned to C major, playing notes from C3 to C6. You can change the scale at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Chrome).
+TouchMe ships tuned to C major, playing notes from C3 to C6. You can change the scale in two ways: with the **SCALE** and **KEY** touch rings on the back of the device, or at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Chrome).
 
 There are 12 scale presets: major, natural minor, chromatic, Dorian, Mixolydian, Lydian, whole tone, minor and major blues, minor and major pentatonic, and diminished. The full preset table — with the notes each scale plays — is on the [tuning page](/devices/touchme-tuning/).
 
