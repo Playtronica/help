@@ -2,12 +2,12 @@
 title: "TouchMe — deep dive"
 slug: touchme-advanced
 section: devices
-summary: "MIDI mapping, custom scales, hardware tuning, and performance tips."
+summary: "MIDI output, scale presets, hardware tuning, and performance tips."
 order: 11
 segment: ["music-producer", "b2b"]
 deflection_target: 10
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-08
+last_edited: 2026-08-04
 emoji: 👐
 parent: touchme
 hide_from_nav: true
@@ -19,26 +19,23 @@ hide_from_nav: true
 
 This page is for musicians and developers who already have TouchMe playing and want more control over the device.
 
-## Custom scales and tunings
+## Scales and tunings
 
-TouchMe ships with a default chromatic-scale mapping. You can change the scale at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Chrome).
+TouchMe ships tuned to C major, playing notes from C3 to C6. You can change the scale at [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme) (open in Chrome).
 
-Common presets:
-
-- **Major and minor** — for predictable melodic playing.
-- **Pentatonic** — every touch sounds good. Useful for live demos.
-- **Chromatic** — the full keyboard range. Requires more skill.
-- **Custom** — pick the MIDI note for each gold pad.
+There are 12 scale presets: major, natural minor, chromatic, Dorian, Mixolydian, Lydian, whole tone, minor and major blues, minor and major pentatonic, and diminished. The full preset table — with the notes each scale plays — is on the [tuning page](/devices/touchme-tuning/).
 
 After picking a preset, click **Send** to push the mapping to the device. The choice is stored on the device. You do not need to set it again on another computer.
 
-## Per-pad MIDI mapping
+## MIDI output
 
-Each TouchMe pad sends a Note On message on MIDI channel 1 by default. In the web settings you can change:
+TouchMe sends on MIDI channel 1 by default. You can change the channel (1–16) on the settings page. A touch produces:
 
-- **Channel** per pad (1–16). Useful for routing pads to different instruments in a DAW.
-- **Note number** (0–127). Overrides the default scale.
-- **Velocity** — a fixed value or derived from pressure. Pressure-derived velocity is the natural choice for expressive playing.
+- **Note On / Note Off** — the note depends on the scale, the key, and how much skin touches the pads. Light contact plays low notes. More contact plays higher notes.
+- **Velocity** — fixed at 127 by default. Set a minimum and a maximum and turn on **Humanize** to get a random velocity inside that range for each note.
+- **CC 90** — touch intensity (0–127), sent with each new note. Map it to filter cutoff or effect depth for expressive control.
+
+To play notes outside the built-in scales, set a custom note range (lowest and highest note, 0–127) on the settings page, or remap incoming notes in your DAW.
 
 ## Use TouchMe in a DAW
 

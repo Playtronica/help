@@ -6,8 +6,8 @@ summary: "Pick a scale, pick a key, save it to the device. Settings sync over th
 order: 14
 segment: ["music-producer"]
 deflection_target: 15
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-08
+last_edited: 2026-08-04
 emoji: 🎼
 parent: touchme
 hide_from_nav: true
@@ -15,7 +15,7 @@ hide_from_nav: true
 
 > **Parent page:** [TouchMe — complete guide](/devices/touchme/). Start there if you have not done the first-time setup.
 
-TouchMe ships with a chromatic scale that starts at MIDI note 48. A chromatic scale is flexible but unforgiving — every touch plays a different note, and many combinations sound harsh. The web settings page lets you pick a scale that is easier to play.
+TouchMe ships tuned to **C major**, playing notes from C3 (MIDI note 48) up to C6 (MIDI note 84). The web settings page lets you pick one of 12 scale presets and move the root note. The choice is saved on the device.
 
 ## Open the tuning page
 
@@ -27,36 +27,48 @@ If your device does not appear in the device dropdown, close the tab, plug in th
 
 ## Pick a scale
 
-A scale is a set of notes that work together. The settings page has these presets:
+A scale is a set of notes that work together. TouchMe has 12 scale presets. The table lists every preset in the order it appears in the **Scale** dropdown, with the notes each one plays in the key of C. The list comes from the device firmware, so this is exactly what the device plays.
 
-- **Major** — bright, predictable, classic. Good for tutorials and demos.
-- **Natural minor** — moodier, still familiar.
-- **Pentatonic (major)** — only 5 notes per octave. Every touch sounds intentional. **Best choice for first-time players.**
-- **Pentatonic (minor)** — same forgiveness, darker mood.
-- **Phrygian, Dorian, Mixolydian** — modal scales for specific musical contexts. Phrygian fits flamenco. Dorian fits jazz. Mixolydian fits blues.
-- **Whole tone** — every step is a major second. Eerie and dreamlike.
-- **Chromatic** — every semitone. The default. Maximum flexibility, hardest to play.
-- **Custom** — set each of the eight pads independently.
+| # | Preset | Notes in the key of C | Feel |
+|---|--------|----------------------|------|
+| 1 | **Major** | C D E F G A B | bright, predictable, classic |
+| 2 | **Minor** (natural minor) | C D Eb F G Ab Bb | moodier, still familiar |
+| 3 | **Chrom** (chromatic) | all 12 semitones | maximum freedom, hardest to control |
+| 4 | **Dorian** | C D Eb F G A Bb | minor with a lift; fits jazz |
+| 5 | **Mixolydian** | C D E F G A Bb | major with a soft edge; fits rock and blues |
+| 6 | **Lydian** | C D E F F# G A B | floating, dreamy major; this preset plays both the fourth and the raised fourth |
+| 7 | **Wholetone** (whole tone) | C D E F# G# A# | eerie and dreamlike |
+| 8 | **Minblues** (minor blues) | C Eb F F# G Bb | the classic blues sound |
+| 9 | **Majblues** (major blues) | C D Eb E G A | brighter blues |
+| 10 | **Minpen** (minor pentatonic) | C Eb F G Bb | five notes, darker mood |
+| 11 | **Majpen** (major pentatonic) | C D E G A | five notes, every touch sounds intentional. **Best choice for first-time players.** |
+| 12 | **Diminished** | C D Eb F F# G# A B | tense, cinematic |
+
+TouchMe does not have a Phrygian preset or a custom scale editor. To play notes outside these presets, use the custom note range (below) or remap incoming notes in your DAW.
+
+## How TouchMe picks a note
+
+TouchMe divides its note range into equal zones — one zone per scale note. Light contact plays the low notes. More skin and more pressure play the higher notes. A preset with fewer notes (pentatonic has five per octave) gives each note a wider zone and more control. Chromatic has twelve narrow zones, which is why it is the hardest to play.
 
 ## Pick a key
 
-Within a scale, you can shift the root note. C major and G major use different notes but have the same melodic feel. The key dropdown shifts everything up or down without changing the scale.
+The **Key** dropdown moves the root note — the lowest note of the range. It offers C3 to B3 (MIDI notes 48 to 59). C major and G major use different notes but have the same melodic feel; the key changes the pitch, not the character.
 
-A reasonable starting point: **C pentatonic major**. Easy on the ear and fits most synths in our online library.
+A reasonable starting point: **Majpen** (major pentatonic) in the key of C. Easy on the ear and fits most synths in our online library.
 
 ## Save the choice
 
 Click **Send** to push the mapping to TouchMe. The choice is stored on the device. When you plug TouchMe into a different computer tomorrow, the scale is still there. You do not need to set it again.
 
-## Per-pad mapping (advanced)
+## Other settings on the page
 
-In Custom mode, you can set each of the eight pads to any MIDI note (0–127) and any MIDI channel (1–16). Useful for:
+- **Velocity** — the loudness sent with every note. The default is the maximum, 127.
+- **Humanize** — when on, each note gets a random velocity between the minimum and maximum you set. Adds movement to long sessions.
+- **Custom range** — replace the default C3–C6 range with any range from MIDI note 0 to 127. A wider range fits more notes. A narrower range gives each note a wider zone and makes playing more precise.
+- **MIDI channel** — TouchMe sends on channel 1 by default. Change it here (1–16).
+- **Sensitivity** — how strongly the device reacts to light contact. Adjust it if notes trigger too easily, or if you need firm pressure to get sound.
 
-- **Drum pads** — map each pad to a different drum sample.
-- **Multi-instrument setups** — odd-numbered pads to a synth, even-numbered pads to a sampler.
-- **Velocity behaviour** — set pads to fixed velocity or pressure-derived velocity. Fixed velocity is predictable for live performance. Pressure-derived velocity is more expressive.
-
-For deep-dive options like CC routing and performance setups, see [TouchMe deep dive](/devices/touchme-advanced/).
+For MIDI output details and performance setups, see [TouchMe deep dive](/devices/touchme-advanced/).
 
 ## If the page does not see the device
 
