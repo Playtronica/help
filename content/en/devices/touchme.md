@@ -11,7 +11,9 @@ last_edited: 2026-06-24
 emoji: 👐
 ---
 
-<img src="/illustrations/touchme/touchme-top.svg" alt="TouchMe top view, labelled — gold conductive pads on both sides, status LED in the middle, USB-C at the bottom" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
+<img src="/illustrations/touchme/touchme-front.svg" alt="TouchMe front view, labelled — two gold conductive pads with alligator-clip holes, USB-C connector on the top edge, an arc of LEDs that shines through to the back, and the microcontroller" style="display:block;margin:8px 0 4px;max-width:100%;height:auto;background:transparent" />
+
+<img src="/illustrations/touchme/touchme-back.svg" alt="TouchMe back view, labelled — two KEY touch rings, two SCALE touch rings, a row of note names C to B showing the current key, and a row of twelve scale symbols showing the current scale" style="display:block;margin:4px 0 20px;max-width:100%;height:auto;background:transparent" />
 
 TouchMe is a small instrument with two gold pads. It turns **skin, water, or flowers into sound**. Touch both pads with bare skin and a note plays. The device measures the conductivity of whatever connects the two pads — your fingers, two people's hands, a glass of water, a wet leaf. A larger contact area produces a louder, brighter sound.
 
@@ -21,7 +23,7 @@ TouchMe is a small instrument with two gold pads. It turns **skin, water, or flo
 
 > ⚠️ **Not waterproof. Do not use with pacemakers.** TouchMe is safe at USB voltage but the device should not be submerged, and people with pacemakers or other implanted medical devices should not use it as a precaution.
 
-> 🛠️ **Want to go deeper?** When you are past the basics, see the [TouchMe deep dive](/devices/touchme-advanced/) for MIDI mapping, custom scales, hardware tuning, and performance tips. The [tuning page](/devices/touchme-tuning/) covers scale presets.
+> 🛠️ **Want to go deeper?** When you are past the basics, see the [TouchMe deep dive](/devices/touchme-advanced/) for MIDI output, hardware tuning, and performance tips. The [tuning page](/devices/touchme-tuning/) covers the scale presets, the SCALE and KEY touch rings, and the symbols on the back.
 
 > 🛒 **Don't have one yet?** [Buy TouchMe on shop.playtronica.com](https://shop.playtronica.com/products/touchme) — White or Black (Limited).
 
@@ -54,7 +56,7 @@ The music does not come from the device. The music comes from the connection bet
 1. **Plug TouchMe into your computer with the USB cable from the box.** No drivers are required on Mac or Windows. The LED stays dark when you plug in — that is normal. If your computer has only USB-A ports, see [Adapters](https://shop.playtronica.com/collections/additional-items).
 2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Chrome.** Safari and Firefox do not support Web MIDI. Open the browser **after** plugging in the device so the browser detects it on page load.
 3. **Choose a synth.** Avoid synths marked "Playtron only" (such as WebSID Commodore 64). The default Dots Piano is the most reliable starting point.
-4. **Hold both gold pads with bare skin.** A note plays, and the LED blinks each time you complete the circuit — that is how you know it is working. Try the two-person demo above.
+4. **Hold both gold pads with bare skin.** A note plays, and the light windows on the back follow your touch — that is how you know it is working. Try the two-person demo above.
 
 ## What is in the box
 
