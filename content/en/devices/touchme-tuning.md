@@ -21,6 +21,8 @@ TouchMe ships tuned to **C major**, playing notes from C3 (MIDI note 48) up to C
 
 You do not need a computer to change the scale or the key.
 
+<img src="/illustrations/touchme/touchme-back.svg" alt="TouchMe back view, labelled — two KEY touch rings, two SCALE touch rings, a row of note names C to B showing the current key, and a row of twelve scale symbols showing the current scale" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
+
 The back of the device has two touch rings labelled **SCALE** and two labelled **KEY**. Tap one **SCALE** ring to step forward through the 12 scales, the other to step back. The **KEY** rings move the root note the same way. Every tap is saved immediately.
 
 The two rows of small windows between the rings show the current state. The top row sits next to the note names **C** to **B** and shows the key. The bottom row sits next to the printed symbols and shows the scale — one symbol per preset, in the table below. While you play, the windows light up following the pitch; lift your hands and they return to showing the key and the scale.
