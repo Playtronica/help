@@ -4,8 +4,8 @@
   <desc id="desc">The back of the Playtronica TouchMe: two KEY touch rings and two SCALE touch rings, a row of note names C to B showing the current key, and a row of twelve scale symbols showing the current scale.</desc>
   <defs>
     <style>
-      .label     { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 15px; fill: #1a1a2e; font-weight: 700; }
-      .label-sub { font-family: "JetBrains Mono", monospace; font-size: 11px; fill: #555; }
+      .label     { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 17px; fill: #1a1a2e; font-weight: 700; letter-spacing: 0.01em; }
+      .label-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 12.5px; fill: #555; }
       .leader    { stroke: #1a1a2e; stroke-width: 0.8; opacity: 0.72; fill: none; }
       .leader-dot{ fill: #1a1a2e; }
     </style>
@@ -17,25 +17,25 @@
   <circle class="leader-dot" cx="361" cy="260" r="3"/>
   <polyline class="leader" points="330,68 330,164 361,260"/>
   <text class="label" x="330" y="60" text-anchor="middle">KEY touch rings</text>
-  <text class="label-sub" x="330" y="76" text-anchor="middle">tap to move the root note</text>
+  <text class="label-sub" x="330" y="77" text-anchor="middle">tap to move the root note</text>
   <circle class="leader-dot" cx="840" cy="260" r="3"/>
   <polyline class="leader" points="850,68 850,164 840,260"/>
   <text class="label" x="850" y="60" text-anchor="middle">SCALE touch rings</text>
-  <text class="label-sub" x="850" y="76" text-anchor="middle">tap to step through the 12 scales</text>
+  <text class="label-sub" x="850" y="77" text-anchor="middle">tap to step through the 12 scales</text>
   <circle class="leader-dot" cx="536" cy="288" r="3"/>
   <polyline class="leader" points="599,128 599,208 536,288"/>
-  <text class="label" x="599" y="120" text-anchor="middle">Key row - note names C to B</text>
-  <text class="label-sub" x="599" y="136" text-anchor="middle">lit window = current key</text>
+  <text class="label" x="599" y="120" text-anchor="middle">Key row — note names C to B</text>
+  <text class="label-sub" x="599" y="137" text-anchor="middle">lit window = current key</text>
   <circle class="leader-dot" cx="630" cy="361" r="3"/>
-  <polyline class="leader" points="599,532 599,446 630,361"/>
-  <text class="label" x="599" y="560" text-anchor="middle">Scale row - one symbol per scale</text>
-  <text class="label-sub" x="599" y="576" text-anchor="middle">lit window = current scale</text>
+  <polyline class="leader" points="599,530 599,445 630,361"/>
+  <text class="label" x="599" y="560" text-anchor="middle">Scale row — one symbol per scale</text>
+  <text class="label-sub" x="599" y="577" text-anchor="middle">lit window = current scale</text>
   <circle class="leader-dot" cx="221" cy="389" r="3"/>
-  <polyline class="leader" points="200,532 200,460 221,389"/>
-  <text class="label" x="200" y="560" text-anchor="middle">Gold conductive pad</text>
-  <text class="label-sub" x="200" y="576" text-anchor="middle">grip with bare skin</text>
+  <polyline class="leader" points="185,530 185,460 221,389"/>
+  <text class="label" x="185" y="560" text-anchor="middle">Gold conductive pad</text>
+  <text class="label-sub" x="185" y="577" text-anchor="middle">grip with bare skin</text>
   <circle class="leader-dot" cx="977" cy="389" r="3"/>
-  <polyline class="leader" points="1000,532 1000,460 977,389"/>
-  <text class="label" x="1000" y="560" text-anchor="middle">Gold conductive pad</text>
-  <text class="label-sub" x="1000" y="576" text-anchor="middle">grip with bare skin</text>
+  <polyline class="leader" points="1090,530 1090,460 977,389"/>
+  <text class="label" x="1090" y="560" text-anchor="middle">Gold conductive pad</text>
+  <text class="label-sub" x="1090" y="577" text-anchor="middle">grip with bare skin</text>
 </svg>

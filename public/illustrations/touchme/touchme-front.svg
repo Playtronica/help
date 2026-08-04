@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 640" role="img" aria-labelledby="title desc">
   <title id="title">TouchMe - front view, labelled</title>
-  <desc id="desc">The front of the Playtronica TouchMe: two gold conductive pads with alligator-clip holes, the USB-C connector on the top edge, an arc of LEDs that shines through to the back, and the microcontroller.</desc>
+  <desc id="desc">The front of the Playtronica TouchMe: two gold conductive pads with alligator-clip holes, the USB-C connector on the top edge, an arc of LEDs that shines through to the back, the microcontroller, and the BOOT pins for the manual firmware reset.</desc>
   <defs>
     <style>
-      .label     { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 15px; fill: #1a1a2e; font-weight: 700; }
-      .label-sub { font-family: "JetBrains Mono", monospace; font-size: 11px; fill: #555; }
+      .label     { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 17px; fill: #1a1a2e; font-weight: 700; letter-spacing: 0.01em; }
+      .label-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 12.5px; fill: #555; }
       .leader    { stroke: #1a1a2e; stroke-width: 0.8; opacity: 0.72; fill: none; }
       .leader-dot{ fill: #1a1a2e; }
     </style>
@@ -17,25 +17,29 @@
   <circle class="leader-dot" cx="599" cy="225" r="3"/>
   <polyline class="leader" points="599,68 599,147 599,225"/>
   <text class="label" x="599" y="60" text-anchor="middle">USB-C connector</text>
-  <text class="label-sub" x="599" y="76" text-anchor="middle">class-compliant MIDI - no drivers</text>
+  <text class="label-sub" x="599" y="77" text-anchor="middle">class-compliant MIDI — no drivers</text>
   <circle class="leader-dot" cx="467" cy="298" r="3"/>
   <polyline class="leader" points="250,128 250,213 467,298"/>
   <text class="label" x="250" y="120" text-anchor="middle">LED arc</text>
-  <text class="label-sub" x="250" y="136" text-anchor="middle">shines through to the back</text>
+  <text class="label-sub" x="250" y="137" text-anchor="middle">shines through to the back</text>
   <circle class="leader-dot" cx="221" cy="389" r="3"/>
-  <polyline class="leader" points="200,532 200,460 221,389"/>
-  <text class="label" x="200" y="560" text-anchor="middle">Gold conductive pad</text>
-  <text class="label-sub" x="200" y="576" text-anchor="middle">grip with bare skin</text>
-  <circle class="leader-dot" cx="977" cy="389" r="3"/>
-  <polyline class="leader" points="1000,532 1000,460 977,389"/>
-  <text class="label" x="1000" y="560" text-anchor="middle">Gold conductive pad</text>
-  <text class="label-sub" x="1000" y="576" text-anchor="middle">grip with bare skin</text>
+  <polyline class="leader" points="185,530 185,460 221,389"/>
+  <text class="label" x="185" y="560" text-anchor="middle">Gold conductive pad</text>
+  <text class="label-sub" x="185" y="577" text-anchor="middle">grip with bare skin</text>
   <circle class="leader-dot" cx="297" cy="323" r="3"/>
-  <polyline class="leader" points="460,532 460,427 297,323"/>
-  <text class="label" x="460" y="560" text-anchor="middle">Alligator-clip holes</text>
-  <text class="label-sub" x="460" y="576" text-anchor="middle">clip fruit, plants, objects</text>
+  <polyline class="leader" points="440,530 440,426 297,323"/>
+  <text class="label" x="440" y="560" text-anchor="middle">Alligator-clip holes</text>
+  <text class="label-sub" x="440" y="577" text-anchor="middle">clip fruit, plants, objects</text>
   <circle class="leader-dot" cx="602" cy="392" r="3"/>
-  <polyline class="leader" points="700,532 700,462 602,392"/>
-  <text class="label" x="700" y="560" text-anchor="middle">Microcontroller</text>
-  <text class="label-sub" x="700" y="576" text-anchor="middle">stores your scale and key</text>
+  <polyline class="leader" points="670,530 670,461 602,392"/>
+  <text class="label" x="670" y="560" text-anchor="middle">Microcontroller</text>
+  <text class="label-sub" x="670" y="577" text-anchor="middle">stores your scale and key</text>
+  <circle class="leader-dot" cx="760" cy="388" r="3"/>
+  <polyline class="leader" points="885,530 885,459 760,388"/>
+  <text class="label" x="885" y="560" text-anchor="middle">BOOT pins</text>
+  <text class="label-sub" x="885" y="577" text-anchor="middle">for the manual firmware reset</text>
+  <circle class="leader-dot" cx="977" cy="389" r="3"/>
+  <polyline class="leader" points="1090,530 1090,460 977,389"/>
+  <text class="label" x="1090" y="560" text-anchor="middle">Gold conductive pad</text>
+  <text class="label-sub" x="1090" y="577" text-anchor="middle">grip with bare skin</text>
 </svg>
