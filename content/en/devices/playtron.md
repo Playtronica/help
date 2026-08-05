@@ -6,10 +6,12 @@ summary: "Clip the wires, ground yourself, touch anything that conducts. Setup, 
 order: 2
 segment: ["music-producer", "gift-recipient", "creator"]
 deflection_target: 90
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-08
+last_edited: 2026-08-05
 emoji: 🍉
 ---
+
+<img src="/illustrations/playtron/playtron-top.svg" alt="Playtron top view, labelled — USB connector on the top peak, 16 gold note pins labelled A1 to D4, the microcontroller in the centre, and two pointed gold ground corners at the bottom" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
 
 Playtron turns any conductive object into a piano key. Clip alligator wires to fruit, plants, metal, or water. Hold the pointed corner of the device — that sharp corner is the ground — and touch the object, and the note plays. Up to **16 objects** can be mapped to 16 notes. If the object conducts electricity, Playtron can play it.
 
