@@ -11,7 +11,7 @@ last_edited: 2026-08-05
 emoji: 🌿
 ---
 
-<img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector at the top, two LED arcs, the microcontroller in the centre, a light sensor below it, two leaf-pad clip points, and the BOOT contacts for firmware updates" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
+<img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
 
 Biotron reads the bio-electrical signals inside a living plant and converts them to MIDI. The plant plays music on its own. You can change the music by touching a leaf, changing the light, or moving your hand close to the plant.
 
