@@ -6,8 +6,8 @@ summary: "Wipe and reinstall the firmware when the device is unresponsive."
 order: 5
 segment: ["music-producer"]
 deflection_target: 60
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-08
+last_edited: 2026-08-05
 emoji: ⚡
 ---
 
@@ -34,7 +34,7 @@ The Nuke reset completely wipes and reinstalls the firmware on your device. Use 
 
 You will need a paper clip, tweezers, or a short piece of wire, and your USB-C cable.
 
-1. **Find the BOOT pins on your device.** The BOOT pins are two small metal contacts on the PCB, usually near the USB port. Check the silkscreen label on the device or the diagram at [settings.playtronica.com](https://settings.playtronica.com).
+1. **Find the BOOT pins on your device.** The BOOT pins are two small metal contacts on the PCB. The labelled diagram on each device page marks them: [TouchMe](/devices/touchme/) (on the middle strip, below the `TOUCH ME` text — they pass through, so you can reach them from either side), [Playtron](/devices/playtron/) (next to the USB-C connector on the top peak), [Biotron](/devices/biotron/) (near the fingerprint button).
 2. **Short the BOOT pins.** Touch both pins at the same time with a paper clip. Hold the connection.
 3. **With the pins still shorted, plug in the USB-C cable.**
 4. **Wait for the `RPI-RP2` drive to appear on your computer.** Only release the pins **after** the drive appears. The window is brief. If you miss it, unplug and try again.
