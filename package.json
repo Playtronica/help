@@ -46,6 +46,7 @@
     "search:index": "node scripts/build-search-index.mjs",
     "seo:files": "node scripts/build-seo-files.mjs",
     "audit": "python3 scripts/audit-cross-references.py",
+    "biotron:contract": "python3 scripts/check-biotron-firmware-docs.py",
     "links:check": "python3 scripts/check-external-links.py",
     "links:check:live": "python3 scripts/check-external-links.py --live",
     "i18n:status": "python3 scripts/check-translation-freshness.py",

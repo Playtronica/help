@@ -2,7 +2,7 @@
 title: "Biotron MIDI: CC mapping, iPad setup, and powering synths over TRS"
 slug: biotron-midi-cc
 section: software
-summary: "How Biotron sends CC90, accepts MIDI CC from a DAW or fader box, avoids Windows MIDI-port conflicts, and works without the settings website."
+summary: "What current firmware source says about Biotron CC90 and experimental incoming MIDI CC, plus a cautious Reaper test route."
 segment: ["music-producer", "creator"]
 deflection_target: 25
 status: new-2026-06
@@ -15,9 +15,9 @@ emoji: 🎹
 Biotron sends MIDI over USB. By default it sends note-on and note-off
 messages when it detects a signal from your plant or cables. It also sends
 **CC90** — a continuous controller message that reflects signal intensity.
-This article covers what CC90 is, how to control Biotron from a DAW or fader
-box, how to avoid Windows MIDI-port conflicts, and how to use Biotron without
-keeping the settings website open.
+This article covers CC90 and how to test incoming commands found in the current
+firmware source. Incoming control has not completed hardware burst and
+persistence testing, so it is not a supported live-control workflow.
 
 ---
 
@@ -27,17 +27,16 @@ When Biotron detects a signal, it sends two things at once:
 
 - **Note-on / note-off** — a standard MIDI note (pitch + velocity) for
   triggering synths, samplers, and DAWs that respond to notes.
-- **CC90** — a continuous controller on the same channel, ranging from 0 to
-  127. It reflects how strong the detected signal is.
+- **CC90** — a continuous controller on the configured plant channel. Current
+  firmware source emits values in the MIDI range 0–127.
 
 CC90 is not documented on the product page. That is a known gap — we get
 questions about it regularly. The short answer: CC90 is useful when you want
 smooth, continuous modulation (filter cutoff, reverb amount, expression)
 instead of discrete note triggers.
 
-> **Example in Ableton Live:** create a MIDI track, open the MIDI Map mode,
-> click a macro knob, then touch your plant. Biotron's CC90 will be detected
-> and mapped automatically.
+> Check the exact response with a MIDI monitor and your installed firmware. Do
+> not treat CC90 as calibrated biological data.
 
 ---
 
@@ -47,8 +46,6 @@ Biotron's **output CC90** is sensor data going from Biotron to your DAW.
 Biotron also accepts a separate set of **incoming CC messages** that change
 its musical settings. These are two different directions.
 
-**Steps:**
-
 The firmware recognises the incoming CC map below, but continuous live control
 is currently **experimental**. Current firmware may save settings too often
 during a fast fader sweep. Until the next firmware update is verified, use the
@@ -57,41 +54,44 @@ fader performance.
 
 ### Incoming CC map (current firmware)
 
-| CC | Parameter |
-|---:|---|
-| 3 | Sensor smoothing / delay |
-| 9 | Maximum note velocity |
-| 14 | Tempo / light-note ratio |
-| 15 | Ultra sensitivity |
-| 20 | Note repeat |
-| 21 | Note hold |
-| 22 | Step size |
-| 23 | Wake-up threshold |
-| 24 | Scale |
-| 25 | Minimum note velocity |
-| 26 | Humanize velocity |
-| 27 | Light pitch-bend mode |
-| 28 | Light-note range |
-| 30 | Manual-control mode |
-| 31 | Mute |
-| 85 | Home note |
-| 86 | Swing |
-| 87 | Button mute state |
+| CC | Firmware setting | Scope |
+|---:|---|---|
+| 3 | Input filter percentage | Global |
+| 9 | Maximum note velocity | Channel-specific |
+| 14 | Plant tempo / light tempo division | Channel-specific |
+| 15 | Random-note mode | Global |
+| 20 | Minimum repeated-note distance | Channel-specific |
+| 21 | Note-off fraction | Global |
+| 22 | Sequence exponent | Global |
+| 23 | Sequence first value | Global |
+| 24 | Scale index | Global |
+| 25 | Minimum note velocity | Channel-specific |
+| 26 | Random-velocity mode | Channel-specific |
+| 27 | Light pitch-bend mode | Global |
+| 28 | Light-note range | Global |
+| 30 | Performance mode | Global |
+| 31 | Mute note output | Channel-specific |
+| 85 | Centre plant note | Global |
+| 86 | First-note swing percentage | Global |
+| 87 | Button mute mode | Global |
 
-Send on **MIDI channel 1** to control the plant sensor and **MIDI channel 2**
-to control the light sensor. For switches such as Mute, values 0–63 mean off
-and 64–127 mean on.
+The parser receives zero-based channels: **MIDI channel 1** selects the plant
+setting and **MIDI channel 2** selects the light setting only where the table
+says **Channel-specific**. Global commands ignore the incoming channel.
+Boolean thresholds and value mappings differ by command; these source-derived
+labels are not yet a final public control specification.
 
 ### Reaper setup (experimental incoming control)
 
-1. Close `settings.playtronica.com`, or click **Release device for DAW** on
-   the settings page.
+1. Close `settings.playtronica.com`. A future build may show **Release device
+   for DAW**; do not expect that control unless it is visible.
 2. In Reaper, open **Options → Preferences → Audio → MIDI Devices**.
 3. Right-click **Biotron** under MIDI outputs and choose **Enable output**.
 4. Create a track for your fader box. Set its input to the fader box and its
    **MIDI hardware output** to Biotron.
-5. Set the fader box or track to channel 1 (plant) or channel 2 (light), and
-   assign a CC number from the table above.
+5. For a channel-specific command, use channel 1 (plant) or channel 2 (light).
+   For a global command, either channel reaches the same setting in current
+   source.
 
 If Reaper says **Failed to open device**, another application still owns the
 port. Close Chrome completely, disconnect and reconnect Biotron, then enable
@@ -99,11 +99,12 @@ the device in Reaper again.
 
 ## Offline use
 
-Biotron stores settings on the device and plays without the website. The
-settings web app is cached for offline use after one successful online visit.
-For a live set, configure and save the preset before going offline. Do not use
-rapid incoming CC automation until the firmware update described above has
-been released and verified.
+Biotron can play from its stored configuration without keeping the settings
+website open. Do not assume the website itself reloads offline: offline caching
+is being tested in a separate unreleased change. Configure while online, close
+the page, and verify the complete setup before travelling. Do not use rapid
+incoming CC automation until a release passes physical burst and persistence
+tests.
 
 ---
 
