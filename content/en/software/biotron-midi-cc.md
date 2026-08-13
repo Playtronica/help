@@ -2,7 +2,7 @@
 title: "Biotron MIDI: CC mapping, iPad setup, and powering synths over TRS"
 slug: biotron-midi-cc
 section: software
-summary: "How Biotron sends MIDI (note-on/off and CC90), how to configure it on a desktop browser, how to use it with iPad and GarageBand, and how to power it when connecting to a synth via TRS."
+summary: "How Biotron sends CC90, accepts MIDI CC from a DAW or fader box, avoids Windows MIDI-port conflicts, and works without the settings website."
 segment: ["music-producer", "creator"]
 deflection_target: 25
 status: new-2026-06
@@ -15,9 +15,9 @@ emoji: 🎹
 Biotron sends MIDI over USB. By default it sends note-on and note-off
 messages when it detects a signal from your plant or cables. It also sends
 **CC90** — a continuous controller message that reflects signal intensity.
-This article covers what CC90 is, how to switch between note and CC output,
-iPad + GarageBand setup, and how to power Biotron when you connect it to a
-hardware synth over TRS.
+This article covers what CC90 is, how to control Biotron from a DAW or fader
+box, how to avoid Windows MIDI-port conflicts, and how to use Biotron without
+keeping the settings website open.
 
 ---
 
@@ -41,21 +41,69 @@ instead of discrete note triggers.
 
 ---
 
-## Switch between note output and CC output
+## Important: Biotron sends and receives CC
 
-By default Biotron sends both note-on/off and CC90 simultaneously. If your
-DAW or synth only needs one of them, mute the other in the settings page.
+Biotron's **output CC90** is sensor data going from Biotron to your DAW.
+Biotron also accepts a separate set of **incoming CC messages** that change
+its musical settings. These are two different directions.
 
 **Steps:**
 
-1. Connect Biotron to a laptop or desktop via USB.
-2. Open **settings.playtronica.com/#/biotron** in Google Chrome or Edge.
-3. Select your Biotron from the device dropdown.
-4. In the channel settings, mute **Notes** if you only want CC output,
-   or mute **CC** if you only want note-on/off.
-5. Click **Send to Device**.
+The firmware recognises the incoming CC map below, but continuous live control
+is currently **experimental**. Current firmware may save settings too often
+during a fast fader sweep. Until the next firmware update is verified, use the
+map only for occasional parameter changes — not automation, LFOs, or rapid
+fader performance.
 
-> The mute setting is stored on the device. It persists after you unplug.
+### Incoming CC map (current firmware)
+
+| CC | Parameter |
+|---:|---|
+| 3 | Sensor smoothing / delay |
+| 9 | Maximum note velocity |
+| 14 | Tempo / light-note ratio |
+| 15 | Ultra sensitivity |
+| 20 | Note repeat |
+| 21 | Note hold |
+| 22 | Step size |
+| 23 | Wake-up threshold |
+| 24 | Scale |
+| 25 | Minimum note velocity |
+| 26 | Humanize velocity |
+| 27 | Light pitch-bend mode |
+| 28 | Light-note range |
+| 30 | Manual-control mode |
+| 31 | Mute |
+| 85 | Home note |
+| 86 | Swing |
+| 87 | Button mute state |
+
+Send on **MIDI channel 1** to control the plant sensor and **MIDI channel 2**
+to control the light sensor. For switches such as Mute, values 0–63 mean off
+and 64–127 mean on.
+
+### Reaper setup (experimental incoming control)
+
+1. Close `settings.playtronica.com`, or click **Release device for DAW** on
+   the settings page.
+2. In Reaper, open **Options → Preferences → Audio → MIDI Devices**.
+3. Right-click **Biotron** under MIDI outputs and choose **Enable output**.
+4. Create a track for your fader box. Set its input to the fader box and its
+   **MIDI hardware output** to Biotron.
+5. Set the fader box or track to channel 1 (plant) or channel 2 (light), and
+   assign a CC number from the table above.
+
+If Reaper says **Failed to open device**, another application still owns the
+port. Close Chrome completely, disconnect and reconnect Biotron, then enable
+the device in Reaper again.
+
+## Offline use
+
+Biotron stores settings on the device and plays without the website. The
+settings web app is cached for offline use after one successful online visit.
+For a live set, configure and save the preset before going offline. Do not use
+rapid incoming CC automation until the firmware update described above has
+been released and verified.
 
 ---
 

@@ -4,9 +4,10 @@
   <desc id="desc">The Playtronica Biotron board, shaped like a plant cell: USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button.</desc>
   <defs>
     <style>
-      .t  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0.14em; fill: #1a1a2e; }
-      .s  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 11.5px; font-weight: 400; letter-spacing: 0.01em; fill: #8a8a8e; }
-      .ln { stroke: #1a1a2e; stroke-width: 1; opacity: 0.36; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .t  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.06em; fill: #111111; paint-order: stroke; stroke: #ffffff; stroke-width: 5px; stroke-linejoin: round; }
+      .s  { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, system-ui, sans-serif; font-size: 17px; font-weight: 650; letter-spacing: 0.01em; fill: #242424; paint-order: stroke; stroke: #ffffff; stroke-width: 4px; stroke-linejoin: round; }
+      .ln { stroke: #111111; stroke-width: 3; opacity: 0.9; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .boot { fill: #b42300; stroke: #ffffff; stroke-width: 6px; paint-order: stroke; }
     </style>
     <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
       <feDropShadow dx="0" dy="2" stdDeviation="7" flood-color="#1a1a2e" flood-opacity="0.14"/>
@@ -50,6 +51,6 @@
   <line class="ln" x1="890" y1="630" x2="890" y2="610"/>
   <line class="ln" x1="890" y1="610" x2="806" y2="268"/>
   <circle cx="806" cy="268" r="3.2" fill="#1a1a2e" stroke="#ffffff" stroke-width="1.4"/>
-  <text class="t" x="890" y="648" text-anchor="middle">BOOT CONTACTS</text>
-  <text class="s" x="890" y="665" text-anchor="middle">manual firmware reset</text>
+  <text class="t boot" x="890" y="648" text-anchor="middle">BOOT CONTACTS</text>
+  <text class="s" x="890" y="672" text-anchor="middle">bridge these two pads while plugging in USB</text>
 </svg>

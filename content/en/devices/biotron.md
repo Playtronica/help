@@ -32,7 +32,7 @@ Biotron sends on two MIDI channels:
 
 ## Step 1 — Update the firmware (first time only)
 
-1. **Activate boot mode.** Short the two small BOOT contacts on the PCB with a paper clip or jumper wire. Connect the pins first, then plug in USB-C, then release the pins. The device appears on your computer as a drive called `RPI-RP2`.
+1. **Activate boot mode.** In the labelled picture above, look for the large orange **BOOT CONTACTS** callout at the bottom-right. It points to two small, unlabelled metal contacts beside the fingerprint button. Bridge those two contacts with a paper clip or jumper wire, plug in USB-C while they are bridged, then release. The device appears on your computer as a drive called `RPI-RP2`.
 2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
 3. **Drag the downloaded file onto the `RPI-RP2` drive.** The drive disappears. Done. When the device reconnects, it appears as a MIDI device called "Biotron" instead of a drive.
 
@@ -86,6 +86,12 @@ Biotron works with any DAW, online synth, or iOS music app that supports MIDI. F
 ## Web settings and presets
 
 At [settings.playtronica.com](https://settings.playtronica.com) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
+
+> **Using a DAW on Windows?** The settings page and your DAW cannot always use the same MIDI port at once. In settings, click **Release device for DAW** (or close the settings tab) before opening Biotron in Reaper, Ableton, or another DAW. Reconnect settings only when you need to change the stored configuration.
+
+> **Incoming MIDI CC is experimental.** Occasional parameter changes work in
+> current firmware, but rapid fader automation is not recommended until the
+> next firmware update is released and verified.
 
 ## What the buttons do
 
