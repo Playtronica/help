@@ -32,7 +32,7 @@ Biotron sends on two MIDI channels:
 
 ## Step 1 — Update the firmware (first time only)
 
-1. **Activate boot mode.** In the labelled picture above, look for the large orange **BOOT CONTACTS** callout at the bottom-right. It points to two small, unlabelled metal contacts beside the fingerprint button. Bridge those two contacts with a paper clip or jumper wire, plug in USB-C while they are bridged, then release. The device appears on your computer as a drive called `RPI-RP2`.
+1. **Activate boot mode.** In the labelled picture above, find marker **8 · BOOT CONTACTS** at the bottom-right. It points to two small, unlabelled metal contacts beside the fingerprint button. Bridge them with a paper clip or jumper wire, plug in USB-C, then **release the bridge immediately** when the `RPI-RP2` drive appears. Do not leave the contacts bridged while copying firmware.
 2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
 3. **Drag the downloaded file onto the `RPI-RP2` drive.** The drive disappears. Done. When the device reconnects, it appears as a MIDI device called "Biotron" instead of a drive.
 
