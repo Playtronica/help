@@ -18,7 +18,11 @@ The Nuke reset completely wipes and reinstalls the firmware on your device. Use 
 - The device behaves unexpectedly after a failed firmware update.
 - Support has asked you to do a full reset.
 
-> ⚠️ **USB-C devices only (2026 models and later).** This reset method requires a USB-C port. Older Micro-USB models do not support this process. Check your device — if the port is USB-C, you can use this guide.
+> ⚠️ **Hardware revision matters.** The contact locations linked below
+> describe the pictured USB-C revisions only. A USB-C connector by itself does
+> not prove that every pad location or recovery step is identical. If your
+> board does not match its picture, stop and send support a clear photo of both
+> sides; do not probe unlabelled pads.
 
 ## First — try the simple update
 
@@ -34,7 +38,11 @@ The Nuke reset completely wipes and reinstalls the firmware on your device. Use 
 
 You will need a paper clip, tweezers, or a short piece of wire, and your USB-C cable.
 
-1. **Find the BOOT pins on your device.** The BOOT pins are two small metal contacts on the PCB. The labelled diagram on each device page marks them: [TouchMe](/devices/touchme/) (on the middle strip, below the `TOUCH ME` text — they pass through, so you can reach them from either side), [Playtron](/devices/playtron/) (next to the USB-C connector on the top peak), [Biotron](/devices/biotron/) (near the fingerprint button).
+1. **Match the device to its pictured hardware revision.** The linked diagrams
+   show two BOOT contacts on their pictured boards: [TouchMe](/devices/touchme/)
+   (middle strip), [Playtron](/devices/playtron/) (top peak near USB-C), and
+   [Biotron](/devices/biotron/) (beside the fingerprint button). Continue only
+   if the connector and contact layout match the picture.
 2. **Short the BOOT pins.** Touch both pins at the same time with a paper clip. Hold the connection.
 3. **With the pins still shorted, plug in the USB-C cable.**
 4. **Wait for the `RPI-RP2` drive to appear on your computer.** Only release the pins **after** the drive appears. The window is brief. If you miss it, unplug and try again.

@@ -52,3 +52,4 @@ one unit is not evidence that multiple identical units can be selected reliably.
 [Email support@playtronica.com](mailto:support@playtronica.com) with the subject
 `Biotron Advanced #[order number]` and include the test details above. Firmware
 source: [Playtronica/biotron-firmware](https://github.com/Playtronica/biotron-firmware).
+We aim for 24 hours, but a reply may take up to 3 business days.
