@@ -89,9 +89,9 @@ At [settings.playtronica.com](https://settings.playtronica.com) you can change s
 
 > **Using a DAW on Windows?** The settings page and your DAW cannot always use the same MIDI port at once. In settings, click **Release device for DAW** (or close the settings tab) before opening Biotron in Reaper, Ableton, or another DAW. Reconnect settings only when you need to change the stored configuration.
 
-> **Incoming MIDI CC is experimental.** Occasional parameter changes work in
-> current firmware, but rapid fader automation is not recommended until the
-> next firmware update is released and verified.
+> **Incoming MIDI CC is experimental.** The firmware team is validating live
+> parameter control, message bursts, and saved settings. Do not rely on rapid
+> fader automation until a tested firmware release is published here.
 
 ## What the buttons do
 
