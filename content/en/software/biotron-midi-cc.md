@@ -83,8 +83,7 @@ labels are not yet a final public control specification.
 
 ### Reaper setup (experimental incoming control)
 
-1. Close `settings.playtronica.com`. A future build may show **Release device
-   for DAW**; do not expect that control unless it is visible.
+1. Close `settings.playtronica.com` before the DAW opens the Biotron MIDI port.
 2. In Reaper, open **Options → Preferences → Audio → MIDI Devices**.
 3. Right-click **Biotron** under MIDI outputs and choose **Enable output**.
 4. Create a track for your fader box. Set its input to the fader box and its
@@ -100,11 +99,11 @@ the device in Reaper again.
 ## Offline use
 
 Biotron can play from its stored configuration without keeping the settings
-website open. Do not assume the website itself reloads offline: offline caching
-is being tested in a separate unreleased change. Configure while online, close
-the page, and verify the complete setup before travelling. Do not use rapid
-incoming CC automation until a release passes physical burst and persistence
-tests.
+website open. The current supported configuration path is the website in a
+compatible desktop browser with an internet connection; offline reload is not
+guaranteed. Configure while online, close the page, and verify the complete
+setup before travelling. Do not use rapid incoming CC automation until a
+release passes physical burst and persistence tests.
 
 ---
 

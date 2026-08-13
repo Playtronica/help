@@ -46,6 +46,8 @@ Record the Biotron hardware revision, firmware filename and hash, operating
 system, DAW version, MIDI channel, CC number/value, and the observed result.
 Keep the settings website closed while the DAW owns the MIDI port. A result on
 one unit is not evidence that multiple identical units can be selected reliably.
+The current supported configuration interface is the website in a compatible
+desktop browser. No desktop application is announced or required by this guide.
 
 ## Still stuck
 

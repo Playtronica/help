@@ -71,7 +71,7 @@ Biotron works with any DAW, online synth, or iOS music app that supports MIDI. F
 
 At [settings.playtronica.com](https://settings.playtronica.com) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
 
-> **Using a DAW on Windows?** The settings page and your DAW cannot always use the same MIDI port at once. Close the settings tab before opening Biotron in Reaper, Ableton, or another DAW. A **Release device for DAW** control exists only in an unreleased settings change and must not be expected until it is published.
+> **Using a DAW on Windows?** The settings page and your DAW cannot always use the same MIDI port at once. The current supported configuration path is [settings.playtronica.com](https://settings.playtronica.com) in a compatible desktop browser. Close the settings tab before opening Biotron in Reaper, Ableton, or another DAW.
 
 > **Incoming MIDI CC is experimental.** The firmware team is validating live
 > parameter control, message bursts, and saved settings. Do not rely on rapid
