@@ -5,8 +5,8 @@ section: software
 summary: "What current firmware source says about Biotron CC90 and experimental incoming MIDI CC, plus a cautious Reaper test route."
 segment: ["music-producer", "creator"]
 deflection_target: 25
-status: new-2026-06
-last_edited: 2026-06-20
+status: edited-2026-08
+last_edited: 2026-08-20
 emoji: 🎹
 ---
 
@@ -96,14 +96,40 @@ If Reaper says **Failed to open device**, another application still owns the
 port. Close Chrome completely, disconnect and reconnect Biotron, then enable
 the device in Reaper again.
 
+### Reaper MIDI Clock changes Biotron's timing
+
+Current firmware listens for MIDI Start, Stop, and Clock. When Reaper sends
+clock to Biotron, the plant notes follow the external clock; after MIDI Stop,
+Biotron returns to its internal timing. This is expected sync behaviour, not a
+plant-input fault.
+
+If you want the plant to keep its independent timing, open Biotron's MIDI
+output configuration in **Options → Preferences → Audio → MIDI Devices** and
+turn off **Send clock to this device**. Reaper documents this control in its
+[official user guide](https://www.reaper.fm/userguide.php).
+
+### If a synth holds a note
+
+Use the synth's **Panic** or **All Notes Off** control first. In Reaper, the
+MIDI Devices preferences also contain hardware reset options for sending All
+Notes Off on stop, and ReaControlMIDI has an **All Notes Off** button documented
+in the [official ReaEffects guide](https://www.reaper.fm/guides/ReaEffectsGuide.pdf).
+
+If held notes return, record a short raw MIDI log and send it to support with
+the synth name and version. Dense-message behaviour is still under firmware
+test, so do not assume that an older synth is the cause.
+
 ## Offline use
 
 Biotron can play from its stored configuration without keeping the settings
-website open. The current supported configuration path is the website in a
-compatible desktop browser with an internet connection; offline reload is not
-guaranteed. Configure while online, close the page, and verify the complete
-setup before travelling. Do not use rapid incoming CC automation until a
-release passes physical burst and persistence tests.
+website open. You can also [install Playtronica Settings for offline use on
+Windows](/software/biotron-offline-settings/): after one online installation,
+the settings interface launches from Windows Start without internet.
+
+The installed app still uses the Chrome or Edge Web MIDI engine. Firmware
+downloads remain online-only, and rapid incoming CC automation remains
+experimental until a firmware release passes physical burst and persistence
+tests.
 
 ---
 

@@ -7,11 +7,13 @@ order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-08
-last_edited: 2026-08-05
+last_edited: 2026-08-20
 emoji: 🌿
 ---
 
-<img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button" style="display:block;margin:8px 0 20px;max-width:100%;height:auto;background:transparent" />
+<a href="/illustrations/biotron/biotron-top.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
+
+[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg) to zoom in before touching the BOOT contacts.
 
 Biotron measures changes in the electrical path between its contacts and maps the sensor readings to MIDI. Plants and other conductive objects can be part of that path. Touch, contact placement, nearby electrical noise, light, and firmware settings can all affect the musical output; it is not a calibrated measurement of plant physiology.
 
@@ -26,13 +28,15 @@ Biotron sends on two MIDI channels:
 
 > 🧬 **Testing firmware features?** See [Biotron Advanced — experimental MIDI control](/devices/biotron-advanced/) for current limits and evidence to record.
 
+> 📴 **Need Settings without internet?** [Install Playtronica Settings once, then use Biotron offline on Windows](/software/biotron-offline-settings/). The installed app still uses Chrome or Edge internally; firmware downloads remain online-only.
+
 > 🛒 **Don't have one yet?** [Buy Biotron on shop.playtronica.com](https://shop.playtronica.com/products/biotron). Biotron ships without a USB cable — see [Accessories](/getting-started/accessories/) for the matching part, or grab the [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) which includes it.
 
 {{ youtube: EArNOal-ba0 title="Introducing the Biotron from Playtronica" }}
 
 ## Step 1 — Update the firmware (first time only)
 
-1. **Confirm that your board matches the pictured revision.** On the pictured board, marker **8 · BOOT CONTACTS** points to two small metal contacts beside the fingerprint button. If your connector or contact layout differs, stop and ask support for the correct revision image; do not probe other pads. If it matches, bridge the two contacts, plug in USB-C, then **release the bridge when the `RPI-RP2` drive appears**. Do not leave the contacts bridged while copying firmware.
+1. **[Open the diagram at full size](/illustrations/biotron/biotron-top.svg) and confirm that your board matches the pictured revision.** On the pictured board, marker **8 · BOOT CONTACTS** points to two small metal contacts beside the fingerprint button. If your connector or contact layout differs, stop and ask support for the correct revision image; do not probe other pads. If it matches, bridge the two contacts, plug in USB-C, then **release the bridge when the `RPI-RP2` drive appears**. Do not leave the contacts bridged while copying firmware.
 2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
 3. **Drag the downloaded file onto the `RPI-RP2` drive.** The drive disappears. Done. When the device reconnects, it appears as a MIDI device called "Biotron" instead of a drive.
 
@@ -69,9 +73,11 @@ Biotron works with any DAW, online synth, or iOS music app that supports MIDI. F
 
 ## Web settings and presets
 
-At [settings.playtronica.com](https://settings.playtronica.com) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
+At [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
 
-> **Using a DAW on Windows?** The settings page and your DAW cannot always use the same MIDI port at once. The current supported configuration path is [settings.playtronica.com](https://settings.playtronica.com) in a compatible desktop browser. Close the settings tab before opening Biotron in Reaper, Ableton, or another DAW.
+> **No internet at the venue?** Install [Playtronica Settings for offline use](/software/biotron-offline-settings/) once while online. The interface then launches from Windows Start without internet; firmware downloads remain online-only.
+
+> **Using a DAW on Windows?** The settings app and your DAW cannot always use the same MIDI port at once. Finish configuring, select **Release device for DAW**, and close Settings before opening Biotron in Reaper, Ableton, or another DAW. See the [offline and DAW handoff guide](/software/biotron-offline-settings/) for the fallback when the port stays busy.
 
 > **Incoming MIDI CC is experimental.** The firmware team is validating live
 > parameter control, message bursts, and saved settings. Do not rely on rapid
