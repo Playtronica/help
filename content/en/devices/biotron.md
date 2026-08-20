@@ -7,7 +7,7 @@ order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-08
-last_edited: 2026-08-05
+last_edited: 2026-08-20
 emoji: 🌿
 ---
 
@@ -24,7 +24,9 @@ Biotron sends on two MIDI channels:
 
 > 🛠️ **New user?** Update the firmware before your first session. The device ships ready to use, but the latest firmware has major improvements. This takes about 3 minutes.
 
-> 🧬 **Want to go deeper?** See [Biotron Advanced — MIDI CC and SysEx](/devices/biotron-advanced/) for real-time MIDI control, presets, and firmware-level customisation.
+> 🧬 **Testing firmware features?** See [Biotron Advanced — MIDI CC and SysEx](/devices/biotron-advanced/). Incoming MIDI control is experimental; do not rely on rapid fader automation until a tested firmware release is published.
+
+> 📴 **Need Settings without internet?** [Install Playtronica Settings once, then use the isolated Biotron beta offline on Windows](/software/biotron-offline-settings/). It still uses Chrome or Edge internally; firmware downloads remain online-only.
 
 > 🛒 **Don't have one yet?** [Buy Biotron on shop.playtronica.com](https://shop.playtronica.com/products/biotron). Biotron ships without a USB cable — see [Accessories](/getting-started/accessories/) for the matching part, or grab the [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) which includes it.
 
@@ -87,6 +89,8 @@ Biotron works with any DAW, online synth, or iOS music app that supports MIDI. F
 
 At [settings.playtronica.com](https://settings.playtronica.com) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
 
+> **Using a DAW on Windows?** Settings and your DAW cannot always use the same MIDI port at once. See the [offline beta and DAW handoff guide](/software/biotron-offline-settings/). The safest fallback is to close Settings completely before opening Biotron in Reaper or Ableton.
+
 ## What the buttons do
 
 Biotron has two buttons.
@@ -144,7 +148,7 @@ Yes. Biotron measures small changes in electrical conductivity across two points
 <details>
 <summary><strong>Can I control Biotron with MIDI CC?</strong></summary>
 
-Yes. Biotron sends and receives MIDI CC. Incoming CC controls sensitivity, scale, note length, and probability in real time from a hardware controller or DAW automation. See [Biotron Advanced](/devices/biotron-advanced/) for the full CC map.
+Biotron sends plant CC90. Current firmware source also contains incoming CC handlers, but incoming live control has not completed burst and persistence testing. Do not rely on rapid hardware-fader or DAW automation until a tested firmware release is published.
 
 </details>
 
