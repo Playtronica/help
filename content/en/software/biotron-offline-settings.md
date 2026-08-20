@@ -133,3 +133,5 @@ Email [support@playtronica.com](mailto:support@playtronica.com) with your
 Windows version, browser, DAW, and the exact message shown by Settings or the
 DAW. A screenshot of **Options → Preferences → Audio → MIDI Devices** is
 usually enough for the first diagnosis.
+
+We aim for 24 hours, but a reply may take up to 3 business days.
