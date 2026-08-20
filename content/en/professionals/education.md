@@ -33,7 +33,7 @@ Playtronica began in workshops. The first session was a music teacher letting ch
 
 All Playtronica devices run on **5 V USB power** — the same voltage as a phone charger. The electrical currents involved are far below any threshold of harm. Playtronica devices have been used safely in classrooms with children from age 4 for more than 10 years.
 
-> ⚠️ **Pacemakers and other implanted medical devices.** Capacitive sensing and electromagnetic signals can interfere with implanted medical devices. Students or visitors with pacemakers or similar implants should not use Playtronica devices. See [Safety and health information](/professionals/safety/) for the full rules.
+> ⚠️ **Pacemakers and other implanted medical devices.** These devices pass a small current through the body, and electromagnetic signals can interfere with implanted medical devices. Students or visitors with pacemakers or similar implants should not use Playtronica devices. See [Safety and health information](/professionals/safety/) for the full rules.
 
 ## Institutional orders
 

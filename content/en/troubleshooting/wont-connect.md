@@ -6,8 +6,8 @@ summary: "Your computer does not see the device, or the browser shows 'denied ac
 order: 2
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 180
-status: edited-2026-05
-last_edited: 2026-07-06
+status: edited-2026-07
+last_edited: 2026-07-11
 emoji: 🔌
 ---
 
@@ -51,7 +51,7 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 
 For the older **Micro-USB TouchMe (v1)** and **Micro-USB Playtron** on a recent Apple-silicon Mac (M1/M2/M3 and later): the device powers on and reacts to touch, but the Mac shows **nothing** in Audio MIDI Setup — even with a good data cable straight into a port.
 
-These devices use an early USB design that new Macs treat very strictly and refuse during setup. The device is fine — a USB hub re-times the connection so the Mac accepts it.
+These devices use an early USB design that new Macs treat very strictly and refuse during setup. The device is fine — a USB hub re-times the connection so the Mac accepts it. Technically, a real hub contains a **Transaction Translator**: a chip that re-clocks the device's slower, full-speed USB signal into clean timing the Mac will accept. A passive adapter has no such chip, so nothing gets re-timed — which is why it never helps.
 
 | Your device | On a new Mac |
 |---|---|
@@ -64,7 +64,14 @@ These devices use an early USB design that new Macs treat very strictly and refu
 2. Plug the hub into the Mac, then the device into the hub.
 3. Open Audio MIDI Setup and check whether the device appears.
 
-A simple, inexpensive **USB 2.0** hub works best; a powered one (with its own adapter) is most reliable. On a USB-C-only Mac, pick a USB-C hub with regular USB-A ports. Examples, about €8–15: Anker, UGREEN, Amazon Basics or Sabrent 4-port hubs — for USB-C Macs, a [UGREEN USB-C→USB-A hub](https://www.amazon.com/dp/B07PY87TBD) or [Anker USB-C hub](https://www.amazon.com/dp/B0CCDMR66Y). **Avoid passive USB-C-to-USB-A adapters — they are not hubs.** If one hub does not help, it is usually the wrong type; a basic USB 2.0 hub is the safest.
+**How to choose the hub** — the details that decide whether it works:
+
+- **A real hub, not an adapter.** It must be a box with its own controller chip and ports. A plain USB-C-to-USB-A dongle is only a wire — it has no Transaction Translator, so it cannot re-time the device.
+- **A basic USB 2.0 hub is the safest.** Its Transaction Translator is built exactly for full-speed devices like these, so the timing fix is guaranteed. USB 3.x hubs usually work too (they contain a USB 2.0 stage), but cheap ones can be fussy — when in doubt, pick plain USB 2.0.
+- **Its own power adapter beats bus power.** Steady external power helps a marginal old device finish enumeration. A bus-powered hub often works — try it — but a self-powered one is the most reliable.
+- **Right ports for your setup.** Regular USB-A ports for the device's cable, and an upstream plug that matches your Mac: a USB-C hub for a USB-C-only Mac, a USB-A hub for an older Mac.
+
+Cheap 4-port hubs from about €8–15 are enough — Anker, UGREEN, Amazon Basics, Sabrent. Examples for USB-C Macs: a [UGREEN USB-C→USB-A hub](https://www.amazon.com/dp/B07PY87TBD) or [Anker USB-C hub](https://www.amazon.com/dp/B0CCDMR66Y). **Avoid passive USB-C-to-USB-A adapters — they are not hubs.** If one hub does not help, it is usually the wrong type; a basic USB 2.0 hub is the safest.
 
 > 💬 **Trying this? Message us on WhatsApp and we'll work it out together:** [chat with us on WhatsApp](https://wa.me/351937910673?text=Hi%20Playtronica%2C%20I%20am%20trying%20the%20USB%20hub%20fix%20for%20my%20old%20Micro-USB%20device%20that%20my%20new%20Mac%20does%20not%20detect.%20My%20setup%3A%20). Tell us your Mac model, the hub you used, and what Audio MIDI Setup shows.
 
