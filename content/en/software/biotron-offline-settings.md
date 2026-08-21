@@ -79,6 +79,13 @@ fallback.
 4. On the track that should send MIDI to Biotron, open **Routing** and choose
    Biotron under **MIDI Hardware Output**.
 
+Leave REAPER's MIDI clock output disabled unless you intentionally want Biotron
+to play on REAPER's clock grid. MIDI Clock is a transport/timing signal, not a
+requirement for sending CC. If notes become stuck while testing, stop playback,
+disable the Biotron MIDI input/output in REAPER, disconnect and reconnect
+Biotron, and do not continue live automation until the tested firmware release
+is linked below.
+
 Incoming MIDI CC control is still experimental. Do not use fast fader
 automation until a tested firmware release is linked from the
 [Biotron MIDI CC guide](/software/biotron-midi-cc/).

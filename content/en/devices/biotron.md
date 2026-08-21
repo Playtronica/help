@@ -13,7 +13,7 @@ emoji: 🌿
 
 <a href="/illustrations/biotron/biotron-top.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
 
-[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg) to zoom in before touching the BOOT contacts.
+[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg) for orientation. Do not use the overview alone to identify or bridge BOOT contacts.
 
 Biotron measures changes in the electrical path between its contacts and maps the sensor readings to MIDI. Plants and other conductive objects can be part of that path. Touch, contact placement, nearby electrical noise, light, and firmware settings can all affect the musical output; it is not a calibrated measurement of plant physiology.
 
@@ -36,9 +36,15 @@ Biotron sends on two MIDI channels:
 
 ## Step 1 — Update the firmware (first time only)
 
-1. **[Open the diagram at full size](/illustrations/biotron/biotron-top.svg) and confirm that your board matches the pictured revision.** On the pictured board, marker **8 · BOOT CONTACTS** points to two small metal contacts beside the fingerprint button. If your connector or contact layout differs, stop and ask support for the correct revision image; do not probe other pads. If it matches, bridge the two contacts, plug in USB-C, then **release the bridge when the `RPI-RP2` drive appears**. Do not leave the contacts bridged while copying firmware.
-2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome.** Click the blue "Update firmware" button. A file downloads to your computer.
-3. **Drag the downloaded file onto the `RPI-RP2` drive.** The drive disappears. Done. When the device reconnects, it appears as a MIDI device called "Biotron" instead of a drive.
+1. **Close your DAW and other MIDI apps.** Connect one Biotron with a USB data cable.
+2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome and select Biotron.** Click **Update Firmware**, confirm **Update**, and wait for the `.uf2` download and a drive named `RPI-RP2`. Do not disconnect the device during the download.
+3. **Drag the downloaded `.uf2` file onto `RPI-RP2`.** Wait for the copy and automatic reboot to finish. The drive disappears and Biotron returns as a MIDI device.
+
+If `RPI-RP2` does not appear, stop rather than trying random contacts. The manual recovery position is not yet verified for every sold board revision. Send [support@playtronica.com](mailto:support@playtronica.com) a clear photo of both sides of the board so we can confirm the right procedure.
+
+<a href="/illustrations/biotron/biotron-boot-area.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-boot-area.svg" alt="Large review close-up of two diagonal copper pads in the candidate BOOT area on the pictured USB-C Biotron board; do not bridge them until support confirms the hardware revision" style="display:block;margin:12px auto 18px;max-width:min(100%,600px);height:auto;background:#fff" /></a>
+
+The large close-up fixes the unreadable overview label, but it is an **identification aid**, not permission to bridge the pads. Continue only after support confirms that your revision matches the pictured USB-C board.
 
 ## Step 2 — Set up and play
 
@@ -105,7 +111,7 @@ Biotron has two buttons.
 
 > **The device does not appear on the computer.** Make sure the firmware is updated. Un-updated devices are sometimes not recognised. Try a different USB cable — it must be a data cable, not a charge-only cable.
 
-> **Reset the device.** Short the BOOT pins, plug in USB-C, release the pins. The device appears as `RPI-RP2`. Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) and reflash the firmware.
+> **Firmware recovery is needed.** Try the normal Update Firmware flow first. If `RPI-RP2` does not appear, follow the [revision-safe recovery guide](/troubleshooting/firmware-reset/) and ask support to confirm your board before bridging any contacts.
 
 ## Frequently asked questions
 
@@ -178,7 +184,7 @@ Try these steps in order:
 1. Unplug and reconnect the USB cable.
 2. Use a different USB port directly on the computer, not a hub.
 3. Use a different USB data cable.
-4. If the device still does not appear, do a firmware reset: short the BOOT pins, plug in USB-C, release the pins. The device appears as `RPI-RP2`. Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) and reflash the firmware. See [Firmware reset (Nuke)](/troubleshooting/firmware-reset/).
+4. If the device still does not appear, use the [revision-safe firmware recovery guide](/troubleshooting/firmware-reset/). For Biotron, do not bridge unconfirmed contacts: send support a clear photo of both sides of the board first.
 
 </details>
 
@@ -195,10 +201,6 @@ Biotron ships without a USB-C cable. Once you have it running, these extend what
 
 - [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box (note: Biotron ships without a cable), software compatibility, prices.
 - [Accessories and add-ons](/getting-started/accessories/) — USB-C cables, patches, conductive materials.
-
-## Ask the community
-
-> 🤝 **Other Playtronica users have probably hit this before.** The [Playtronica Friends Facebook group](https://www.facebook.com/groups/playtronica) has 4,400 members and is the fastest source of creative and technical help. Search the group's history first (use the magnifying glass at the top — try `playtron mobile no sound`, `all leds lit`, `touchme biotron no sound`, `koala sampler midi`, or whatever fits your problem). If your question is not already answered, post a new one with a `[Device]` prefix in the title. See [the community page](/site/community/) for what to ask there and what to email instead.
 
 ## Still stuck
 
