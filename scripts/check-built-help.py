@@ -40,8 +40,8 @@ def main() -> int:
         if marker not in biotron:
             errors.append(f"Biotron build is missing safety marker: {marker}")
 
-    if "MIDI clock output disabled" not in offline:
-        errors.append("offline/DAW build is missing the MIDI Clock warning")
+    if "MIDI Clock is not required for sending CC" not in offline:
+        errors.append("offline/DAW build is missing the MIDI Clock/CC boundary")
     if "support confirms the board revision" not in reset:
         errors.append("firmware reset build is missing the Biotron revision gate")
     if "facebook.com/groups/playtronica" in biotron or "facebook.com/groups/playtronica" in reset:
