@@ -127,11 +127,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     // out, nobody is coming, and the applicant has no way to know. Tell them.
     const sent = await sendEmail(context.env, form, data);
     if (!sent.ok) {
+      // Status 200 on purpose. Cloudflare replaces the body of any 5xx a Pages
+      // Function returns with its own "error code: 502" page, so a 502 here would
+      // hide the one sentence the applicant actually needs. A 4xx would blame them
+      // for our failure. The message is the payload; the status only has to survive.
       return new Response(
-        "We could not deliver your submission (mail service error). " +
-          "Nothing was recorded, so please email manirko@playtronica.com directly — " +
-          "your message will be read. Sorry for the detour.",
-        { status: 502, headers: { "content-type": "text/plain;charset=UTF-8" } },
+        "We could not deliver your submission — our mail service rejected it, and " +
+          "nothing was recorded on our side.\n\n" +
+          "Please email manirko@playtronica.com directly and paste what you wrote. " +
+          "It will be read. Sorry for the detour.",
+        { status: 200, headers: { "content-type": "text/plain;charset=UTF-8" } },
       );
     }
 
