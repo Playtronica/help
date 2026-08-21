@@ -20,6 +20,7 @@ import re
 import sys
 from pathlib import Path
 from collections import defaultdict
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content" / "en"
@@ -140,12 +141,12 @@ def main() -> int:
             # Skip non-internal links
             if target.startswith(("http://", "https://", "mailto:", "tel:", "#", "/_pagefind/")):
                 continue
-            # Strip anchor for path lookup
-            anchor: str | None = None
-            if "#" in target:
-                path_part, anchor = target.split("#", 1)
-            else:
-                path_part = target
+            # Strip query and fragment before path lookup. Versioned local
+            # assets (for example image.svg?v=hash) still point to the same
+            # public file and must remain auditable.
+            parsed_target = urlsplit(target)
+            path_part = parsed_target.path
+            anchor: str | None = parsed_target.fragment or None
             # Normalize trailing slash
             if not path_part.endswith("/"):
                 path_part = path_part + "/"
