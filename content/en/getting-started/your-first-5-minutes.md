@@ -45,11 +45,12 @@ These instructions take about five minutes. Find your device below and follow th
 
 > **How it works:** Biotron measures the bio-electrical signals inside a living plant. The plant generates the music. Your job is to set up the circuit and wait for calibration.
 
-1. **Clip both leaf-pads to a houseplant.** Use different leaves or different points on the same branch. The pads must not touch each other.
-2. **Plug Biotron into your computer with a USB cable.**
-3. **Move away from the plant and wait 30 seconds.** Biotron calibrates to the plant's baseline signal during this time — standing close would interfere with the reading. You will hear two short calibration tones, and the LED will pulse slowly once it is ready.
-4. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/), or use our own [synth.playtronica.com](https://synth.playtronica.com). Click **Allow** on the MIDI permission popup.
-5. **Listen.** The plant is now playing. You can also touch a leaf, change the room lighting, or move your hand near the plant — each changes the signal.
+1. **Plug both leaf-pad cables into Biotron.** The pads come on cables — push each connector onto the leaf-pad pins on the board. Both have to be connected: a single pad on its own produces no signal.
+2. **Clip both leaf-pads to a houseplant.** Use different leaves or different points on the same branch. The pads must not touch each other.
+3. **Plug Biotron into your computer with a USB cable.**
+4. **Move away from the plant and wait 30 seconds.** Biotron calibrates to the plant's baseline signal during this time — standing close would interfere with the reading. You will hear two short calibration tones, and the LED will pulse slowly once it is ready.
+5. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/), or use our own [synth.playtronica.com](https://synth.playtronica.com). Click **Allow** on the MIDI permission popup.
+6. **Listen.** The plant is now playing. You can also touch a leaf, change the room lighting, or move your hand near the plant — each changes the signal.
 
 ## 🌀 Orbita
 

@@ -32,7 +32,7 @@ If you cannot identify your device, see [Which Playtronica do I have?](/getting-
 4. Pick one:
    - **TouchMe** — touch both gold pads with bare skin. The LED stays dark when you plug in — that is normal; it blinks when you touch the pads.
    - **Playtron** — clip one alligator wire to a piece of fruit. Hold the pointed corner of the device with one hand (that sharp corner is the ground). Touch the fruit with the other hand. Playtron's LED stays dark when you plug it in — that's normal. It blinks each time you complete the circuit and a note plays, which is how you know it's working.
-   - **Biotron** — clip both leaf-pads to a houseplant. Wait 30 seconds for calibration.
+   - **Biotron** — plug both leaf-pad cables into the board first (a single pad on its own produces no signal), then clip both leaf-pads to a houseplant. Wait 30 seconds for calibration.
    - **Scales** — place an object up to 3 kg on the weight plate.
    - **Orbita** — open a DAW or music app first (Orbita needs a sound source), then place a coloured magnet on a track and press Start.
 

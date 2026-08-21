@@ -68,12 +68,14 @@ async function sendEmail(
   const to = env.NOTIFY_TO || NOTIFY_DEFAULT;
 
   if (!apiKey) {
-    // No key configured. Log the submission so it's still recoverable from CF logs.
-    console.log(
-      `[edu-form] No RESEND_API_KEY set. Submission for "${form}":`,
+    // No key configured — the submission goes nowhere. Log it so it is at least
+    // recoverable from CF logs, but report failure: reporting ok here is what let
+    // applications disappear behind a thank-you page.
+    console.error(
+      `[edu-form] No RESEND_API_KEY set. Submission for "${form}" NOT delivered:`,
       JSON.stringify(data),
     );
-    return { ok: true, status: 200 };
+    return { ok: false, status: 500, error: "RESEND_API_KEY not configured" };
   }
 
   const subject = SUBJECT_PREFIX[form] + " — " + (data.school || data.institution || data.email || "");
@@ -120,7 +122,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       return new Response("Email is required", { status: 400 });
     }
 
-    await sendEmail(context.env, form, data);
+    // 🔴 Never show the thank-you page for a submission we failed to deliver.
+    // The page promises a reply within one business day; if the mail did not go
+    // out, nobody is coming, and the applicant has no way to know. Tell them.
+    const sent = await sendEmail(context.env, form, data);
+    if (!sent.ok) {
+      return new Response(
+        "We could not deliver your submission (mail service error). " +
+          "Nothing was recorded, so please email manirko@playtronica.com directly — " +
+          "your message will be read. Sorry for the detour.",
+        { status: 502, headers: { "content-type": "text/plain;charset=UTF-8" } },
+      );
+    }
 
     // PRG pattern — redirect to thank-you page so user can refresh without re-submitting.
     return Response.redirect(
