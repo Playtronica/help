@@ -1,64 +1,92 @@
 ---
-title: "Firmware reset (Nuke) — TouchMe, Playtron, and Biotron"
+title: "Firmware recovery — start here"
 slug: firmware-reset
 section: troubleshooting
-summary: "Wipe and reinstall the firmware when the device is unresponsive."
+summary: "Try the normal update first. Use manual recovery only for a board revision that has been confirmed."
 order: 5
 segment: ["music-producer"]
 deflection_target: 60
 status: edited-2026-08
-last_edited: 2026-08-05
+last_edited: 2026-08-21
 emoji: ⚡
 ---
 
-The Nuke reset completely wipes and reinstalls the firmware on your device. Use it when:
+<div class="task-grid" aria-label="Choose a firmware recovery route">
+  <a class="task-card" href="#try-the-normal-update"><span class="task-card__icon">↻</span><span><strong>Device still appears</strong><small>Use the normal Settings update first.</small></span></a>
+  <a class="task-card" href="#if-rpi-rp2-is-already-visible"><span class="task-card__icon">💾</span><span><strong>RPI-RP2 is visible</strong><small>Finish the verified firmware copy.</small></span></a>
+  <a class="task-card" href="#biotron-recovery"><span class="task-card__icon">🌿</span><span><strong>Recover a Biotron</strong><small>Send a board photo before touching contacts.</small></span></a>
+  <a class="task-card" href="#touchme-or-playtron-manual-recovery"><span class="task-card__icon">🧰</span><span><strong>TouchMe or Playtron</strong><small>Use manual recovery only on a matching board.</small></span></a>
+</div>
 
-- The device is not recognised by your computer at all.
-- The device appears as the `RPI-RP2` drive but not as a MIDI device.
-- The device behaves unexpectedly after a failed firmware update.
-- Support has asked you to do a full reset.
+Use firmware recovery when the device is missing, remains an `RPI-RP2` drive,
+or stopped working after an interrupted update. Do not start with exposed
+contacts if Settings can still see the device.
 
-> ⚠️ **Hardware revision matters.** The contact locations linked below
-> describe the pictured USB-C revisions only. A USB-C connector by itself does
-> not prove that every pad location or recovery step is identical. If your
-> board does not match its picture, stop and send support a clear photo of both
-> sides; do not probe unlabelled pads.
+> ⚠️ **The board must match the picture.** USB-C alone does not identify a
+> hardware revision. If any label, component, or contact position differs,
+> stop. Send support a clear photo of both sides instead of probing pads.
 
-## First — try the simple update
+## Try the normal update
 
-1. **Open the settings page for your device in Chrome.**
-   - TouchMe: [settings.playtronica.com/#/touchme](https://settings.playtronica.com/#/touchme)
-   - Playtron: [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron)
-   - Biotron: [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron)
-2. **Plug in the device with USB-C and click "Update Firmware".** If the `RPI-RP2` drive appears automatically, skip to step 4. If the drive does not appear, use the manual Nuke below.
-3. **Follow the on-screen instructions** to put the device into update mode.
-4. **Upload the latest firmware.** The device reboots automatically. After the reboot, the device appears as a MIDI device, not a drive.
+<ol class="steps">
+  <li><strong>Close every DAW and MIDI app.</strong></li>
+  <li><strong>Connect one device directly with a USB data cable.</strong></li>
+  <li><strong>Open the correct Settings page in desktop Chrome or Edge:</strong> <a href="https://settings.playtronica.com/#/touchme">TouchMe</a>, <a href="https://settings.playtronica.com/#/playtron">Playtron</a>, or <a href="https://settings.playtronica.com/#/biotron">Biotron</a>.</li>
+  <li><strong>Select Update Firmware</strong> and follow the on-screen steps. Do not disconnect during a file copy.</li>
+  <li><strong>Wait for the automatic restart.</strong> Success means the drive disappears and the device returns as MIDI.</li>
+</ol>
 
-## Manual Nuke (if the simple update does not work)
+## If RPI-RP2 is already visible
 
-You will need a paper clip, tweezers, or a short piece of wire, and your USB-C cable. **Biotron owners must pause here until support confirms the board revision from a clear photo of both sides.**
+The device is in update mode. Use only the firmware file supplied by the
+Settings flow or Playtronica support for your exact device. Copy it to
+`RPI-RP2`, wait for the copy to finish, and let the device restart.
 
-> **Biotron:** use the [large, readable revision-review close-up](/illustrations/biotron/biotron-boot-area.svg) only to identify the area in a photo. The older full-board label was too small to be a safe procedure. Do not bridge the pictured pads until support confirms that your exact board revision matches.
+Do not copy a TouchMe, Playtron, Orbita, or generic Pico file onto Biotron.
 
-1. **Match the device to its pictured hardware revision.** The linked diagrams
-   show two BOOT contacts on their pictured boards: [TouchMe](/devices/touchme/)
-   (middle strip), [Playtron](/devices/playtron/) (top peak near USB-C), and
-   [Biotron](/devices/biotron/) (revision-review image only). For Biotron,
-   visual similarity is not sufficient: continue only after support explicitly
-   confirms the pictured revision.
-2. **Short the BOOT pins.** Touch both pins at the same time with a paper clip. Hold the connection.
-3. **With the pins still shorted, plug in the USB-C cable.**
-4. **Wait for the `RPI-RP2` drive to appear on your computer.** Only release the pins **after** the drive appears. The window is brief. If you miss it, unplug and try again.
-5. **Release the pins.**
-6. **Download `flash_nuke.uf2` and drag it onto the `RPI-RP2` drive.** The device disconnects and reboots. This wipes the firmware completely.
-7. **Open [settings.playtronica.com/#/[your device]](https://settings.playtronica.com) in Chrome and click "Update Firmware".** Upload the latest firmware. The device reboots again and appears as a working MIDI device.
+## Biotron recovery
 
-## Related pages
+Do not bridge Biotron contacts from a general internet image. Sold board
+revisions may differ, and the manual position is not verified for every unit.
 
-- [Troubleshooting hub](/troubleshooting/hub/) — start here if you do not know which troubleshooting path applies.
-- [No sound](/troubleshooting/no-sound/) — most common follow-up after a firmware reset.
-- [Won't connect](/troubleshooting/wont-connect/) — if the device still does not appear after a reset.
+<a href="/illustrations/biotron/biotron-boot-area.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-boot-area.svg" alt="Large review close-up of the possible BOOT area on the pictured USB-C Biotron board; use it to frame a support photo, not as permission to bridge contacts" style="display:block;margin:12px auto 18px;max-width:min(100%,600px);height:auto;background:#fff" /></a>
+
+<ol class="steps">
+  <li><strong>Photograph both sides of the full board.</strong> Keep USB disconnected.</li>
+  <li><strong>Email the photos to <a href="mailto:support@playtronica.com">support@playtronica.com</a>.</strong> Include the order number and operating system.</li>
+  <li><strong>Wait for revision confirmation.</strong> Support will identify the exact contacts and recovery file.</li>
+</ol>
+
+The close-up makes the area readable. It is an identification aid, not a
+universal procedure.
+
+## TouchMe or Playtron manual recovery
+
+Continue only when the board matches the labelled image for
+[TouchMe](/devices/touchme/) or [Playtron](/devices/playtron/). These steps do
+**not** apply to an unconfirmed Biotron.
+
+<ol class="steps">
+  <li><strong>Disconnect USB.</strong> Prepare a paper clip, tweezers, or a short wire.</li>
+  <li><strong>Hold the two labelled BOOT contacts together.</strong></li>
+  <li><strong>Connect USB while holding the contacts.</strong></li>
+  <li><strong>Release when <code>RPI-RP2</code> appears.</strong> If it does not appear, disconnect and stop after one retry.</li>
+  <li><strong>Copy the verified <code>flash_nuke.uf2</code> supplied for this recovery.</strong> Wait for the drive to reappear.</li>
+  <li><strong>Return to Settings and install the device firmware.</strong> Wait until it returns as MIDI.</li>
+</ol>
+
+> ⚠️ `flash_nuke.uf2` erases the flash. Do not use a file from an unknown mirror
+> and do not interrupt either copy.
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Firmware reset #[order number]`. Tell us your device, your operating system, and which step failed. We aim for 24 hours, but a reply may take up to 3 business days.
+Email [support@playtronica.com](mailto:support@playtronica.com) with the subject
+`Firmware recovery #[order number]`. Include:
+
+- the device name;
+- clear photos of both sides;
+- Windows or macOS version;
+- whether `RPI-RP2` appears;
+- the exact step that failed.
+
+We aim for 24 hours, but a reply may take up to 3 business days.

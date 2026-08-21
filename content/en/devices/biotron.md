@@ -2,206 +2,130 @@
 title: "Biotron — your plant as a MIDI instrument"
 slug: biotron
 section: devices
-summary: "Clip the leaf-pads to a houseplant and let it play itself. Setup, wiring, firmware updates, and the fix for when there's no sound."
+summary: "Connect a plant, hear the first notes, then choose Settings, offline use, DAW routing, or recovery."
 order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-08
-last_edited: 2026-08-20
+last_edited: 2026-08-21
 emoji: 🌿
 ---
 
-<a href="/illustrations/biotron/biotron-top.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view, labelled — USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
+<div class="task-grid" aria-label="Choose a Biotron task">
+  <a class="task-card" href="#quick-start"><span class="task-card__icon">▶</span><span><strong>Play the first notes</strong><small>Connect one plant and hear Biotron in about five minutes.</small></span></a>
+  <a class="task-card" href="/software/biotron-offline-settings/"><span class="task-card__icon">📴</span><span><strong>Use Settings offline</strong><small>Install once, then configure without internet.</small></span></a>
+  <a class="task-card" href="/software/biotron-midi-cc/"><span class="task-card__icon">🎛</span><span><strong>Connect a DAW</strong><small>Receive plant MIDI or test outgoing CC.</small></span></a>
+  <a class="task-card" href="#fix-a-problem"><span class="task-card__icon">🛟</span><span><strong>Fix a problem</strong><small>Start with the cable, signal, or safe recovery path.</small></span></a>
+</div>
 
-[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg) for orientation. Do not use the overview alone to identify or bridge BOOT contacts.
+## Quick start
 
-Biotron measures changes in the electrical path between its contacts and maps the sensor readings to MIDI. Plants and other conductive objects can be part of that path. Touch, contact placement, nearby electrical noise, light, and firmware settings can all affect the musical output; it is not a calibrated measurement of plant physiology.
+<ol class="steps">
+  <li><strong>Clip both leaf-pads to the plant.</strong> Use two separate leaves or branches. Keep the metal contacts apart.</li>
+  <li><strong>Connect Biotron with a USB data cable.</strong> Biotron ships without a cable. A charge-only cable powers the LEDs but carries no MIDI.</li>
+  <li><strong>Open <a href="https://synth.playtronica.com">synth.playtronica.com</a> in Chrome.</strong> Allow MIDI access and choose Biotron.</li>
+  <li><strong>Leave the setup untouched during startup, then play.</strong> Touch the plant or cover the light sensor. You should see MIDI activity and hear notes.</li>
+</ol>
 
-Biotron sends on two MIDI channels:
+> 💡 **Two sources, two channels.** Plant activity uses MIDI channel 1. The
+> light sensor uses MIDI channel 2. MIDI itself is not audio, so choose a synth
+> or instrument track to hear it.
 
-- **Channel 1** — the plant sensor.
-- **Channel 2** — the light sensor.
+## Know the board
 
-> ⚠️ **Handle only the parts shown in this guide.** Touch the leaf-pad cables, the light sensor face, and the USB-C connector. Do not touch the solder joints, the exposed chips on top, or the underside of the PCB — even when the device is unplugged. Biotron is durable, but those areas can be damaged permanently. Treat the rest of the board the way you would treat the back of a phone screen.
+<a href="/illustrations/biotron/biotron-top.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view labelled with the USB-C connector, leaf-pad contacts, light sensor, buttons, LEDs, and electronics" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
 
-> 🛠️ **Firmware update requested by support?** Follow the recovery sequence below. Update time and behaviour vary by computer and hardware revision; do not interrupt a file copy in progress.
+[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg).
 
-> 🧬 **Testing firmware features?** See [Biotron Advanced — experimental MIDI control](/devices/biotron-advanced/) for current limits and evidence to record.
+> ⚠️ **Handle the connectors and sensor surfaces only.** Do not press exposed
+> chips, solder joints, or the underside. The BOOT label in the overview is for
+> orientation, not permission to bridge contacts.
 
-> 📴 **Need Settings without internet?** [Install Playtronica Settings once, then use the isolated Biotron beta offline on Windows](/software/biotron-offline-settings/). It still uses Chrome or Edge internally; firmware downloads remain online-only.
+## Configure, save, then close Settings
 
-> 🛒 **Don't have one yet?** [Buy Biotron on shop.playtronica.com](https://shop.playtronica.com/products/biotron). Biotron ships without a USB cable — see [Accessories](/getting-started/accessories/) for the matching part, or grab the [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) which includes it.
+Use [Biotron Settings](https://settings.playtronica.com/#/biotron) to change
+sensitivity, scale, note range, buttons, and MIDI behaviour.
 
-{{ youtube: EArNOal-ba0 title="Introducing the Biotron from Playtronica" }}
+<ol class="steps">
+  <li>Close your DAW and other MIDI apps.</li>
+  <li>Open Settings in desktop Chrome or Edge and select one Biotron.</li>
+  <li>Change a setting and send it to the device.</li>
+  <li>Close Settings before opening the same MIDI port in a DAW.</li>
+</ol>
 
-## Step 1 — Update the firmware (first time only)
+Need it at a venue without internet? Follow the
+[offline Windows guide](/software/biotron-offline-settings/). The isolated beta
+can be installed once and opened later without a connection. Firmware downloads
+remain online-only.
 
-1. **Close your DAW and other MIDI apps.** Connect one Biotron with a USB data cable.
-2. **Open [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) in Chrome and select Biotron.** Click **Update Firmware**, confirm **Update**, and wait for the `.uf2` download and a drive named `RPI-RP2`. Do not disconnect the device during the download.
-3. **Drag the downloaded `.uf2` file onto `RPI-RP2`.** Wait for the copy and automatic reboot to finish. The drive disappears and Biotron returns as a MIDI device.
+## Use Biotron with a DAW
 
-If `RPI-RP2` does not appear, stop rather than trying random contacts. The manual recovery position is not yet verified for every sold board revision. Send [support@playtronica.com](mailto:support@playtronica.com) a clear photo of both sides of the board so we can confirm the right procedure.
+- **Biotron → DAW:** enable Biotron as a MIDI input. Plant data arrives on
+  channel 1; light data arrives on channel 2.
+- **DAW → Biotron:** enable the MIDI output only when you need to send settings
+  or clock back to Biotron.
+- **Windows port busy:** release and close Settings before opening the device
+  in Reaper or Ableton.
 
-<a href="/illustrations/biotron/biotron-boot-area.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-boot-area.svg" alt="Large review close-up of two diagonal copper pads in the candidate BOOT area on the pictured USB-C Biotron board; do not bridge them until support confirms the hardware revision" style="display:block;margin:12px auto 18px;max-width:min(100%,600px);height:auto;background:#fff" /></a>
+The [Biotron MIDI guide](/software/biotron-midi-cc/) has the Reaper route, CC90
+output, and the experimental incoming CC map.
 
-The large close-up fixes the unreadable overview label, but it is an **identification aid**, not permission to bridge the pads. Continue only after support confirms that your revision matches the pictured USB-C board.
+> ⚠️ **Fast incoming CC automation is still experimental.** Occasional test
+> commands are documented. Do not depend on rapid fader sweeps until a tested
+> firmware release is linked from the MIDI guide.
 
-## Step 2 — Set up and play
+## Improve a weak or unstable signal
 
-1. **Clip the leaf-pads to your plant.** Clip one pad to a leaf or branch. Clip the other pad to a different leaf or branch. The pads must be **at least 2 cm apart**. The pads must never touch each other.
-2. **Plug Biotron into your computer with a USB cable** (not included — use any USB-C data cable). Then open [synth.playtronica.com](https://synth.playtronica.com) in Chrome.
-3. **Leave the connected setup untouched during startup.** Current firmware performs automatic calibration, but the exact duration and completion cue still need confirmation for each released firmware/hardware revision.
-4. **Check the output.** Touch a connected conductive surface and change the light over the board. Results vary with contact, environment, settings, and firmware.
+1. Check that both contacts are secure and do not touch.
+2. Try another leaf, branch, contact position, or conductive object.
+3. Move chargers and power supplies away, then compare the MIDI output.
+4. Reconnect Biotron and leave the setup untouched during startup.
 
-## Picking the right plant
+Contact, moisture, geometry, nearby electrical noise, light, and stored settings
+all affect the musical result. Biotron is a musical controller, not a calibrated
+measurement of plant physiology.
 
-Contact quality, moisture, geometry, nearby electrical equipment, and settings can all change the result. We have not validated a species-by-species performance ranking, so treat plant choice as an experiment rather than a biological claim.
+## Buttons and useful accessories
 
-### Improve a weak or unstable result
+| Control | What it does |
+|---|---|
+| Fingerprint button | Cycles through stored presets. Save your custom preset before cycling. |
+| Mute button | Mutes or restores the configured tracks. Change its mode in Settings. |
 
-1. Check that both contacts are secure and do not touch each other.
-2. Try a different contact position or conductive object.
-3. Move chargers, power supplies, and other possible noise sources away, then compare the MIDI output. No universal separation distance is verified.
-4. Reconnect the device and leave the setup untouched while automatic calibration runs. The exact completion cue is pending revision testing.
+- [Patches for skin and plants](https://shop.playtronica.com/products/patches-for-skin-and-plants) — for narrow or waxy leaves and body contact.
+- [USB-C data cable](https://shop.playtronica.com/products/usb-c-cable-1m) — Biotron needs data, not power only.
+- [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) — Biotron, cable, and accessories.
 
-### A small experiment to find your favourite plant
-
-Set up Biotron on three different plants on three consecutive days. Same scale, same synth, same time of day. Listen to how each plant phrases. You will quickly find which plant in your room has the most musical voice. It is not always the obvious one.
-
-## MIDI channels
-
-| Source | MIDI channel | What it sends |
-|---|---|---|
-| 🌿 Plant sensor | Channel 1 | Note and CC data from plant conductivity (touch or proximity) |
-| 💡 Light sensor | Channel 2 | Note data, or pitch-bend when that mode is enabled |
-
-Biotron works with any DAW, online synth, or iOS music app that supports MIDI. For web synths, use Chrome at [synth.playtronica.com](https://synth.playtronica.com).
-
-## Web settings and presets
-
-At [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotron) you can change sensitivity, MIDI mapping, scales, and more. After changing settings, click the blue "Send" button to push the changes to the device. Preset files are also available to download and load.
-
-> **No internet at the venue?** Install [Playtronica Settings for offline use](/software/biotron-offline-settings/) once while online. The interface then launches from Windows Start without internet; firmware downloads remain online-only.
-
-> **Using a DAW on Windows?** Settings and your DAW cannot always use the same MIDI port at once. In the isolated beta, finish configuring, select **Release device for DAW**, and close Settings before opening Biotron in Reaper, Ableton, or another DAW. If your Settings build has no Release button, close it completely. See the [offline and DAW handoff guide](/software/biotron-offline-settings/).
-
-> **Incoming MIDI CC is experimental.** The firmware team is validating live
-> parameter control, message bursts, and saved settings. Do not rely on rapid
-> fader automation until a tested firmware release is published here.
-
-## What the buttons do
-
-Biotron has two buttons.
-
-- **Fingerprint button** — cycles through the default presets. Your custom preset does **not** return after cycling. Save your custom preset first.
-- **Mute button** (top of the device, near USB-C) — ON mutes all tracks. OFF restores the previously active tracks. Change the behaviour at [settings.playtronica.com](https://settings.playtronica.com) under Settings → Buttons Mode → Mute button state.
-
-## Four ways to use Biotron
-
-- **Leave the setup alone.** After startup, observe whether it continues producing MIDI without touch.
-- **Move your hands close to the plant.** No touching required. Proximity changes the signal.
-- **Change the light.** Turn a lamp on and off, or cover the light sensor with your hand.
-- **Use Biotron on your body.** Clip the two pads to different points of skin. Your body becomes the instrument.
-
-## Troubleshooting
-
-> **The same notes repeat when nothing is touching the plant.** Reconnect the device and leave the setup untouched during automatic calibration. The exact duration and completion cue must still be confirmed for your firmware/hardware revision.
-
-> **The setup produces little MIDI activity.** Check both contacts, try a different contact position or conductive object, reconnect, and leave the setup untouched during automatic calibration. Compare the result in a MIDI monitor before attributing it to a plant species or biological state.
-
-> **The device does not appear on the computer.** Make sure the firmware is updated. Un-updated devices are sometimes not recognised. Try a different USB cable — it must be a data cable, not a charge-only cable.
-
-> **Firmware recovery is needed.** Try the normal Update Firmware flow first. If `RPI-RP2` does not appear, follow the [revision-safe recovery guide](/troubleshooting/firmware-reset/) and ask support to confirm your board before bridging any contacts.
-
-## Frequently asked questions
+## Fix a problem
 
 <details>
-<summary><strong>How does Biotron convert plant signals to MIDI? Is it chromatic?</strong></summary>
-
-Biotron maps changes in its electrical sensor input to MIDI notes and plant CC90. Available scales and note range depend on the stored configuration and firmware; check the settings page rather than assuming a default scale or octave count.
-
+<summary>Biotron lights up but does not appear on the computer</summary>
+<p>Try another USB data cable and a direct computer port. Close other MIDI apps. If it still does not appear, use the safe recovery route below.</p>
 </details>
 
 <details>
-<summary><strong>Can I use multiple Biotrons together?</strong></summary>
-
-This is not yet a supported guarantee. Identical USB-MIDI devices may be hard to distinguish in some browser/Windows combinations, and the settings page has not completed a two-device selection test. Test your exact OS, browser, DAW, and firmware before relying on several units in a performance.
-
+<summary>The same notes repeat or the signal is unstable</summary>
+<p>Reconnect Biotron, leave the setup untouched during startup, then check both contacts in a MIDI monitor. Compare the signal before changing firmware.</p>
 </details>
 
 <details>
-<summary><strong>Can the plant play on its own, without my hands?</strong></summary>
-
-It may continue producing changing MIDI without touch, depending on the setup and settings. This output is not proof of a particular biological process. Monitor the MIDI result on your own unit before a performance.
-
+<summary>Settings says “Denied access to MIDI”</summary>
+<p>Open the browser site settings, allow MIDI device control for Playtronica Settings, then reload. Close your DAW before reconnecting.</p>
 </details>
 
 <details>
-<summary><strong>Does it really work? What is being measured?</strong></summary>
-
-Biotron maps changes in its electrical sensor readings to MIDI. Contact, touch, environmental electrical noise, and settings can influence the readings. Biotron is a musical controller, not a calibrated scientific instrument, and its output should not be described as a direct account of a plant's internal state.
-
+<summary>Firmware update or recovery is needed</summary>
+<p>Try the normal Update Firmware button first. If the <code>RPI-RP2</code> drive does not appear, do not probe contacts. Open the <a href="/troubleshooting/firmware-reset/">revision-safe recovery guide</a> and send support a clear photo of both sides of your board.</p>
 </details>
-
-<details>
-<summary><strong>Can I control Biotron with MIDI CC?</strong></summary>
-
-Current firmware source sends plant CC90 and contains incoming CC handlers. Incoming control is experimental: command scope varies (some commands are global, others channel-specific), and rapid automation still requires physical burst and persistence testing. See [Biotron MIDI CC](/software/biotron-midi-cc/) for the source-derived test map and limitations.
-
-</details>
-
-<details>
-<summary><strong>What USB cable should I use?</strong></summary>
-
-Use a data cable, not a charge-only cable. Most cables that ship with phones are data cables. Charge-only cables carry power but no data, and the device will not appear on your computer.
-
-</details>
-
-<details>
-<summary><strong>I see "Denied access to MIDI" in the browser.</strong></summary>
-
-The browser blocked MIDI access. To fix this:
-
-1. Open the browser settings.
-2. Go to **Privacy and Security → Site Settings → MIDI**.
-3. Find `settings.playtronica.com` or `synth.playtronica.com` and change the setting to **Allow**.
-4. Reload the page.
-
-</details>
-
-<details>
-<summary><strong>Can I make a Biotron myself?</strong></summary>
-
-Yes. The firmware is open source on GitHub, and the hardware schematics are published. If you are comfortable with PCB design and RP2040 firmware, you can build your own. See the [Biotron firmware on GitHub](https://github.com/Playtronica/biotron-firmware).
-
-</details>
-
-<details>
-<summary><strong>The device suddenly stopped working.</strong></summary>
-
-Try these steps in order:
-
-1. Unplug and reconnect the USB cable.
-2. Use a different USB port directly on the computer, not a hub.
-3. Use a different USB data cable.
-4. If the device still does not appear, use the [revision-safe firmware recovery guide](/troubleshooting/firmware-reset/). For Biotron, do not bridge unconfirmed contacts: send support a clear photo of both sides of the board first.
-
-</details>
-
-## Works great with Biotron
-
-Biotron ships without a USB-C cable. Once you have it running, these extend what it can do.
-
-- **[Patches for skin and plants](https://shop.playtronica.com/products/patches-for-skin-and-plants)** — stick-on electrodes for leaves with waxy or narrow surfaces, or for running Biotron on skin instead of a plant. From €16.
-- **[Orbita + Biotron Duo](https://shop.playtronica.com/products/next-gen-playtronica-duo-orbita-biotron)** — Orbita's turntable drives the rhythm while Biotron's plant drives the melody. Designed to play together out of the box. €520.
-- **[USB-C to USB-A cable — 1 m](https://shop.playtronica.com/products/usb-c-cable-1m)** — the cable Playtronica devices are built for. Braided, data cable, not charge-only. €9.98.
-- **[Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit)** — Biotron + cable + accessories as a gift-ready bundle. €122.
-
-## Related pages
-
-- [Compare all Playtronica devices](/devices/compare/) — side-by-side spec matrix, what is in each box (note: Biotron ships without a cable), software compatibility, prices.
-- [Accessories and add-ons](/getting-started/accessories/) — USB-C cables, patches, conductive materials.
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `Biotron issue #[order number]`. We aim for 24 hours, but a reply may take up to 3 business days.
+Email [support@playtronica.com](mailto:support@playtronica.com) with:
+
+- a photo of the full setup;
+- your operating system and music app;
+- what the LEDs do;
+- the exact step that failed.
+
+Use the subject `Biotron issue #[order number]`. We aim for 24 hours, but a
+reply may take up to 3 business days.

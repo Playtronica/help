@@ -2,142 +2,119 @@
 title: "Use Biotron Settings offline on Windows"
 slug: biotron-offline-settings
 section: software
-summary: "Install Playtronica Settings once, then configure Biotron without an internet connection and hand the MIDI port back to your DAW."
+summary: "Install once, open without internet, then release Biotron before starting your DAW."
 order: 8
 segment: ["music-producer", "creator"]
 deflection_target: 55
-status: new-2026-08
-last_edited: 2026-08-20
+status: edited-2026-08
+last_edited: 2026-08-21
 emoji: 📴
 ---
 
-Playtronica Settings can be installed from Chrome or Edge and then launched
-from Windows without an internet connection. No ZIP, terminal, administrator
-mode, or firmware flash is required.
+<div class="task-grid" aria-label="Choose an offline Settings task">
+  <a class="task-card" href="#install-once"><span class="task-card__icon">⬇</span><span><strong>Install once</strong><small>Prepare Settings while you still have internet.</small></span></a>
+  <a class="task-card" href="#open-without-internet"><span class="task-card__icon">📴</span><span><strong>Open offline</strong><small>Configure Biotron from the Windows Start menu.</small></span></a>
+  <a class="task-card" href="#move-to-your-daw"><span class="task-card__icon">🎚</span><span><strong>Move to your DAW</strong><small>Release the MIDI port before Reaper or Ableton.</small></span></a>
+  <a class="task-card" href="#fix-only-if-needed"><span class="task-card__icon">🛟</span><span><strong>Fix a problem</strong><small>Permission, install, clock, or held-note help.</small></span></a>
+</div>
 
-> 🧪 **Beta:** this guide uses the isolated
+> 🧪 **Isolated beta.** Open
 > [Biotron Settings beta](https://offline-integrated.biotron-midi-preview.pages.dev/#/biotron).
-> It does not replace or modify `settings.playtronica.com`. Do not use the beta
-> to update firmware.
+> It does not replace `settings.playtronica.com` or update production. It uses
+> Chrome or Edge internally, but after installation the interface works
+> without a website, browser tab, or internet connection.
 
-> **Important boundary:** this is an installed web app powered by Chrome or
-> Edge, not a native application. After the first online installation, the
-> settings interface works offline. Firmware downloads still require internet.
+## Install once
 
-## Install once while online
+<ol class="steps">
+  <li><strong>Close Reaper, Ableton, and other MIDI apps.</strong></li>
+  <li><strong>Open the <a href="https://offline-integrated.biotron-midi-preview.pages.dev/#/biotron">Biotron Settings beta</a></strong> in desktop Chrome or Edge.</li>
+  <li><strong>Allow MIDI device control.</strong> Keep the page open until the green status says <strong>Ready offline</strong>.</li>
+  <li><strong>Install the app.</strong> In Chrome, use the install icon or <strong>More → Cast, save and share → Install page as app</strong>. In Edge, use <strong>App available → Install</strong>.</li>
+  <li><strong>Open Playtronica Settings once from Windows Start</strong> while you are still online.</li>
+</ol>
 
-1. Close Reaper, Ableton, and other MIDI applications.
-2. In desktop Chrome or Edge, open
-   [Biotron Settings beta](https://offline-integrated.biotron-midi-preview.pages.dev/#/biotron).
-3. Allow **MIDI device control** when the browser asks. Keep the page open until
-   the green message says **Ready offline**.
-4. Install the app:
-   - **Chrome:** select the install icon in the address bar, or choose
-     **More → Cast, save and share → Install page as app**.
-   - **Edge:** select the **App available** icon in the address bar, then
-     **Install**.
-5. Close the browser window. Open **Playtronica Settings** from the Windows
-   Start menu once while still online.
+> 💡 The offline copy belongs to the browser profile that installed it. Clearing
+> that profile's site data removes the copy; repeat these steps afterwards.
 
-Chrome and Edge keep the installed app inside the browser profile used for the
-installation. Clearing that profile's site data removes the offline copy, so
-repeat the installation steps afterwards.
+## Open without internet
 
-## Use it without internet
+<ol class="steps">
+  <li>Disconnect Wi-Fi or Ethernet.</li>
+  <li>Open <strong>Playtronica Settings</strong> from Windows Start.</li>
+  <li>Check for <strong>Offline — Settings are available</strong>.</li>
+  <li>Connect one Biotron, select it, and change the settings you need.</li>
+</ol>
 
-1. Disconnect Wi-Fi or Ethernet.
-2. Open **Playtronica Settings** from the Windows Start menu.
-3. Confirm the green status says **Offline — Settings are available**.
-4. Connect Biotron, select it in the app, and change the settings you need.
+Firmware update stays disabled offline. The app must find a valid online
+firmware file before it can send a BOOT command.
 
-The firmware update button is disabled offline. It will not put Biotron into
-BOOT mode unless an online firmware file has first been found.
+## Move to your DAW
 
-## Move from Settings to Reaper or Ableton
+On Windows, use one application at a time:
 
-The safest workflow on Windows is to let only one application use Biotron at a
-time:
+<ol class="steps">
+  <li>Finish configuring Biotron.</li>
+  <li>Select <strong>Release device for DAW</strong>, then close Settings.</li>
+  <li>Open Reaper or Ableton and enable Biotron as a MIDI input.</li>
+  <li>When you need Settings again, close Biotron in the DAW, reopen Settings, and select <strong>Reconnect settings</strong>.</li>
+</ol>
 
-1. Finish configuring Biotron.
-2. Select **Release device for DAW**, then close Playtronica Settings.
-3. Open your DAW and enable Biotron's MIDI input. Enable its MIDI output
-   separately only when the DAW needs to send MIDI back to Biotron.
-4. When you want to configure Biotron again, close the MIDI device in the DAW,
-   reopen Playtronica Settings, and select **Reconnect settings**.
+If the DAW still cannot open the device, close every Chrome, Edge, and Settings
+window. Reconnect the USB cable, then enable Biotron in the DAW again.
 
-If the DAW still reports that the device cannot be opened, close every Chrome,
-Edge, and Playtronica Settings window, disconnect and reconnect Biotron, then
-enable it in the DAW again. The Release button explicitly closes the selected
-Web MIDI ports, but MIDI drivers differ; closing the app is the reliable
-fallback.
+<details>
+<summary>Send MIDI from Reaper to Biotron</summary>
+<ol>
+  <li>Open <strong>Options → Preferences → Audio → MIDI Devices</strong>.</li>
+  <li>Enable Biotron under <strong>MIDI outputs</strong>.</li>
+  <li>Open the sending track's <strong>Routing</strong>.</li>
+  <li>Choose Biotron under <strong>MIDI Hardware Output</strong>.</li>
+</ol>
+<p>Incoming CC is still experimental. Use occasional test values, not fast automation, until a tested firmware release is linked from the <a href="/software/biotron-midi-cc/">MIDI guide</a>.</p>
+</details>
 
-### Reaper: enable the output to Biotron
+## Fix only if needed
 
-1. Open **Options → Preferences → Audio → MIDI Devices**.
-2. Under **MIDI inputs**, right-click Biotron and choose **Enable input**.
-3. Under **MIDI outputs**, right-click Biotron and choose **Enable output**.
-4. On the track that should send MIDI to Biotron, open **Routing** and choose
-   Biotron under **MIDI Hardware Output**.
+<details>
+<summary>There is no “Ready offline” message</summary>
+<p>Stay online, reload the beta, and wait for the green status before installing. Do not assume the app is cached while the status is still pending.</p>
+</details>
 
-### If MIDI Clock changes the plant timing
+<details>
+<summary>There is no install icon</summary>
+<p>Use the browser menu path in step 4. See the official <a href="https://support.google.com/chrome/answer/9658361">Chrome web app instructions</a> or <a href="https://learn.microsoft.com/microsoft-edge/progressive-web-apps/ux">Edge PWA instructions</a>.</p>
+</details>
 
-Current firmware listens for MIDI Start, Stop, and Clock. When Reaper sends
-clock to Biotron, the plant notes follow the external clock; after MIDI Stop,
-Biotron returns to its internal timing.
+<details>
+<summary>MIDI permission was denied</summary>
+<p>Open site settings for <code>offline-integrated.biotron-midi-preview.pages.dev</code>, allow MIDI device control, and reload. Close other MIDI applications first.</p>
+</details>
 
-MIDI Clock is not required for sending CC. If you want the plant to keep its
-independent timing, open Biotron's MIDI output configuration in **Options →
-Preferences → Audio → MIDI Devices** and turn off **Send clock to this
-device**. Reaper documents this control in its
-[official user guide](https://www.reaper.fm/userguide.php).
+<details>
+<summary>MIDI Clock changes the plant timing</summary>
+<p>MIDI Clock is not required for CC. In Reaper's Biotron output configuration, turn off <strong>Send clock to this device</strong> if you want Biotron to keep its own timing.</p>
+</details>
 
-### If a synth holds a note
+<details>
+<summary>A synth holds a note</summary>
+<p>Use the synth's <strong>Panic</strong> or <strong>All Notes Off</strong> control. If it returns, stop playback, disable the Biotron input and output, reconnect USB, and save a short MIDI log for support.</p>
+</details>
 
-Use the synth's **Panic** or **All Notes Off** control first. In Reaper, the
-MIDI Devices preferences also contain hardware reset options for sending All
-Notes Off on stop, and ReaControlMIDI has an **All Notes Off** button documented
-in the [official ReaEffects guide](https://www.reaper.fm/guides/ReaEffectsGuide.pdf).
-
-If held notes return, stop playback, disable the Biotron MIDI input and output
-in Reaper, disconnect and reconnect Biotron, then record a short raw MIDI log
-and send it to support with the synth name and version. Dense-message behaviour
-is still under firmware test, so do not assume that an older synth is the cause.
-
-Incoming MIDI CC control is still experimental. Do not use fast fader
-automation until a tested firmware release is linked from the
-[Biotron MIDI CC guide](/software/biotron-midi-cc/).
-
-## What this offline app does not do
-
-- It does not remove the Chrome/Edge Web MIDI engine.
-- It does not provide a first installation on a computer that has never been
-  online.
-- It does not download or update firmware while offline.
-- It does not guarantee that Settings and a DAW can hold the same MIDI port at
-  the same time.
-- It does not make incoming MIDI CC automation release-ready. Do not use fast
-  fader automation until a tested firmware release is published.
-
-## If installation or MIDI access fails
-
-- **No Ready offline message:** stay online, reload the page, and wait for the
-  green status before installing.
-- **No install icon:** use the browser menu path above. Chrome's official
-  [web app instructions](https://support.google.com/chrome/answer/9658361)
-  and Microsoft's official
-  [Edge PWA instructions](https://learn.microsoft.com/microsoft-edge/progressive-web-apps/ux)
-  show the current controls.
-- **MIDI permission denied:** open the browser's site settings for
-  `offline-integrated.biotron-midi-preview.pages.dev`, allow MIDI device
-  control, and reload.
-- **Biotron is missing:** use a USB data cable, connect directly rather than
-  through a hub, and close other MIDI applications.
+<details>
+<summary>What the offline beta does not do</summary>
+<ul>
+  <li>It does not remove the Chrome or Edge engine.</li>
+  <li>It does not install on a computer that has never been online.</li>
+  <li>It does not download or update firmware offline.</li>
+  <li>It does not let Settings and a DAW share one exclusive MIDI port.</li>
+  <li>It does not make fast incoming CC automation release-ready.</li>
+</ul>
+</details>
 
 ## Still stuck
 
 Email [support@playtronica.com](mailto:support@playtronica.com) with your
-Windows version, browser, DAW, and the exact message shown by Settings or the
-DAW. A screenshot of **Options → Preferences → Audio → MIDI Devices** is
-usually enough for the first diagnosis.
-
-We aim for 24 hours, but a reply may take up to 3 business days.
+Windows version, browser, DAW, and the exact error. Add one screenshot of
+**Options → Preferences → Audio → MIDI Devices**. We aim for 24 hours, but a
+reply may take up to 3 business days.

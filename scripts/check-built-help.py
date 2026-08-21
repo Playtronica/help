@@ -29,20 +29,32 @@ def main() -> int:
     require(OUT / "_pagefind/pagefind.js", errors)
     biotron = article(require(OUT / "devices/biotron/index.html", errors), "Biotron", errors)
     offline = article(require(OUT / "software/biotron-offline-settings/index.html", errors), "offline Settings", errors)
+    midi = article(require(OUT / "software/biotron-midi-cc/index.html", errors), "Biotron MIDI", errors)
     reset = article(require(OUT / "troubleshooting/firmware-reset/index.html", errors), "firmware reset", errors)
 
+    for label, body in {
+        "Biotron": biotron,
+        "offline Settings": offline,
+        "Biotron MIDI": midi,
+        "firmware reset": reset,
+    }.items():
+        if len(re.findall(r"<h1\b", body)) != 1:
+            errors.append(f"{label} must render exactly one H1")
+        if len(re.findall(r'class="task-card"', body)) != 4:
+            errors.append(f"{label} must start with four task-first navigation cards")
+
     required_biotron = [
-        "biotron-boot-area.svg",
-        "not yet verified for every sold board revision",
-        "support confirms",
+        "task-grid",
+        "not permission to bridge contacts",
+        "/software/biotron-offline-settings/",
     ]
     for marker in required_biotron:
         if marker not in biotron:
             errors.append(f"Biotron build is missing safety marker: {marker}")
 
-    if "MIDI Clock is not required for sending CC" not in offline:
+    if "MIDI Clock is not required for CC" not in offline:
         errors.append("offline/DAW build is missing the MIDI Clock/CC boundary")
-    if "support confirms the board revision" not in reset:
+    if "Wait for revision confirmation" not in reset or "biotron-boot-area.svg" not in reset:
         errors.append("firmware reset build is missing the Biotron revision gate")
     if "facebook.com/groups/playtronica" in biotron or "facebook.com/groups/playtronica" in reset:
         errors.append("Biotron recovery still routes support through Facebook")
