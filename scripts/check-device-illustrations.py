@@ -21,7 +21,7 @@ def main() -> int:
     referenced = set()
     for page in CONTENT.glob("*.md"):
         text = page.read_text()
-        for src, alt in re.findall(r'<img\s+[^>]*src="([^"]+\.svg)"[^>]*alt="([^"]*)"', text):
+        for src, alt in re.findall(r'<img\s+[^>]*src="([^"]+\.svg)(?:\?[^"]*)?"[^>]*alt="([^"]*)"', text):
             referenced.add(src.lstrip("/"))
             if len(alt.strip()) < 20:
                 fail(f"{page}: local device illustration needs descriptive alt text", errors)

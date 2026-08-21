@@ -33,9 +33,9 @@ emoji: 🌿
 
 ## Know the board
 
-<a href="/illustrations/biotron/biotron-top.svg" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg" alt="Biotron top view labelled with the USB-C connector, leaf-pad contacts, light sensor, buttons, LEDs, and electronics" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
+<a href="/illustrations/biotron/biotron-top.svg?v=319ac17" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg?v=319ac17" alt="Biotron top view labelled with the USB-C connector, leaf-pad contacts, light sensor, buttons, LEDs, and electronics" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
 
-[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg).
+[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg?v=319ac17).
 
 > ⚠️ **Handle the connectors and sensor surfaces only.** Do not press exposed
 > chips, solder joints, or the underside. The BOOT label in the overview is for
