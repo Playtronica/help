@@ -14,9 +14,19 @@ export const onRequestPost: PagesFunction = async (context) => {
   for (const [k, v] of original.entries()) fd.append(k, v as string);
   fd.set("form", "lesson-download");
 
+  // 🔴 Do NOT reuse the original Content-Type here. The incoming body is
+  // application/x-www-form-urlencoded (a plain HTML form with no enctype), but `fd`
+  // is multipart. Copying the old header made edu-form's request.formData() parse
+  // multipart bytes as urlencoded, yielding an empty map and a 400 "Email is required"
+  // on every real submission. Dropping content-type/content-length lets Request derive
+  // the correct multipart header and boundary from the new body.
+  const headers = new Headers(context.request.headers);
+  headers.delete("content-type");
+  headers.delete("content-length");
+
   const newRequest = new Request(context.request.url, {
     method: "POST",
-    headers: context.request.headers,
+    headers,
     body: fd,
   });
 
