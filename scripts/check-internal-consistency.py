@@ -27,6 +27,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlsplit
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONTENT = REPO_ROOT / "content"
@@ -183,7 +184,7 @@ def issues_iter():
 
         # 4. Broken internal links
         for link in re.findall(r"\]\((/[a-z][^)]*)\)", text):
-            base = link.rstrip("/").split("#")[0]
+            base = urlsplit(link).path.rstrip("/")
             if not base:
                 continue
             if base + "/" in slugs or base in slugs:
