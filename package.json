@@ -39,13 +39,15 @@
     "predev": "node scripts/build-search-index.mjs && node scripts/build-seo-files.mjs",
     "dev": "next dev -p 3001",
     "prebuild": "node scripts/build-search-index.mjs && node scripts/build-seo-files.mjs",
-    "build": "NEXT_OUTPUT_MODE=export next build && pagefind --site out",
-    "build:dev": "next build && pagefind --site .next/server/app",
+    "build": "NEXT_OUTPUT_MODE=export next build && pagefind --site out --output-subdir _pagefind && python3 scripts/check-built-help.py",
+    "build:dev": "next build && pagefind --site .next/server/app --output-subdir _pagefind",
     "start": "next start -p 3001",
     "lint": "next lint",
     "search:index": "node scripts/build-search-index.mjs",
     "seo:files": "node scripts/build-seo-files.mjs",
     "audit": "python3 scripts/audit-cross-references.py",
+    "biotron:contract": "python3 scripts/check-biotron-firmware-docs.py",
+    "illustrations:check": "python3 scripts/check-device-illustrations.py",
     "links:check": "python3 scripts/check-external-links.py",
     "links:check:live": "python3 scripts/check-external-links.py --live",
     "i18n:status": "python3 scripts/check-translation-freshness.py",
@@ -55,7 +57,7 @@
     "review:3": "python3 scripts/reviews/pass-3-ecommerce-friction.py",
     "review:4": "python3 scripts/reviews/pass-4-trust-signals.py",
     "review:all": "bash scripts/reviews/run-all.sh",
-    "indexing": "pagefind --site out"
+    "indexing": "pagefind --site out --output-subdir _pagefind"
   },
   "dependencies": {
     "next": "14.2.35",

@@ -2,11 +2,11 @@
 title: "Biotron MIDI: CC mapping, iPad setup, and powering synths over TRS"
 slug: biotron-midi-cc
 section: software
-summary: "How Biotron sends MIDI (note-on/off and CC90), how to configure it on a desktop browser, how to use it with iPad and GarageBand, and how to power it when connecting to a synth via TRS."
+summary: "What current firmware source says about Biotron CC90 and experimental incoming MIDI CC, plus a cautious Reaper test route."
 segment: ["music-producer", "creator"]
 deflection_target: 25
-status: new-2026-06
-last_edited: 2026-06-20
+status: edited-2026-08
+last_edited: 2026-08-20
 emoji: 🎹
 ---
 
@@ -15,9 +15,9 @@ emoji: 🎹
 Biotron sends MIDI over USB. By default it sends note-on and note-off
 messages when it detects a signal from your plant or cables. It also sends
 **CC90** — a continuous controller message that reflects signal intensity.
-This article covers what CC90 is, how to switch between note and CC output,
-iPad + GarageBand setup, and how to power Biotron when you connect it to a
-hardware synth over TRS.
+This article covers CC90 and how to test incoming commands found in the current
+firmware source. Incoming control has not completed hardware burst and
+persistence testing, so it is not a supported live-control workflow.
 
 ---
 
@@ -27,35 +27,109 @@ When Biotron detects a signal, it sends two things at once:
 
 - **Note-on / note-off** — a standard MIDI note (pitch + velocity) for
   triggering synths, samplers, and DAWs that respond to notes.
-- **CC90** — a continuous controller on the same channel, ranging from 0 to
-  127. It reflects how strong the detected signal is.
+- **CC90** — a continuous controller on the configured plant channel. Current
+  firmware source emits values in the MIDI range 0–127.
 
 CC90 is not documented on the product page. That is a known gap — we get
 questions about it regularly. The short answer: CC90 is useful when you want
 smooth, continuous modulation (filter cutoff, reverb amount, expression)
 instead of discrete note triggers.
 
-> **Example in Ableton Live:** create a MIDI track, open the MIDI Map mode,
-> click a macro knob, then touch your plant. Biotron's CC90 will be detected
-> and mapped automatically.
+> Check the exact response with a MIDI monitor and your installed firmware. Do
+> not treat CC90 as calibrated biological data.
 
 ---
 
-## Switch between note output and CC output
+## Important: Biotron sends and receives CC
 
-By default Biotron sends both note-on/off and CC90 simultaneously. If your
-DAW or synth only needs one of them, mute the other in the settings page.
+Biotron's **output CC90** is sensor data going from Biotron to your DAW.
+Biotron also accepts a separate set of **incoming CC messages** that change
+its musical settings. These are two different directions.
 
-**Steps:**
+The firmware recognises the incoming CC map below, but continuous live control
+is currently **experimental**. Current firmware may save settings too often
+during a fast fader sweep. Until the next firmware update is verified, use the
+map only for occasional parameter changes — not automation, LFOs, or rapid
+fader performance.
 
-1. Connect Biotron to a laptop or desktop via USB.
-2. Open **settings.playtronica.com/#/biotron** in Google Chrome or Edge.
-3. Select your Biotron from the device dropdown.
-4. In the channel settings, mute **Notes** if you only want CC output,
-   or mute **CC** if you only want note-on/off.
-5. Click **Send to Device**.
+### Incoming CC map (current firmware)
 
-> The mute setting is stored on the device. It persists after you unplug.
+| CC | Firmware setting | Scope |
+|---:|---|---|
+| 3 | Input filter percentage | Global |
+| 9 | Maximum note velocity | Channel-specific |
+| 14 | Plant tempo / light tempo division | Channel-specific |
+| 15 | Random-note mode | Global |
+| 20 | Minimum repeated-note distance | Channel-specific |
+| 21 | Note-off fraction | Global |
+| 22 | Sequence exponent | Global |
+| 23 | Sequence first value | Global |
+| 24 | Scale index | Global |
+| 25 | Minimum note velocity | Channel-specific |
+| 26 | Random-velocity mode | Channel-specific |
+| 27 | Light pitch-bend mode | Global |
+| 28 | Light-note range | Global |
+| 30 | Performance mode | Global |
+| 31 | Mute note output | Channel-specific |
+| 85 | Centre plant note | Global |
+| 86 | First-note swing percentage | Global |
+| 87 | Button mute mode | Global |
+
+The parser receives zero-based channels: **MIDI channel 1** selects the plant
+setting and **MIDI channel 2** selects the light setting only where the table
+says **Channel-specific**. Global commands ignore the incoming channel.
+Boolean thresholds and value mappings differ by command; these source-derived
+labels are not yet a final public control specification.
+
+### Reaper setup (experimental incoming control)
+
+1. Close `settings.playtronica.com` before the DAW opens the Biotron MIDI port.
+2. In Reaper, open **Options → Preferences → Audio → MIDI Devices**.
+3. Right-click **Biotron** under MIDI outputs and choose **Enable output**.
+4. Create a track for your fader box. Set its input to the fader box and its
+   **MIDI hardware output** to Biotron.
+5. For a channel-specific command, use channel 1 (plant) or channel 2 (light).
+   For a global command, either channel reaches the same setting in current
+   source.
+
+If Reaper says **Failed to open device**, another application still owns the
+port. Close Chrome completely, disconnect and reconnect Biotron, then enable
+the device in Reaper again.
+
+### Reaper MIDI Clock changes Biotron's timing
+
+Current firmware listens for MIDI Start, Stop, and Clock. When Reaper sends
+clock to Biotron, the plant notes follow the external clock; after MIDI Stop,
+Biotron returns to its internal timing. This is expected sync behaviour, not a
+plant-input fault.
+
+If you want the plant to keep its independent timing, open Biotron's MIDI
+output configuration in **Options → Preferences → Audio → MIDI Devices** and
+turn off **Send clock to this device**. Reaper documents this control in its
+[official user guide](https://www.reaper.fm/userguide.php).
+
+### If a synth holds a note
+
+Use the synth's **Panic** or **All Notes Off** control first. In Reaper, the
+MIDI Devices preferences also contain hardware reset options for sending All
+Notes Off on stop, and ReaControlMIDI has an **All Notes Off** button documented
+in the [official ReaEffects guide](https://www.reaper.fm/guides/ReaEffectsGuide.pdf).
+
+If held notes return, record a short raw MIDI log and send it to support with
+the synth name and version. Dense-message behaviour is still under firmware
+test, so do not assume that an older synth is the cause.
+
+## Offline use
+
+Biotron can play from its stored configuration without keeping the settings
+website open. You can also [install Playtronica Settings for offline use on
+Windows](/software/biotron-offline-settings/): after one online installation,
+the settings interface launches from Windows Start without internet.
+
+The installed app still uses the Chrome or Edge Web MIDI engine. Firmware
+downloads remain online-only, and rapid incoming CC automation remains
+experimental until a firmware release passes physical burst and persistence
+tests.
 
 ---
 

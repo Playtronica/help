@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Variable fonts, self-hosted (drop into public/fonts/ when ready).
-       Until the files exist, the system stack defined in tailwind.config.ts
-       takes over — site still loads instantly. */
+/* ─── Prefer locally installed faces without requesting files that are not
+       shipped. The system stacks in tailwind.config.ts are the reliable
+       cross-platform fallback. */
 @font-face {
   font-family: "Inter";
-  src: local("Inter"), url("/fonts/InterVariable.woff2") format("woff2-variations");
+  src: local("Inter");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "JetBrains Mono";
-  src: local("JetBrains Mono"), url("/fonts/JetBrainsMono-Variable.woff2") format("woff2-variations");
+  src: local("JetBrains Mono");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

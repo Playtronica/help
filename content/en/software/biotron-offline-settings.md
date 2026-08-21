@@ -85,9 +85,10 @@ Current firmware listens for MIDI Start, Stop, and Clock. When Reaper sends
 clock to Biotron, the plant notes follow the external clock; after MIDI Stop,
 Biotron returns to its internal timing.
 
-If you want the plant to keep its independent timing, open Biotron's MIDI
-output configuration in **Options → Preferences → Audio → MIDI Devices** and
-turn off **Send clock to this device**. Reaper documents this control in its
+MIDI Clock is not required for sending CC. If you want the plant to keep its
+independent timing, open Biotron's MIDI output configuration in **Options →
+Preferences → Audio → MIDI Devices** and turn off **Send clock to this
+device**. Reaper documents this control in its
 [official user guide](https://www.reaper.fm/userguide.php).
 
 ### If a synth holds a note
@@ -97,9 +98,14 @@ MIDI Devices preferences also contain hardware reset options for sending All
 Notes Off on stop, and ReaControlMIDI has an **All Notes Off** button documented
 in the [official ReaEffects guide](https://www.reaper.fm/guides/ReaEffectsGuide.pdf).
 
-If held notes return, record a short raw MIDI log and send it to support with
-the synth name and version. Dense-message behaviour is still under firmware
-test, so do not assume that an older synth is the cause.
+If held notes return, stop playback, disable the Biotron MIDI input and output
+in Reaper, disconnect and reconnect Biotron, then record a short raw MIDI log
+and send it to support with the synth name and version. Dense-message behaviour
+is still under firmware test, so do not assume that an older synth is the cause.
+
+Incoming MIDI CC control is still experimental. Do not use fast fader
+automation until a tested firmware release is linked from the
+[Biotron MIDI CC guide](/software/biotron-midi-cc/).
 
 ## What this offline app does not do
 
