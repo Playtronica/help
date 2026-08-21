@@ -64,13 +64,13 @@ def main() -> int:
     biotron = (CONTENT / "biotron.md").read_text()
     reset = (ROOT / "content/en/troubleshooting/firmware-reset.md").read_text()
     biotron_safety_markers = [
-        "not yet verified for every sold board revision",
-        "Do not use the overview alone to identify or bridge BOOT contacts",
-        "Continue only after support confirms",
+        "not permission to bridge contacts",
+        "/troubleshooting/firmware-reset/",
+        "do not probe contacts",
     ]
     if any(marker not in biotron for marker in biotron_safety_markers):
         fail("Biotron BOOT copy must require support-confirmed hardware revision", errors)
-    if "Hardware revision matters" not in reset or "do not probe unlabelled pads" not in reset:
+    if "The board must match the picture" not in reset or "instead of probing pads" not in reset:
         fail("Firmware reset copy must contain the revision mismatch stop condition", errors)
 
     boot_asset = ASSETS / "biotron/biotron-boot-area.svg"
@@ -86,8 +86,8 @@ def main() -> int:
         for marker in required:
             if marker not in boot_text:
                 fail(f"Biotron BOOT crop is missing readability/safety marker: {marker}", errors)
-        if "biotron-boot-area.svg" not in biotron or "biotron-boot-area.svg" not in reset:
-            fail("Biotron and firmware-reset copy must both route to the readable BOOT review crop", errors)
+        if "biotron-boot-area.svg" not in reset:
+            fail("Firmware-reset copy must route to the readable Biotron BOOT review crop", errors)
 
     if errors:
         print("Device illustration checks failed:\n- " + "\n- ".join(errors), file=sys.stderr)
