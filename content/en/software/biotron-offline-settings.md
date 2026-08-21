@@ -116,5 +116,6 @@ window. Reconnect the USB cable, then enable Biotron in the DAW again.
 
 Email [support@playtronica.com](mailto:support@playtronica.com) with your
 Windows version, browser, DAW, and the exact error. Add one screenshot of
-**Options → Preferences → Audio → MIDI Devices**. We aim for 24 hours, but a
-reply may take up to 3 business days.
+**Options → Preferences → Audio → MIDI Devices**.
+
+We aim for 24 hours, but a reply may take up to 3 business days.

@@ -127,5 +127,6 @@ Email [support@playtronica.com](mailto:support@playtronica.com) with:
 - what the LEDs do;
 - the exact step that failed.
 
-Use the subject `Biotron issue #[order number]`. We aim for 24 hours, but a
-reply may take up to 3 business days.
+Use the subject `Biotron issue #[order number]`.
+
+We aim for 24 hours, but a reply may take up to 3 business days.
