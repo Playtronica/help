@@ -103,6 +103,75 @@ async function sendEmail(
   return { ok: true, status: 200 };
 }
 
+const LABELS: Record<string, string> = {
+  name: "Name", email: "Email", school: "School / institution", country: "Country",
+  role: "Role", grades: "Grades", student_count: "Students", environment: "Computers",
+  vision: "What they would do", why_school: "Why this school",
+  institution: "Institution", form: "Form",
+};
+
+function esc(v: string): string {
+  return v.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+/**
+ * Delivery failed. Do NOT lose what the person typed.
+ *
+ * The submission is handed straight back, formatted and ready to send: a mailto
+ * link that opens their mail app with everything already in the body, plus the
+ * same text in a select-all box for when mailto is unavailable or the body is
+ * too long for a URL. Nothing here needs a secret, a provider or a database —
+ * the same reason the help-centre feedback widget keeps working when this does not.
+ */
+function rescuePage(form: FormType, data: Record<string, string>, reason: string): Response {
+  const body = Object.entries(data)
+    .filter(([k]) => k !== "form")
+    .map(([k, v]) => `${LABELS[k] ?? k}: ${v}`)
+    .join("\n");
+  const subject = `${SUBJECT_PREFIX[form]} (sent by hand)`;
+  const mailto =
+    `mailto:${NOTIFY_DEFAULT}?subject=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(body)}`;
+
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One more step — Playtronica</title>
+<style>
+ body{font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      max-width:44rem;margin:0 auto;padding:2.5rem 1.25rem;color:#1a1a1a;background:#fff}
+ h1{font-size:1.4rem;margin:0 0 .75rem}
+ .btn{display:inline-block;padding:.7rem 1.15rem;border:1.5px solid #1a1a1a;
+      text-decoration:none;color:#1a1a1a;font-weight:600;margin:.5rem 0}
+ textarea{width:100%;min-height:14rem;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+      padding:.75rem;border:1.5px solid #999;margin-top:.5rem}
+ .muted{color:#555;font-size:.92rem}
+ @media(prefers-color-scheme:dark){body{background:#111;color:#eee}
+  .btn{border-color:#eee;color:#eee}.muted{color:#aaa}textarea{background:#1c1c1c;color:#eee;border-color:#555}}
+</style></head><body>
+<h1>Your application did not send automatically</h1>
+<p>Our mail service is not connected right now, so nothing reached us — and we would
+rather tell you than show you a thank-you page that means nothing.</p>
+<p><strong>Nothing you wrote is lost.</strong> It is all below.</p>
+<p><a class="btn" href="${esc(mailto)}">Open it in my email app →</a></p>
+<p class="muted">If that button does nothing, copy the text below and send it to
+<strong>${NOTIFY_DEFAULT}</strong>. Either way it reaches Andrey, and it counts as
+submitted on time.</p>
+<textarea readonly onclick="this.select()">${esc(body)}</textarea>
+</body></html>`;
+
+  return new Response(html, {
+    status: 200,
+    headers: {
+      "content-type": "text/html;charset=UTF-8",
+      "cache-control": "no-store",
+      // Failure class only — lets the cause be read from outside without opening
+      // the Cloudflare dashboard. No key, no provider body, no applicant data.
+      "x-edu-fail": reason,
+    },
+  });
+}
+
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
     const formData = await context.request.formData();
@@ -127,27 +196,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     // out, nobody is coming, and the applicant has no way to know. Tell them.
     const sent = await sendEmail(context.env, form, data);
     if (!sent.ok) {
-      // Status 200 on purpose. Cloudflare replaces the body of any 5xx a Pages
-      // Function returns with its own "error code: 502" page, so a 502 here would
-      // hide the one sentence the applicant actually needs. A 4xx would blame them
-      // for our failure. The message is the payload; the status only has to survive.
-      return new Response(
-        "We could not deliver your submission — our mail service rejected it, and " +
-          "nothing was recorded on our side.\n\n" +
-          "Please email manirko@playtronica.com directly and paste what you wrote. " +
-          "It will be read. Sorry for the detour.",
-        {
-          status: 200,
-          headers: {
-            "content-type": "text/plain;charset=UTF-8",
-            // Temporary: failure CLASS only, so the cause can be told apart from
-            // outside without opening the Cloudflare dashboard. No key, no
-            // provider body, no applicant data. Removed once delivery works.
-            "x-edu-fail": sent.error === "RESEND_API_KEY not configured"
-              ? "no-key"
-              : `provider-${sent.status}`,
-          },
-        },
+      return rescuePage(
+        form,
+        data,
+        sent.error === "RESEND_API_KEY not configured" ? "no-key" : `provider-${sent.status}`,
       );
     }
 
