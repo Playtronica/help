@@ -63,6 +63,12 @@ def main() -> int:
 
     biotron = (CONTENT / "biotron.md").read_text()
     reset = (ROOT / "content/en/troubleshooting/firmware-reset.md").read_text()
+    biotron_top = ASSETS / "biotron/biotron-top.svg"
+    biotron_top_text = biotron_top.read_text()
+    if 'data-role="boot-contact-bracket"' not in biotron_top_text:
+        fail("Biotron overview must point to BOOT contacts without covering them", errors)
+    if 'class="marker-text"' in biotron_top_text:
+        fail("Biotron BOOT callout must not place a numbered marker over the contacts", errors)
     biotron_safety_markers = [
         "not permission to bridge contacts",
         "/troubleshooting/firmware-reset/",
