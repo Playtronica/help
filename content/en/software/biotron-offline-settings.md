@@ -79,12 +79,29 @@ fallback.
 4. On the track that should send MIDI to Biotron, open **Routing** and choose
    Biotron under **MIDI Hardware Output**.
 
-Leave REAPER's MIDI clock output disabled unless you intentionally want Biotron
-to play on REAPER's clock grid. MIDI Clock is a transport/timing signal, not a
-requirement for sending CC. If notes become stuck while testing, stop playback,
-disable the Biotron MIDI input/output in REAPER, disconnect and reconnect
-Biotron, and do not continue live automation until the tested firmware release
-is linked below.
+### If MIDI Clock changes the plant timing
+
+Current firmware listens for MIDI Start, Stop, and Clock. When Reaper sends
+clock to Biotron, the plant notes follow the external clock; after MIDI Stop,
+Biotron returns to its internal timing.
+
+MIDI Clock is not required for sending CC. If you want the plant to keep its
+independent timing, open Biotron's MIDI output configuration in **Options →
+Preferences → Audio → MIDI Devices** and turn off **Send clock to this
+device**. Reaper documents this control in its
+[official user guide](https://www.reaper.fm/userguide.php).
+
+### If a synth holds a note
+
+Use the synth's **Panic** or **All Notes Off** control first. In Reaper, the
+MIDI Devices preferences also contain hardware reset options for sending All
+Notes Off on stop, and ReaControlMIDI has an **All Notes Off** button documented
+in the [official ReaEffects guide](https://www.reaper.fm/guides/ReaEffectsGuide.pdf).
+
+If held notes return, stop playback, disable the Biotron MIDI input and output
+in Reaper, disconnect and reconnect Biotron, then record a short raw MIDI log
+and send it to support with the synth name and version. Dense-message behaviour
+is still under firmware test, so do not assume that an older synth is the cause.
 
 Incoming MIDI CC control is still experimental. Do not use fast fader
 automation until a tested firmware release is linked from the
@@ -98,7 +115,8 @@ automation until a tested firmware release is linked from the
 - It does not download or update firmware while offline.
 - It does not guarantee that Settings and a DAW can hold the same MIDI port at
   the same time.
-- It does not make experimental incoming MIDI CC automation release-ready.
+- It does not make incoming MIDI CC automation release-ready. Do not use fast
+  fader automation until a tested firmware release is published.
 
 ## If installation or MIDI access fails
 
@@ -121,3 +139,5 @@ Email [support@playtronica.com](mailto:support@playtronica.com) with your
 Windows version, browser, DAW, and the exact message shown by Settings or the
 DAW. A screenshot of **Options → Preferences → Audio → MIDI Devices** is
 usually enough for the first diagnosis.
+
+We aim for 24 hours, but a reply may take up to 3 business days.

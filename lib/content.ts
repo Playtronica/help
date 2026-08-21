@@ -75,6 +75,12 @@ function readMarkdownFile(filePath: string, lang: Lang, isFallback: boolean): Pa
   return { ...fm, filePath, html, lang, isFallback };
 }
 
+// Static export renders hundreds of routes in the same worker. Components such
+// as the sidebar and Related section ask for the full catalogue on every route;
+// without an export-only cache that re-reads and re-renders every Markdown file
+// hundreds of times. Keep development uncached so content edits remain visible.
+const staticPagesCache = new Map<Lang, Page[]>();
+
 /**
  * Rewrite internal links inside rendered article HTML so they keep the reader
  * in their language. `href="/devices/biotron/"` becomes `href="/de/devices/..."`.
@@ -133,6 +139,11 @@ function postProcessHtml(html: string): string {
  * 404s on a missing translation.
  */
 export function getAllPages(lang: Lang = DEFAULT_LANG): Page[] {
+  if (process.env.NEXT_OUTPUT_MODE === "export") {
+    const cached = staticPagesCache.get(lang);
+    if (cached) return cached;
+  }
+
   const out: Page[] = [];
   const enRoot = contentRoot(DEFAULT_LANG);
 
@@ -153,7 +164,9 @@ export function getAllPages(lang: Lang = DEFAULT_LANG): Page[] {
     }
   }
   walk(enRoot);
-  return out.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+  const pages = out.sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+  if (process.env.NEXT_OUTPUT_MODE === "export") staticPagesCache.set(lang, pages);
+  return pages;
 }
 
 /** Load one page by its path relative to the content root, with English fallback. */

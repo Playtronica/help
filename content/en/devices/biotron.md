@@ -28,7 +28,7 @@ Biotron sends on two MIDI channels:
 
 > 🧬 **Testing firmware features?** See [Biotron Advanced — experimental MIDI control](/devices/biotron-advanced/) for current limits and evidence to record.
 
-> 📴 **Need Settings without internet?** [Install Playtronica Settings once, then use Biotron offline on Windows](/software/biotron-offline-settings/). The installed app still uses Chrome or Edge internally; firmware downloads remain online-only.
+> 📴 **Need Settings without internet?** [Install Playtronica Settings once, then use the isolated Biotron beta offline on Windows](/software/biotron-offline-settings/). It still uses Chrome or Edge internally; firmware downloads remain online-only.
 
 > 🛒 **Don't have one yet?** [Buy Biotron on shop.playtronica.com](https://shop.playtronica.com/products/biotron). Biotron ships without a USB cable — see [Accessories](/getting-started/accessories/) for the matching part, or grab the [Biotron Starter Kit](https://shop.playtronica.com/products/biotron-starter-kit) which includes it.
 
@@ -83,7 +83,7 @@ At [settings.playtronica.com/#/biotron](https://settings.playtronica.com/#/biotr
 
 > **No internet at the venue?** Install [Playtronica Settings for offline use](/software/biotron-offline-settings/) once while online. The interface then launches from Windows Start without internet; firmware downloads remain online-only.
 
-> **Using a DAW on Windows?** The settings app and your DAW cannot always use the same MIDI port at once. Finish configuring, select **Release device for DAW**, and close Settings before opening Biotron in Reaper, Ableton, or another DAW. See the [offline and DAW handoff guide](/software/biotron-offline-settings/) for the fallback when the port stays busy.
+> **Using a DAW on Windows?** Settings and your DAW cannot always use the same MIDI port at once. In the isolated beta, finish configuring, select **Release device for DAW**, and close Settings before opening Biotron in Reaper, Ableton, or another DAW. If your Settings build has no Release button, close it completely. See the [offline and DAW handoff guide](/software/biotron-offline-settings/).
 
 > **Incoming MIDI CC is experimental.** The firmware team is validating live
 > parameter control, message bursts, and saved settings. Do not rely on rapid
