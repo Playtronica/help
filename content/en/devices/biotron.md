@@ -21,6 +21,7 @@ emoji: 🌿
 ## Quick start
 
 <ol class="steps">
+  <li><strong>Plug both leaf-pad cables into Biotron.</strong> The pads come on cables — push each connector onto the <strong>LEAF-PAD CLIPS</strong> pins marked in the board picture below. Both cables have to be connected: a single pad on its own produces no signal.</li>
   <li><strong>Clip both leaf-pads to the plant.</strong> Use two separate leaves or branches. Keep the metal contacts apart.</li>
   <li><strong>Connect Biotron with a USB data cable.</strong> Biotron ships without a cable. A charge-only cable powers the LEDs but carries no MIDI.</li>
   <li><strong>Open <a href="https://synth.playtronica.com">synth.playtronica.com</a> in Chrome.</strong> Allow MIDI access and choose Biotron.</li>

@@ -2,7 +2,7 @@
 title: "Grounding — how and why"
 slug: grounding
 section: sound
-summary: "Ground has to reach your skin. Playtron and TouchMe close an electrical circuit through your body, so the ground pin must connect to you — never to a radiator, a pipe, or your laptop. Five ways to ground yourself, plus ground patterns for installations."
+summary: "Ground has to reach your skin — never a radiator, a pipe, or your laptop. Five ways to ground yourself, plus ground patterns for installations."
 order: 1
 segment: ["music-producer"]
 deflection_target: 20
