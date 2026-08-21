@@ -136,7 +136,18 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           "nothing was recorded on our side.\n\n" +
           "Please email manirko@playtronica.com directly and paste what you wrote. " +
           "It will be read. Sorry for the detour.",
-        { status: 200, headers: { "content-type": "text/plain;charset=UTF-8" } },
+        {
+          status: 200,
+          headers: {
+            "content-type": "text/plain;charset=UTF-8",
+            // Temporary: failure CLASS only, so the cause can be told apart from
+            // outside without opening the Cloudflare dashboard. No key, no
+            // provider body, no applicant data. Removed once delivery works.
+            "x-edu-fail": sent.error === "RESEND_API_KEY not configured"
+              ? "no-key"
+              : `provider-${sent.status}`,
+          },
+        },
       );
     }
 
