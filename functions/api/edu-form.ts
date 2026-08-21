@@ -123,6 +123,11 @@ function esc(v: string): string {
  * same text in a select-all box for when mailto is unavailable or the body is
  * too long for a URL. Nothing here needs a secret, a provider or a database —
  * the same reason the help-centre feedback widget keeps working when this does not.
+ *
+ * The <!--email_off--> wrapper is load-bearing: Cloudflare's Email Obfuscation
+ * rewrites addresses in text/html responses, which turned the mailto button into
+ * a /cdn-cgi/l/email-protection stub and printed "[email protected]" where the
+ * address should be — on the one page whose entire job is to be trusted.
  */
 function rescuePage(form: FormType, data: Record<string, string>, reason: string): Response {
   const body = Object.entries(data)
@@ -149,6 +154,7 @@ function rescuePage(form: FormType, data: Record<string, string>, reason: string
  @media(prefers-color-scheme:dark){body{background:#111;color:#eee}
   .btn{border-color:#eee;color:#eee}.muted{color:#aaa}textarea{background:#1c1c1c;color:#eee;border-color:#555}}
 </style></head><body>
+<!--email_off-->
 <h1>Your application did not send automatically</h1>
 <p>Our mail service is not connected right now, so nothing reached us — and we would
 rather tell you than show you a thank-you page that means nothing.</p>
@@ -158,6 +164,7 @@ rather tell you than show you a thank-you page that means nothing.</p>
 <strong>${NOTIFY_DEFAULT}</strong>. Either way it reaches Andrey, and it counts as
 submitted on time.</p>
 <textarea readonly onclick="this.select()">${esc(body)}</textarea>
+<!--/email_off-->
 </body></html>`;
 
   return new Response(html, {
