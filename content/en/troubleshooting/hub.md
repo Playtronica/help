@@ -7,7 +7,7 @@ order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
 status: edited-2026-05
-last_edited: 2026-07-06
+last_edited: 2026-08-26
 emoji: 🔧
 ---
 
@@ -22,7 +22,7 @@ Pick the symptom that matches your situation. Each row points to the right page 
 | Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
 | USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
 | Some objects play, others do not | Conductivity | [Objects you can play](/sound/objects-you-can-play/) |
-| Worked once, now broken | Firmware corruption | [Firmware reset (Nuke)](/troubleshooting/firmware-reset/) |
+| Worked once, now missing | Busy MIDI port, cable, USB enumeration, driver, or firmware | [Device will not connect](/troubleshooting/wont-connect/) |
 
 ## Quick checklist — works for 80% of "not working" cases
 
@@ -41,7 +41,7 @@ If all six are confirmed and the device still does not work, go to the symptom-s
 
 | LED behaviour | What it means |
 |---|---|
-| Solid on when plugged in | The device is powered and connected. |
+| Solid on when plugged in | The device has power. This does not prove that USB MIDI is connected. |
 | Off when plugged in | USB power issue. Try another port or cable. (Playtron and TouchMe stay dark when you plug them in — that is normal; their LED blinks when you complete the circuit and a note plays.) |
 | Flashing rapidly | The device is sending MIDI signals. This is correct. |
 | All LEDs lit at once | Either calibration mode (Biotron, briefly) or a stuck state (Playtron — try a reset). |
@@ -51,7 +51,7 @@ If all six are confirmed and the device still does not work, go to the symptom-s
 
 This happens when the device cannot find a stable reference point.
 
-- **Biotron** — the device did not calibrate. Unplug, plug back in, move at least 1 metre away from the plant for 30 seconds, wait for the steady green pulse.
+- **Biotron** — reconnect it and leave the setup untouched while startup settles. Check both contacts in a MIDI monitor before changing settings or firmware.
 - **Playtron** — the room has strong electromagnetic interference. Move the device away from your computer, phone charger, and Wi-Fi router. Try a different room as a quick test.
 - **All devices** — confirm grounding (Playtron) or that the plant pads are at least 2 cm apart and not touching each other (Biotron).
 

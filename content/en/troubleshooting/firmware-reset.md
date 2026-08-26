@@ -7,7 +7,7 @@ order: 5
 segment: ["music-producer"]
 deflection_target: 60
 status: edited-2026-08
-last_edited: 2026-08-21
+last_edited: 2026-08-26
 emoji: ⚡
 ---
 
@@ -18,9 +18,15 @@ emoji: ⚡
   <a class="task-card" href="#touchme-or-playtron-manual-recovery"><span class="task-card__icon">🧰</span><span><strong>TouchMe or Playtron</strong><small>Use manual recovery only on a matching board.</small></span></a>
 </div>
 
-Use firmware recovery when the device is missing, remains an `RPI-RP2` drive,
-or stopped working after an interrupted update. Do not start with exposed
-contacts if Settings can still see the device.
+Use firmware recovery when a verified update was interrupted or the device
+remains an `RPI-RP2` drive. A powered device that is merely missing from a DAW
+is **not** proof of damaged firmware. Do not start with exposed contacts if
+Settings or Windows can still see the device.
+
+> **Green LEDs mean power only.** First close browsers, DAWs, and MIDI utilities;
+> check Windows Device Manager; then reconnect once with a known data cable. If
+> the device remains absent, save screenshots and stop. Do not reflash from this
+> symptom alone.
 
 > ⚠️ **The board must match the picture.** USB-C alone does not identify a
 > hardware revision. If any label, component, or contact position differs,

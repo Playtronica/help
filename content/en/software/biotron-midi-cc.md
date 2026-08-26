@@ -6,7 +6,7 @@ summary: "Receive plant MIDI, test experimental incoming CC, connect Reaper or i
 segment: ["music-producer", "creator"]
 deflection_target: 25
 status: edited-2026-08
-last_edited: 2026-08-21
+last_edited: 2026-08-26
 emoji: 🎹
 ---
 
@@ -83,6 +83,11 @@ a finished live-control specification.
 If Reaper says **Failed to open device**, close every Chrome, Edge, and
 Playtronica Settings window. Reconnect Biotron, then enable the output again.
 
+If Biotron disappears from both Reaper and MIDI-OX, stop sending CC immediately.
+Close every MIDI app, disconnect USB, and check **Device Manager → Sound, video
+and game controllers** before reconnecting once with a known data cable. Green
+LEDs prove power only. Do not reflash firmware from this symptom alone.
+
 <details>
 <summary>MIDI Clock changes Biotron's timing</summary>
 <p>Biotron listens for MIDI Start, Stop, and Clock. Turn off <strong>Send clock to this device</strong> in Reaper if you want Biotron to keep its own timing. MIDI Clock is not required for CC.</p>
@@ -129,9 +134,8 @@ Press the fingerprint button and watch a MIDI monitor. If the monitor receives
 the preset-change note burst, the USB route works and the remaining issue is
 likely routing, mute state, or the instrument track.
 
-Need Settings without internet? Install the
-[isolated offline beta](/software/biotron-offline-settings/) once while online.
-Firmware downloads remain online-only.
+Need Settings without internet? The [offline Windows guide](/software/biotron-offline-settings/)
+links to one downloadable field-test file. Firmware downloads remain online-only.
 
 ## Still stuck
 

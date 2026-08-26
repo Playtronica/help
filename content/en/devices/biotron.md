@@ -7,13 +7,13 @@ order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-08
-last_edited: 2026-08-21
+last_edited: 2026-08-26
 emoji: 🌿
 ---
 
 <div class="task-grid" aria-label="Choose a Biotron task">
   <a class="task-card" href="#quick-start"><span class="task-card__icon">▶</span><span><strong>Play the first notes</strong><small>Connect one plant and hear Biotron in about five minutes.</small></span></a>
-  <a class="task-card" href="/software/biotron-offline-settings/"><span class="task-card__icon">📴</span><span><strong>Use Settings offline</strong><small>Install once, then configure without internet.</small></span></a>
+  <a class="task-card" href="/software/biotron-offline-settings/"><span class="task-card__icon">📴</span><span><strong>Test Settings offline</strong><small>Download one Windows beta file and read its current limits.</small></span></a>
   <a class="task-card" href="/software/biotron-midi-cc/"><span class="task-card__icon">🎛</span><span><strong>Connect a DAW</strong><small>Receive plant MIDI or test outgoing CC.</small></span></a>
   <a class="task-card" href="#fix-a-problem"><span class="task-card__icon">🛟</span><span><strong>Fix a problem</strong><small>Start with the cable, signal, or safe recovery path.</small></span></a>
 </div>
@@ -55,9 +55,9 @@ sensitivity, scale, note range, buttons, and MIDI behaviour.
 </ol>
 
 Need it at a venue without internet? Follow the
-[offline Windows guide](/software/biotron-offline-settings/). The isolated beta
-can be installed once and opened later without a connection. Firmware downloads
-remain online-only.
+[offline Windows guide](/software/biotron-offline-settings/). The current
+field-test beta is one downloadable Windows file; it has not completed physical
+performance acceptance. Firmware downloads remain online-only.
 
 ## Use Biotron with a DAW
 
@@ -101,7 +101,7 @@ measurement of plant physiology.
 
 <details>
 <summary>Biotron lights up but does not appear on the computer</summary>
-<p>Try another USB data cable and a direct computer port. Close other MIDI apps. If it still does not appear, use the safe recovery route below.</p>
+<p>Green LEDs prove power only, not USB MIDI recognition. Close browsers, Settings, the DAW, and MIDI utilities. In Windows, open <strong>Device Manager → Sound, video and game controllers</strong>. Reconnect once with a known USB data cable and a direct port. If Biotron is absent from Device Manager and MIDI-OX, stop and record screenshots; do not assume firmware corruption.</p>
 </details>
 
 <details>
