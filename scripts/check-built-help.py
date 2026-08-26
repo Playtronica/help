@@ -42,6 +42,10 @@ def main() -> int:
             errors.append(f"{label} must render exactly one H1")
         if len(re.findall(r'class="task-card"', body)) != 4:
             errors.append(f"{label} must start with four task-first navigation cards")
+        ids = set(re.findall(r'\bid="([^"]+)"', body))
+        for anchor in re.findall(r'<a[^>]+href="#([^"]+)"', body):
+            if anchor not in ids:
+                errors.append(f"{label} task link #{anchor} has no built heading target")
 
     required_biotron = [
         "task-grid",

@@ -121,7 +121,24 @@ function postProcessHtml(html: string): string {
     },
   );
 
-  // 3) YouTube shortcode: {{ youtube: VIDEOID title="optional" }}
+  // 3) remark-html does not add heading IDs. Task-first cards use same-page
+  // anchors, so a visually correct card would otherwise change the URL but
+  // never move the reader. Keep this slugger aligned with
+  // scripts/audit-cross-references.py.
+  html = html.replace(
+    /<(h2|h3)([^>]*)>([\s\S]*?)<\/\1>/g,
+    (match, tag: string, attributes: string, inner: string) => {
+      if (/\sid=["'][^"']+["']/.test(attributes)) return match;
+      const text = inner.replace(/<[^>]+>/g, "").toLowerCase();
+      const id = text
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/[\s-]+/g, "-")
+        .replace(/^-|-$/g, "");
+      return id ? `<${tag}${attributes} id="${id}">${inner}</${tag}>` : match;
+    },
+  );
+
+  // 4) YouTube shortcode: {{ youtube: VIDEOID title="optional" }}
   //    becomes a marker the article page replaces with the <LiteYoutube /> component.
   html = html.replace(
     /\{\{\s*youtube:\s*([\w\-]+)(?:\s+title="([^"]+)")?\s*\}\}/g,

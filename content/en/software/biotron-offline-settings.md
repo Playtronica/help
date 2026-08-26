@@ -2,94 +2,84 @@
 title: "Use Biotron Settings offline on Windows"
 slug: biotron-offline-settings
 section: software
-summary: "Install once, open without internet, then release Biotron before starting your DAW."
+summary: "Download one Windows beta file, configure without internet, then release Biotron before starting your DAW."
 order: 8
 segment: ["music-producer", "creator"]
 deflection_target: 55
 status: edited-2026-08
-last_edited: 2026-08-21
+last_edited: 2026-08-26
 emoji: 📴
 ---
 
 <div class="task-grid" aria-label="Choose an offline Settings task">
-  <a class="task-card" href="#install-once"><span class="task-card__icon">⬇</span><span><strong>Install once</strong><small>Prepare Settings while you still have internet.</small></span></a>
-  <a class="task-card" href="#open-without-internet"><span class="task-card__icon">📴</span><span><strong>Open offline</strong><small>Configure Biotron from the Windows Start menu.</small></span></a>
+  <a class="task-card" href="#download-the-windows-beta"><span class="task-card__icon">⬇</span><span><strong>Download one file</strong><small>No installer, command line, or administrator account.</small></span></a>
+  <a class="task-card" href="#configure-biotron-offline"><span class="task-card__icon">📴</span><span><strong>Configure offline</strong><small>The file opens Settings locally in Chrome or Edge.</small></span></a>
   <a class="task-card" href="#move-to-your-daw"><span class="task-card__icon">🎚</span><span><strong>Move to your DAW</strong><small>Release the MIDI port before Reaper or Ableton.</small></span></a>
-  <a class="task-card" href="#fix-only-if-needed"><span class="task-card__icon">🛟</span><span><strong>Fix a problem</strong><small>Permission, install, clock, or held-note help.</small></span></a>
+  <a class="task-card" href="#stop-safely-when-something-disappears"><span class="task-card__icon">⏹</span><span><strong>Stop safely</strong><small>Check Windows before assuming a firmware fault.</small></span></a>
 </div>
 
-> 🧪 **Isolated beta.** Open
-> [Biotron Settings beta](https://offline-integrated.biotron-midi-preview.pages.dev/#/biotron).
-> It does not replace `settings.playtronica.com` or update production. It uses
-> Chrome or Edge internally, but after installation the interface works
-> without a website, browser tab, or internet connection.
+> 🧪 **Field-test beta — not yet approved for performance use.** The team is
+> testing this exact build on Windows with real Biotron hardware. It does not
+> replace `settings.playtronica.com` or change the production site.
 
-## Install once
+## Download the Windows beta
 
-<ol class="steps">
-  <li><strong>Close Reaper, Ableton, and other MIDI apps.</strong></li>
-  <li><strong>Open the <a href="https://offline-integrated.biotron-midi-preview.pages.dev/#/biotron">Biotron Settings beta</a></strong> in desktop Chrome or Edge.</li>
-  <li><strong>Allow MIDI device control.</strong> Keep the page open until the green status says <strong>Ready offline</strong>.</li>
-  <li><strong>Install the app.</strong> In Chrome, use the install icon or <strong>More → Cast, save and share → Install page as app</strong>. In Edge, use <strong>App available → Install</strong>.</li>
-  <li><strong>Open Playtronica Settings once from Windows Start</strong> while you are still online.</li>
-</ol>
-
-> 💡 The offline copy belongs to the browser profile that installed it. Clearing
-> that profile's site data removes the copy; repeat these steps afterwards.
-
-## Open without internet
+Open the permanent [Biotron Settings Offline beta download](https://biotron-settings-beta.pages.dev/).
+The page includes the Windows file, a small Reaper test clip, and the exact
+SHA-256 checksum. The link does not use an expiring email signature.
 
 <ol class="steps">
-  <li>Disconnect Wi-Fi or Ethernet.</li>
-  <li>Open <strong>Playtronica Settings</strong> from Windows Start.</li>
-  <li>Check for <strong>Offline — Settings are available</strong>.</li>
-  <li>Connect one Biotron, select it, and change the settings you need.</li>
+  <li><strong>Download <code>Biotron-Settings-Offline-Windows-x64.exe</code>.</strong> You may copy it to an offline computer with a USB drive.</li>
+  <li><strong>Keep Chrome or Edge installed.</strong> The beta opens its local Settings interface in that browser engine; the internet is not used.</li>
+  <li><strong>Run it as your normal Windows user.</strong> It is unsigned, so Windows may show <strong>More info → Run anyway</strong>. Never choose <strong>Run as administrator</strong>.</li>
+  <li><strong>If it starts only as administrator, stop.</strong> Do not work around it. Send support a screenshot of the Windows message.</li>
 </ol>
 
-Firmware update stays disabled offline. The app must find a valid online
-firmware file before it can send a BOOT command.
+The beta needs no installation, Node, CMD, PowerShell, or runtime download.
+When it opens, the address starts with `http://127.0.0.1`; that is the same
+computer, not an external website.
+
+## Configure Biotron offline
+
+<ol class="steps">
+  <li><strong>Close Reaper, Ableton, MIDI-OX, browser Settings pages, and other MIDI apps.</strong></li>
+  <li><strong>Connect one Biotron directly with a USB data cable.</strong></li>
+  <li><strong>Open the downloaded beta and allow MIDI device control.</strong></li>
+  <li><strong>Change one reversible setting.</strong> Confirm the device responds before changing anything else.</li>
+</ol>
+
+Firmware update stays disabled offline. The beta must never send a BOOT command
+when it cannot first verify an online firmware file.
 
 ## Move to your DAW
 
-On Windows, use one application at a time:
+Windows MIDI ports may be available to only one app at a time.
 
 <ol class="steps">
   <li>Finish configuring Biotron.</li>
-  <li>Select <strong>Release device for DAW</strong>, then close Settings.</li>
+  <li>Select <strong>Release device for DAW</strong>, then close the beta window.</li>
   <li>Open Reaper or Ableton and enable Biotron as a MIDI input.</li>
-  <li>When you need Settings again, close Biotron in the DAW, reopen Settings, and select <strong>Reconnect settings</strong>.</li>
+  <li>To return to Settings, close Biotron in the DAW, reopen the beta, and select <strong>Reconnect settings</strong>.</li>
 </ol>
 
-If the DAW still cannot open the device, close every Chrome, Edge, and Settings
-window. Reconnect the USB cable, then enable Biotron in the DAW again.
+This is a handoff, not simultaneous sharing. If the DAW still cannot open the
+device, close every Chrome, Edge, Settings, and MIDI utility window. Reconnect
+USB once, then retry in the DAW.
 
-<details>
-<summary>Send MIDI from Reaper to Biotron</summary>
-<ol>
-  <li>Open <strong>Options → Preferences → Audio → MIDI Devices</strong>.</li>
-  <li>Enable Biotron under <strong>MIDI outputs</strong>.</li>
-  <li>Open the sending track's <strong>Routing</strong>.</li>
-  <li>Choose Biotron under <strong>MIDI Hardware Output</strong>.</li>
-</ol>
-<p>Incoming CC is still experimental. Use occasional test values, not fast automation, until a tested firmware release is linked from the <a href="/software/biotron-midi-cc/">MIDI guide</a>.</p>
-</details>
+## Stop safely when something disappears
 
-## Fix only if needed
+Green LEDs prove that Biotron has power. They do **not** prove that Windows has
+recognised its USB MIDI interface.
 
-<details>
-<summary>There is no “Ready offline” message</summary>
-<p>Stay online, reload the beta, and wait for the green status before installing. Do not assume the app is cached while the status is still pending.</p>
-</details>
+1. Stop playback and rapid MIDI messages.
+2. Disconnect Biotron. Close the beta, browsers, Reaper, and MIDI-OX.
+3. Reopen **Device Manager → Sound, video and game controllers**.
+4. Connect Biotron directly with a known USB data cable once.
+5. If it is absent from both Device Manager and MIDI-OX, stop. Do not reflash
+   firmware from this symptom alone. Save screenshots and contact support.
 
-<details>
-<summary>There is no install icon</summary>
-<p>Use the browser menu path in step 4. See the official <a href="https://support.google.com/chrome/answer/9658361">Chrome web app instructions</a> or <a href="https://learn.microsoft.com/microsoft-edge/progressive-web-apps/ux">Edge PWA instructions</a>.</p>
-</details>
-
-<details>
-<summary>MIDI permission was denied</summary>
-<p>Open site settings for <code>offline-integrated.biotron-midi-preview.pages.dev</code>, allow MIDI device control, and reload. Close other MIDI applications first.</p>
-</details>
+If Windows becomes unstable or restarts repeatedly, leave Biotron disconnected
+until Windows starts normally. Do not reconnect it just to continue the test.
 
 <details>
 <summary>MIDI Clock changes the plant timing</summary>
@@ -98,24 +88,32 @@ window. Reconnect the USB cable, then enable Biotron in the DAW again.
 
 <details>
 <summary>A synth holds a note</summary>
-<p>Use the synth's <strong>Panic</strong> or <strong>All Notes Off</strong> control. If it returns, stop playback, disable the Biotron input and output, reconnect USB, and save a short MIDI log for support.</p>
+<p>Stop playback and use the synth's <strong>Panic</strong> or <strong>All Notes Off</strong> control. If it returns, disable the Biotron route and save a short raw MIDI log. Do not continue dense-message testing.</p>
 </details>
 
 <details>
-<summary>What the offline beta does not do</summary>
+<summary>What this beta does not claim</summary>
 <ul>
+  <li>It is not signed and does not have completed physical Windows acceptance.</li>
   <li>It does not remove the Chrome or Edge engine.</li>
-  <li>It does not install on a computer that has never been online.</li>
   <li>It does not download or update firmware offline.</li>
   <li>It does not let Settings and a DAW share one exclusive MIDI port.</li>
-  <li>It does not make fast incoming CC automation release-ready.</li>
+  <li>It does not make rapid incoming CC automation release-ready.</li>
 </ul>
 </details>
+
+## Browser-installed offline copy
+
+We are also testing a version installed from Chrome or Edge after one online
+visit. One field test opened successfully once and then failed on the next
+offline launch, so this route is not the recommended recovery path yet. The
+next beta reports a stable error code and can copy a privacy-bounded diagnostic
+report instead of showing only a generic error.
 
 ## Still stuck
 
 Email [support@playtronica.com](mailto:support@playtronica.com) with your
-Windows version, browser, DAW, and the exact error. Add one screenshot of
-**Options → Preferences → Audio → MIDI Devices**.
+Windows version, browser, DAW, the exact error, and one screenshot of both
+**Device Manager** and **Options → Preferences → Audio → MIDI Devices**.
 
 We aim for 24 hours, but a reply may take up to 3 business days.
