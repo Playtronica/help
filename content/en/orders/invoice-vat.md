@@ -7,12 +7,21 @@ summary: "How to get an invoice for your order — for customs, your accountant,
 segment: ["b2b", "international"]
 deflection_target: 140
 order: 2
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-09
+last_edited: 2026-09-01
 emoji: 🧾
 ---
 
 Most invoice requests fall into three cases. Find yours below.
+
+## Download it yourself — instantly
+
+Every order has a ready invoice you can download without writing to us:
+
+- **Right after checkout** — the **Download invoice** button on the order confirmation page.
+- **Any time later** — log in to your account at [shop.playtronica.com](https://shop.playtronica.com), open the **Invoices** tab, and download the invoice for any order (you can select several at once). The same button also sits inside each order's page under **Orders**.
+
+If the downloaded invoice is missing something you need (your company details, a VAT number), see the company invoice section below.
 
 ## I just want a receipt for my records
 
