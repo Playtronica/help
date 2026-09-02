@@ -86,22 +86,22 @@ Continue only when the board matches the labelled image for
 
 ## On a Mac: "error code 100093" when dragging the file
 
-If you drag a  file onto the  drive and macOS says **"The operation can't be completed because an unexpected error occurred (error code 100093)"** — the file did not copy and the device does not reboot.
+If you drag a `.uf2` file onto the `RPI-RP2` drive and macOS says **"The operation can't be completed because an unexpected error occurred (error code 100093)"** — the file did not copy and the device does not reboot.
 
 **This is not your device and not our firmware.** Since macOS Ventura (13.0), Finder tries to write extended attributes onto firmware drives like this one, and the drive rejects them. It affects every board that updates this way — Raspberry Pi Pico, Adafruit, micro:bit and ours alike.
 
 **The fix — copy from Terminal instead of Finder:**
 
-1. Put the device into update mode so the  drive appears.
+1. Put the device into update mode so the `RPI-RP2` drive appears.
 2. Open **Terminal** (Applications → Utilities → Terminal).
-3. Type  (with a space after ), then **drag the  file into the Terminal window** — the path fills in by itself.
-4. Add  at the end and press Enter:
+3. Type `cp -X ` (with a space after `-X`), then **drag the `.uf2` file into the Terminal window** — the path fills in by itself.
+4. Add ` /Volumes/RPI-RP2` at the end and press Enter:
 
 ```
 cp -X ~/Downloads/flash_nuke.uf2 /Volumes/RPI-RP2
 ```
 
-The  tells macOS to skip the extended attributes, which is exactly what Finder gets wrong. The drive disappears immediately and the device reboots — that is success, not an error.
+The `-X` flag tells macOS to skip the extended attributes, which is exactly what Finder gets wrong. The drive disappears immediately and the device reboots — that is success, not an error.
 
 > If Terminal says "No such file or directory", the drive is not mounted: put the device back into update mode and check that `RPI-RP2` is visible in Finder first.
 
