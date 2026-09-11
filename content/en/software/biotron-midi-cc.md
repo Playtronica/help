@@ -23,8 +23,12 @@ Biotron sends standard MIDI over USB:
 
 - **Note on/off** triggers instruments and samplers.
 - **CC90** follows plant-sensor intensity in the MIDI range 0–127.
-- **Channel 1** carries plant data.
-- **Channel 2** carries light-sensor notes or the configured light behaviour.
+- Plant and light output can use separate MIDI channels. These channels are
+  configurable, so choose **All channels** for the first test.
+
+> On Windows, names such as **Biotron**, **Biotron 2**, `MIDIIN2` or
+> `MIDIOUT2` identify the device's two USB MIDI ports. They are not the plant
+> and light channels.
 
 Enable Biotron as a MIDI input, arm an instrument track, and choose all
 channels for the first test. MIDI carries control data, not sound; the track
@@ -71,13 +75,19 @@ channel 2 selects the light setting. Global commands ignore the channel.
 Value mappings differ by command; this source-derived table is a test map, not
 a finished live-control specification.
 
+The USB port number and MIDI channel number are separate. Firmware 1.9.8
+accepts incoming CC on either Biotron USB output: if Reaper can enable only
+`Biotron 2`, use that output and send on MIDI channel 1 to change plant
+settings. This does not turn `Biotron 2` into the light channel.
+
 ### Test one command in Reaper
 
 <ol class="steps">
   <li><strong>Close Settings.</strong> On Windows, another app may still own the Biotron MIDI port.</li>
-  <li><strong>Enable Biotron under MIDI outputs</strong> in <strong>Options → Preferences → Audio → MIDI Devices</strong>.</li>
+  <li><strong>Enable a Biotron output</strong> in <strong>Options → Preferences → Audio → MIDI Devices</strong>. If Windows lists two, use the one Reaper opens without an error.</li>
   <li><strong>Route one track to Biotron</strong> under <strong>MIDI Hardware Output</strong>.</li>
-  <li><strong>Send one reversible value.</strong> Start with CC31 mute/unmute, then stop and confirm normal notes return.</li>
+  <li><strong>Set the track to MIDI channel 1</strong> for plant settings.</li>
+  <li><strong>Send one reversible value.</strong> Send CC31 = 127 to mute plant notes, then CC31 = 0 and confirm the notes return.</li>
 </ol>
 
 If Reaper says **Failed to open device**, close every Chrome, Edge, and
