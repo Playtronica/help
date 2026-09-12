@@ -57,7 +57,10 @@
     "review:3": "python3 scripts/reviews/pass-3-ecommerce-friction.py",
     "review:4": "python3 scripts/reviews/pass-4-trust-signals.py",
     "review:all": "bash scripts/reviews/run-all.sh",
-    "indexing": "pagefind --site out --output-subdir _pagefind"
+    "indexing": "pagefind --site out --output-subdir _pagefind",
+    "help": "python3 scripts/helpctl.py",
+    "help:check": "python3 scripts/helpctl.py check --full",
+    "test:help-loop": "python3 -m unittest discover -s tests -p 'test_*.py'"
   },
   "dependencies": {
     "next": "14.2.35",

@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -69,14 +69,18 @@ def main():
         except (TypeError, ValueError):
             deflection_target = None
 
+        previous_hope = prev.get("what_we_hope", "")
+        if not previous_hope or previous_hope.startswith("Address topic '"):
+            previous_hope = (
+                f"Publish a verified answer for '{slug}' that makes the matching "
+                "customer problem easier to resolve or prevents it."
+            )
+
         hypotheses.append({
             "url": url,
             "title": fm.get("title", slug),
             "audience": segment,
-            "what_we_hope": prev.get(
-                "what_we_hope",
-                f"Address topic '{slug}' for {', '.join(segment) if segment else 'general'} readers, reduce support tickets, let them self-serve.",
-            ),
+            "what_we_hope": previous_hope,
             "deflection_target_per_month": deflection_target,
             "first_published": prev.get("first_published", last_edited),
             "next_check_in": prev.get("next_check_in", next_check_in),
@@ -87,12 +91,12 @@ def main():
     out = {
         "schema_version": 1,
         "description": (
-            "Hypothesis log — each help-center page is a hypothesis that "
-            "addressing this topic for this audience reduces support tickets. "
-            "Every 90 days we review whether the page is doing its job. "
+            "Article outcome inventory — each page is a hypothesis that a "
+            "verified reusable answer improves the matching customer outcome. "
+            "Review with referenced before/after evidence. "
             "See docs/HYPOTHESIS-LOG.md."
         ),
-        "generated_at": datetime.utcnow().strftime("%Y-%m-%d"),
+        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "pages": hypotheses,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -1,124 +1,56 @@
-# How the help center improves itself
+# How the help center improves from real customer work
 
-The help center is built as a self-improving system. It applies the same 5-method framework (GAP / Bottlenecks / Staleness / SO Patterns / Leverage Points) and the same PROMETHEUS principles ("Real World Is What Is Reported", Antifragility, Leverage Points) that the rest of Playtronica's strategy work uses — but it does this *for itself*, on a recurring schedule, without anyone remembering to start it.
+The operating system is event-driven: every customer question must end with either a relevant help link or a referenced knowledge gap. See [HELP-LOOP.md](HELP-LOOP.md) for the exact commands and state machine.
 
-This document is the map of how it works.
+## One source of content, one source of private workflow state
 
-## The four layers
+- Public articles and checks: this `Playtronica/help` repository.
+- Primary customer evidence: Freshdesk, Telegram, WhatsApp, email, Shopify, search logs, or another named source.
+- Private gap state and history: `~/ProjectData/Playtronica/help-loop/`.
+- Raw exports and PII: private source folders under `~/ProjectData`; never this public repository.
 
-```
-                         ┌───────────────────────────────────┐
-                         │  Layer 4 — Monthly Audit          │
-                         │  Cowork scheduled-task            │
-                         │  Generates HTML report monthly    │
-                         └────────────────┬──────────────────┘
-                                          │
-        ┌─────────────────────────────────┼─────────────────────────────────┐
-        │                                 │                                 │
-┌───────▼────────┐              ┌─────────▼─────────┐             ┌─────────▼──────────┐
-│ Layer 3 —      │              │ Layer 2 —         │             │ Layer 1 —          │
-│ Hypothesis log │              │ Feedback loop     │             │ Outcomes tracking  │
-│ each page is   │              │ classify external │             │ deflection_target  │
-│ a hypothesis   │              │ feedback into     │             │ vs Freshdesk       │
-│ checked Q90d   │              │ priority list     │             │ ticket volume      │
-└────────────────┘              └───────────────────┘             └────────────────────┘
-                                          │
-                         ┌────────────────▼──────────────────┐
-                         │  Layer 0 — CI Gates               │
-                         │  audit-help-system.py             │
-                         │  check-internal-consistency.py    │
-                         │  block bad PRs from merging       │
-                         └───────────────────────────────────┘
-```
+Other clones, workshop notes, reports, model summaries, and old corpora are useful history. They are not sources of truth. `./help status` reveals duplicate checkouts so edits do not silently split.
 
-## Layer 0 — CI Gates (catch drift on every PR)
+## The loop
 
-**Where:** `.github/workflows/ci.yml`
+1. **Resolve.** Run `./help find "question"`. Use the closest relevant article in every support answer.
+2. **Capture.** If the article lacks a reusable answer, add a gap with an exact primary-source reference. Drafter records these automatically in its gap feed; `./help` imports them idempotently.
+3. **Prioritise.** Repeated evidence merges into the same gap. Frequency matters, but high-risk safety, money, and policy claims are routed to stronger human verification.
+4. **Improve.** Edit the mapped article, not a parallel FAQ or private answer library.
+5. **Verify.** A human confirms facts against an authoritative product, operational, legal, financial, or safety source. An LLM or old internal note is never the authority.
+6. **Gate.** Run `./help check --full`. Broken links, inconsistent claims, stale page inventory, lint, or build failures block publication.
+7. **Publish.** Push a reviewed commit and verify the live URL. Record the commit in the gap state.
+8. **Observe.** Later ticket evidence and searches show whether the answer prevents confusion. Contradictory evidence reopens the gap.
 
-Two scripts run on every pull request:
+This is a closed loop because every branch has a terminal record: covered by a live article, open with evidence, rejected with a reason, or published and awaiting observation.
 
-- `scripts/check-internal-consistency.py` — **blocking gate**. Fails the PR if it finds non-canonical service URLs, SLA-phrase drift in "Still stuck" footers, hard-coded calendar dates, broken internal links, or stale `status: edited-YYYY-MM` markers.
-- `scripts/audit-help-system.py` — **informational only**. Prints the 5-method snapshot so the PR author sees what the audit currently looks like.
+## What “complete help” means
 
-These two are the antidote to staleness. They never make decisions; they refuse to ignore drift.
+It does not mean guessing every question anyone might ask. It means:
 
-## Layer 1 — Outcomes Tracking (does the page do its job?)
+- every recurring, reusable, customer-safe answer seen in primary evidence is covered or explicitly open;
+- every claim can be traced to current authority;
+- case-specific information stays in the support reply, not the public article;
+- absence of evidence is never converted into a confident public claim.
 
-**Where:** `content/_data/hypotheses.json`, `scripts/check-deflection-vs-tickets.py`, `docs/HYPOTHESIS-LOG.md`
+## Layers around the event loop
 
-Every page declares a hypothesis in frontmatter:
+The older broad audits remain useful, but they are secondary:
 
-```yaml
-segment: ["music-producer", "creator"]
-deflection_target: 50    # tickets per month this page should prevent
-```
+- CI catches mechanical regression on every pull request.
+- Weekly live-link and deployment checks catch broken delivery.
+- Monthly review looks for silent sources, stale open gaps, and recurring themes the event stream may miss.
+- Quarterly outcome review asks whether published answers changed ticket outcomes.
 
-`rebuild-hypothesis-log.py` derives `_data/hypotheses.json` from these. The monthly task then runs:
+None of these replaces the per-ticket loop. A monthly report is not a backlog, and a page-view count is not proof of deflection.
 
-```
-FRESHDESK_DOMAIN=... FRESHDESK_API_KEY=... python3 scripts/check-deflection-vs-tickets.py
-```
+## Measurement
 
-For each page with a target, it counts actual Freshdesk tickets containing that slug and labels the page **GREEN / YELLOW / RED / UNKNOWN**. RED pages get flagged for review.
+For each published gap, measure a comparable before/after window using the same topic definition:
 
-This is how a page that doesn't work gets caught — not by accident, but by a measurement that runs every month.
+- repeated tickets or follow-ups about the missing answer;
+- support resolution outcome and whether the article was actually used;
+- article feedback and zero-result searches;
+- new contradictory primary evidence.
 
-**Required for full operation:** Freshdesk API key in `FRESHDESK_API_KEY`. Without it, the script prints a list of pages with targets and stops — useful for "which pages are even being measured?".
-
-## Layer 2 — Feedback Loop (close the antifragility loop)
-
-**Where:** `scripts/classify-feedback.py`
-
-Every WhatsApp feedback message and email reply is data. The classifier:
-
-1. Parses a WhatsApp text export (or any line-per-message text file).
-2. Sends each message to Claude Haiku with a strict classification prompt.
-3. Buckets results into: `broken-link`, `missing-topic`, `unclear-writing`, `wrong-device`, `bug-report`, `question-not-feedback`, `praise`, `off-topic`.
-4. Outputs the top 5 actionable categories with sample messages — this is the content roadmap, written by users.
-
-Run monthly with the latest export. Each run writes `_data/feedback-digest-YYYY-MM-DD.json` so you can see whether categories shrink (good — we addressed them) or grow (a recurring failure mode that needs a structural fix).
-
-This is **P5.1 Antifragility** for the help center: every angry user message makes the system smarter.
-
-**Required for full operation:** `ANTHROPIC_API_KEY` in environment. Same key as the translation pipeline.
-
-## Layer 3 — Hypothesis Log (90-day review of every page)
-
-**Where:** `docs/HYPOTHESIS-LOG.md`, `content/_data/hypotheses.json`
-
-Every page has a `next_check_in` date — by default 90 days after `last_edited`. The monthly Cowork audit task is responsible for reviewing pages whose check-in date has passed: gather evidence (page views + tickets + feedback), mark the outcome as `success / partial / failed / obsolete`, and either reset the date (keep) or open a content task (rewrite).
-
-Failed hypotheses are the most valuable outputs. They tell us either the IA is wrong, the segment is wrong, or the voice is wrong — and each failure narrows the search space for what to fix next.
-
-## Layer 4 — Monthly Audit (the orchestrator)
-
-**Where:** Cowork scheduled-task `help-center-system-audit` (runs `0 9 1 * *`)
-
-Every 1st of the month at 9 AM local time, the task:
-
-1. Runs `audit-help-system.py` for the 5-method snapshot.
-2. Compares against last month's report (if exists) — identifies what improved, what regressed, what's new.
-3. Generates a fresh HTML report at `~/Documents/Claude/Playtronica Claude/docs/audit-help-system-YYYY-MM-DD.html`.
-4. Surfaces P0 items in chat as "you can fix these quickly".
-5. Triggers the hypothesis-log review for pages whose `next_check_in` has passed.
-
-The task is fully self-contained (the prompt has all the context). It runs while Cowork is open; if Cowork is closed on the 1st, it runs on next launch.
-
-## What is the system NOT
-
-- It does not auto-edit pages.
-- It does not auto-merge PRs.
-- It does not auto-trigger the translation pipeline.
-- It does not send messages to anyone but you.
-
-Every action that changes the actual content is a human decision. The system's job is to make sure that decision is well-informed, that drift is caught early, and that nothing important gets forgotten.
-
-## How to extend this
-
-If you find yourself remembering "I should check X every month", that's a sign X belongs in this system. The pattern is always:
-
-1. A script that measures X reproducibly (`scripts/<verb>-<noun>.py`).
-2. Either a CI gate (if X must never get worse) or a monthly task entry (if X needs a human eye).
-3. A markdown doc in `docs/` describing what the measurement means and what to do when it crosses a threshold.
-
-The system grows by adding more loops, each one closing a different feedback gap. The 5-method audit is the meta-loop that catches gaps in the gaps.
+The old slug-keyword counter (`check-deflection-vs-tickets.py`) is exploratory only. It cannot prove causality: ticket text rarely contains a page slug, topics overlap, and fewer tickets may have causes unrelated to the article.

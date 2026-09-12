@@ -2,6 +2,7 @@
 """Fail a static Help build when customer-critical assets are missing."""
 
 from pathlib import Path
+import json
 import re
 
 
@@ -27,6 +28,31 @@ def article(html: str, label: str, errors: list[str]) -> str:
 def main() -> int:
     errors: list[str] = []
     require(OUT / "_pagefind/pagefind.js", errors)
+    fallback_index = json.loads(require(ROOT / "public/search-index.json", errors) or "[]")
+    searchable_sources = 0
+    searchable_urls: list[str] = []
+    for source in (ROOT / "content/en").rglob("*.md"):
+        raw = source.read_text(encoding="utf-8", errors="replace")
+        if re.search(r"^hide_from_search:\s*true\s*$", raw, re.MULTILINE):
+            continue
+        slug = re.search(r"^slug:\s*([^\s]+)\s*$", raw, re.MULTILINE)
+        section = re.search(r"^section:\s*([^\s]+)\s*$", raw, re.MULTILINE)
+        if slug and section:
+            searchable_sources += 1
+            searchable_urls.append(
+                f"https://help.playtronica.com/{section.group(1)}/{slug.group(1)}/"
+            )
+    if len(fallback_index) != searchable_sources:
+        errors.append(
+            f"fallback search covers {len(fallback_index)} of {searchable_sources} searchable EN articles"
+        )
+    llms = require(OUT / "llms.txt", errors)
+    sitemap = require(OUT / "sitemap.xml", errors)
+    for url in searchable_urls:
+        if url not in llms:
+            errors.append(f"llms.txt omits searchable article: {url}")
+        if url not in sitemap:
+            errors.append(f"sitemap.xml omits searchable article: {url}")
     biotron = article(require(OUT / "devices/biotron/index.html", errors), "Biotron", errors)
     offline = article(require(OUT / "software/biotron-offline-settings/index.html", errors), "offline Settings", errors)
     midi = article(require(OUT / "software/biotron-midi-cc/index.html", errors), "Biotron MIDI", errors)

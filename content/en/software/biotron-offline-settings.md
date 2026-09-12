@@ -98,3 +98,5 @@ until Windows starts normally.
 
 Stop at the first failure. Email [support@playtronica.com](mailto:support@playtronica.com)
 with the failed step and one screenshot; do not repeat the whole setup.
+
+We aim for 24 hours, but a reply may take up to 3 business days.

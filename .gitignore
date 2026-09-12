@@ -36,3 +36,7 @@ _reviews/
 # Editor caches
 .idea/
 .vscode/
+
+# Python caches
+__pycache__/
+*.py[cod]

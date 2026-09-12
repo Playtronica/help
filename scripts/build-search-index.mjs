@@ -88,9 +88,10 @@ function build() {
     const raw = readFileSync(file, "utf8");
     const { data, content } = parseFrontmatter(raw);
     if (!data.slug || !data.section) continue;
-    // Hide pages flagged hide_from_nav from search — they remain accessible
-    // via deep link but should not surface in search results.
-    if (data.hide_from_nav === "true") continue;
+    // Navigation and search are separate concerns. Advanced and curriculum
+    // pages may stay out of the sidebar while still answering an exact query.
+    // Only an explicit hide_from_search flag removes an article from search.
+    if (data.hide_from_search === "true") continue;
 
     const rel = relative(CONTENT_DIR, file);
     const url = `/${data.section}/${data.slug}/`;

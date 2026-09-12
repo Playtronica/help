@@ -10,6 +10,18 @@ The complete documentation, manuals, and troubleshooting library for [Playtronic
 
 This is the **source code and the source of truth** for [help.playtronica.com](https://help.playtronica.com). Every page on the live help center is one Markdown file in this repository.
 
+## Start any help task here
+
+```bash
+./help
+./help status
+./help find "the customer's question"
+./help gap import-drafter
+./help gap next
+```
+
+The command finds the closest live article and tracks any missing reusable answer from the original ticket through verification, publication, and later observation. Private evidence stays in `~/ProjectData/Playtronica/help-loop`; it is never committed to this public repository. See **[docs/HELP-LOOP.md](docs/HELP-LOOP.md)** for the complete workflow.
+
 > **Why open-source?** Because the help center is more useful when AI tools, search engines, makers, educators, and integrators can read it, link it, fork it, and translate it. The content is licensed CC-BY-4.0 so anyone can quote, remix, and republish it with attribution.
 
 ---
@@ -37,7 +49,7 @@ That is the whole setup. No database, no CMS, no API keys required.
 To build the production bundle (static HTML + Pagefind index + AI-search files):
 
 ```bash
-npm run build:export    # writes everything to out/
+npm run build           # writes everything to out/
 npx serve out
 ```
 
