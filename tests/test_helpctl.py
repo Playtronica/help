@@ -40,6 +40,41 @@ class HelpCtlTests(unittest.TestCase):
         self.assertEqual(first["id"], second["id"])
         self.assertEqual(second["occurrences"], 2)
 
+    def test_superseding_drafter_wording_reuses_unique_ticket_article_gap(self):
+        state = helpctl.empty_state()
+        original, _ = helpctl.upsert_gap(
+            state,
+            article_url="/orders/returns-refunds/",
+            missing_answer="How an approved return receives its RMA reference",
+            source="freshdesk",
+            ref="Freshdesk #7942",
+        )
+        matched = helpctl.matching_drafter_gap(
+            state,
+            "https://help.playtronica.com/orders/returns-refunds/",
+            "Approved return awaiting its verified RMA and complete shipping instructions",
+            "Freshdesk #7942",
+        )
+        self.assertIs(original, matched)
+
+    def test_same_ticket_article_does_not_merge_when_existing_gap_is_ambiguous(self):
+        state = helpctl.empty_state()
+        for missing in ("RMA reference", "Return label"):
+            helpctl.upsert_gap(
+                state,
+                article_url="/orders/returns-refunds/",
+                missing_answer=missing,
+                source="freshdesk",
+                ref="Freshdesk #7942",
+            )
+        matched = helpctl.matching_drafter_gap(
+            state,
+            "/orders/returns-refunds/",
+            "Complete return instructions",
+            "Freshdesk #7942",
+        )
+        self.assertIsNone(matched)
+
     def test_private_state_round_trip_and_event_log(self):
         with tempfile.TemporaryDirectory() as tmp:
             state_dir = Path(tmp)
@@ -56,6 +91,29 @@ class HelpCtlTests(unittest.TestCase):
             self.assertEqual(loaded["gaps"][0]["id"], item["id"])
             self.assertIn(item["id"], (state_dir / "BACKLOG.md").read_text())
             self.assertIn("gap_added", (state_dir / "events.jsonl").read_text())
+
+    def test_same_ticket_at_new_timestamp_is_one_occurrence(self):
+        state = helpctl.empty_state()
+        first, _ = helpctl.upsert_gap(
+            state,
+            article_url="/orders/invoice-vat/",
+            missing_answer="How to correct an issued invoice",
+            source="freshdesk",
+            ref="Freshdesk #7917",
+            seen_at="2026-09-12T08:00:00Z",
+        )
+        second, created = helpctl.upsert_gap(
+            state,
+            article_url="/orders/invoice-vat/",
+            missing_answer="How to correct an issued invoice",
+            source="freshdesk",
+            ref="Freshdesk #7917",
+            seen_at="2026-09-12T09:00:00Z",
+        )
+        self.assertFalse(created)
+        self.assertIs(first, second)
+        self.assertEqual(1, second["occurrences"])
+        self.assertEqual("2026-09-12T09:00:00Z", second["last_seen"])
 
     def test_new_post_publish_evidence_reopens_but_reimport_does_not(self):
         state = helpctl.empty_state()

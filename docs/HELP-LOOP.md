@@ -73,6 +73,10 @@ Import them without copying raw ticket text:
 
 Repeated evidence is merged into one gap and increases its occurrence count. The private canonical workflow state is:
 
+When a superseding Drafter note rephrases the same missing answer, the importer
+reuses the existing gap only if the article and Freshdesk reference identify one
+unambiguous record. Ambiguous cases remain separate rather than being guessed together.
+
 ```text
 ~/ProjectData/Playtronica/help-loop/gaps.json
 ~/ProjectData/Playtronica/help-loop/events.jsonl

@@ -126,6 +126,27 @@ def gap_key(article_url: str, missing_answer: str) -> str:
     return hashlib.sha256(material.encode()).hexdigest()[:12]
 
 
+def matching_drafter_gap(state: dict, article_url: str, missing_answer: str,
+                         ref: str) -> dict | None:
+    """Resolve a superseding Drafter wording to the same ticket/article gap.
+
+    Exact semantic keys remain canonical. If wording changed, reuse an existing
+    gap only when the primary ticket reference and article identify one and only
+    one candidate; ambiguity deliberately creates a separate record.
+    """
+    exact = gap_key(article_url, missing_answer)
+    for item in state["gaps"]:
+        if item["key"] == exact:
+            return item
+    normalized_article = normalize_article_url(article_url)
+    candidates = [
+        item for item in state["gaps"]
+        if normalize_article_url(item.get("article_url") or "") == normalized_article
+        and any(str(ev.get("ref") or "") == ref for ev in item.get("evidence") or [])
+    ]
+    return candidates[0] if len(candidates) == 1 else None
+
+
 def gap_id(key: str) -> str:
     return f"HELP-{key[:8].upper()}"
 
@@ -170,6 +191,33 @@ def evidence(source: str, ref: str, seen_at: str | None = None) -> dict:
     }
 
 
+def evidence_key(value: dict) -> tuple[str, str]:
+    return str(value.get("source") or "").strip().lower(), str(value.get("ref") or "").strip()
+
+
+def dedupe_state_evidence(state: dict) -> int:
+    """Count one primary ticket/source once, while preserving the observation window."""
+    removed = 0
+    for item in state["gaps"]:
+        before_count = len(item.get("evidence") or [])
+        unique = {}
+        seen_dates = []
+        for ev in item.get("evidence") or []:
+            key = evidence_key(ev)
+            seen = str(ev.get("seen_at") or "")
+            if seen:
+                seen_dates.append(seen)
+            if key not in unique or seen < str(unique[key].get("seen_at") or ""):
+                unique[key] = ev
+        removed += before_count - len(unique)
+        item["evidence"] = list(unique.values())
+        item["occurrences"] = len(item["evidence"])
+        if seen_dates:
+            item["first_seen"] = min(str(item.get("first_seen") or seen_dates[0]), min(seen_dates))
+            item["last_seen"] = max(str(item.get("last_seen") or seen_dates[0]), max(seen_dates))
+    return removed
+
+
 def upsert_gap(
     state: dict,
     *,
@@ -185,10 +233,10 @@ def upsert_gap(
     ev = evidence(source, ref, seen_at)
     for item in state["gaps"]:
         if item["key"] == key:
-            evidence_added = ev not in item["evidence"]
+            evidence_added = evidence_key(ev) not in {evidence_key(old) for old in item["evidence"]}
             if evidence_added:
                 item["evidence"].append(ev)
-            item["last_seen"] = ev["seen_at"]
+            item["last_seen"] = max(str(item.get("last_seen") or ""), ev["seen_at"])
             item["occurrences"] = len(item["evidence"])
             item["risk"] = risk_for(f"{article_url} {missing_answer}")
             item["updated_at"] = utc_now()
@@ -388,13 +436,16 @@ def cmd_status(args: argparse.Namespace) -> int:
         )
     if DEFAULT_DRAFTER_GAPS.exists():
         records = [json.loads(line) for line in DEFAULT_DRAFTER_GAPS.read_text(encoding="utf-8").splitlines() if line.strip()]
-        state_keys = {g["key"] for g in state["gaps"]}
-        feed_keys = {
-            gap_key(r.get("article_url", ""), r.get("gap", ""))
-            for r in records
+        pending = sum(
+            1 for r in records
             if r.get("article_url") and r.get("gap")
-        }
-        pending = len(feed_keys - state_keys)
+            and not matching_drafter_gap(
+                state,
+                r.get("article_url", ""),
+                r.get("gap", ""),
+                str(r.get("ticket_ref") or r.get("ticket") or ""),
+            )
+        )
         suffix = "synchronized" if pending == 0 else f"{pending} new — run './help gap import-drafter'"
         print(f"Drafter gap feed: {len(records)} records — {suffix}")
     return 0
@@ -434,6 +485,7 @@ def cmd_gap_import(args: argparse.Namespace) -> int:
     if not source_path.exists():
         raise SystemExit(f"Drafter gap feed not found: {source_path}")
     state = load_state(args.state_dir)
+    repaired_evidence = dedupe_state_evidence(state)
     created = evidence_added = unchanged = skipped = 0
     imported_ids = []
     for line_no, line in enumerate(source_path.read_text(encoding="utf-8").splitlines(), 1):
@@ -447,16 +499,22 @@ def cmd_gap_import(args: argparse.Namespace) -> int:
             if not article or not missing:
                 skipped += 1
                 continue
-            before = next((len(g["evidence"]) for g in state["gaps"] if g["key"] == gap_key(article, missing)), 0)
+            matched = matching_drafter_gap(state, article, missing, ref)
+            canonical_missing = matched["missing_answer"] if matched else missing
+            before = len(matched["evidence"]) if matched else 0
             item, was_created = upsert_gap(
                 state,
                 article_url=article,
-                missing_answer=missing,
+                missing_answer=canonical_missing,
                 source="freshdesk",
                 ref=ref,
                 seen_at=raw.get("seen_at"),
                 note=f"Imported from {source_path.name}",
             )
+            if matched and normalize_text(missing) != normalize_text(canonical_missing):
+                alias = f"Superseding Drafter wording: {missing.strip()}"
+                if alias not in item["notes"]:
+                    item["notes"].append(alias)
             imported_ids.append(item["id"])
             created += int(was_created)
             if not was_created and len(item["evidence"]) > before:
@@ -465,8 +523,8 @@ def cmd_gap_import(args: argparse.Namespace) -> int:
                 unchanged += 1
         except (json.JSONDecodeError, TypeError, ValueError):
             skipped += 1
-    save_state(args.state_dir, state, {"action": "drafter_import", "source_path": str(source_path), "created": created, "evidence_added": evidence_added, "unchanged": unchanged, "skipped": skipped, "gap_ids": sorted(set(imported_ids))})
-    print(f"Imported Drafter gaps: created={created} evidence_added={evidence_added} unchanged={unchanged} skipped={skipped}")
+    save_state(args.state_dir, state, {"action": "drafter_import", "source_path": str(source_path), "created": created, "evidence_added": evidence_added, "unchanged": unchanged, "skipped": skipped, "repaired_evidence": repaired_evidence, "gap_ids": sorted(set(imported_ids))})
+    print(f"Imported Drafter gaps: created={created} evidence_added={evidence_added} unchanged={unchanged} skipped={skipped} repaired_evidence={repaired_evidence}")
     return 0
 
 
