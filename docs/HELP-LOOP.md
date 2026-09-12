@@ -23,6 +23,7 @@ If an article answers the reusable part, link it in the customer reply. If it do
 ```
 
 Never paste a customer's name, email, address, ticket body, or other PII into `--missing` or `--note`. `--ref` is the pointer back to the primary evidence.
+If no article exists yet, Drafter may emit the gap with an empty `article_url`; import keeps it as new-article work instead of dropping it.
 
 ## The lifecycle
 

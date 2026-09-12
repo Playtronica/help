@@ -75,6 +75,20 @@ class HelpCtlTests(unittest.TestCase):
         )
         self.assertIsNone(matched)
 
+    def test_gap_without_existing_article_is_kept_for_new_article_work(self):
+        state = helpctl.empty_state()
+        item, created = helpctl.upsert_gap(
+            state,
+            article_url="",
+            missing_answer="How to request a correction to Playtronica editorial credits",
+            source="freshdesk",
+            ref="Freshdesk #7964",
+        )
+        self.assertTrue(created)
+        self.assertEqual("", item["article_url"])
+        self.assertIsNone(item["article_path"])
+        self.assertEqual(1, item["occurrences"])
+
     def test_private_state_round_trip_and_event_log(self):
         with tempfile.TemporaryDirectory() as tmp:
             state_dir = Path(tmp)

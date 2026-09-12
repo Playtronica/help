@@ -438,10 +438,10 @@ def cmd_status(args: argparse.Namespace) -> int:
         records = [json.loads(line) for line in DEFAULT_DRAFTER_GAPS.read_text(encoding="utf-8").splitlines() if line.strip()]
         pending = sum(
             1 for r in records
-            if r.get("article_url") and r.get("gap")
+            if r.get("gap")
             and not matching_drafter_gap(
                 state,
-                r.get("article_url", ""),
+                r.get("article_url") or "",
                 r.get("gap", ""),
                 str(r.get("ticket_ref") or r.get("ticket") or ""),
             )
@@ -493,10 +493,10 @@ def cmd_gap_import(args: argparse.Namespace) -> int:
             continue
         try:
             raw = json.loads(line)
-            article = raw.get("article_url", "")
+            article = raw.get("article_url") or ""
             missing = raw.get("gap", "")
             ref = str(raw.get("ticket_ref") or raw.get("ticket") or f"line-{line_no}")
-            if not article or not missing:
+            if not missing:
                 skipped += 1
                 continue
             matched = matching_drafter_gap(state, article, missing, ref)
