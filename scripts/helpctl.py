@@ -603,6 +603,7 @@ def check_loop_metadata(state_dir: Path) -> bool:
 
 def cmd_check(args: argparse.Namespace) -> int:
     checks = [
+        ([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"], "help-loop unit tests"),
         ([sys.executable, "scripts/audit-cross-references.py"], "cross references"),
         ([sys.executable, "scripts/check-internal-consistency.py"], "internal consistency"),
         ([sys.executable, "scripts/helpctl.py", "--state-dir", str(args.state_dir), "gap", "list", "--status", "open"], "open knowledge gaps"),
