@@ -56,7 +56,9 @@ RISK_TERMS = {
         "allerg", "tax", "vat", "invoice", "refund", "warranty", "legal",
         "adhesive", "chemical", "voltage", "power supply",
         "chorus pro", "mandat administratif", "public institution",
-        "procurement", "purchase order",
+        "procurement", "purchase order", "privacy", "passport",
+        "personal identifier", "identification number", "identity document",
+        "national id", "visa identifier", "data retention",
     },
     "medium": {
         "shipping", "delivery", "country", "availability", "firmware",
@@ -262,6 +264,28 @@ def upsert_gap(
     }
     state["gaps"].append(item)
     return item, True
+
+
+def rebind_gap(state: dict, identifier: str, article: str) -> dict:
+    """Move a gap to an existing canonical article without changing its stable ID."""
+    item = get_gap(state, identifier)
+    new_url = normalize_article_url(article)
+    new_path = article_path(new_url)
+    if not new_path:
+        raise SystemExit("Cannot rebind: mapped article does not exist in this checkout.")
+    new_key = gap_key(new_url, item["missing_answer"])
+    duplicate = next(
+        (gap for gap in state["gaps"] if gap is not item and gap.get("key") == new_key),
+        None,
+    )
+    if duplicate:
+        raise SystemExit(f"Cannot rebind: target would duplicate {duplicate['id']}.")
+    item["key"] = new_key
+    item["article_url"] = new_url
+    item["article_path"] = str(new_path.relative_to(REPO))
+    item["risk"] = risk_for(f"{new_url} {item['missing_answer']}")
+    item["updated_at"] = utc_now()
+    return item
 
 
 def get_gap(state: dict, identifier: str) -> dict:
@@ -477,6 +501,25 @@ def cmd_gap_add(args: argparse.Namespace) -> int:
     save_state(args.state_dir, state, {"action": "gap_added" if created else "evidence_added", "gap_id": item["id"], "source": args.source, "ref": args.ref})
     print(f"{'Created' if created else 'Updated'} {item['id']}: {item['missing_answer']}")
     print(f"Status={item['status']} risk={item['risk']} evidence={item['occurrences']}")
+    return 0
+
+
+def cmd_gap_rebind(args: argparse.Namespace) -> int:
+    state = load_state(args.state_dir)
+    item = get_gap(state, args.id)
+    old_url = item.get("article_url") or ""
+    item = rebind_gap(state, args.id, args.article)
+    save_state(
+        args.state_dir,
+        state,
+        {
+            "action": "article_rebound",
+            "gap_id": item["id"],
+            "from": old_url,
+            "to": item["article_url"],
+        },
+    )
+    print(f"{item['id']}: {old_url or '(unmapped)'} → {item['article_url']}")
     return 0
 
 
@@ -706,6 +749,11 @@ def parser() -> argparse.ArgumentParser:
     add.add_argument("--seen-at", help="YYYY-MM-DD; defaults to today")
     add.add_argument("--note", default="")
     add.set_defaults(func=cmd_gap_add)
+
+    rebind = gap_sub.add_parser("rebind", help="move a gap to an existing canonical article")
+    rebind.add_argument("id")
+    rebind.add_argument("--article", required=True, help="live URL, /section/slug/, or content/en path")
+    rebind.set_defaults(func=cmd_gap_rebind)
 
     imp = gap_sub.add_parser("import-drafter", help="import the Drafter ticket-derived gap feed")
     imp.add_argument("--path", type=Path, default=DEFAULT_DRAFTER_GAPS)

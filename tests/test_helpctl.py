@@ -89,6 +89,32 @@ class HelpCtlTests(unittest.TestCase):
         self.assertIsNone(item["article_path"])
         self.assertEqual(1, item["occurrences"])
 
+    def test_rebind_gap_preserves_id_and_moves_to_existing_article(self):
+        state = helpctl.empty_state()
+        item, _ = helpctl.upsert_gap(
+            state,
+            article_url="/orders/payment-methods/",
+            missing_answer="How checkout currency differs from issuer conversion",
+            source="freshdesk",
+            ref="6054",
+        )
+        stable_id = item["id"]
+        rebound = helpctl.rebind_gap(
+            state,
+            stable_id,
+            "content/en/orders/pricing-and-discounts.md",
+        )
+        self.assertEqual(stable_id, rebound["id"])
+        self.assertEqual(
+            "https://help.playtronica.com/orders/pricing-and-discounts/",
+            rebound["article_url"],
+        )
+        self.assertEqual("content/en/orders/pricing-and-discounts.md", rebound["article_path"])
+        self.assertEqual(
+            helpctl.gap_key(rebound["article_url"], rebound["missing_answer"]),
+            rebound["key"],
+        )
+
     def test_private_state_round_trip_and_event_log(self):
         with tempfile.TemporaryDirectory() as tmp:
             state_dir = Path(tmp)
@@ -165,6 +191,11 @@ class HelpCtlTests(unittest.TestCase):
     def test_risk_routing(self):
         self.assertEqual(helpctl.risk_for("clinical adhesive disinfection"), "high")
         self.assertEqual(helpctl.risk_for("Chorus Pro public institution purchase"), "high")
+        self.assertEqual(
+            helpctl.risk_for("secure submission of a personal identifier and data retention"),
+            "high",
+        )
+        self.assertEqual(helpctl.risk_for("passport number for customs"), "high")
         self.assertEqual(helpctl.risk_for("country shipping availability"), "medium")
         self.assertEqual(helpctl.risk_for("connect Ableton"), "normal")
 
