@@ -25,7 +25,7 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -197,8 +197,8 @@ def issues_iter():
         # 5. Stale status markers
         for m in re.finditer(r"^status: edited-(\d{4})-(\d{1,2})$", text, re.MULTILINE):
             year, month = int(m.group(1)), int(m.group(2))
-            edited = datetime(year, month, 1)
-            age_days = (datetime.utcnow() - edited).days
+            edited = datetime(year, month, 1, tzinfo=timezone.utc)
+            age_days = (datetime.now(timezone.utc) - edited).days
             if age_days > 365:
                 yield (
                     rel,

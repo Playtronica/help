@@ -28,10 +28,10 @@ downloads. It does not need internet each time you configure or play Biotron.
 
 <ol class="steps">
   <li><strong>Close Reaper, MIDI-OX and other MIDI apps.</strong></li>
-  <li><strong>Open the <a href="https://d4b98280.biotron-settings-beta.pages.dev/#/biotron/play">Biotron Settings beta</a> in current Chrome or Edge.</strong></li>
+  <li><strong>Open the <a href="https://ec8b8266.biotron-settings-beta.pages.dev/#/biotron/play">Biotron Settings beta</a> in current Chrome or Edge.</strong></li>
   <li><strong>Connect one Biotron and allow MIDI device access.</strong></li>
   <li><strong>Wait for the green “Offline mode is ready” message.</strong> Do not disconnect the network before it appears.</li>
-  <li><strong>Install the page from the browser address bar.</strong> If no install icon appears, use Chrome's menu → <strong>Cast, save and share → Install page as app</strong>, or Edge's menu → <strong>Apps → Install this site as an app</strong>.</li>
+  <li><strong>Install the page from the browser address bar.</strong> If no install icon appears, use Chrome's menu → <strong>Cast, save and share → Install page as app</strong>, or Edge's menu → <strong>More tools → Apps → Install this site as an app</strong>.</li>
 </ol>
 
 There is no separate `.exe` or administrator step. The installed copy uses the

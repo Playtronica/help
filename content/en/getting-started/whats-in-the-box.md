@@ -2,7 +2,7 @@
 title: "What is in the box?"
 slug: whats-in-the-box
 section: getting-started
-summary: "What you find inside the box, and what each piece does."
+summary: "Do I need a cable? See what ships with each Playtronica device and what you need to provide."
 order: 4
 segment: ["gift-recipient", "music-producer"]
 deflection_target: 60

@@ -2,7 +2,7 @@
 title: "TouchMe not recognized on Mac or Windows"
 slug: touchme-not-recognized
 section: troubleshooting
-summary: "TouchMe is plugged in but your computer doesn't detect it as a MIDI device. This covers the four fixes that resolve almost every case: data cable, plug-in order, Web MIDI browser, and macOS permission."
+summary: "Four checks when a Mac or Windows computer does not detect TouchMe: cable, plug-in order, Web MIDI browser, and permissions."
 segment: ["music-producer", "creator"]
 deflection_target: 40
 status: new-2026-06
