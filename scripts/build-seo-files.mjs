@@ -51,6 +51,7 @@ const SECTION_TITLES = {
   troubleshooting: "Troubleshooting",
   orders: "Orders & support",
   professionals: "For professionals",
+  education: "Education",
   site: "About this site",
 };
 
@@ -113,7 +114,10 @@ function build() {
     const raw = readFileSync(file, "utf8");
     const { data, content } = parseFrontmatter(raw);
     if (!data.slug || !data.section) continue;
-    if (data.hide_from_nav === "true") continue;
+    // A page can stay out of sidebar navigation and still be a valuable exact
+    // answer for search engines and grounded assistants. Only an explicit
+    // hide_from_search flag removes public content from discovery surfaces.
+    if (data.hide_from_search === "true") continue;
     pages.push({
       file,
       title: data.title || data.slug,
@@ -161,6 +165,7 @@ function build() {
     "troubleshooting",
     "orders",
     "professionals",
+    "education",
     "site",
   ];
   for (const section of sectionOrder) {

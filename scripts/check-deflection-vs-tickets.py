@@ -20,9 +20,10 @@ Usage:
     export FRESHDESK_API_KEY=...
     python3 scripts/check-deflection-vs-tickets.py --window-days 30
 
-This script does not modify pages. Its job is to surface the signal so a human
-can decide whether to rewrite, reframe, or archive each underperforming page.
-The monthly Cowork audit task feeds this report into the hypothesis-log review.
+This is an exploratory keyword counter, not proof of causal deflection. Page
+slugs are only rough topic proxies: the script can miss relevant tickets and
+combine unrelated ones. Never mark a gap observed from this output alone. Use
+referenced gap evidence and comparable before/after ticket outcomes instead.
 """
 
 from __future__ import annotations
@@ -32,7 +33,7 @@ import json
 import os
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -113,8 +114,9 @@ def main():
         )
         sys.exit(2)
 
-    since = datetime.utcnow() - timedelta(days=args.window_days)
+    since = datetime.now(timezone.utc) - timedelta(days=args.window_days)
 
+    print("NOTE: exploratory slug-keyword counts; not causal deflection evidence.\n")
     print(f"=== Deflection vs Freshdesk tickets (last {args.window_days} days) ===\n")
     results = []
     for page in pages:
@@ -133,7 +135,7 @@ def main():
         )
         time.sleep(0.3)
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out = DATA / f"deflection-report-{today}.json"
     out.write_text(json.dumps({"date": today, "results": results}, indent=2))
     print(f"\n✓ Wrote {out.relative_to(REPO)}")

@@ -2,7 +2,7 @@
 title: "Customs duties & import taxes — what to expect"
 slug: customs-duties
 section: orders
-summary: "Orders outside the EU may be charged import duties or taxes by your country's customs authority. This article explains who pays, how to pay, what to do if your parcel is held, and when you can appeal"
+summary: "Who pays import duties outside the EU, how to pay them, and what to do when customs holds your Playtronica parcel."
 segment: ["music-producer", "creator"]
 deflection_target: 30
 status: new-2026-06

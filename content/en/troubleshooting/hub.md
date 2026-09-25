@@ -2,7 +2,7 @@
 title: "Troubleshooting hub"
 slug: hub
 section: troubleshooting
-summary: "Something is not working. Start here."
+summary: "All LEDs are lit but nothing happens, or something else is not working. Start with the matching symptom."
 order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80

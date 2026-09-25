@@ -2,7 +2,7 @@
 title: "Music Technology in K-12 Classrooms — The Complete Guide"
 slug: guide-music-technology-k12-classrooms
 section: education
-summary: "How to bring music technology into K-12 classrooms — the only guide written by people who actually ship the hardware. Standards-aligned lesson design, equipment selection, classroom management, procurement, and what works (and what doesn't) for each grade band."
+summary: "A practical guide to K-12 music technology: lesson design, equipment, classroom management, procurement, and grade-level choices."
 segment: ["education", "b2b"]
 deflection_target: 0
 order: 100
