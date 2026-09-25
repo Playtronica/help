@@ -79,14 +79,14 @@ a finished live-control specification.
 
 | Control | Useful values | What to listen for |
 |---|---|---|
-| **CC15 — Ultra sensitivity** | 0–63 off; 64–127 on | Adds variability to note selection. It does not change velocity. |
+| **CC15 — Ultra sensitivity** | 0–63 off; 64–127 on | Enables the firmware's alternate sensor-processing mode. It does not control velocity, and the audible difference may be subtle. |
 | **CC21 — Note Hold** | 0 = 1/64 beat; 99 = 1/2 beat; 127 = full beat | Shorter or longer notes. Tempo does not change. |
 | **CC22 — Step Size** | 0–127; compare 32 and 96 | Shapes how strongly sensor changes move through the note sequence. Judge it over several notes, not one event. |
 | **CC24 — Scale** | 0 Major; 20 Chromatic; 40 Mixolydian; 69 Minor blues; 119 Hirajōshi | Changes the set of notes selected around the Home Note. The complete map contains 13 scales. |
 | **CC25 — Minimum velocity** | 0–127 | This is the lower edge of the velocity range. It is used only while Humanize is on, and should not be higher than CC9 Maximum velocity. |
 | **CC26 — Humanize** | 0–63 off; 64–127 on | When on, each note receives a velocity between CC25 Minimum and CC9 Maximum. When off, CC25 has no audible effect. |
 | **CC27 — Light Pitch Bend** | 0–63 off; 64–127 on | When on, the light sensor bends plant notes instead of playing separate light notes. |
-| **CC28 — Light Note Range** | 0–127 | Sets the span of separate light notes. It is not Pitch Bend and is heard only while CC27 is off. |
+| **CC28 — Light Note Range** | 1–127; 0 is treated as 1 | Sets the span of separate light notes. It is not Pitch Bend and is heard only while CC27 is off. |
 
 For a quick velocity check on MIDI channel 1, send **CC9 = 100**, then
 **CC26 = 127**, then **CC25 = 20**. Play several plant notes: their velocities
