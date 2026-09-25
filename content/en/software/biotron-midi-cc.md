@@ -169,7 +169,8 @@ the preset-change note burst, the USB route works and the remaining issue is
 likely routing, mute state, or the instrument track.
 
 Need Settings without internet? The [offline Windows guide](/software/biotron-offline-settings/)
-links to one downloadable field-test file. Firmware downloads remain online-only.
+shows how to prepare and install the field-test beta once, then reopen it
+without internet. Firmware downloads remain online-only.
 
 ## Still stuck
 
