@@ -6,14 +6,14 @@ summary: "Connect a plant, hear the first notes, then choose Settings, offline u
 order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
-status: edited-2026-08
-last_edited: 2026-08-26
+status: edited-2026-09
+last_edited: 2026-09-25
 emoji: 🌿
 ---
 
 <div class="task-grid" aria-label="Choose a Biotron task">
   <a class="task-card" href="#quick-start"><span class="task-card__icon">▶</span><span><strong>Play the first notes</strong><small>Connect one plant and hear Biotron in about five minutes.</small></span></a>
-  <a class="task-card" href="/software/biotron-offline-settings/"><span class="task-card__icon">📴</span><span><strong>Test Settings offline</strong><small>Download one Windows beta file and read its current limits.</small></span></a>
+  <a class="task-card" href="/software/biotron-offline-settings/"><span class="task-card__icon">📴</span><span><strong>Test Settings offline</strong><small>Install the beta once, then reopen it without internet.</small></span></a>
   <a class="task-card" href="/software/biotron-midi-cc/"><span class="task-card__icon">🎛</span><span><strong>Connect a DAW</strong><small>Receive plant MIDI or test outgoing CC.</small></span></a>
   <a class="task-card" href="#fix-a-problem"><span class="task-card__icon">🛟</span><span><strong>Fix a problem</strong><small>Start with the cable, signal, or safe recovery path.</small></span></a>
 </div>
@@ -28,9 +28,10 @@ emoji: 🌿
   <li><strong>Leave the setup untouched during startup, then play.</strong> Touch the plant or cover the light sensor. You should see MIDI activity and hear notes.</li>
 </ol>
 
-> 💡 **Two sources, two channels.** Plant activity uses MIDI channel 1. The
-> light sensor uses MIDI channel 2. MIDI itself is not audio, so choose a synth
-> or instrument track to hear it.
+> 💡 **Two sensor sources.** Plant and light output can use separate MIDI
+> channels, and those channels are configurable in Settings. Choose **All
+> channels** for the first DAW test. MIDI itself is not audio, so choose a
+> synth or instrument track to hear it.
 
 ## Know the board
 
@@ -55,14 +56,14 @@ sensitivity, scale, note range, buttons, and MIDI behaviour.
 </ol>
 
 Need it at a venue without internet? Follow the
-[offline Windows guide](/software/biotron-offline-settings/). The current
-field-test beta is one downloadable Windows file; it has not completed physical
-performance acceptance. Firmware downloads remain online-only.
+[offline Windows guide](/software/biotron-offline-settings/). Prepare and
+install the field-test beta once in Chrome or Edge, then reopen the installed
+copy without internet. Firmware downloads remain online-only.
 
 ## Use Biotron with a DAW
 
-- **Biotron → DAW:** enable Biotron as a MIDI input. Plant data arrives on
-  channel 1; light data arrives on channel 2.
+- **Biotron → DAW:** enable Biotron as a MIDI input and choose **All channels**
+  for the first test. Plant and light output channels are configurable.
 - **DAW → Biotron:** enable the MIDI output only when you need to send settings
   or clock back to Biotron.
 - **Windows port busy:** release and close Settings before opening the device
