@@ -6,7 +6,7 @@ summary: "Receive plant MIDI, test experimental incoming CC, connect Reaper or i
 segment: ["music-producer", "creator"]
 deflection_target: 25
 status: edited-2026-09
-last_edited: 2026-09-25
+last_edited: 2026-09-26
 emoji: 🎹
 ---
 
@@ -54,7 +54,7 @@ settings.
 | 3 | Input filter percentage | Global |
 | 9 | Maximum note velocity | Channel-specific |
 | 14 | Plant tempo / light tempo division | Channel-specific |
-| 15 | Ultra sensitivity | Global |
+| 15 | Input variation (experimental) | Global |
 | 20 | Minimum repeated-note distance | Channel-specific |
 | 21 | Note Hold | Global |
 | 22 | Step Size | Global |
@@ -79,7 +79,7 @@ a finished live-control specification.
 
 | Control | Useful values | What to listen for |
 |---|---|---|
-| **CC15 — Ultra sensitivity** | 0–63 off; 64–127 on | Enables the firmware's alternate sensor-processing mode. It does not control velocity, and the audible difference may be subtle. |
+| **CC15 — Input variation** | 0–63 off; 64–127 on | Adds a random 0–9 offset to each new plant-sensor reading before note calculation. It does not increase sensor sensitivity or control note velocity. |
 | **CC21 — Note Hold** | 0 = 1/64 beat; 99 = 1/2 beat; 127 = full beat | Shorter or longer notes. Tempo does not change. |
 | **CC22 — Step Size** | 0–127; compare 32 and 96 | Shapes how strongly sensor changes move through the note sequence. Judge it over several notes, not one event. |
 | **CC24 — Scale** | 0 Major; 20 Chromatic; 40 Mixolydian; 69 Minor blues; 119 Hirajōshi | Changes the set of notes selected around the Home Note. The complete map contains 13 scales. |

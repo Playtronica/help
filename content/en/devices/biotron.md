@@ -7,7 +7,7 @@ order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-09
-last_edited: 2026-09-25
+last_edited: 2026-09-26
 emoji: 🌿
 ---
 
@@ -59,6 +59,23 @@ Need it at a venue without internet? Follow the
 [offline Windows guide](/software/biotron-offline-settings/). Prepare and
 install the field-test beta once in Chrome or Edge, then reopen the installed
 copy without internet. Firmware downloads remain online-only.
+
+### Computer and phone compatibility
+
+- **Primary beta test path:** current Chrome or Edge on a Windows, macOS, or
+  Linux computer with a USB data cable. An exact combination becomes supported
+  only after its physical acceptance result is recorded.
+- **Android field test:** current Chrome may open Settings when the exact phone
+  provides USB host/OTG and Web MIDI. This remains experimental until that
+  phone, Android version, Chrome version, and cable pass a physical test.
+  Firmware update still requires a computer.
+- **iPhone and iPad:** standard Safari, Chrome, Edge, and Firefox cannot open
+  the Web MIDI Settings connection. Native MIDI apps such as GarageBand can
+  still play notes from Biotron; that is a different path from web Settings.
+
+A page fitting on a phone screen proves only the layout. It does not prove that
+the browser can control Biotron over USB. Third-party iOS MIDI browsers are not
+a supported workaround until an exact build passes the full physical test.
 
 ## Use Biotron with a DAW
 

@@ -6,8 +6,8 @@ summary: "Plug a Playtronica device into a Mac, Windows PC, iPhone, iPad, or And
 order: 2
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-09
+last_edited: 2026-09-26
 emoji: 💻
 ---
 
@@ -39,12 +39,29 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 2. **Connect the Playtronica device through the USB-C OTG adapter.**
 3. **Open a MIDI-compatible app.** Koala Sampler (Android) and MIDI+BTLE are good starting points. Allow the app to access USB devices when prompted.
 
+## Mobile apps are not the web Settings page
+
+The iPhone, iPad, and Android steps above describe playing a class-compliant
+MIDI device in a native music app. They do not prove that a phone browser can
+change device Settings.
+
+- Use current Chrome or Edge on a computer for the primary Settings beta test
+  path. Physical acceptance still applies to the exact combination.
+- Android Chrome is experimental and also needs USB host/OTG, Web MIDI, and a
+  data-capable cable. Support is recorded per exact phone/OS/browser/cable
+  combination, not for “Android” as a whole.
+- Standard iPhone and iPad browsers do not provide the Web MIDI connection used
+  by Settings. Configure on a computer, then use the saved configuration in a
+  native iOS music app.
+- Firmware updates are computer-only.
+
 ## Related pages
 
 - [Won't connect](/troubleshooting/wont-connect/) — what to try when the device does not show up.
 - [Online synths](/software/online-synths/) — what to play with once the device is connected.
 - [Hardware synths](/software/hardware/) — connecting via 5-pin MIDI DIN instead of USB.
-- [Device settings](https://settings.playtronica.com) — change MIDI channels, sensitivity, scales, and presets. Open in Chrome.
+- [Device settings](https://settings.playtronica.com) — change MIDI channels,
+  sensitivity, scales, and presets. Use current Chrome or Edge on a computer.
 
 ## Ask the community
 
