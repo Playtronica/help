@@ -70,12 +70,20 @@ copy without internet. Firmware downloads remain online-only.
   phone, Android version, Chrome version, and cable pass a physical test.
   Firmware update still requires a computer.
 - **iPhone and iPad:** standard Safari, Chrome, Edge, and Firefox cannot open
-  the Web MIDI Settings connection. Native MIDI apps such as GarageBand can
-  still play notes from Biotron; that is a different path from web Settings.
+  the Web MIDI Settings connection. On iOS/iPadOS 17.6 or later, the current
+  experimental route is [MIDIWeb Browser by 5of12
+  LLP](https://apps.apple.com/us/app/midiweb-browser/id6757226617). Install it,
+  open the exact beta link from your invitation inside MIDIWeb Browser, connect
+  Biotron with a data-capable cable or adapter, then allow MIDI and SysEx when
+  asked. This route is not yet verified for every Biotron, iPhone, iPad, cable,
+  or OS version; send us those exact details with your result. Firmware updates
+  still require a computer. Native MIDI apps such as GarageBand can also play
+  notes from Biotron, but that is a different path from web Settings.
 
 A page fitting on a phone screen proves only the layout. It does not prove that
-the browser can control Biotron over USB. Third-party iOS MIDI browsers are not
-a supported workaround until an exact build passes the full physical test.
+the browser can control Biotron over USB. MIDIWeb Browser remains an
+experimental test route, not supported compatibility, until an exact Biotron,
+Apple device, OS, app version, and cable pass the full physical test.
 
 ## Use Biotron with a DAW
 
