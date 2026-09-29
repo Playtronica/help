@@ -33,7 +33,7 @@ You will need a computer with **Chrome** installed to use any Playtronica device
 ## 🌿 Biotron
 
 - **Biotron device** — the main PCB with a built-in light sensor.
-- **Two leaf-pad probes on cables** — for clipping to plant leaves or branches.
+- **Two contacts on cables** — for clipping to plant leaves or branches.
 - **Quick-start card.**
 
 > ℹ️ **A USB cable is not included.** You will need a USB cable that matches Biotron's port and your computer.

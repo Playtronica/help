@@ -128,7 +128,7 @@
                     "id": "biotron-fix",
                     "title": "Likely a plant or contact issue.",
                     "fix": [
-                      "Make sure each leaf-pad is on a different branch or leaf, at least 2 cm apart.",
+                      "Make sure each contact is on a different branch or leaf, at least 2 cm apart.",
                       "Water the plant. Dry plants give weak signals.",
                       "Check that the synth's MIDI input is set to Channel 1 (the plant). Channel 2 is the light sensor — separate notes."
                     ]

@@ -38,8 +38,8 @@ Playtronica makes five devices. They all turn something physical into MIDI, but 
 [🌿 Biotron — your plant as a MIDI instrument](/devices/biotron/) · [Biotron Advanced](/devices/biotron-advanced/)
 
 - **What it senses:** bio-electrical signals from a living plant, plus an ambient light sensor. Plant and light can use separate configurable MIDI channels; the plant plays itself while light changes shape the result.
-- **What it looks like:** a black PCB with two cable connectors for leaf-pad probes and a small light sensor on top.
-- **In the box:** Biotron and two leaf-pad probes on cables. (A USB cable is not included.)
+- **What it looks like:** a black PCB with two cable connectors for the contacts and a small light sensor on top.
+- **In the box:** Biotron and two contacts on cables. (A USB cable is not included.)
 - **Best for:** sound artists, therapists, and anyone who likes that plants are quietly alive. Generative music without any input from you.
 
 ## Orbita — rotating MIDI sequencer

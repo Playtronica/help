@@ -78,7 +78,7 @@ Soft, bendable, adhesive. Works on textiles, garments, and curved sculpture surf
 
 ### Patches for skin and plants — 4 pack
 
-Stick-on conductive electrodes with an alligator-clip attachment point. Use them to clip TouchMe or Playtron to a comfortable spot on your skin without holding the device, or to attach Biotron's leaf-pads to a leaf without a good clip surface.
+Stick-on conductive electrodes with an alligator-clip attachment point. Use them to clip TouchMe or Playtron to a comfortable spot on your skin without holding the device, or to attach Biotron's contacts to a leaf without a good clip surface.
 
 [4 Patches](https://shop.playtronica.com/products/patches-for-skin-and-plants) — €16.63
 
@@ -161,7 +161,7 @@ A digital gift card in €50, €100, €200, and €500 denominations. Delivere
 | Stick conductive shapes onto paper, cardboard, walls | [Copper tape](https://shop.playtronica.com/products/copper-tape) |
 | Sew or stick conductive material onto textiles | [Conductive fabric tape](https://shop.playtronica.com/products/conductive-fabric-tape) |
 | Wear a TouchMe or Playtron probe comfortably | [Patches](https://shop.playtronica.com/products/patches-for-skin-and-plants) |
-| Attach Biotron's leaf clip to a tricky leaf | [Patches](https://shop.playtronica.com/products/patches-for-skin-and-plants) |
+| Attach a Biotron contact to a tricky leaf | [Patches](https://shop.playtronica.com/products/patches-for-skin-and-plants) |
 | Protect Playtron's pin row in a bag | [Playtron case](https://shop.playtronica.com/products/case-for-midi-controller-playtron) |
 | Buy "everything I might need" in one click | [Accessory Kit](https://shop.playtronica.com/products/playtronica-accessory-kit) |
 | Gift Playtronica without picking the device | [e-Gift card](https://shop.playtronica.com/products/playtronica-gift-card-1) |

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
   <title id="title">Biotron - top view, labelled</title>
-  <desc id="desc">The Playtronica Biotron board, shaped like a plant cell: USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, two leaf-pad clip points, the BOOT contacts, and the fingerprint button.</desc>
+  <desc id="desc">The Playtronica Biotron board, shaped like a plant cell: USB-C connector on the left edge, LED arcs around the centre, the microcontroller in the nucleus, a light sensor beside it, the two contact pins, the BOOT contacts, and the fingerprint button.</desc>
   <defs>
     <style>
       .t  { font-family: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; fill: #1a1a2e; }
@@ -26,8 +26,8 @@
   <circle cx="688" cy="240" r="3.2" fill="#1a1a2e" stroke="#ffffff" stroke-width="1.4"/>
   <line class="ln" x1="756" y1="112" x2="824" y2="476"/>
   <circle cx="824" cy="476" r="3.2" fill="#1a1a2e" stroke="#ffffff" stroke-width="1.4"/>
-  <text class="t" x="756" y="62" text-anchor="middle">LEAF-PAD CLIPS</text>
-  <text class="s" x="756" y="79" text-anchor="middle">connect the two leaf-pad cables</text>
+  <text class="t" x="756" y="62" text-anchor="middle">CONTACT PINS</text>
+  <text class="s" x="756" y="79" text-anchor="middle">connect the two contact cables</text>
   <line class="ln" x1="955" y1="92" x2="955" y2="112"/>
   <line class="ln" x1="955" y1="112" x2="955" y2="264"/>
   <circle cx="955" cy="264" r="3.2" fill="#1a1a2e" stroke="#ffffff" stroke-width="1.4"/>

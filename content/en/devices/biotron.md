@@ -21,8 +21,8 @@ emoji: 🌿
 ## Quick start
 
 <ol class="steps">
-  <li><strong>Plug both leaf-pad cables into Biotron.</strong> The pads come on cables — push each connector onto the <strong>LEAF-PAD CLIPS</strong> pins marked in the board picture below. Both cables have to be connected: a single pad on its own produces no signal.</li>
-  <li><strong>Clip both leaf-pads to the plant.</strong> Use two separate leaves or branches. Keep the metal contacts apart.</li>
+  <li><strong>Plug both contact cables into Biotron.</strong> The two contacts come on cables with Dupont connectors — push each connector onto the <strong>CONTACT PINS</strong> marked in the board picture below. Both cables have to be connected: a single contact on its own produces no signal.</li>
+  <li><strong>Clip the two contacts to the plant.</strong> Use two separate leaves or branches. Keep the contacts apart.</li>
   <li><strong>Connect Biotron with a USB data cable.</strong> Biotron ships without a cable. A charge-only cable powers the LEDs but carries no MIDI.</li>
   <li><strong>Open <a href="https://synth.playtronica.com">synth.playtronica.com</a> in Chrome.</strong> Allow MIDI access and choose Biotron.</li>
   <li><strong>Leave the setup untouched during startup, then play.</strong> Touch the plant or cover the light sensor. You should see MIDI activity and hear notes.</li>
@@ -35,9 +35,9 @@ emoji: 🌿
 
 ## Know the board
 
-<a href="/illustrations/biotron/biotron-top.svg?v=319ac17" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg?v=319ac17" alt="Biotron top view labelled with the USB-C connector, leaf-pad contacts, light sensor, buttons, LEDs, and electronics" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
+<a href="/illustrations/biotron/biotron-top.svg?v=contacts-2026-09-29" target="_blank" rel="noopener"><img src="/illustrations/biotron/biotron-top.svg?v=contacts-2026-09-29" alt="Biotron top view labelled with the USB-C connector, the two contact pins, light sensor, buttons, LEDs, and electronics" style="display:block;margin:8px 0 8px;max-width:100%;height:auto;background:transparent" /></a>
 
-[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg?v=319ac17).
+[Open the labelled board image at full size](/illustrations/biotron/biotron-top.svg?v=contacts-2026-09-29).
 
 > ⚠️ **Handle the connectors and sensor surfaces only.** Do not press exposed
 > chips, solder joints, or the underside. The BOOT label in the overview is for

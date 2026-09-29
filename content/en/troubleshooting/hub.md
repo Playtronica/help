@@ -53,7 +53,7 @@ This happens when the device cannot find a stable reference point.
 
 - **Biotron** — reconnect it and leave the setup untouched while startup settles. Check both contacts in a MIDI monitor before changing settings or firmware.
 - **Playtron** — the room has strong electromagnetic interference. Move the device away from your computer, phone charger, and Wi-Fi router. Try a different room as a quick test.
-- **All devices** — confirm grounding (Playtron) or that the plant pads are at least 2 cm apart and not touching each other (Biotron).
+- **All devices** — confirm grounding (Playtron) or that the contacts on the plant are at least 2 cm apart and not touching each other (Biotron).
 
 ## Hardware damage
 
