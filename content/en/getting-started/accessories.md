@@ -6,18 +6,25 @@ summary: "Every non-device product Playtronica makes — what each one is for, w
 order: 5
 segment: ["music-producer", "gift-buyer", "creator"]
 deflection_target: 30
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-09
+last_edited: 2026-09-30
 emoji: 🧰
 ---
 
-Every Playtronica device works out of the box. The accessories on this page are optional — they extend what you can do, replace a part you have worn out, or smooth over the cable situation on your particular computer or phone. This page is the long version. Browse them all at [shop.playtronica.com](https://shop.playtronica.com).
+TouchMe, Playtron, and Orbita include their USB cable. Biotron and Scales do
+not, so a matching USB data cable is required before first use. The other
+accessories on this page are optional: they extend what you can do, replace a
+worn part, or adapt the connection to your computer or phone. This page is the
+long version. Browse them all at
+[shop.playtronica.com](https://shop.playtronica.com).
 
 > 💡 **Already own a device?** Most owners only ever buy two extras: a longer or replacement USB cable, and the [Accessory Kit](https://shop.playtronica.com/products/playtronica-accessory-kit) for installation work. Everything else is situational.
 
 ## Cables
 
-Every device ships with the USB cable it needs. These are spares, replacements, longer runs, or the right end if you have a non-default port.
+TouchMe, Playtron, and Orbita ship with a USB cable. Biotron and Scales ship
+without one. Choose a data cable, not a charge-only cable; the options below
+also cover spares, replacements, longer runs, and different computer ports.
 
 ### USB-C to USB-A — 1 m
 

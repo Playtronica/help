@@ -7,8 +7,8 @@ summary: "Someone gave you a Playtronica. Here is how to hear your first note in
 segment: ["gift-recipient"]
 deflection_target: 120
 order: 3
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-09
+last_edited: 2026-09-30
 emoji: 🎁
 ---
 
@@ -26,7 +26,10 @@ If you cannot identify your device, see [Which Playtronica do I have?](/getting-
 
 ## Make sound in five minutes
 
-1. Plug the device into your laptop with a USB cable. Use the cable from the box — a charge-only cable looks identical but carries no data, and the device will not be detected.
+1. Plug the device into your laptop with a known USB data cable. If your device
+   came with a cable, use that one. Biotron does not include a USB cable. A
+   charge-only cable looks identical but carries no data, so the device will
+   power on without being detected.
 2. Open **Chrome** and go to [dotpiano.com](https://dotpiano.com/) — it is the simplest web instrument and the easiest place to hear your first note. Our own synth library is at [synth.playtronica.com](https://synth.playtronica.com) if you want to explore further.
 3. Click **Allow** on the MIDI permission popup that appears in the browser.
 4. Pick one:
@@ -38,7 +41,11 @@ If you cannot identify your device, see [Which Playtronica do I have?](/getting-
 
 You should hear a note. If not, see "No sound" below.
 
-> 💡 **Why Chrome?** Playtronica devices talk to your laptop through a feature called Web MIDI. Chrome supports it. Safari and Firefox do not yet. **Use a computer, not a phone** — Web MIDI does not work in any mobile browser.
+> 💡 **Why Chrome?** Playtronica devices talk to your laptop through Web MIDI.
+> Current Chrome or Edge on a computer is the primary path. Standard iPhone
+> and iPad browsers cannot make this connection; Android Chrome and a separate
+> iOS app have limited experimental Biotron Settings routes. See
+> [Mobile apps](/software/mobile/) before trying a phone.
 
 ## What to try next
 
@@ -51,7 +58,9 @@ You should hear a note. If not, see "No sound" below.
 - **Browser:** are you in Chrome? Safari and Firefox do not support MIDI.
 - **Permission:** did you click **Allow** on the MIDI permission popup? If you clicked Block, see [No sound or MIDI not detected](/troubleshooting/no-sound/).
 - **Order of operations:** the device must be plugged in **before** the browser opens the synth page. If you plugged in after, close the synth tab and open it again.
-- **Cable:** the device ships with a USB data cable. A charge-only cable looks identical but carries no data — if you are using a different cable, swap in the one from the box.
+- **Cable:** use a known USB data cable. A charge-only cable looks identical but
+  carries no data. If your device came with a cable, try that one; Biotron does
+  not include a USB cable.
 - **Playtron only:** are you holding the pointed corner of the device with bare skin? Without that contact (the ground), Playtron makes no sound at all.
 
 If none of that works, open the [troubleshooting hub](/troubleshooting/hub/), or email [support@playtronica.com](mailto:support@playtronica.com). We read every email.
