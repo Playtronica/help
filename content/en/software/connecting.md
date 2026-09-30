@@ -52,7 +52,11 @@ change device Settings.
   combination, not for “Android” as a whole.
 - Standard iPhone and iPad browsers do not provide the Web MIDI connection used
   by Settings. Configure on a computer, then use the saved configuration in a
-  native iOS music app.
+  native iOS music app. Biotron testers on iOS/iPadOS 17.6 or later may instead
+  try the separate MIDIWeb Browser app using the exact invitation link; see the
+  [Biotron compatibility notes](/devices/biotron/#computer-and-phone-compatibility).
+  That route remains experimental until the exact device, OS, app version, and
+  cable have passed a physical test.
 - Firmware updates are computer-only.
 
 ## Related pages

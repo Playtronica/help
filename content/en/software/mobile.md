@@ -6,12 +6,20 @@ summary: "iOS and Android apps that work with Playtronica devices."
 order: 6
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 50
-status: edited-2026-05
-last_edited: 2026-05-26
+status: edited-2026-09
+last_edited: 2026-09-30
 emoji: 📱
 ---
 
-> ⚠️ **Web MIDI does not work on mobile browsers.** Web MIDI is not supported on iOS or Android browsers. Use the apps listed below instead.
+> ⚠️ **Start with a native MIDI app.** Standard iPhone and iPad browsers cannot
+> connect to a Playtronica device through Web MIDI. Android Chrome and the
+> separate MIDIWeb Browser app on iOS have experimental Biotron Settings paths,
+> but neither is supported for every phone, OS, cable, and device combination.
+> Use the apps below for the reliable mobile playing route.
+
+The mobile Settings exceptions are documented on the
+[Biotron page](/devices/biotron/#computer-and-phone-compatibility). Firmware
+updates still require a computer.
 
 ## Adapters you will need (not in the box)
 
@@ -95,7 +103,8 @@ We try to keep these app links current. Apps come and go; storefronts change URL
 
 ## Related pages
 
-- [Online synths](/software/online-synths/) — synth.playtronica.com works in mobile browsers too.
+- [Online synths](/software/online-synths/) — the primary browser-synth route is
+  current Chrome or Edge on a computer; use the native apps above on mobile.
 - [Connect your device](/software/connecting/) — adapter and cable choices for iPhone, iPad, and Android.
 - [Accessories](/getting-started/accessories/) — iPhone Lightning adapter, USB-C to C cable.
 

@@ -6,8 +6,8 @@ summary: "From box to first sound, in five minutes."
 order: 2
 segment: ["gift-recipient", "music-producer"]
 deflection_target: 100
-status: edited-2026-06
-last_edited: 2026-06-27
+status: edited-2026-09
+last_edited: 2026-09-30
 emoji: 🔌
 ---
 
@@ -15,7 +15,11 @@ These instructions take about five minutes. Find your device below and follow th
 
 > 🔌 **Two things before you start:**
 > - **Your device sends MIDI — it makes no sound on its own.** You open a free web instrument (like [dotpiano.com](https://dotpiano.com/)) and *that* makes the sound. The steps below show you how.
-> - **Use a computer, not a phone.** Web MIDI does not work in any mobile browser — iPhone, Android, or iPad. For phones and tablets, see [Mobile apps](/software/mobile/).
+> - **Use a computer for this five-minute web route.** Current Chrome or Edge
+>   on a computer is the primary tested path. Phones and tablets work reliably
+>   with native MIDI apps; browser Settings routes are device-specific and
+>   still experimental. See [Mobile apps](/software/mobile/) or the device's
+>   own compatibility section before trying a phone browser.
 
 **Not sure which device you have?** [Find it here — with photos](/getting-started/which-device/). Choosing between devices? See the [comparison page](/devices/compare/).
 
