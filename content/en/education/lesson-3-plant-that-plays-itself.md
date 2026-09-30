@@ -6,8 +6,8 @@ summary: "Grades 3-8. Cross-curricular biology + music. Students set up Biotron 
 segment: ["education"]
 deflection_target: 0
 order: 3
-status: new-2026-05
-last_edited: 2026-05-27
+status: edited-2026-09
+last_edited: 2026-09-30
 hide_from_nav: true
 emoji: 🌿
 grade_band: "3-8"
@@ -111,7 +111,9 @@ Close with the Essential Question: "If we measured a different thing — say, br
 ## Teacher Notes
 
 - Snake plants are quiet but resonant. Aloe is barely audible. Pothos is reliable. Monstera is showy.
-- The plant takes about 90 seconds to calibrate when you first plug Biotron in — quiet during that time is normal, don't panic.
+- Leave the setup untouched and allow up to 30 seconds for Biotron to calibrate
+  when you first plug it in. The exact cue depends on the firmware, so quiet
+  during this step is not by itself a fault.
 - Bio-electric signals are not dangerous. Voltages are millivolts — far below anything you'd feel. Reassure anxious parents in advance with a one-paragraph note.
 - The plant doesn't get harmed by Biotron. Leaf-pads don't pierce the leaf. Reusable.
 

@@ -52,7 +52,10 @@ These instructions take about five minutes. Find your device below and follow th
 1. **Plug both leaf-pad cables into Biotron.** The pads come on cables — push each connector onto the leaf-pad pins on the board. Both have to be connected: a single pad on its own produces no signal.
 2. **Clip both leaf-pads to a houseplant.** Use different leaves or different points on the same branch. The pads must not touch each other.
 3. **Plug Biotron into your computer with a USB cable.**
-4. **Move away from the plant and wait 30 seconds.** Biotron calibrates to the plant's baseline signal during this time — standing close would interfere with the reading. You will hear two short calibration tones, and the LED will pulse slowly once it is ready.
+4. **Move away from the plant and allow up to 30 seconds.** Biotron calibrates
+   to the plant's baseline signal during this time, so leave the setup untouched.
+   The exact sound and LED cue depends on the firmware; wait until calibration
+   finishes and normal plant notes begin.
 5. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/), or use our own [synth.playtronica.com](https://synth.playtronica.com). Click **Allow** on the MIDI permission popup.
 6. **Listen.** The plant is now playing. You can also touch a leaf, change the room lighting, or move your hand near the plant — each changes the signal.
 

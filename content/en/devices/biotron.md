@@ -7,7 +7,7 @@ order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
 status: edited-2026-09
-last_edited: 2026-09-26
+last_edited: 2026-09-30
 emoji: 🌿
 ---
 
@@ -32,6 +32,11 @@ emoji: 🌿
 > channels, and those channels are configurable in Settings. Choose **All
 > channels** for the first DAW test. MIDI itself is not audio, so choose a
 > synth or instrument track to hear it.
+
+> 💡 **Light notes are muted in the default preset.** To test the light sensor
+> as a separate MIDI source, open Settings, expand **Light Sensor**, and switch
+> **Mute** off. This setting is unrelated to USB Port 2; the two USB ports are
+> not separate plant and light channels.
 
 ## Know the board
 
