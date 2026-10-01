@@ -30,7 +30,7 @@ The minimum gear for each device:
 
 - **TouchMe** — TouchMe, the USB cable from the box, a laptop with Chrome. Touch the pads.
 - **Playtron** — Playtron, the USB cable from the box, at least **2 alligator clips** (in the box), a laptop. Clip the wires to fruit, water, or a friend.
-- **Biotron** — Biotron, a USB cable, leaf-pads (in the box), a houseplant, a laptop. The plant plays.
+- **Biotron** — Biotron, a USB cable, the two contacts (in the box), a houseplant, a laptop. The plant plays.
 - **Orbita** — Orbita, the USB cable from the box, a laptop. Self-playing sequencer.
 - **Scales** — Scales, a USB cable, a laptop, and one or more objects to place on the plate.
 

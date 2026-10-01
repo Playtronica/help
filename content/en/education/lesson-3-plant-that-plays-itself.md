@@ -56,7 +56,7 @@ If we changed what we measure, would every living thing have a "song"?
 - One leafy houseplant per Biotron — pothos, monstera, philodendron, or a basil plant from the cafeteria.
 - Laptop with browser piano per group.
 - Worksheet: "What did you change? What did you hear?" (provided in PDF download).
-- **Teacher prep (10 min):** Water plants 30 minutes before class (dry plants give weak signal). Clip leaf-pads to one leaf on each Biotron. Volume up to *quiet*, not loud — the plant's voice rewards listening.
+- **Teacher prep (10 min):** Water plants 30 minutes before class (dry plants give weak signal). Clip the contacts to one leaf on each Biotron. Volume up to *quiet*, not loud — the plant's voice rewards listening.
 
 ## Lesson Procedure
 
@@ -115,7 +115,7 @@ Close with the Essential Question: "If we measured a different thing — say, br
   when you first plug it in. The exact cue depends on the firmware, so quiet
   during this step is not by itself a fault.
 - Bio-electric signals are not dangerous. Voltages are millivolts — far below anything you'd feel. Reassure anxious parents in advance with a one-paragraph note.
-- The plant doesn't get harmed by Biotron. Leaf-pads don't pierce the leaf. Reusable.
+- The plant doesn't get harmed by Biotron. The contacts don't pierce the leaf. Reusable.
 
 ---
 

@@ -49,8 +49,8 @@ These instructions take about five minutes. Find your device below and follow th
 
 > **How it works:** Biotron measures the bio-electrical signals inside a living plant. The plant generates the music. Your job is to set up the circuit and wait for calibration.
 
-1. **Plug both leaf-pad cables into Biotron.** The pads come on cables — push each connector onto the leaf-pad pins on the board. Both have to be connected: a single pad on its own produces no signal.
-2. **Clip both leaf-pads to a houseplant.** Use different leaves or different points on the same branch. The pads must not touch each other.
+1. **Plug both contact cables into Biotron.** The two contacts come on cables with Dupont connectors — push each connector onto the contact pins on the board. Both have to be connected: a single contact on its own produces no signal.
+2. **Clip the two contacts to a houseplant.** Use different leaves or different points on the same branch. The contacts must not touch each other.
 3. **Plug Biotron into your computer with a USB cable.**
 4. **Move away from the plant and allow up to 30 seconds.** Biotron calibrates
    to the plant's baseline signal during this time, so leave the setup untouched.

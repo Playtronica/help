@@ -65,6 +65,10 @@ def main() -> int:
     reset = (ROOT / "content/en/troubleshooting/firmware-reset.md").read_text()
     biotron_top = ASSETS / "biotron/biotron-top.svg"
     biotron_top_text = biotron_top.read_text()
+    if "CONTACT PINS" not in biotron_top_text or "contact cables" not in biotron_top_text:
+        fail("Biotron overview must name the connection as CONTACT PINS and contact cables", errors)
+    if re.search(r"leaf[- _]?pads?|leaf[- _]?probes?|plant[- _]?pads?|leaf clip", biotron_top_text, re.IGNORECASE):
+        fail("Biotron overview still contains a legacy contact term", errors)
     if 'data-role="boot-contact-bracket"' not in biotron_top_text:
         fail("Biotron overview must point to BOOT contacts without covering them", errors)
     if 'class="marker-text"' in biotron_top_text:

@@ -27,6 +27,19 @@ def article(html: str, label: str, errors: list[str]) -> str:
 
 def main() -> int:
     errors: list[str] = []
+    legacy_contact_terms = re.compile(
+        r"leaf[- _]?pads?|leaf[- _]?probes?|plant[- _]?pads?|leaf clip",
+        re.IGNORECASE,
+    )
+    for path in [
+        *sorted((ROOT / "content").rglob("*")),
+        *sorted((ROOT / "public/illustrations").rglob("*.svg")),
+        ROOT / "docs/AI-SEO.md",
+    ]:
+        if path.is_file() and legacy_contact_terms.search(
+            path.read_text(encoding="utf-8", errors="replace")
+        ):
+            errors.append(f"legacy Biotron contact term remains in {path.relative_to(ROOT)}")
     require(OUT / "_pagefind/pagefind.js", errors)
     fallback_index = json.loads(require(ROOT / "public/search-index.json", errors) or "[]")
     searchable_sources = 0
@@ -75,6 +88,8 @@ def main() -> int:
 
     required_biotron = [
         "task-grid",
+        "contact cables",
+        "CONTACT PINS",
         "not permission to bridge contacts",
         "/software/biotron-offline-settings/",
     ]

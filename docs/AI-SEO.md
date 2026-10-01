@@ -15,7 +15,7 @@ Every Markdown page in `content/en/` has frontmatter that drives meta tags:
 title: "Biotron — your plant as a MIDI instrument"
 slug: biotron
 section: devices
-summary: "Clip the leaf-pads to a houseplant and let it play itself."
+summary: "Clip the two contacts to a houseplant and let it play itself."
 order: 3
 emoji: 🌿
 ---

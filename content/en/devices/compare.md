@@ -58,13 +58,13 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 |---|---|---|---|---|---|
 | **What it senses** | Skin conductivity between two gold pads | Conductivity through 16 alligator clips | Bio-signals from a plant + ambient light | Coloured magnets passing under a sensor on a rotating disc | Weight on a load cell (0–3 kg) |
 | **Plays itself?** | No | No | Yes — the plant plays | Yes — the motor plays | No |
-| **Inputs** | 2 touch pads | 16 alligator-clip pins + ground | 2 leaf-pad probes + light sensor | 4 magnetic tracks, central encoder, side buttons | 1 weight plate + 3 buttons |
+| **Inputs** | 2 touch pads | 16 alligator-clip pins + ground | 2 contacts on cables + light sensor | 4 magnetic tracks, central encoder, side buttons | 1 weight plate + 3 buttons |
 | **Polyphony** | Up to 12 notes | Up to 16 simultaneous notes | 2 channels (plant + light) | Up to 4 tracks of mono | 1 note at a time (5 modes) |
 | **Output** | USB MIDI (class-compliant) | USB MIDI | USB MIDI | USB MIDI + 5-pin MIDI DIN | USB MIDI |
 | **Power** | USB | USB | USB | USB | USB |
 | **Needs grounding?** | No | Yes — hold the pointed corner | No | No | No |
 | **Needs a sound source?** | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW |
-| **Form factor** | Credit-card-sized PCB with gold pads | Long PCB, 16 pin row + ground | Black PCB, 2 probe sockets, light sensor | Round disc with central encoder | Flat plate with buttons and LEDs |
+| **Form factor** | Credit-card-sized PCB with gold pads | Long PCB, 16 pin row + ground | Black PCB, 2 contact sockets, light sensor | Round disc with central encoder | Flat plate with buttons and LEDs |
 | **Web settings page** | [touchme](https://settings.playtronica.com/#/touchme) | [playtron](https://settings.playtronica.com/#/playtron) | [biotron](https://settings.playtronica.com/#/biotron) | [orbita](https://settings.playtronica.com/#/orbita) | No |
 | **Firmware updatable** | Yes (BOOT pin + .uf2) | Yes | Yes | Yes | Yes |
 | **Price (from)** | €92.93 | €101.64 | €110.00 | €494.76 | TBA — coming soon |
@@ -78,7 +78,7 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 |---|---|---|
 | **TouchMe** | USB-C to A, 1 m | Nothing else — the device is the instrument |
 | **Playtron** | USB-C to A, 1 m | 8 alligator-clip cables |
-| **Biotron** | **Not included** — buy a [USB-C cable](https://shop.playtronica.com/products/usb-c-cable-1m) if you do not have one | 2 leaf-pad probes on cables |
+| **Biotron** | **Not included** — buy a [USB-C cable](https://shop.playtronica.com/products/usb-c-cable-1m) if you do not have one | 2 contacts on cables |
 | **Orbita** | USB-C to A, 1 m | A set of coloured magnets |
 | **Scales** | **Not included** — buy a [USB-C cable](https://shop.playtronica.com/products/usb-c-cable-1m) if you do not have one | Three colour variants; the plate is the instrument |
 

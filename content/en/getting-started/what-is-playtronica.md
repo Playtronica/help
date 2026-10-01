@@ -20,7 +20,7 @@ There are five devices:
 
 - **TouchMe** — touch two gold pads with bare skin. Notes play. The simplest device.
 - **Playtron** — clip alligator wires to anything that conducts electricity (fruit, water, foil, skin). Touch the object to play.
-- **Biotron** — clip leaf-pads to a houseplant. The plant plays the music.
+- **Biotron** — clip the two contacts to a houseplant. The plant plays the music.
 - **Orbita** — a round device with a motor. It plays a step sequence by itself.
 - **Scales** — place an object on the plate. Heavier objects play higher notes.
 
