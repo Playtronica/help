@@ -6,8 +6,8 @@ summary: "Install the Biotron Settings beta once in Chrome or Edge, then reopen 
 order: 8
 segment: ["music-producer", "creator"]
 deflection_target: 55
-status: edited-2026-09
-last_edited: 2026-09-26
+status: edited-2026-10
+last_edited: 2026-10-01
 emoji: 📴
 ---
 
@@ -29,7 +29,7 @@ downloads. It does not need internet each time you configure or play Biotron.
 <ol class="steps">
   <li><strong>Close Reaper, MIDI-OX and other MIDI apps.</strong></li>
   <li><strong>Open the exact private Biotron Settings beta URL from your test invitation in current Chrome or Edge.</strong> Each accepted candidate has a visible build revision; do not reuse an older saved beta link.</li>
-  <li><strong>Connect one Biotron and allow MIDI device access.</strong></li>
+  <li><strong>Connect one Biotron and allow MIDI device access.</strong> If Settings offers more than one entry, choose the main device, normally named simply <strong>Biotron</strong>. Do not choose <code>MIDIIN2</code>, <code>MIDIOUT2</code>, or <strong>Biotron Port 2</strong> in Settings.</li>
   <li><strong>Wait for the green “Offline mode is ready” message.</strong> Do not disconnect the network before it appears.</li>
   <li><strong>Install the page from the browser address bar.</strong> If no install icon appears, use Chrome's menu → <strong>Cast, save and share → Install page as app</strong>, or Edge's menu → <strong>More tools → Apps → Install this site as an app</strong>.</li>
 </ol>
@@ -59,8 +59,8 @@ Windows may allow only one application to use a MIDI port at a time.
 
 <ol class="steps">
   <li>In Settings choose <strong>Release device for DAW</strong>.</li>
-  <li>Open Reaper or Ableton and enable a Biotron MIDI input or output.</li>
-  <li>If Windows lists two Biotron ports, do not treat them as plant and light channels. Use the port the DAW opens; choose MIDI channel 1 for incoming plant-setting CC.</li>
+  <li>Open Reaper or Ableton. To receive Biotron notes, enable the main <strong>Biotron</strong> MIDI input. Enable an output only if you intend to send settings CC back to Biotron.</li>
+  <li>If Windows lists two Biotron outputs, do not treat them as plant and light channels. For incoming plant-setting CC, use the output the DAW opens and choose MIDI channel 1.</li>
   <li>Before returning to Settings, close the Biotron port in the DAW, then choose <strong>Reconnect settings</strong>.</li>
 </ol>
 

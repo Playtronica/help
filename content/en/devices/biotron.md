@@ -6,8 +6,8 @@ summary: "Connect a plant, hear the first notes, then choose Settings, offline u
 order: 3
 segment: ["music-producer", "creator"]
 deflection_target: 70
-status: edited-2026-09
-last_edited: 2026-09-30
+status: edited-2026-10
+last_edited: 2026-10-01
 emoji: 🌿
 ---
 
@@ -55,10 +55,16 @@ sensitivity, scale, note range, buttons, and MIDI behaviour.
 
 <ol class="steps">
   <li>Close your DAW and other MIDI apps.</li>
-  <li>Open Settings in desktop Chrome or Edge and select one Biotron.</li>
+  <li>Open Settings in desktop Chrome or Edge and choose the main device entry, normally named simply <strong>Biotron</strong>. If the browser also offers <code>MIDIIN2</code>, <code>MIDIOUT2</code>, or <strong>Biotron Port 2</strong>, leave that secondary entry unselected in Settings. It is a second USB MIDI port, not the light sensor.</li>
   <li>Change a setting and send it to the device.</li>
   <li>Close Settings before opening the same MIDI port in a DAW.</li>
 </ol>
+
+This selection rule is specific to Settings. After Settings releases the
+device, use the main Biotron input to receive notes in a DAW. When sending an
+occasional incoming CC command from the DAW to firmware 1.9.8, either Biotron
+output can accept it. See [Biotron MIDI and CC](/software/biotron-midi-cc/) for
+that separate route.
 
 Need it at a venue without internet? Follow the
 [offline Windows guide](/software/biotron-offline-settings/). Prepare and

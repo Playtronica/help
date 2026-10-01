@@ -5,8 +5,8 @@ section: software
 summary: "Receive plant MIDI, test experimental incoming CC, connect Reaper or iPad, and power a hardware-synth setup."
 segment: ["music-producer", "creator"]
 deflection_target: 25
-status: edited-2026-09
-last_edited: 2026-09-26
+status: edited-2026-10
+last_edited: 2026-10-01
 emoji: 🎹
 ---
 
@@ -29,6 +29,14 @@ Biotron sends standard MIDI over USB:
 > On Windows, names such as **Biotron**, **Biotron 2**, `MIDIIN2` or
 > `MIDIOUT2` identify the device's two USB MIDI ports. They are not the plant
 > and light channels.
+
+To receive Biotron notes, use the main **Biotron** MIDI input. The firmware
+sends musical notes on that main port; the second port is not a separate light
+or plant-note stream.
+
+> This section describes DAW routing. In Playtronica Settings, choose the main
+> device entry, normally named simply **Biotron**; do not choose `MIDIIN2`,
+> `MIDIOUT2`, or **Biotron Port 2** there.
 
 Enable Biotron as a MIDI input, arm an instrument track, and choose all
 channels for the first test. MIDI carries control data, not sound; the track

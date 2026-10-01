@@ -92,6 +92,7 @@ def main() -> int:
         "CONTACT PINS",
         "not permission to bridge contacts",
         "/software/biotron-offline-settings/",
+        "use the main Biotron input to receive notes",
     ]
     for marker in required_biotron:
         if marker not in biotron:
@@ -99,6 +100,10 @@ def main() -> int:
 
     if "MIDI Clock is not required for CC" not in offline:
         errors.append("offline/DAW build is missing the MIDI Clock/CC boundary")
+    if "To receive Biotron notes, use the main" not in midi:
+        errors.append("Biotron MIDI build does not identify the main note input")
+    if "accepts incoming CC on either Biotron USB output" not in midi:
+        errors.append("Biotron MIDI build does not distinguish CC output routing")
     if "Wait for revision confirmation" not in reset or "biotron-boot-area.svg" not in reset:
         errors.append("firmware reset build is missing the Biotron revision gate")
     if "facebook.com/groups/playtronica" in biotron or "facebook.com/groups/playtronica" in reset:
