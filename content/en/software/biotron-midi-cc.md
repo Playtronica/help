@@ -14,7 +14,7 @@ emoji: 🎹
   <a class="task-card" href="#biotron-to-your-daw"><span class="task-card__icon">🌿</span><span><strong>Biotron → DAW</strong><small>Receive notes and plant CC90.</small></span></a>
   <a class="task-card" href="#your-daw-to-biotron"><span class="task-card__icon">🎚</span><span><strong>DAW → Biotron</strong><small>Test incoming settings commands carefully.</small></span></a>
   <a class="task-card" href="#use-an-ipad"><span class="task-card__icon">📱</span><span><strong>Use an iPad</strong><small>Play instruments without opening Settings.</small></span></a>
-  <a class="task-card" href="#use-a-hardware-synth"><span class="task-card__icon">🎛</span><span><strong>Use a hardware synth</strong><small>Send TRS MIDI and power Biotron separately.</small></span></a>
+  <a class="task-card" href="#use-a-hardware-synth"><span class="task-card__icon">🎛</span><span><strong>Use a hardware synth</strong><small>Route Biotron's USB MIDI through a host if the synth has only DIN MIDI input.</small></span></a>
 </div>
 
 ## Biotron to your DAW
@@ -159,16 +159,18 @@ computer and restore them there.
 
 ## Use a hardware synth
 
-The TRS MIDI cable carries MIDI data but does not power Biotron.
+Biotron outputs USB MIDI. It does **not** have a TRS or 5-pin DIN MIDI output.
+Do not buy a passive USB-to-DIN or TRS cable for this connection.
 
 <ol class="steps">
-  <li>Connect Biotron's TRS output to the synth's MIDI input.</li>
-  <li>Power Biotron from a standard 5 V USB adapter or battery pack.</li>
-  <li>Power on the synth, then touch the plant.</li>
+  <li>If the synth has a verified USB <em>host</em> input for class-compliant MIDI controllers, connect Biotron to that host with a USB data cable.</li>
+  <li>If the synth has only a 5-pin MIDI input, use a powered USB-MIDI host interface with a 5-pin MIDI output between Biotron and the synth.</li>
+  <li>Match the synth's receive channel to Biotron's output channel and test the exact combination before relying on it for a performance.</li>
 </ol>
 
-Biotron uses **TRS MIDI Type A**. If the synth expects Type B, use a Type A to
-Type B adapter.
+This is a wiring route, not a compatibility guarantee for a particular host
+interface or Biotron hardware revision. Tell support the exact synth and host
+interface models if you need help checking them.
 
 ## Quick self-test
 
