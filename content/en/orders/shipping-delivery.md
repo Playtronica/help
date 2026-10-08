@@ -27,7 +27,7 @@ We ship globally from two fulfilment centres:
 | 🇬🇧 United Kingdom | Floship Hong Kong | 5–10 business days | €100 |
 | 🇺🇸 United States | Floship Hong Kong | 7–14 business days | €100 |
 | 🇨🇦 Canada | ShipBob Netherlands (express) | 3–7 business days | €100 |
-| 🇮🇱 Israel / 🇬🇪 Georgia | Floship Hong Kong | 5–10 business days | €100 |
+| 🇮🇱 Israel / 🇬🇪 Georgia | ShipBob Netherlands | 5–10 business days | €100 |
 | 🌏 Asia Pacific | Floship Hong Kong | 5–10 business days | €100 |
 | 🌍 Rest of the world (including Switzerland and Norway) | Floship Hong Kong | 7–21 business days | Varies |
 
