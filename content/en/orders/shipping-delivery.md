@@ -16,7 +16,7 @@ All orders ship within **1–2 business days** from one of two fulfilment centre
 
 We ship globally from two fulfilment centres:
 
-- **Netherlands (ShipBob NL)** — for the EU and Canada, and for Orbita and Scales orders to any country. Carriers: UPS, DHL, PostNL.
+- **Netherlands (ShipBob NL)** — for the EU and Canada, for Orbita orders to any country, and for Scales (EU, Canada and a few other destinations). Carriers: UPS, DHL, PostNL.
 - **Hong Kong (Floship)** — for the US, the UK, Switzerland, Norway, Asia Pacific, and the rest of the world. Carriers: DHL, FedEx.
 
 ## Delivery times by region
@@ -31,7 +31,7 @@ We ship globally from two fulfilment centres:
 | 🌏 Asia Pacific | Floship Hong Kong | 5–10 business days | €100 |
 | 🌍 Rest of the world (including Switzerland and Norway) | Floship Hong Kong | 7–21 business days | Varies |
 
-**Exception:** Orbita and Scales always ship from the Netherlands (ShipBob), including to the US.
+**Exceptions:** Orbita always ships from the Netherlands (ShipBob), including to the US. Scales ships only from the Netherlands — to EU countries, Canada and a few other destinations.
 
 ## Processing time
 

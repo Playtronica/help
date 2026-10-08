@@ -19,7 +19,7 @@ Two carriers ship Playtronica orders:
 - **EU orders** ship from the Netherlands with **ShipBob**. Typical delivery: **3 to 7 business days** after shipment.
 - **Orders to the US, the UK, Asia-Pacific, and the rest of the world** ship from Hong Kong with **Floship**. Typical delivery: **7 to 14 business days** for the US, **5 to 10 business days** for Asia-Pacific.
 - **Orders to Canada** ship from the Netherlands with express delivery. Typical delivery: **3 to 7 business days**.
-- **Exception:** Orbita and Scales always ship from the Netherlands (ShipBob), including to the US.
+- **Exceptions:** Orbita always ships from the Netherlands (ShipBob), including to the US. Scales ships only from the Netherlands — to EU countries, Canada and a few other destinations.
 
 Your shipping confirmation email shows the exact carrier and tracking.
 
