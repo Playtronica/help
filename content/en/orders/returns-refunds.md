@@ -9,7 +9,7 @@ segment: ["gift-recipient", "music-producer"]
 deflection_target: 170
 order: 3
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-13
 emoji: ↩️
 ---
 
@@ -18,6 +18,8 @@ You have **30 days** from the delivery date to return any Playtronica device for
 - **Unused**
 - In **original condition**
 - In **original packaging**, with all cables and accessories included
+
+Return shipping is paid by you, unless the device arrived defective or we sent the wrong item.
 
 ## How to start a return
 
