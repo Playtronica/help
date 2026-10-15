@@ -105,7 +105,8 @@ const siteJsonLd = {
       url: "https://playtronica.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://playtronica.com/favicon.png",
+        // playtronica.com/favicon.png answers 402; the shop CDN copy is live.
+        url: "https://shop.playtronica.com/cdn/shop/files/Playtronica_logo.378x196.png",
       },
       sameAs: [
         "https://www.instagram.com/playtronica",

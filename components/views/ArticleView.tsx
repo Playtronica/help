@@ -25,7 +25,7 @@ function buildArticleJsonLd(p: Page, lang: Lang) {
       "@type": "Organization",
       name: "Playtronica",
       url: "https://playtronica.com",
-      logo: { "@type": "ImageObject", url: "https://playtronica.com/favicon.png" },
+      logo: { "@type": "ImageObject", url: "https://shop.playtronica.com/cdn/shop/files/Playtronica_logo.378x196.png" },
     },
     license: "https://creativecommons.org/licenses/by/4.0/",
   };

@@ -101,3 +101,26 @@
 /contact                        /site/contact/                          301
 /support                        /site/contact/                          301
 /help                           /                                       301
+
+# Old Super.so sub-pages and renamed slugs — GA4 BigQuery 2026-08-16..10-14
+# logged each as "Page not found". Specific rules first, folder splats last.
+/daws/koala-app                 /software/mobile/                       301
+/daws/how-to-play-the-bells-synth-at-playtronica-sampler-1 /software/online-synths/ 301
+/quick-start                    /getting-started/your-first-5-minutes/  301
+/connecting-devices             /software/connecting/                   301
+/how-touchme-and-playtron-are-different /devices/compare/               301
+/sound/objects-you-cant-play    /sound/objects-you-can-play/            301
+/sound/objects-you-cant-play/   /sound/objects-you-can-play/            301
+/ableton/*                      /software/ableton/                      301
+/daws/*                         /software/fl-studio-and-other-daws/     301
+/mobile/*                       /software/mobile/                       301
+
+# Broken language links already out in the wild (bookmarks, crawlers).
+# The bugs that made them are fixed in LanguageBanner.tsx and lib/content.ts.
+/:lang/vices/*                  /:lang/devices/:splat                   301
+/:lang/illustrations/*          /illustrations/:splat                   301
+/:lang/education/pilot/         /education/pilot/                       301
+/:lang/education/quote/         /education/quote/                       301
+/:lang/education/curriculum/    /education/curriculum/                  301
+/:lang/education/standards/     /education/standards/                   301
+/:lang/education/playtronica-lesson-1.pdf /education/playtronica-lesson-1.pdf 301
