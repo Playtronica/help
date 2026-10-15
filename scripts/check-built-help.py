@@ -25,6 +25,25 @@ def article(html: str, label: str, errors: list[str]) -> str:
     return match.group(1)
 
 
+def broken_internal_links() -> list[str]:
+    """Every root-relative href in a built page must hit a built file.
+
+    GA4 caught readers landing on /es/illustrations/…svg and /fr/education/pilot/
+    — links the build itself had rewritten into 404s.
+    """
+    missing: dict[str, str] = {}
+    for page in OUT.rglob("*.html"):
+        html = page.read_text(encoding="utf-8", errors="replace")
+        for href in re.findall(r'href="(/[^"/][^"]*|/)"', html):
+            path = re.split(r"[?#]", href)[0]
+            if path.startswith("/api/") or path in missing:
+                continue
+            target = OUT / path.lstrip("/")
+            if not (target.is_file() or (target / "index.html").is_file()):
+                missing[path] = str(page.relative_to(OUT))
+    return [f"{page} links to missing {path}" for path, page in sorted(missing.items())]
+
+
 def main() -> int:
     errors: list[str] = []
     require(OUT / "_pagefind/pagefind.js", errors)
@@ -96,6 +115,8 @@ def main() -> int:
     for font_url in re.findall(r'url\(["\']?(/fonts/[^)"\']+)', css):
         if not (OUT / font_url.lstrip("/")).is_file():
             errors.append(f"built CSS requests missing font: {font_url}")
+
+    errors.extend(broken_internal_links())
 
     if errors:
         print("Built Help checks failed:\n- " + "\n- ".join(errors))

@@ -25,7 +25,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { LANG_CODES, LANGUAGES, langFromPath, localizedPath, type Lang } from "@/lib/i18n";
+import { LANG_CODES, LANGUAGES, canonicalPath, langFromPath, localizedPath, type Lang } from "@/lib/i18n";
 
 const STORAGE_KEY = "playtronica.lang.preference";
 
@@ -84,7 +84,9 @@ export function LanguageBanner() {
 
   if (!offerLang) return null;
 
-  const targetPath = localizedPath(offerLang, pathname.replace(/^\/(de|es|fr|ja)/, "") || "/");
+  // canonicalPath, not a bare /^\/(de|es|fr|ja)/ strip: that also ate the
+  // "/de" of "/devices/…" and sent readers to /fr/vices/biotron/ (404).
+  const targetPath = localizedPath(offerLang, canonicalPath(pathname));
 
   function remember(choice: "switch" | "stay") {
     try {
