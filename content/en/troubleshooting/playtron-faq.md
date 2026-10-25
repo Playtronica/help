@@ -7,7 +7,7 @@ order: 4
 segment: ["music-producer"]
 deflection_target: 40
 status: edited-2026-05
-last_edited: 2026-07-06
+last_edited: 2026-10-25
 emoji: 🍉
 ---
 
@@ -20,12 +20,12 @@ Pin corrosion is the most common physical issue with Playtron. Acidic or wet obj
 
 **Prevention:** wipe the pins and the clip ends dry after every session with acidic or wet objects. Store the device in the pouch if you have one.
 
-## The LED stays on but nothing plays
+## Nothing plays when I touch an object
 
-This is almost always a grounding problem. Two things to check:
+This is almost always a grounding problem. Start with the [Playtron no-sound checklist](/devices/playtron/#if-playtron-is-not-playing). Two things to check:
 
-- Your bare skin is touching the **pointed corner** of the device — that sharp corner is the ground. There must be no clothing or material between your skin and the corner.
-- Or a ground cable runs from the pointed corner to something that touches your skin — the cable end in your hand, a metal ring, a clip on clothing, or a second object you hold. Ground clipped to a radiator or a laptop body does not work: it leaves you outside the circuit.
+- Your bare skin is touching a **gold corner** of the device — the two gold corners are the ground, and either one works. There must be no clothing or material between your skin and the corner.
+- Or a ground cable runs from a gold corner to something that touches your skin — the cable end in your hand, a metal ring, a clip on clothing, or a second object you hold. Ground clipped to a radiator or a laptop body does not work: it leaves you outside the circuit.
 
 If grounding is correct, unplug the USB cable and reconnect it.
 
@@ -49,7 +49,7 @@ Full steps, hub models and the decision table: **[Device will not connect → Ol
 
 The cause is one of three:
 
-- **Grounding is too weak.** Your bare skin is not touching the pointed corner of the device, or the ground cable is not in contact with your skin. Use a palm instead of a fingertip, and slightly damp hands. See [Grounding — how and why](/sound/grounding/).
+- **Grounding is too weak.** Your bare skin is not touching a gold corner of the device, or the ground cable is not in contact with your skin. Use a palm instead of a fingertip, and slightly damp hands. See [Grounding — how and why](/sound/grounding/).
 - **The object is too dry.** Dry fruit and dead plants give weak signals. Add moisture, or use a different object.
 - **The clip contact is poor.** Reposition the alligator clip so the metal teeth grip the object firmly.
 

@@ -7,7 +7,7 @@ order: 2
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 💻
 ---
 
@@ -42,7 +42,7 @@ Every Playtronica device is a class-compliant USB MIDI device. No drivers are re
 ## Related pages
 
 - [Won't connect](/troubleshooting/wont-connect/) — what to try when the device does not show up.
-- [Online synths](/software/online-synths/) — what to play with once the device is connected.
+- [More instruments](/software/online-synths/) — what to play with once the device is connected.
 - [Hardware synths](/software/hardware/) — connecting via 5-pin MIDI DIN instead of USB.
 - [Device settings](https://settings.playtronica.com) — change MIDI channels, sensitivity, scales, and presets. Open in Chrome.
 

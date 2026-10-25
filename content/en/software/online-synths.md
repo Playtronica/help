@@ -1,8 +1,8 @@
 ---
-title: "Online synth library"
+title: "More instruments"
 slug: online-synths
 section: software
-summary: "The web synths that work with TouchMe, Playtron, and Biotron."
+summary: "Web synths for TouchMe, Biotron, and Playtron when you want more sounds. Own a Playtron? Start with Play."
 order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 25
@@ -10,6 +10,8 @@ status: edited-2026-05
 last_edited: 2026-10-25
 emoji: 🎹
 ---
+
+> 🎛️ **Own a Playtron? Start with Play.** [Play](https://play.playtronica.com) is Playtronica's online sampler, made for Playtron. Open it in Chrome (Brave and Edge work too), plug in Playtron, and touch to play. The [Playtron page](/devices/playtron/#quick-start) has the three-step Quick start. The synths on this page are for TouchMe, for Biotron, and for more sounds.
 
 > ℹ️ **The synths at synth.playtronica.com are not made by Playtronica.** They are a curated collection of third-party web synths. Some may stop working as browsers change. We try to keep the list up to date but cannot fix the synths themselves. If you find a broken synth, tell us.
 
@@ -28,7 +30,7 @@ emoji: 🎹
 
 ### 🎹 Dots Piano
 
-The best starting point. Clean sound, responsive, beautiful interface. Works with both TouchMe and Playtron.
+The best starting point among the web synths. Clean sound, responsive, beautiful interface. Works with both TouchMe and Playtron.
 
 ### 🎸 WebSID Commodore 64
 
@@ -42,8 +44,6 @@ Powerful synth. Some users report stability issues. Try it. Skip it if it behave
 
 Any synth without a "Playtron only" label works with both TouchMe and Playtron. Explore — the library has many small gems.
 
-> 🎛️ **play.playtronica.com is back.** Since October 2026 it is Playtronica's own online sampler for Playtron: sound packs made for 16 objects, no installation. Open [play.playtronica.com](https://play.playtronica.com) in Chrome on a computer and plug in Playtron. On a phone or tablet you can play the sounds with the touch screen.
-
 ## Web MIDI and browser support
 
 The web synths talk to your device through **Web MIDI**, a browser feature that lets a web page send and receive MIDI. Not every browser supports it. We recommend **Chrome**. Other Chromium-based browsers (Brave, Edge) also work; Safari and Firefox do not.
@@ -55,7 +55,7 @@ The web synths talk to your device through **Web MIDI**, a browser feature that 
 | Edge | Yes | Chromium-based |
 | Safari | No | No Web MIDI support |
 | Firefox | No | No Web MIDI support |
-| Mobile Chrome and Safari | No | Web MIDI is not available on mobile browsers. Use mobile apps instead — see [Mobile apps](/software/mobile/). |
+| Phone and tablet browsers | Not tested | We have not tested Playtronica devices with web synths on phones or tablets. Use mobile apps instead — see [Mobile apps](/software/mobile/). Play plays with the touch screen. |
 
 ## Ask the community
 

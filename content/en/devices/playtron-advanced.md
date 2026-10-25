@@ -7,7 +7,7 @@ order: 12
 segment: ["music-producer", "b2b"]
 deflection_target: 10
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 🍉
 parent: playtron
 hide_from_nav: true
@@ -46,7 +46,7 @@ Materials to avoid: dry wood, dry plastic, dry stones, paint, and painted cerami
 
 Grounding is the most-misunderstood part of Playtron. The rule never changes: **the ground contact has to touch the player's skin.** Only the form changes.
 
-- **You are the ground.** Bare skin on the pointed corner of the device. The most reliable method for solo play.
+- **You are the ground.** Bare skin on a gold corner of the device. The most reliable method for solo play.
 - **The hidden ground.** Clip the ground cable to a metal ring, a metal wristband, a belt buckle, or the edge of your clothing where it touches skin. Your hands stay free and the cable is invisible from the audience. This is the stage pattern.
 - **A ground surface.** Clip the ground cable to aluminium foil, a metal plate, or copper tape on the plinth. The visitor rests a hand on it or stands on it barefoot. This is the installation pattern when nobody can hold a cable.
 - **A held object.** One object on ground, the rest on the pins. The player takes the ground object in one hand and plays with the other.

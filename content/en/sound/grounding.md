@@ -7,7 +7,7 @@ order: 1
 segment: ["music-producer"]
 deflection_target: 20
 status: rewritten-2026-08
-last_edited: 2026-08-03
+last_edited: 2026-10-25
 emoji: 💡
 ---
 
@@ -24,7 +24,7 @@ This page is mainly for Playtron. TouchMe uses the same principle with its two p
 Picture an electrical circuit with two ends. Both ends have to be connected for current to flow.
 
 - The **16 alligator-clip pins** are one end.
-- The **two golden ground pins on the pointed corner** are the other end.
+- The **two gold ground corners** are the other end.
 
 Touch an object clipped to a pin with one hand, and touch the ground corner — or anything conductive connected to it — with the other hand. The circuit closes through your body and the note plays. Leave the ground side untouched and it is the same as switching off a lamp: nothing flows, nothing sounds.
 
@@ -38,13 +38,13 @@ All five put the ground in contact with your skin. Use whichever fits what you a
 
 {{ youtube: JC2lzwe_NwQ title="Four easy ways to ground your Playtron — Playtronica tutorial" }}
 
-### 1. Bare skin on the pointed corner
+### 1. Bare skin on a gold corner
 
-Hold the pointed corner of Playtron with bare skin — a finger, a palm, the side of your hand. Play objects with the other hand. This needs no accessories and is the most reliable method.
+Hold a gold corner of Playtron with bare skin — a finger, a palm, the side of your hand. Play objects with the other hand. Both gold corners are Ground, so either one works. This needs no accessories and is the most reliable method.
 
 ### 2. Hold a ground cable
 
-Clip an alligator cable to the pointed corner and keep the metal end in your hand. Useful when the device sits far away, on a table or in a rack.
+For more freedom, clip an alligator cable to a gold corner and keep the metal end in your hand. Useful when the device sits far away, on a table or in a rack.
 
 ### 3. Wear the ground
 
@@ -83,7 +83,7 @@ The computer running your DAW makes no difference to any of this. A MacBook, a P
 
 This is the most common wrong turn, so it is worth being exact: **it cannot work, and you do not need it.**
 
-Playtron's ground is already connected to your computer's ground through the USB cable — the USB shield and the chassis are bonded together at the connector. Clipping a wire from the pointed corner to a screw or a port frame connects ground to the same ground it is already on. Nothing changes. And it is the wrong target anyway: what has to be connected to ground is the person playing, not the computer.
+Playtron's ground is already connected to your computer's ground through the USB cable — the USB shield and the chassis are bonded together at the connector. Clipping a wire from a gold corner to a screw or a port frame connects ground to the same ground it is already on. Nothing changes. And it is the wrong target anyway: what has to be connected to ground is the person playing, not the computer.
 
 If you were told to attach a clip to a MacBook, ignore it — do not clip anything to the case or the connectors. Use one of the five methods above, or a ground surface for installations.
 
@@ -139,9 +139,9 @@ Yes. Playtron and TouchMe run on USB low voltage, and the current that passes th
 
 ## Troubleshooting
 
-> **Nothing plays, and the LED never blinks.** The circuit is open. Put bare skin on the pointed corner and touch an object. If the LED blinks, grounding was the problem.
+> **Nothing plays, and the LED never blinks.** The circuit is open. Put bare skin on a gold corner and touch an object. If the LED blinks, grounding was the problem.
 
-> **The LED blinks but there is no sound.** Grounding is fine. Confirm you are using Brave or Chrome, that MIDI permission is allowed, and that the device is selected in the synth. See [No sound or MIDI not detected](/troubleshooting/no-sound/).
+> **The LED blinks but there is no sound.** Grounding is fine. Confirm you are using Chrome (Brave and Edge work too), that MIDI permission is allowed, and that the device is selected in Play or the synth. In Play, **Help & settings → No sound?** runs a check. See [No sound or MIDI not detected](/troubleshooting/no-sound/).
 
 > **TouchMe fires on just one hand.** Earth is leaking in through the mains. Run the host on battery, or add a USB isolator — see the ground-leaking section above.
 

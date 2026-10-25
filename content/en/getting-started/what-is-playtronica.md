@@ -8,7 +8,7 @@ order: 1
 segment: ["gift-buyer", "music-producer"]
 deflection_target: 40
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: ⭐
 ---
 
@@ -24,11 +24,11 @@ There are five devices:
 - **Orbita** — a round device with a motor. It plays a step sequence by itself.
 - **Scales** — place an object on the plate. Heavier objects play higher notes.
 
-Every device works with the music software you probably already have: Ableton, Logic, GarageBand, FL Studio. If you do not have music software, [synth.playtronica.com](https://synth.playtronica.com) is a free browser-based synth that works with every Playtronica device.
+Every device works with the music software you probably already have: Ableton, Logic, GarageBand, FL Studio. If you do not have music software, open [Play](https://play.playtronica.com) for Playtron. For any device, [synth.playtronica.com](https://synth.playtronica.com) is a free browser-based synth.
 
 ## Two things to know first
 
-- You need **Chrome** for the browser synth and our settings tools. Safari and Firefox do not support Web MIDI yet.
+- You need **Chrome** for Play, the browser synth, and our settings tools (Brave and Edge work too). Safari and Firefox do not support Web MIDI yet.
 - Each device is a bare circuit board. It is durable, but the metal pins can corrode if you leave them in contact with wet objects for a long time. Wipe the pins dry after sessions with water or fruit.
 
 ## If you just received one

@@ -8,7 +8,7 @@ segment: ["music-producer", "gift-buyer", "b2b"]
 deflection_target: 90
 order: 4
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 💸
 ---
 
@@ -29,12 +29,12 @@ If both a bundle and its single items are sold out, the next batch usually arriv
 The minimum gear for each device:
 
 - **TouchMe** — TouchMe, the USB cable from the box, a laptop with Chrome. Touch the pads.
-- **Playtron** — Playtron, the USB cable from the box, at least **2 alligator clips** (in the box), a laptop. Clip the wires to fruit, water, or a friend.
+- **Playtron** — Playtron, the USB cable from the box, at least **2 alligator clips** (in the box), a laptop with Chrome. Clip the wires to fruit, water, or a friend.
 - **Biotron** — Biotron, a USB cable, the two contacts (in the box), a houseplant, a laptop. The plant plays.
 - **Orbita** — Orbita, the USB cable from the box, a laptop. Self-playing sequencer.
 - **Scales** — Scales, a USB cable, a laptop, and one or more objects to place on the plate.
 
-You do not need to install software. [synth.playtronica.com](https://synth.playtronica.com) is a free browser-based synth that works with every device.
+You do not need to install software. Playtron plays in your browser with [Play](https://play.playtronica.com). For any device, [synth.playtronica.com](https://synth.playtronica.com) is a free browser-based synth.
 
 ## B2B and bulk orders
 

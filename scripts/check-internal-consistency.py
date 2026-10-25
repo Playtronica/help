@@ -139,6 +139,8 @@ def issues_iter():
                 continue
             if host_path.startswith("synth.playtronica.com"):
                 continue
+            if host_path.startswith("play.playtronica.com"):
+                continue
             if host_path.startswith("shop.playtronica.com"):
                 continue
             if host_path.startswith("playtronica.com"):

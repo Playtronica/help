@@ -7,7 +7,7 @@ order: 4
 segment: ["gift-recipient", "music-producer"]
 deflection_target: 60
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 📦
 ---
 
@@ -15,7 +15,7 @@ emoji: 📦
 
 Every Playtronica device ships in a small cardboard box with the parts the device needs and a quick-start card. No power adapter is included — every device is powered through USB. The cable depends on the device — see below.
 
-You will need a computer with **Chrome** installed to use any Playtronica device with the browser synth.
+You will need a computer with **Chrome** installed to use a Playtronica device in the browser: Play for Playtron, or the browser synth for any device.
 
 ## 👐 TouchMe
 
@@ -25,7 +25,7 @@ You will need a computer with **Chrome** installed to use any Playtronica device
 
 ## 🍉 Playtron
 
-- **Playtron device** — the main PCB with 16 alligator-clip pins and a pointed corner that acts as the ground.
+- **Playtron device** — the main PCB with 16 alligator-clip pins and two gold corners that act as the ground.
 - **USB cable.**
 - **Alligator-clip cables** — usually 8 in the box.
 - **Quick-start card.**

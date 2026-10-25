@@ -7,7 +7,7 @@ order: 3
 segment: ["music-producer"]
 deflection_target: 35
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 🎛️
 ---
 
@@ -24,7 +24,7 @@ emoji: 🎛️
 
 - [Logic and GarageBand](/software/logic-garageband/) — same idea, slightly different setup.
 - [FL Studio and other DAWs](/software/fl-studio-and-other-daws/) — Reaper, Cubase, Studio One, Bitwig, Reason.
-- [Online synths](/software/online-synths/) — browser-based sound sources that need no DAW.
+- [More instruments](/software/online-synths/) — browser-based sound sources that need no DAW.
 
 ## Ask the community
 

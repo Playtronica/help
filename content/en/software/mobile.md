@@ -7,11 +7,11 @@ order: 6
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 50
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 📱
 ---
 
-> ⚠️ **Web MIDI does not work on mobile browsers.** Web MIDI is not supported on iOS or Android browsers. Use the apps listed below instead.
+> ⚠️ **Use a computer for web synths.** We have not tested Playtronica devices with web synths in phone or tablet browsers. Use the apps listed below instead. [Play](https://play.playtronica.com) plays with the touch screen on a phone or tablet.
 
 ## Adapters you will need (not in the box)
 
@@ -95,7 +95,7 @@ We try to keep these app links current. Apps come and go; storefronts change URL
 
 ## Related pages
 
-- [Online synths](/software/online-synths/) — synth.playtronica.com works in mobile browsers too.
+- [More instruments](/software/online-synths/) — web synths to use on a computer.
 - [Connect your device](/software/connecting/) — adapter and cable choices for iPhone, iPad, and Android.
 - [Accessories](/getting-started/accessories/) — iPhone Lightning adapter, USB-C to C cable.
 

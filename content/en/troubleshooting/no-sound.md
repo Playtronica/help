@@ -7,7 +7,7 @@ order: 3
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 200
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 🔇
 ---
 
@@ -22,7 +22,11 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 - **No LED.** Go to [Device will not connect](/troubleshooting/wont-connect/).
 - **LED is on.** Continue below.
 
-## Using the online synth at synth.playtronica.com
+## Using Play with Playtron
+
+Playtron plays through [Play](https://play.playtronica.com). Work through the [Playtron no-sound checklist](/devices/playtron/#if-playtron-is-not-playing); it starts with the Device menu in Play and its **No sound?** check.
+
+## Using a web synth at synth.playtronica.com
 
 1. **Use Chrome.** Safari and Firefox do not support Web MIDI. This is the most common cause of no sound.
 2. **Confirm MIDI permission.** If you clicked Block on the MIDI popup, the browser remembers. Open the browser settings → Site Settings → MIDI → find `synth.playtronica.com` → set to **Allow**.

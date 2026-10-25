@@ -7,7 +7,7 @@ order: 2
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 180
 status: edited-2026-07
-last_edited: 2026-07-11
+last_edited: 2026-10-25
 emoji: 🔌
 ---
 
@@ -19,7 +19,7 @@ If the browser says **denied access to MIDI** or asks for permission every time,
 
 1. **Open browser settings** in Chrome.
 2. **Go to Privacy and Security → Site Settings → MIDI**.
-3. Find `synth.playtronica.com` and `settings.playtronica.com` and change each to **Allow**.
+3. Find `play.playtronica.com`, `synth.playtronica.com` and `settings.playtronica.com` and change each to **Allow**.
 4. **Reload the page.** The device should be detected within two seconds.
 
 If MIDI permission is correctly set to Allow and the device is still not detected, continue below.

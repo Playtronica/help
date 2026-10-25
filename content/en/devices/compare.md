@@ -7,7 +7,7 @@ order: 0
 segment: ["gift-buyer", "music-producer", "b2b"]
 deflection_target: 30
 status: new-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 📊
 ---
 
@@ -62,8 +62,8 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 | **Polyphony** | Up to 12 notes | Up to 16 simultaneous notes | 2 channels (plant + light) | Up to 4 tracks of mono | 1 note at a time (5 modes) |
 | **Output** | USB MIDI (class-compliant) | USB MIDI | USB MIDI | USB MIDI + 5-pin MIDI DIN | USB MIDI |
 | **Power** | USB | USB | USB | USB | USB |
-| **Needs grounding?** | No | Yes — hold the pointed corner | No | No | No |
-| **Needs a sound source?** | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW |
+| **Needs grounding?** | No | Yes — hold a gold corner | No | No | No |
+| **Needs a sound source?** | Yes — synth or DAW | Yes — Play, a synth, or a DAW | Yes — synth or DAW | Yes — synth or DAW | Yes — synth or DAW |
 | **Form factor** | Credit-card-sized PCB with gold pads | Long PCB, 16 pin row + ground | Black PCB, 2 contact sockets, light sensor | Round disc with central encoder | Flat plate with buttons and LEDs |
 | **Web settings page** | [touchme](https://settings.playtronica.com/#/touchme) | [playtron](https://settings.playtronica.com/#/playtron) | [biotron](https://settings.playtronica.com/#/biotron) | [orbita](https://settings.playtronica.com/#/orbita) | No |
 | **Firmware updatable** | Yes (BOOT pin + .uf2) | Yes | Yes | Yes | Yes |
@@ -94,7 +94,7 @@ Every device is class-compliant USB MIDI — they appear as a MIDI device to any
 | Device | macOS | Windows | iOS / iPadOS | Android | Best apps |
 |---|---|---|---|---|---|
 | **TouchMe** | ✅ | ✅ | ✅ (Lightning or USB-C) | ✅ | [Koala](https://www.koalasampler.com/), [GarageBand](/software/logic-garageband/), [synth.playtronica.com](https://synth.playtronica.com) |
-| **Playtron** | ✅ | ✅ | ✅ | ✅ | [Ableton](/software/ableton/), [Koala](https://www.koalasampler.com/), DAWs, hardware synths |
+| **Playtron** | ✅ | ✅ | ✅ | ✅ | [Play](https://play.playtronica.com), [Ableton](/software/ableton/), [Koala](https://www.koalasampler.com/), DAWs, hardware synths |
 | **Biotron** | ✅ | ✅ | ✅ | ✅ | [synth.playtronica.com](https://synth.playtronica.com), Ableton, plant-music apps |
 | **Orbita** | ✅ | ✅ | ✅ | ✅ | Any DAW, sampler app, hardware synth via 5-pin DIN |
 | **Scales** | ✅ | ✅ | ✅ | ✅ | Any CoreMIDI app, DAWs |

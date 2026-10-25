@@ -7,7 +7,7 @@ order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
 status: edited-2026-05
-last_edited: 2026-08-26
+last_edited: 2026-10-25
 emoji: 🔧
 ---
 
@@ -18,7 +18,7 @@ Pick the symptom that matches your situation. Each row points to the right page 
 | Computer does not see the device at all | Wrong cable, wrong port, wrong browser | [Device will not connect](/troubleshooting/wont-connect/) |
 | Old **Micro-USB** TouchMe/Playtron — nothing on a new Mac | New Mac is too strict; needs a USB hub | [Device will not connect](/troubleshooting/wont-connect/) |
 | LED on, but no sound when I touch | MIDI permission, wrong browser, no grounding | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
-| Playtron specifically — plugged in but silent | Grounding | [Grounding — how and why](/sound/grounding/) |
+| Playtron specifically — plugged in but silent | Play check, then grounding | [If Playtron is not playing](/devices/playtron/#if-playtron-is-not-playing) |
 | Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
 | USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
 | Some objects play, others do not | Conductivity | [Objects you can play](/sound/objects-you-can-play/) |
@@ -29,9 +29,9 @@ Pick the symptom that matches your situation. Each row points to the right page 
 Work through these in order. They resolve most issues without needing the deeper pages.
 
 1. **Use Chrome.** Safari and Firefox do not support Web MIDI. This is the single most common reason a Playtronica device appears to not work.
-2. **Plug in the device, then open the browser.** The browser scans for MIDI devices on page load. If the browser is already open, the device will not be detected.
+2. **Plug in the device, then open the browser.** Web synths scan for MIDI devices on page load; if the page was already open, reload it. Play also detects Playtron when you plug it in later.
 3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
-4. **For Playtron, confirm grounding.** Bare skin on the pointed corner of the device, or a ground cable that touches your skin. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/).
+4. **For Playtron, confirm grounding.** Bare skin on a gold corner of the device, or a ground cable that touches your skin. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/). For all Playtron checks, use the [Playtron checklist](/devices/playtron/#if-playtron-is-not-playing).
 5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
 6. **Use a USB port directly on the computer, not a hub** — *except* an old Micro-USB TouchMe or Playtron on a new Mac, which often needs a hub. See [Device will not connect](/troubleshooting/wont-connect/).
 

@@ -7,7 +7,7 @@ segment: ["education"]
 deflection_target: 0
 order: 2
 status: new-2026-05
-last_edited: 2026-05-27
+last_edited: 2026-10-25
 hide_from_nav: true
 emoji: 🍉
 grade_band: "3-5"
@@ -54,7 +54,7 @@ How does the same idea of "melody" survive when the instrument is a banana?
 - One Playtron per group of 4 students (plan for 7-8 groups in a 30-student class — see Class Pack 30 bundle).
 - 6-10 fruits per group: bananas, apples, lemons, oranges, pears, kiwis.
 - Alligator clips (Playtron ships with 8; for full pin coverage use the [10 extra alligator clips](https://shop.playtronica.com/products/10-extra-alligator-clips) accessory).
-- Browser piano open in Chrome on each group's laptop or tablet.
+- [Play](https://play.playtronica.com) open in Chrome on each group's laptop (a tablet plays with its touch screen only).
 - One whiteboard per group to sketch the composition.
 - **Teacher prep (10 min):** clip a fruit to each pin on one demo Playtron. Confirm grounding works before students enter. Wipe table dry.
 

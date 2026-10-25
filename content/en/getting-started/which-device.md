@@ -7,7 +7,7 @@ order: 1
 segment: ["gift-buyer", "music-producer"]
 deflection_target: 50
 status: edited-2026-09
-last_edited: 2026-09-25
+last_edited: 2026-10-25
 emoji: 🤔
 ---
 
@@ -29,7 +29,7 @@ Playtronica makes five devices. They all turn something physical into MIDI, but 
 [🍉 Playtron — complete guide](/devices/playtron/) · [deep dive](/devices/playtron-advanced/)
 
 - **What it senses:** conductivity through 16 alligator clips. Clip the wires to fruit, water, foil, or skin — touch the object to play.
-- **What it looks like:** a longer PCB with 16 metal pins along the edge for alligator clips, with a pointed corner that acts as the ground.
+- **What it looks like:** a longer PCB with 16 metal pins along the edge for alligator clips, with two gold corners that act as the ground.
 - **In the box:** Playtron, a USB cable, and alligator-clip cables.
 - **Best for:** musicians, makers, and installation artists. Up to 16 objects map to 16 notes.
 
@@ -67,7 +67,7 @@ Playtronica makes five devices. They all turn something physical into MIDI, but 
 | Device | What it senses | Plays itself? | Needs grounding? |
 |---|---|---|---|
 | TouchMe | Skin conductivity | No | No |
-| Playtron | Conductivity of any clipped object | No | Yes (hold the pointed corner) |
+| Playtron | Conductivity of any clipped object | No | Yes (hold a gold corner) |
 | Biotron | Plant bio-signals and light | Yes (the plant does it) | No |
 | Orbita | Nothing — it is a sequencer | Yes | No |
 | Scales | Weight on a load cell | No | No |
