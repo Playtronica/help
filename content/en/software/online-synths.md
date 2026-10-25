@@ -7,7 +7,7 @@ order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 25
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-25
 emoji: 🎹
 ---
 
@@ -42,7 +42,7 @@ Powerful synth. Some users report stability issues. Try it. Skip it if it behave
 
 Any synth without a "Playtron only" label works with both TouchMe and Playtron. Explore — the library has many small gems.
 
-> ℹ️ **About play.playtronica.com.** This older synth site stopped working with current browsers in April 2023, after a browser API change. It will not be fixed. Use [synth.playtronica.com](https://synth.playtronica.com) instead.
+> 🎛️ **play.playtronica.com is back.** Since October 2026 it is Playtronica's own online sampler for Playtron: sound packs made for 16 objects, no installation. Open [play.playtronica.com](https://play.playtronica.com) in Chrome on a computer and plug in Playtron. On a phone or tablet you can play the sounds with the touch screen.
 
 ## Web MIDI and browser support
 

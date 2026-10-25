@@ -7,7 +7,7 @@ order: 2
 segment: ["music-producer", "gift-recipient", "creator"]
 deflection_target: 90
 status: edited-2026-08
-last_edited: 2026-08-05
+last_edited: 2026-10-25
 emoji: 🍉
 ---
 
@@ -18,6 +18,8 @@ Playtron turns any conductive object into a piano key. Clip alligator wires to f
 > ⚠️ **Handle only the parts shown in this guide.** Touch the 16 alligator-clip pins, the pointed ground corner, and the USB-C connector. Even when nothing is plugged in, do not touch solder joints, exposed chips, or the back of the PCB. Playtron is durable, but those areas can be damaged permanently. Treat the rest of the board the way you would treat the back of a phone screen.
 
 > 🛠️ **Want to go deeper?** When you are past the basics, see the [Playtron deep dive](/devices/playtron-advanced/) for custom scales, per-pin mapping, and performance routing.
+
+> 🎛️ **Play in your browser.** [play.playtronica.com](https://play.playtronica.com) is Playtronica's online sampler made for Playtron: choose a sound pack, plug in Playtron, touch to play. No installation. No Playtron yet? Try the sounds with your keyboard or touch screen.
 
 > 🛒 **Don't have one yet?** [Buy Playtron on shop.playtronica.com](https://shop.playtronica.com/products/playtron) — White or Black (Limited). The box ships with the USB cable and 8 alligator-clip cables.
 
@@ -50,7 +52,7 @@ For installation patterns and the full explanation, see [Grounding — how and w
 You have read about grounding. Now plug in.
 
 1. **Clip an alligator wire to a note pin on Playtron.** Clip the other end to a conductive object — fruit, plants, metal, or water. Repeat for each note, up to 16 objects.
-2. **Plug Playtron into your computer with the USB cable from the box.** Then open [synth.playtronica.com](https://synth.playtronica.com) in Chrome. Plug in the device first, then open the browser.
+2. **Plug Playtron into your computer with the USB cable from the box.** Then open [play.playtronica.com](https://play.playtronica.com) in Chrome and choose a sound pack. Plug in the device first, then open the browser. For more instruments, try the web synths at [synth.playtronica.com](https://synth.playtronica.com).
 3. **Ground yourself.** Hold the pointed corner of the device with one hand, or use one of the five methods above.
 4. **Touch a note object with your other hand.** A note plays. Playtron's LED stays dark when you plug it in — that is normal and not a fault. It blinks each time you complete the circuit and a note plays, which is how you know the circuit is working.
 
