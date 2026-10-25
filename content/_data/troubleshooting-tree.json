@@ -85,7 +85,7 @@
                       "id": "playtron-synth-issue",
                       "title": "Device works — the sound software is the problem.",
                       "fix": [
-                        "Open Play at play.playtronica.com. Open Help & settings, choose No sound?, and press Check & copy report.",
+                        "Open Play at play.playtronica.com. Press No sound? Check & report at the bottom of Play.",
                         "Still silent in Play? Try a web synth at synth.playtronica.com (Dots Piano is a reliable starting point).",
                         "Refresh the Play or synth tab — sometimes the page loses the MIDI connection after a few minutes.",
                         "If you're using a DAW, make sure a track is armed to receive MIDI and the volume isn't muted."

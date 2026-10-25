@@ -61,7 +61,7 @@ For more freedom, clip a cable to Ground and hold its metal end. Repeat the clip
 
 Go through every step before you conclude the device is faulty. This resolves 98% of cases.
 
-1. **Check Play.** The Device menu in Play shows **Playtron**. If it does not, choose Playtron from the menu. Then open **Help & settings**, choose **No sound?**, and press **Check & copy report**. Play checks your volume and Playtron separately.
+1. **Check Play.** The Device menu in Play shows **Playtron**. If it does not, choose Playtron from the menu. Then press **No sound? Check & report** at the bottom of Play (or **Options** ⚙ → **Check sound**). If it still fails, choose **Report a problem** and email us the report. Play checks your volume and Playtron separately.
 2. **Use Chrome (Brave and Edge work too).** Safari and Firefox cannot receive Playtron. In those browsers, Play still plays with your keyboard and screen.
 3. **Allow MIDI.** If you clicked Block by mistake, open the browser's Site Settings → MIDI, set `play.playtronica.com` to **Allow**, and reload the page.
 4. **Confirm you are grounded.** See the grounding section above. This is the cause 70% of the time.
