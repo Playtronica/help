@@ -21,7 +21,7 @@ Playtron turns any conductive object into a piano key. Clip alligator wires to f
 
 > 🎛️ **Playtron plays through Play.** [Play](https://play.playtronica.com) is Playtronica's online sampler made for Playtron: choose a sound pack, plug in Playtron, touch to play. No installation. No Playtron yet? Try the sounds with your keyboard or touch screen.
 
-> 🛒 **Don't have one yet?** [Buy Playtron on shop.playtronica.com](https://shop.playtronica.com/products/playtron) — White or Black (Limited). The box ships with the USB cable and 8 alligator-clip cables.
+> 🛒 **Don't have one yet?** [Buy Playtron on shop.playtronica.com](https://shop.playtronica.com/products/playtron) — White or Black (Limited). The box ships with the USB cable and 20 alligator-clip cables.
 
 {{ youtube: ibQuzjFUJd4 title="How to connect Playtron — Playtronica tutorial" }}
 
@@ -109,9 +109,9 @@ Use the reset only if the firmware update will not start, or after a hardware fa
 
 ## Works great with Playtron
 
-Playtron ships with a USB cable and eight alligator clips. To map all 16 notes and play more surfaces, add these.
+Playtron ships with a USB cable and 20 alligator clips — enough for all 16 pins and Ground, plus two spares. To play more surfaces, add these.
 
-- **[10 extra alligator clips](https://shop.playtronica.com/products/10-extra-alligator-clips)** — Playtron maps up to 16 objects, but the box includes 8 clips. This set covers the rest. €9.
+- **[10 extra alligator clips](https://shop.playtronica.com/products/10-extra-alligator-clips)** — spares for workshops and big setups. €9.
 - **[Patches for skin and plants](https://shop.playtronica.com/products/patches-for-skin-and-plants)** — stick-on electrodes for playing skin, leaves, and awkward surfaces without clipping. From €16.
 - **[Copper tape](https://shop.playtronica.com/products/copper-tape)** — turn any flat surface into a key. Stick it down, clip to it, play it. €9.
 - **[Playtron + TouchMe bundle](https://shop.playtronica.com/products/playtron-touchme-bundle)** — pair Playtron with TouchMe for clip-play and touch-play together. €163.

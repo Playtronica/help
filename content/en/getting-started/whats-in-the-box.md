@@ -27,7 +27,7 @@ You will need a computer with **Chrome** installed to use a Playtronica device i
 
 - **Playtron device** — the main PCB with 16 alligator-clip pins and two gold corners that act as the ground.
 - **USB cable.**
-- **Alligator-clip cables** — usually 8 in the box.
+- **Alligator-clip cables** — 20 in the box: enough for all 16 pins and Ground, plus two spares.
 - **Quick-start card.**
 
 ## 🌿 Biotron

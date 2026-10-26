@@ -77,7 +77,7 @@ Playtronica makes five MIDI controllers. Every one turns a different physical th
 | Device | USB cable | Other contents |
 |---|---|---|
 | **TouchMe** | USB-C to A, 1 m | Nothing else — the device is the instrument |
-| **Playtron** | USB-C to A, 1 m | 8 alligator-clip cables |
+| **Playtron** | USB-C to A, 1 m | 20 alligator-clip cables |
 | **Biotron** | **Not included** — buy a [USB-C cable](https://shop.playtronica.com/products/usb-c-cable-1m) if you do not have one | 2 contacts on cables |
 | **Orbita** | USB-C to A, 1 m | A set of coloured magnets |
 | **Scales** | **Not included** — buy a [USB-C cable](https://shop.playtronica.com/products/usb-c-cable-1m) if you do not have one | Three colour variants; the plate is the instrument |

@@ -90,7 +90,7 @@ Same patches, twice as many. Pick this size if you are kitting out a workshop, a
 
 ### 10 extra alligator clips
 
-Each Playtron ships with 8 alligator-clip cables. The 10-pack brings you to 18 — enough to use all 16 alligator-clip pins on Playtron at the same time, with two spares for when teeth break or wires bend.
+Each Playtron ships with 20 alligator-clip cables — enough for all 16 pins and Ground, with two spares for when teeth break or wires bend. The 10-pack adds spares for workshops and big setups.
 
 [10 Extra Alligator Clips](https://shop.playtronica.com/products/10-extra-alligator-clips) — €9.31. Each clip is 44 to 50 cm long.
 
