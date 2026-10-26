@@ -81,16 +81,22 @@ function readMarkdownFile(filePath: string, lang: Lang, isFallback: boolean): Pa
 // hundreds of times. Keep development uncached so content edits remain visible.
 const staticPagesCache = new Map<Lang, Page[]>();
 
+/** Education landing pages built from app/education/*, with no /de/ etc. copy. */
+const EN_ONLY_ROUTE = /^\/education\/(pilot|quote|curriculum|standards|thanks-[a-z-]+)\/?(?:[?#]|$)/;
+
 /**
  * Rewrite internal links inside rendered article HTML so they keep the reader
  * in their language. `href="/devices/biotron/"` becomes `href="/de/devices/..."`.
- * External links (https:, mailto:), in-page anchors (#...), and links that
- * already carry a language prefix are left alone.
+ * External links (https:, mailto:), in-page anchors (#...), links that
+ * already carry a language prefix, static files and English-only landing
+ * pages are left alone.
  */
 function localizeInternalLinks(html: string, lang: Lang): string {
   return html.replace(/href="(\/[^"]*)"/g, (match, href: string) => {
     if (href.startsWith("//")) return match; // protocol-relative — external
     if (/^\/(de|es|fr|ja)(\/|$)/.test(href)) return match; // already prefixed
+    if (/\.[a-z0-9]+(?:[?#]|$)/i.test(href)) return match; // file (svg, pdf) — one copy at root
+    if (EN_ONLY_ROUTE.test(href)) return match; // app/education/* landings — English only
     return `href="/${lang}${href}"`;
   });
 }
