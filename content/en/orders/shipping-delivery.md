@@ -12,24 +12,26 @@ last_edited: 2026-05-26
 emoji: 🚚
 ---
 
-All orders ship within **1–2 business days** from one of two fulfilment centres. EU and North America orders ship from the Netherlands via UPS, DHL, or local post. Asia Pacific orders ship from Hong Kong via DHL or FedEx. Tracking is provided for every order.
+All orders ship within **1–2 business days** from one of two fulfilment centres. EU and Canada orders ship from the Netherlands via UPS, DHL, or local post. Orders to the US, the UK, Asia Pacific, and the rest of the world ship from Hong Kong via DHL or FedEx. Tracking is provided for every order.
 
 We ship globally from two fulfilment centres:
 
-- **Netherlands (ShipBob NL)** — for Europe and North America. Carriers: UPS, DHL, PostNL.
-- **Hong Kong (Floship)** — for Asia Pacific and the rest of the world. Carriers: DHL, FedEx.
+- **Netherlands (ShipBob NL)** — for the EU and Canada, for Orbita orders to any country, and for Scales (EU, Canada and a few other destinations). Carriers: UPS, DHL, PostNL.
+- **Hong Kong (Floship)** — for the US, the UK, Switzerland, Norway, Asia Pacific, and the rest of the world. Carriers: DHL, FedEx.
 
 ## Delivery times by region
 
 | Region | Warehouse | Delivery | Free shipping from |
 |---|---|---|---|
 | 🇪🇺 European Union | ShipBob Netherlands | 3–7 business days | €100 |
-| 🇬🇧 United Kingdom | ShipBob Netherlands | 5–10 business days | €100 |
-| 🇺🇸 United States | ShipBob Netherlands | 7–14 business days | €100 |
-| 🇨🇦 Canada | ShipBob Netherlands | 7–14 business days | €100 |
+| 🇬🇧 United Kingdom | Floship Hong Kong | 5–10 business days | €100 |
+| 🇺🇸 United States | Floship Hong Kong | 7–14 business days | €100 |
+| 🇨🇦 Canada | ShipBob Netherlands (express) | 3–7 business days | €100 |
 | 🇮🇱 Israel / 🇬🇪 Georgia | ShipBob Netherlands | 5–10 business days | €100 |
 | 🌏 Asia Pacific | Floship Hong Kong | 5–10 business days | €100 |
-| 🌍 Rest of the world | Floship Hong Kong | 7–21 business days | Varies |
+| 🌍 Rest of the world (including Switzerland and Norway) | Floship Hong Kong | 7–21 business days | Varies |
+
+**Exceptions:** Orbita always ships from the Netherlands (ShipBob), including to the US. Scales ships only from the Netherlands — to EU countries, Canada and a few other destinations.
 
 ## Processing time
 

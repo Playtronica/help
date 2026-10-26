@@ -24,8 +24,9 @@ This page is for makers and musicians who already have Playtron playing and want
 Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Chrome. Each of the 16 alligator pins can be mapped to:
 
 - A specific MIDI note (0–127).
-- A specific MIDI channel (1–16). Useful for routing pins to different instruments in a DAW.
 - A specific velocity profile — fixed value or derived from contact area.
+
+The MIDI channel (1–16) is set once for the whole device, not per pin.
 
 Common presets ship in the web tool: major, minor, pentatonic, and octatonic. Custom mappings are stored on the device. You do not need to set them again on another computer.
 
@@ -56,10 +57,9 @@ Methods that do not work: ground clipped to a radiator, a pipe, or a laptop body
 
 ## Route Playtron in a DAW
 
-Playtron is a class-compliant MIDI device. In any DAW, select Playtron as a MIDI input. To split pins across different instruments:
+Playtron is a class-compliant MIDI device. In any DAW, select Playtron as a MIDI input.
 
-1. In [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron), set each pin to a different MIDI channel.
-2. In the DAW, filter each track by the corresponding MIDI channel.
+Playtron sends all 16 pads on one MIDI channel, which you set for the whole device in the settings app (1–16). Each pad has its own MIDI note (0–127), which you can change under 'Notes for Pad'. To send pads to different instruments, filter each DAW track by note or note range, not by channel.
 
 See the DAW setup pages:
 

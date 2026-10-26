@@ -58,7 +58,7 @@ Playtronica devices output MIDI, not CV. To play a Eurorack rig, use a MIDI-to-C
 
 - **Befaco Voltio**, **Doepfer MCV4**, **Korg SQ-64**, **Polyend Poly 2** — all accept MIDI over USB host or DIN, and output CV plus gate.
 - Plug the Playtronica device into the interface's USB host port, or use a USB-host adapter for DIN. Patch the CV and Gate outputs to your oscillator and envelope.
-- Playtron's 16 alligator pins all send on MIDI channel 1 by default. To split them across multiple voices, set per-pin channels at [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron).
+- Playtron's 16 alligator pins all send on one MIDI channel (channel 1 by default), set for the whole device. To split them across multiple voices, filter by note or note range in your interface or DAW; each pad's note can be changed at [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron).
 
 ## Combinations we have seen work well
 
