@@ -6,7 +6,7 @@ summary: "Four checks when a Mac or Windows computer does not detect TouchMe: ca
 segment: ["music-producer", "creator"]
 deflection_target: 40
 status: new-2026-06
-last_edited: 2026-07-06
+last_edited: 2026-10-31
 emoji: 🔌
 ---
 
@@ -59,7 +59,7 @@ After changing the permission, refresh the page with the device already plugged 
 
 ## Step 4 — Mac: check that the device appears in Audio MIDI Setup
 
-This confirms whether the problem is the cable/connection or the browser.
+This checks whether macOS lists the device before you check the browser.
 
 **Do this:**
 
@@ -68,27 +68,23 @@ This confirms whether the problem is the cable/connection or the browser.
 3. In the Audio MIDI Setup window, go to **Window → Show MIDI Studio**.
 4. Look for "TouchMe" or an unrecognized USB MIDI device in the list.
 
-**If TouchMe appears here but not in your browser:** the issue is browser permissions (see Step 3).
+**If TouchMe appears here but not in your browser:** check browser permissions (Step 3).
 
-**If TouchMe does not appear here at all:** the Mac is not seeing the device at the hardware level. Try a different USB cable (Step 1) and a different USB port. On the **newer USB-C TouchMe**, remove any hub or adapter and connect directly. The **older Micro-USB TouchMe (v1)** on a new Mac is the opposite — it often needs a hub added; see "Old Micro-USB TouchMe not seen at all on a new Mac" below.
+**If TouchMe does not appear here at all:** try a confirmed data cable (Step 1), a different USB port and a direct connection. For an older Micro-USB TouchMe, follow the [Mac connection comparison](/troubleshooting/wont-connect/#mac-connection-comparison).
 
 ---
 
 ## Mac-specific: USB adapter issues
 
-**If your Mac only has USB-C ports** and you are using an adapter, the adapter must support data transfer, not just charging. Many small white USB-C adapters are power-only. The adapter included in some bundles is a confirmed data adapter. Third-party adapters vary — test with a known-good one.
+**If your Mac only has USB-C ports**, use a cable or adapter that supports data transfer and matches your TouchMe connector. Check it with a known-good data connection.
 
-Customers with new MacBook Pros (M1, M2, M5, running Sequoia or Sonoma) using the **USB-C TouchMe (v2)** have reported that cheap multiport hubs drop the MIDI connection — for that device, connect directly to a USB-C port with a USB-C to USB-C cable, or use Apple's own USB-C adapter. **The older Micro-USB TouchMe (v1) is the exception:** on a new Mac it often needs a hub to be seen at all (see the section below).
-
-**Older TouchMe (Micro-USB) on a USB-C Mac:** You need a Micro-USB to USB-C adapter or cable that carries data. Standard phone charging adapters often do not.
+**Older TouchMe (Micro-USB) on a USB-C Mac:** use a Micro-USB cable or adapter that carries data and matches your Mac.
 
 ---
 
 ## Old Micro-USB TouchMe not seen at all on a new Mac
 
-If your **Micro-USB TouchMe (v1)** shows **nothing** in Audio MIDI Setup on a recent Apple-silicon Mac even with a good data cable, it usually needs a **real USB hub** between the device and the Mac (not a passive adapter). This is the opposite of removing the hub — which is right for the newer USB-C TouchMe (v2).
-
-Full steps, hub models and the decision table: **[Device will not connect → Old Micro-USB device on a new Mac](/troubleshooting/wont-connect/)**.
+For Audio MIDI Setup checks using a direct connection and a data hub you already have, follow the **[Mac connection comparison](/troubleshooting/wont-connect/#mac-connection-comparison)**. A hub is not a guaranteed fix.
 
 ---
 
@@ -100,7 +96,7 @@ Windows users sometimes see the TouchMe in Device Manager under "Sound, video an
 
 1. Open Chrome (not Edge, not Internet Explorer).
 2. Go to [settings.playtronica.com](https://settings.playtronica.com/#/touchme).
-3. If the page connects to your device, the hardware is working. The issue is DAW recognition — check your DAW's MIDI input list and enable the TouchMe port there.
+3. If the page connects to your device, check your DAW's MIDI input list and enable the TouchMe port there. This connection alone does not rule out a hardware fault.
 4. If the settings page also cannot connect, try a different USB cable first, then a different USB port.
 
 ---
@@ -112,7 +108,7 @@ Before contacting support, send us a short video showing:
 - The Audio MIDI Setup window (Mac) or Device Manager (Windows).
 - Your browser attempting to connect.
 
-This lets us confirm whether it is a hardware fault or a configuration issue and speeds up the response significantly.
+This helps support review what your computer detects and choose the next check.
 
 Contact: [support@playtronica.com](mailto:support@playtronica.com)
 
@@ -122,13 +118,13 @@ Contact: [support@playtronica.com](mailto:support@playtronica.com)
 
 | Symptom | First thing to check |
 |---|---|
-| No LED even when you touch a pad | USB cable is charge-only or not delivering power — try the included cable or a different port |
+| No LED even when you touch a pad | Try a confirmed data cable and a different port; record the LED behaviour |
 | LED blinks on touch, nothing in browser | Plug in before opening browser; check MIDI permission in browser |
-| LED blinks on touch, not in Audio MIDI Setup | Cable is charge-only; try the included cable |
+| LED blinks on touch, not in Audio MIDI Setup | Try a confirmed data cable and a different port |
 | Works in Audio MIDI Setup, not in DAW | Enable TouchMe MIDI input inside your DAW settings |
-| Only works on Windows, not Mac | Adapter is charge-only; use a data adapter directly into a USB-C port |
-| Worked before, stopped after macOS update (newer USB-C TouchMe) | Open Audio MIDI Setup → MIDI Studio and rescan; try direct USB connection without hub |
-| Older Micro-USB TouchMe, invisible on a new Mac even with a good cable | Add a real USB hub between the device and the Mac (not a passive adapter) |
+| Only works on Windows, not Mac | Check Audio MIDI Setup and the data cable or adapter |
+| Worked before, stopped after macOS update | Open Audio MIDI Setup → MIDI Studio and rescan; try a direct USB connection |
+| Older Micro-USB TouchMe, invisible on a new Mac even with a good cable | Follow the [Mac connection comparison](/troubleshooting/wont-connect/#mac-connection-comparison) with a hub you already have |
 
 ---
 

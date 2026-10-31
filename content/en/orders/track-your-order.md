@@ -8,7 +8,7 @@ segment: ["gift-buyer", "music-producer"]
 deflection_target: 320
 order: 1
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-10-31
 emoji: 🔍
 ---
 
@@ -23,7 +23,12 @@ The first 24 to 48 hours after we ship can show no updates. The carrier may not 
 
 ## Where is my order?
 
-Open your tracking link. If the last update is within the past **5 business days**, the package is moving normally. Packages routinely wait at customs or for the next regional hub scan.
+Open your tracking link and check the **status before the date of the last scan**.
+
+- **Returned to sender:** email **support@playtronica.com** with your order number and tracking link so we can check the parcel's location and next step. The status alone does not confirm that the warehouse has received it.
+- **Collection or redelivery needed:** follow the carrier's collection or redelivery instructions. Contact us if the instructions are missing or you cannot complete that step.
+- **Delivery attempt failed or another exception:** read the carrier's instructions and contact us if the next step is unclear.
+- **In transit with no exception:** check the date of the last scan. A recent scan alone does not confirm normal delivery progress.
 
 If the tracking shows no movement for more than 5 business days, write to **support@playtronica.com** with the subject line `Tracking #[your order number]`. We will contact the carrier the same day.
 
