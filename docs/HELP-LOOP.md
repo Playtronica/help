@@ -12,7 +12,7 @@ The help center is complete only when every **reusable, customer-safe answer tha
 ./help find "customer's question in plain words"
 ```
 
-If an article answers the reusable part, link it in the customer reply. If it does not, record the smallest missing answer:
+Answer the customer directly. Include an article only when it helps the next step; a sufficient personal answer may have no link, and several useful links are allowed. Check every included URL. An unavailable catalogue is a source error, not proof that no article exists. If reusable knowledge is missing, record the smallest missing answer:
 
 ```bash
 ./help gap add \
@@ -31,7 +31,7 @@ If no article exists yet, Drafter may emit the gap with an empty `article_url`; 
 customer question
       │
       ▼
-find closest article ── fully covered ──► send article and resolve ticket
+find useful article ── answer grounded ──► answer + useful link; verify resolution
       │
       └── missing reusable answer
                  │
