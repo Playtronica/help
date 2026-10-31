@@ -7,17 +7,17 @@ order: 1
 segment: ["music-producer", "gift-recipient"]
 deflection_target: 80
 status: edited-2026-05
-last_edited: 2026-10-25
+last_edited: 2026-10-31
 emoji: 🔧
 ---
 
 Pick the symptom that matches your situation. Each row points to the right page or the fastest fix.
 
-| What you are seeing | Most likely cause | Where to go |
+| What you are seeing | What to check | Where to go |
 |---|---|---|
 | Computer does not see the device at all | Wrong cable, wrong port, wrong browser | [Device will not connect](/troubleshooting/wont-connect/) |
-| Old **Micro-USB** TouchMe/Playtron — nothing on a new Mac | New Mac is too strict; needs a USB hub | [Device will not connect](/troubleshooting/wont-connect/) |
-| LED on, but no sound when I touch | MIDI permission, wrong browser, no grounding | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
+| Old **Micro-USB** TouchMe/Playtron — nothing on a new Mac | Compare Audio MIDI Setup results with a direct connection and a hub you already have | [Mac connection comparison](/troubleshooting/wont-connect/#mac-connection-comparison) |
+| LED on, but no sound when I touch | OS MIDI recognition, browser permissions and connections | [No sound or MIDI not detected](/troubleshooting/no-sound/) |
 | Playtron specifically — plugged in but silent | Play check, then grounding | [If Playtron is not playing](/devices/playtron/#if-playtron-is-not-playing) |
 | Random notes play with nothing touched | Calibration / electrical interference | "Spurious notes" below |
 | USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
@@ -33,7 +33,7 @@ Work through these in order. They resolve most issues without needing the deeper
 3. **Click Allow on the MIDI permission popup.** If you clicked Block earlier, the browser remembers. See [No sound](/troubleshooting/no-sound/).
 4. **For Playtron, confirm grounding.** Bare skin on a gold corner of the device, or a ground cable that touches your skin. Without grounding, Playtron is silent. See [Grounding](/sound/grounding/). For all Playtron checks, use the [Playtron checklist](/devices/playtron/#if-playtron-is-not-playing).
 5. **Try a different USB cable.** It must be a data cable, not a charge-only cable. Charge-only cables look identical but carry no data.
-6. **Use a USB port directly on the computer, not a hub** — *except* an old Micro-USB TouchMe or Playtron on a new Mac, which often needs a hub. See [Device will not connect](/troubleshooting/wont-connect/).
+6. **Try a USB port directly on the computer.** For an older Micro-USB TouchMe or Playtron on a Mac, see the [Mac connection comparison](/troubleshooting/wont-connect/#mac-connection-comparison) with a hub you already have.
 
 If all six are confirmed and the device still does not work, go to the symptom-specific page above.
 
@@ -42,9 +42,9 @@ If all six are confirmed and the device still does not work, go to the symptom-s
 | LED behaviour | What it means |
 |---|---|
 | Solid on when plugged in | The device has power. This does not prove that USB MIDI is connected. |
-| Off when plugged in | USB power issue. Try another port or cable. (Playtron and TouchMe stay dark when you plug them in — that is normal; their LED blinks when you complete the circuit and a note plays.) |
-| Flashing rapidly | The device is sending MIDI signals. This is correct. |
-| All LEDs lit at once | Either calibration mode (Biotron, briefly) or a stuck state (Playtron — try a reset). |
+| Off when plugged in | Check the data cable and USB port. Playtron and TouchMe stay dark when you plug them in — that is normal. LED behaviour alone does not identify the cause. |
+| Flashing rapidly | Record the behaviour and check whether the computer or app receives MIDI. |
+| All LEDs lit at once | Record the LED behaviour and check OS MIDI recognition. Before recovery, identify the device and revision using the [firmware recovery guide](/troubleshooting/firmware-reset/). |
 | Solid on but no response to touch | Unplug and reconnect. If the problem continues, see the symptom rows above. |
 
 ## Spurious notes — device plays without anything touching it
