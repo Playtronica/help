@@ -147,7 +147,9 @@ stays on the device.
 
 If Biotron lights up but GarageBand is silent, check the external MIDI input
 for the track. If notes were muted in Settings, reconnect Biotron to a desktop
-comput## Use a hardware synth
+computer and restore them there.
+
+## Use a hardware synth
 
 Biotron has no TRS or 5-pin DIN MIDI jack. It sends MIDI only over its USB-C
 port, and it takes its power from the same cable.
@@ -160,9 +162,6 @@ port, and it takes its power from the same cable.
 
 [Hardware synths](/software/hardware/) lists adapters that work without a
 computer.
-
- Type A to
-Type B adapter.
 
 ## Quick self-test
 
