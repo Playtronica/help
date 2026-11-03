@@ -2,11 +2,11 @@
 title: "Biotron MIDI and CC"
 slug: biotron-midi-cc
 section: software
-summary: "Receive plant MIDI, test experimental incoming CC, connect Reaper or iPad, and power a hardware-synth setup."
+summary: "Receive plant MIDI, test experimental incoming CC, connect Reaper or iPad, and reach a hardware synth through a USB MIDI host."
 segment: ["music-producer", "creator"]
 deflection_target: 25
 status: edited-2026-09
-last_edited: 2026-09-25
+last_edited: 2026-11-03
 emoji: 🎹
 ---
 
@@ -14,7 +14,7 @@ emoji: 🎹
   <a class="task-card" href="#biotron-to-your-daw"><span class="task-card__icon">🌿</span><span><strong>Biotron → DAW</strong><small>Receive notes and plant CC90.</small></span></a>
   <a class="task-card" href="#your-daw-to-biotron"><span class="task-card__icon">🎚</span><span><strong>DAW → Biotron</strong><small>Test incoming settings commands carefully.</small></span></a>
   <a class="task-card" href="#use-an-ipad"><span class="task-card__icon">📱</span><span><strong>Use an iPad</strong><small>Play instruments without opening Settings.</small></span></a>
-  <a class="task-card" href="#use-a-hardware-synth"><span class="task-card__icon">🎛</span><span><strong>Use a hardware synth</strong><small>Send TRS MIDI and power Biotron separately.</small></span></a>
+  <a class="task-card" href="#use-a-hardware-synth"><span class="task-card__icon">🎛</span><span><strong>Use a hardware synth</strong><small>Go through a USB MIDI host: Biotron has no MIDI jack.</small></span></a>
 </div>
 
 ## Biotron to your DAW
@@ -147,19 +147,21 @@ stays on the device.
 
 If Biotron lights up but GarageBand is silent, check the external MIDI input
 for the track. If notes were muted in Settings, reconnect Biotron to a desktop
-computer and restore them there.
+comput## Use a hardware synth
 
-## Use a hardware synth
-
-The TRS MIDI cable carries MIDI data but does not power Biotron.
+Biotron has no TRS or 5-pin DIN MIDI jack. It sends MIDI only over its USB-C
+port, and it takes its power from the same cable.
 
 <ol class="steps">
-  <li>Connect Biotron's TRS output to the synth's MIDI input.</li>
-  <li>Power Biotron from a standard 5 V USB adapter or battery pack.</li>
-  <li>Power on the synth, then touch the plant.</li>
+  <li>If the synth has a USB host port, plug Biotron into it with a USB-C data cable.</li>
+  <li>If the synth has only DIN or TRS MIDI input, put a USB MIDI host adapter between them: Biotron → adapter's USB host port → MIDI cable → synth's MIDI input.</li>
+  <li>Make sure the host port or adapter supplies USB power, then touch the plant.</li>
 </ol>
 
-Biotron uses **TRS MIDI Type A**. If the synth expects Type B, use a Type A to
+[Hardware synths](/software/hardware/) lists adapters that work without a
+computer.
+
+ Type A to
 Type B adapter.
 
 ## Quick self-test
