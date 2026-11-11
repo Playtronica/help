@@ -6,7 +6,7 @@ import { localizedPath, type Lang } from "@/lib/i18n";
 // design labels, localised in SECTION_TITLES lookups elsewhere.
 const HOME_ORDER: { section: string; num: string; meta?: string }[] = [
   { section: "getting-started", num: "01", meta: "start here" },
-  { section: "devices", num: "02", meta: "5 instruments" },
+  { section: "devices", num: "02", meta: "5 instruments · MIDI host" },
   { section: "orders", num: "03", meta: "most-asked" },
   { section: "software", num: "04", meta: "DAWs · synths · mobile" },
   { section: "troubleshooting", num: "05", meta: "interactive triage" },

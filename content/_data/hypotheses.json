@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "description": "Article outcome inventory — each page is a hypothesis that a verified reusable answer improves the matching customer outcome. Review with referenced before/after evidence. See docs/HYPOTHESIS-LOG.md.",
-  "generated_at": "2026-09-12",
+  "generated_at": "2026-11-11",
   "pages": [
     {
       "url": "/devices/biotron-advanced/",
@@ -45,6 +45,20 @@
       "next_check_in": "2026-08-24",
       "outcome": null,
       "notes": ""
+    },
+    {
+      "url": "/devices/marshmellow/",
+      "title": "MIDI Marshmellow — USB MIDI host",
+      "audience": [
+        "music-producer",
+        "creator"
+      ],
+      "what_we_hope": "Publish a verified answer for 'marshmellow' that makes the matching customer problem easier to resolve or prevents it.",
+      "deflection_target_per_month": 20,
+      "first_published": null,
+      "next_check_in": "2027-02-09",
+      "outcome": null,
+      "notes": "Conditional M1 draft, not published. Merge only if the packaging QR does not lead to working instructions."
     },
     {
       "url": "/devices/orbita-advanced/",

@@ -14,6 +14,9 @@ This document is the exact set of Shopify theme edits needed. Hand it to whoever
 
 Every device on the shop maps to exactly one help-center page:
 
+The MIDI Marshmellow entries below are conditional M1 additions, using the product handle from the 11 November 2026 shop snapshot.
+Use them only if the packaging QR does not lead to working instructions and the help page is merged and published.
+
 | Shopify product handle | Help-center URL |
 |---|---|
 | `touchme` | `https://help.playtronica.com/devices/touchme/` |
@@ -21,6 +24,7 @@ Every device on the shop maps to exactly one help-center page:
 | `biotron` | `https://help.playtronica.com/devices/biotron/` |
 | `orbita` | `https://help.playtronica.com/devices/orbita/` |
 | `midi-controller-scales` | `https://help.playtronica.com/devices/scales/` |
+| `midi-marshmellow™` | `https://help.playtronica.com/devices/marshmellow/` (conditional M1) |
 | any bundle | `https://help.playtronica.com/devices/compare/` |
 | any accessory or cable | `https://help.playtronica.com/getting-started/accessories/` |
 
@@ -37,7 +41,7 @@ The block uses the product handle to construct the right help URL automatically.
   Falls back to the comparison page for bundles / accessories.
 {%- endcomment -%}
 
-{%- assign device_handles = 'touchme,playtron,biotron,orbita,midi-controller-scales' | split: ',' -%}
+{%- assign device_handles = 'touchme,playtron,biotron,orbita,midi-controller-scales,midi-marshmellow™' | split: ',' -%}
 {%- assign accessory_keywords = 'cable,adapter,patch,clip,tape,case,necklace,scarf,kit' | split: ',' -%}
 
 {%- assign help_path = '/devices/compare/' -%}
@@ -47,6 +51,8 @@ The block uses the product handle to construct the right help URL automatically.
   {%- if product.handle == device -%}
     {%- if device == 'midi-controller-scales' -%}
       {%- assign help_path = '/devices/scales/' -%}
+    {%- elsif device == 'midi-marshmellow™' -%}
+      {%- assign help_path = '/devices/marshmellow/' -%}
     {%- else -%}
       {%- assign help_path = '/devices/' | append: device | append: '/' -%}
     {%- endif -%}

@@ -2,18 +2,18 @@
 title: "Which Playtronica do I have?"
 slug: which-device
 section: getting-started
-summary: "Five Playtronica devices exist. This page helps you tell them apart and explains what each one does."
+summary: "Identify TouchMe, Playtron, Biotron, Orbita, Scales, or the MIDI Marshmellow USB MIDI host and find its guide."
 order: 1
 segment: ["gift-buyer", "music-producer"]
 deflection_target: 50
 status: edited-2026-09
-last_edited: 2026-10-25
+last_edited: 2026-11-11
 emoji: 🤔
 ---
 
-Playtronica makes five devices. They all turn something physical into MIDI, but each one senses something different. If you are holding a circuit board and you are not sure which device it is, start here.
+Playtronica makes five MIDI instruments and the MIDI Marshmellow USB MIDI host. The instruments turn physical gestures into MIDI. Marshmellow passes MIDI to a hardware synth. If you are holding a circuit board and you are not sure which device it is, start here.
 
-> ⚠️ **All five devices share the same safety rule.** Handle only the contacts shown in the device's own guide. Touching solder joints, exposed chips, or the underside of the PCB can damage the device permanently, even when the device is unplugged.
+> ⚠️ **All five instruments share the same safety rule.** Handle only the contacts shown in the device's own guide. Touching solder joints, exposed chips, or the underside of the PCB can damage the device permanently, even when the device is unplugged.
 
 ## TouchMe — touch instrument
 
@@ -61,6 +61,12 @@ Playtronica makes five devices. They all turn something physical into MIDI, but 
 - **What it looks like:** a flat plate with three buttons and five LEDs along the side. The plate is the instrument.
 - **In the box:** Scales. (A USB cable is not included.)
 - **Best for:** anyone curious about gestural music, children, installation work, and sound designers. Five modes turn the same gesture into a chord, an arpeggio, a tempo, or a tuning pad.
+
+## MIDI Marshmellow — USB MIDI host
+
+[🎛️ MIDI Marshmellow — connection guide](/devices/marshmellow/)
+
+MIDI Marshmellow passes MIDI from Playtron, TouchMe, or Biotron to a hardware synth. It does not pass audio.
 
 ## Side-by-side comparison
 

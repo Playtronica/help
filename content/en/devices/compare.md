@@ -7,11 +7,14 @@ order: 0
 segment: ["gift-buyer", "music-producer", "b2b"]
 deflection_target: 30
 status: new-2026-05
-last_edited: 2026-10-25
+last_edited: 2026-11-11
 emoji: 📊
 ---
 
 Playtronica makes five MIDI controllers. Every one turns a different physical thing — skin, fruit, a plant, a rotating disc, a weight — into MIDI. They are designed to be played together as much as alone. This page is the long, honest comparison.
+
+To send MIDI from Playtron, TouchMe, or Biotron to a hardware synth, see the [MIDI Marshmellow guide](/devices/marshmellow/).
+Marshmellow is a USB MIDI host. It does not pass audio.
 
 > 💡 **Not sure which device you already have?** That is a different page. See [Which Playtronica do I have](/getting-started/which-device/) — it identifies the device from a photo. This page is for picking which one to buy or play with next.
 

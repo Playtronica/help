@@ -28,7 +28,7 @@ The command finds the closest live article and tracks any missing reusable answe
 
 ## What you will find here
 
-- **40+ Markdown articles** covering every Playtronica device — TouchMe, Playtron, Biotron, Orbita, Scales — plus connecting to DAWs, online synths, mobile apps, and grounding physics.
+- **40+ Markdown articles** covering Playtronica devices — TouchMe, Playtron, Biotron, Orbita, Scales, and the MIDI Marshmellow USB MIDI host — plus connecting to DAWs, online synths, mobile apps, and grounding physics.
 - **A brutalist, mobile-first Next.js site** with sub-50 ms search via [Pagefind](https://pagefind.app/), no client-side JavaScript bloat, and a documented design system (`docs/DESIGN-TOKENS.md`).
 - **A documented writing process**: voice specification, quality-review rubric, and a monthly refresh loop — see `docs/`.
 - **Optional AI-search surfaces**: `llms.txt`, JSON-LD structured data, OpenGraph metadata, sitemap, robots.txt — built for ChatGPT, Claude, Perplexity, and Google.

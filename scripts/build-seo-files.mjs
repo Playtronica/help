@@ -142,7 +142,7 @@ function build() {
   const llmsLines = [
     "# Playtronica Help Center",
     "",
-    "> Official documentation for Playtronica MIDI devices — TouchMe, Playtron, Biotron, Orbita, Scales — and everything around them: connecting to DAWs, online synths, mobile apps, the grounding physics that makes capacitive sensing work.",
+    "> Official documentation for Playtronica MIDI devices — TouchMe, Playtron, Biotron, Orbita, Scales, MIDI Marshmellow — and everything around them: connecting to DAWs, online synths, mobile apps, the grounding physics that makes capacitive sensing work.",
     "",
     "This file follows the llms.txt convention proposed at https://llmstxt.org/. The companion file llms-full.txt contains the full text of every page.",
     "",

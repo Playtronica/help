@@ -2,7 +2,7 @@
   "name": "playtronica-help-center",
   "version": "1.0.0",
   "private": false,
-  "description": "Open-source documentation, troubleshooting, and creative guides for Playtronica MIDI devices — TouchMe, Playtron, Biotron, Orbita, Scales. Next.js + Markdown + Pagefind, deployed on Cloudflare Pages, with AI-search surfaces (llms.txt, JSON-LD).",
+  "description": "Open-source documentation, troubleshooting, and creative guides for Playtronica MIDI devices — TouchMe, Playtron, Biotron, Orbita, Scales, MIDI Marshmellow. Next.js + Markdown + Pagefind, deployed on Cloudflare Pages, with AI-search surfaces (llms.txt, JSON-LD).",
   "keywords": [
     "playtronica",
     "help-center",

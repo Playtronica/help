@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s — Playtronica Help",
   },
   description:
-    "Everything you need to make music from anything. Manuals, troubleshooting, and creative guides for TouchMe, Playtron, Biotron, Orbita, and Scales.",
+    "Manuals, troubleshooting, and creative guides for TouchMe, Playtron, Biotron, Orbita, Scales, and the MIDI Marshmellow USB MIDI host.",
   applicationName: "Playtronica Help Center",
   authors: [{ name: "Playtronica", url: "https://playtronica.com" }],
   generator: "Next.js",
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     "Biotron",
     "Orbita",
     "Scales",
+    "MIDI Marshmellow",
     "music tech",
     "capacitive sensing",
     "plant music",
