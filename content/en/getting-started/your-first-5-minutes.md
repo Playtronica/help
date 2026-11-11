@@ -24,6 +24,9 @@ These instructions take about five minutes. Find your device below and follow th
 > **How it works:** the two gold pads sense the conductivity of your skin. Bare skin in contact with both pads completes a circuit. The larger the skin contact area, the louder and brighter the sound.
 
 1. **Plug TouchMe into your computer with the USB cable from the box.** Use the cable from the box — charge-only cables look identical but carry no data. The LED stays dark when you plug in — that is normal; it blinks when you touch the pads, which is how you know it is working.
+
+   You can also [open TouchMe online](https://touchme.playtronica.com/).
+
 2. **Open a web instrument in Chrome.** Start with [dotpiano.com](https://dotpiano.com/) — it is the simplest. More instruments are on [synth.playtronica.com](https://synth.playtronica.com) ([see all](/software/online-synths/)). Plug the device in *before* opening the browser — if the tab was already open, reload it. Safari and Firefox do not support Web MIDI.
 3. **Click Allow on the MIDI permission popup.** You only see this prompt once. Missed it, or clicked Block? In Chrome go to Settings → Privacy → Site Settings → MIDI, set the synth site to **Allow**, then reload.
 4. **Touch both gold pads with bare fingers.** You should hear a note — that is it, you are playing. If the sound is faint, press more firmly: dry skin conducts weakly.

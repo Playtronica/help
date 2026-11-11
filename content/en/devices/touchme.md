@@ -53,6 +53,8 @@ The music does not come from the device. The music comes from the connection bet
 
 ## Quick start — first sound in 2 minutes
 
+Prefer to play in your browser? Open [TouchMe online](https://touchme.playtronica.com/).
+
 1. **Plug TouchMe into your computer with the USB cable from the box.** No drivers are required on Mac or Windows. The LED stays dark when you plug in — that is normal. If your computer has only USB-A ports, see [Adapters](https://shop.playtronica.com/collections/additional-items).
 2. **Open [synth.playtronica.com](https://synth.playtronica.com) in Chrome.** Safari and Firefox do not support Web MIDI. Open the browser **after** plugging in the device so the browser detects it on page load.
 3. **Choose a synth.** Avoid synths marked "Playtron only" (such as WebSID Commodore 64). The default Dots Piano is the most reliable starting point.

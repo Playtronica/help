@@ -13,6 +13,8 @@ emoji: 🎹
 
 > 🎛️ **Own a Playtron? Start with Play.** [Play](https://play.playtronica.com) is Playtronica's online sampler, made for Playtron. Open it in Chrome (Brave and Edge work too), plug in Playtron, and touch to play. The [Playtron page](/devices/playtron/#quick-start) has the three-step Quick start. The synths on this page are for TouchMe, for Biotron, and for more sounds.
 
+For TouchMe, [open TouchMe online](https://touchme.playtronica.com/).
+
 > ℹ️ **The synths at synth.playtronica.com are not made by Playtronica.** They are a curated collection of third-party web synths. Some may stop working as browsers change. We try to keep the list up to date but cannot fix the synths themselves. If you find a broken synth, tell us.
 
 ## Where to find synths

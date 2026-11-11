@@ -22,6 +22,7 @@ You will need a computer with **Chrome** installed to use a Playtronica device i
 - **TouchMe device** — the main PCB with two touch-sensitive gold pads.
 - **USB cable** — for connecting to your computer.
 - **Quick-start card.**
+- [Open TouchMe online](https://touchme.playtronica.com/).
 
 ## 🍉 Playtron
 
