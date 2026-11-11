@@ -30,6 +30,7 @@ You will need a computer with **Chrome** installed to use a Playtronica device i
 - **USB cable.**
 - **Alligator-clip cables** — 20 in the box: enough for all 16 pins and Ground, plus two spares.
 - **Quick-start card.**
+- [Play Playtron online](https://play.playtronica.com/).
 
 ## 🌿 Biotron
 
