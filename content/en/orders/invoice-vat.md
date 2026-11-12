@@ -7,8 +7,8 @@ summary: "How to get an invoice for your order — for customs, your accountant,
 segment: ["b2b", "international"]
 deflection_target: 140
 order: 2
-status: edited-2026-09
-last_edited: 2026-09-01
+status: edited-2026-11
+last_edited: 2026-11-12
 emoji: 🧾
 ---
 
@@ -48,10 +48,28 @@ For business purchases, your accountant or finance team will need a formal invoi
 - Your **order number**
 - **Company name** as it should appear on the invoice
 - **Full company address**
-- **VAT number** (required if you are in the EU and want VAT reverse charge)
+- **VAT number** (printed on the invoice)
 - A **PO number** if your accounting system requires one
 
 We send the invoice within 1 business day.
+
+## VAT on your invoice: what we do not change
+
+Enter your billing details correctly at checkout. This is the best way to get a correct invoice the first time. At checkout, fill in:
+
+- Company name
+- Billing address
+- VAT number
+
+The invoice is built from the billing details entered at checkout.
+
+**We do not refund VAT after an order is paid.** For EU orders, VAT is part of the price you paid. A VAT number added after payment does not change the VAT amount. A VAT invoice does not make us return the VAT.
+
+If your company is registered for VAT, you can usually recover the VAT in your own VAT return. Your accountant knows the rules for your country. We cannot give tax advice.
+
+If your organization cannot recover VAT, or you need a purchase at 0% VAT, ask us **before you pay**. [Email collaboration@playtronica.com](mailto:collaboration@playtronica.com) with your VAT number and what you want to buy. For eligible EU businesses we prepare the order at the correct VAT rate. See [B2B and institutional orders](/professionals/b2b-bulk/).
+
+**If a detail on your invoice is wrong**, email [support@playtronica.com](mailto:support@playtronica.com) with the subject `Invoice correction #[your order number]`. Include the correct company name, address, and VAT number. We can issue a new copy of the invoice with these details. The new copy does not change the VAT amount.
 
 ## I need a quote before buying (B2B)
 
