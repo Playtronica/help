@@ -52,13 +52,6 @@ export default function ThanksDownload() {
             </Link>{" "}
             and above.
           </li>
-          <li>
-            Interested in a free Class Pack 10?{" "}
-            <Link href="/education/pilot/" className="text-accent hover:underline">
-              Apply for the Fall 2026 pilot
-            </Link>{" "}
-            — 5 schools selected, applications close 31 August.
-          </li>
         </ul>
 
         <p className="mt-10 text-[12px] text-ink-soft">

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Music technology for K-12, conservatories + museums — Playtronica for Education",
   description:
-    "Standards-aligned music technology for K-12 classrooms, conservatories, museums, and special-ed programs. NCAS / UK MMC / NGSS / ISTE-aligned lessons, classroom bundles from €390, free Lesson 1 PDF download.",
+    "Standards-aligned music technology for K-12 classrooms, conservatories, museums, and special-ed programs. NCAS / UK MMC / NGSS / ISTE-aligned lessons, classroom bundles quoted on request, free Lesson 1 PDF download.",
   robots: { index: true, follow: true },
   keywords: [
     "music technology lesson plans",
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
 const PRICING = [
   {
     name: "Single Teacher Starter",
-    price: "€390",
     students: "1 teacher, up to 5 students",
     contents: [
       "1 TouchMe + 1 Playtron",
@@ -47,7 +46,6 @@ const PRICING = [
   },
   {
     name: "Class Pack 10",
-    price: "€1,380",
     students: "1 classroom up to 20 students",
     contents: [
       "5 TouchMe + 5 Playtron + 1 Biotron",
@@ -62,7 +60,6 @@ const PRICING = [
   },
   {
     name: "Class Pack 30",
-    price: "€3,690",
     students: "Music lab, multi-section",
     contents: [
       "15 TouchMe + 10 Playtron + 3 Biotron + 1 Orbita",
@@ -75,7 +72,6 @@ const PRICING = [
   },
   {
     name: "District / Lab",
-    price: "from €15,000",
     students: "Custom — districts, university labs, museums",
     contents: [
       "Custom device mix",
@@ -161,10 +157,6 @@ const FAQ = [
     a: "Free replacement. Our institutional warranty is 1 year US/JP, 2 years EU/UK — extended beyond the consumer 30-day window. We ship replacements within 3 business days of confirmation.",
   },
   {
-    q: "Can we try before we buy?",
-    a: "Yes — the Fall 2026 pilot program is open. We ship a free Class Pack 10 to 5 selected schools. In return: a written case study + photo/video rights. Applications close 31 August 2026.",
-  },
-  {
     q: "What if I'm not a music teacher?",
     a: "Lots of our institutional buyers are STEAM coordinators, makerspace leads, or art teachers running cross-curricular music units. The hardware works the same. The curriculum gives entry points for non-music backgrounds.",
   },
@@ -203,41 +195,11 @@ function buildSchemaJsonLd() {
     })),
   };
 
-  // Single ItemList that wraps all pricing tiers as Offer objects. Cleanest
-  // shape Google can parse without ambiguity. Each price-tier Offer has a
-  // category and itemOffered set to a generic Product (the bundle).
-  const offerCatalogLd = {
-    "@context": "https://schema.org",
-    "@type": "OfferCatalog",
-    "@id": `${pageUrl}#pricing`,
-    name: "Playtronica Education — Classroom bundles",
-    url: `${pageUrl}#pricing`,
-    itemListElement: PRICING.map((tier) => {
-      const numericPrice = tier.price.replace(/[^0-9]/g, "");
-      return {
-        "@type": "Offer",
-        name: tier.name,
-        description: tier.students,
-        category: "Educational classroom bundle",
-        priceCurrency: "EUR",
-        ...(numericPrice && { price: numericPrice }),
-        availability: "https://schema.org/InStock",
-        url: `${SITE_URL}${tier.href}`,
-        itemOffered: {
-          "@type": "Product",
-          name: `Playtronica — ${tier.name}`,
-          description: tier.contents.join("; "),
-          brand: { "@type": "Brand", name: "Playtronica" },
-        },
-      };
-    }),
-  };
-
-  return { educationalOrgLd, faqLd, offerCatalogLd };
+  return { educationalOrgLd, faqLd };
 }
 
 export default function EducationLanding() {
-  const { educationalOrgLd, faqLd, offerCatalogLd } = buildSchemaJsonLd();
+  const { educationalOrgLd, faqLd } = buildSchemaJsonLd();
   return (
     <article className="-mx-4 -mt-6 md:-mx-0">
       <script
@@ -247,10 +209,6 @@ export default function EducationLanding() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogLd) }}
       />
       {/* ──── Hero ──── */}
       <section className="border-b-[1.5px] border-rule bg-bg px-4 py-10 md:px-0 md:py-16">
@@ -276,12 +234,6 @@ export default function EducationLanding() {
             className="inline-flex min-h-[44px] items-center border-[1.5px] border-ink bg-ink px-5 py-2 font-mono text-[13px] uppercase tracking-[0.06em] text-bg no-underline transition hover:border-accent hover:bg-accent"
           >
             Request a quote →
-          </Link>
-          <Link
-            href="/education/pilot/"
-            className="inline-flex min-h-[44px] items-center border-[1.5px] border-ink bg-bg px-5 py-2 font-mono text-[13px] uppercase tracking-[0.06em] text-ink no-underline transition hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-block-sm"
-          >
-            Apply for free pilot
           </Link>
           <Link
             href="/education/curriculum/"
@@ -333,12 +285,11 @@ export default function EducationLanding() {
             <div className="text-2xl">🏛️</div>
             <h3 className="mt-2 font-mono text-[16px] font-bold uppercase tracking-tight">Principal / admin</h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
-              You approve budgets. Class Pack pricing starts at €1,380 — under most music-supply
-              line items. Eligible for ESSER (US) and Digitalpakt 2.0 (DE) funding.
+              You approve budgets. Every order is quoted individually, with an education discount. Eligible for ESSER (US) and Digitalpakt 2.0 (DE) funding.
             </p>
             <p className="mt-3 text-[13px] text-ink">
               <strong>See:</strong>{" "}
-              <Link href="#pricing" className="text-accent hover:underline">pricing tiers</Link>
+              <Link href="#pricing" className="text-accent hover:underline">classroom sets</Link>
             </p>
           </div>
           <div className="border-[1.5px] border-rule bg-white p-6">
@@ -358,13 +309,14 @@ export default function EducationLanding() {
 
       {/* ──── Pricing ──── */}
       <section id="pricing" className="border-b-[1.5px] border-rule px-4 py-12 md:px-0">
-        <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">/ 02 · Pricing</div>
+        <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">/ 02 · Quotes</div>
         <h2 className="mt-3 font-mono text-[clamp(24px,4vw,36px)] font-bold leading-tight">
-          Open prices. No quote-walls.
+          Quoted for your classroom.
         </h2>
         <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-ink-soft">
-          Most music-tech vendors hide pricing behind "talk to sales". We publish ours. Quotes are
-          for delivery logistics, not negotiation.
+          We quote every classroom order individually: our website prices excluding VAT, with an
+          education discount for schools and universities. Tell us what you're planning and we'll
+          reply with an itemized quote.
         </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -376,7 +328,7 @@ export default function EducationLanding() {
               } p-6`}
             >
               <h3 className="font-mono text-[14px] font-bold uppercase tracking-[0.04em]">{tier.name}</h3>
-              <div className="mt-3 font-mono text-[32px] font-bold leading-none">{tier.price}</div>
+              <div className="mt-3 font-mono text-[16px] font-bold leading-none">Quote on request</div>
               <div className="mt-1 text-[12px] uppercase tracking-[0.06em] text-ink-soft">{tier.students}</div>
               <ul className="mt-4 flex-1 space-y-1.5 text-[13px] leading-relaxed text-ink">
                 {tier.contents.map((c) => (
@@ -530,7 +482,7 @@ export default function EducationLanding() {
               Get the lesson PDF →
             </button>
             <span className="text-[12px] text-ink-soft">
-              No marketing emails. One follow-up only if your school joins the pilot.
+              No marketing emails.
             </span>
           </div>
         </form>
@@ -569,31 +521,10 @@ export default function EducationLanding() {
         </div>
       </section>
 
-      {/* ──── Pilot CTA ──── */}
-      <section className="border-b-[1.5px] border-rule bg-hl px-4 py-12 md:px-0">
-        <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
-          / 06 · Free pilot · Fall 2026
-        </div>
-        <h2 className="mt-3 font-mono text-[clamp(28px,4.5vw,44px)] font-bold leading-tight">
-          5 schools. Free Class Pack 10. One published case study.
-        </h2>
-        <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-ink">
-          We ship a free Class Pack 10 (€1,380 value) to 5 selected schools in September 2026. In
-          return: a written case study from your teacher + photo / video rights from your students.
-          Applications close 31 August. Case studies published December 2026.
-        </p>
-        <Link
-          href="/education/pilot/"
-          className="mt-6 inline-flex min-h-[48px] items-center border-[1.5px] border-ink bg-ink px-6 py-3 font-mono text-[14px] uppercase tracking-[0.06em] text-bg no-underline transition hover:border-accent hover:bg-accent"
-        >
-          Apply for the pilot →
-        </Link>
-      </section>
-
       {/* ──── FAQ ──── */}
       <section className="border-b-[1.5px] border-rule px-4 py-12 md:px-0">
         <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
-          / 07 · Common questions
+          / 06 · Common questions
         </div>
         <h2 className="mt-3 font-mono text-[clamp(24px,4vw,36px)] font-bold leading-tight">
           Real questions from real schools.
@@ -616,7 +547,7 @@ export default function EducationLanding() {
       {/* ──── Contact ──── */}
       <section className="px-4 py-12 md:px-0">
         <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-soft">
-          / 08 · Talk to us
+          / 07 · Talk to us
         </div>
         <h2 className="mt-3 font-mono text-[clamp(24px,4vw,36px)] font-bold leading-tight">
           One human reads every email.
@@ -627,8 +558,7 @@ export default function EducationLanding() {
               Andrey Manirko · founder
             </h3>
             <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
-              Replies within 1 business day. I review every pilot application personally and most
-              quote requests too. If your school is a good fit, we'll book a 30-minute call.
+              Replies within 1 business day. I review most quote requests personally. If your school is a good fit, we'll book a 30-minute call.
             </p>
             <div className="mt-4 space-y-1.5 text-[14px]">
               <div>
@@ -654,11 +584,6 @@ export default function EducationLanding() {
               <li>
                 <Link href="/education/quote/" className="text-accent hover:underline">
                   Institutional quote form →
-                </Link>
-              </li>
-              <li>
-                <Link href="/education/pilot/" className="text-accent hover:underline">
-                  Free pilot application →
                 </Link>
               </li>
               <li>

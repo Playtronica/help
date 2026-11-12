@@ -24,14 +24,14 @@ The full table of contents:
 2. **What "music technology in the classroom" actually means** — the four categories, and which one matters for which grade band
 3. **The grade-band realities** — what works in K-2, in 3-5, in 6-8, in 9-12, and in conservatory / advanced settings
 4. **Standards alignment** — NCAS, UK Model Music Curriculum, NGSS, ISTE — what they want and how music tech delivers
-5. **The equipment decision** — software, hardware, hybrid, and the budget envelopes for each
+5. **The equipment decision** — software, hardware, hybrid, and the setup that fits each size of program
 6. **Lesson design for music tech** — the 4-phase template that works whether you have 1 device or 30
 7. **Classroom management** — the specific problems music-tech lessons create, and how to solve them
 8. **Special education and accessibility** — where music tech is most under-used and most transformative
 9. **Procurement and budget** — Title IV-A, ESSER, Digitalpakt 2.0, PTA, district budget lines — what works
 10. **Common mistakes and how to avoid them** — the failure modes you can see coming
 11. **The Playtronica approach** — what we built, why, and how it differs from what's already out there
-12. **Free starter resources** — Lesson 1 PDF, standards mapping, pilot program
+12. **Free starter resources** — Lesson 1 PDF, standards mapping, quote request
 
 This guide assumes you have a music education background. It does **not** assume you have a technology background. If you have neither, skim Section 2 first and come back.
 
@@ -182,27 +182,27 @@ For students (not teachers). Seven domains: 1.1 Empowered Learner through 1.7 Gl
 
 ## 5. The equipment decision
 
-What you buy depends on what you're solving for. Here's the decision tree we recommend, with budget ranges.
+What you buy depends on what you're solving for. Here's the decision tree we recommend, by size of program.
 
-### Solo teacher testing the waters — $200-500 budget
+### Solo teacher testing the waters
 
-**Buy:** one TouchMe + one Playtron + alligator clip kit. Total: roughly €390 (Single Teacher Starter pricing). Try it in one section for one unit. Measure: did students engage? Did anyone make music they couldn't have made before?
+**Buy:** one TouchMe + one Playtron + alligator clip kit. This is our Single Teacher Starter set. Try it in one section for one unit. Measure: did students engage? Did anyone make music they couldn't have made before?
 
 **Don't:** buy a 30-pack of anything before you've taught one full unit with one device. The most common procurement mistake is buying for scale before validating the workflow.
 
-### Single classroom (12-25 students) — $1,200-1,800 budget
+### Single classroom (12-25 students)
 
-**Buy:** 5 TouchMe + 5 Playtron + 1 Biotron + accessories (we sell this as Class Pack 10, €1,380). Five devices serve a 20-student class in pairs. The Biotron is the demo station — set up the houseplant once, leave it running, everyone visits.
+**Buy:** 5 TouchMe + 5 Playtron + 1 Biotron + accessories (we sell this as Class Pack 10). Five devices serve a 20-student class in pairs. The Biotron is the demo station — set up the houseplant once, leave it running, everyone visits.
 
 **Don't:** buy "one device per student." Music technology is a collaborative activity. Pairs and small groups work better than solo time at this age.
 
-### Music lab or multi-section program — $3,500-5,000 budget
+### Music lab or multi-section program
 
-**Buy:** 15 TouchMe + 10 Playtron + 3 Biotron + 1 Orbita (Class Pack 30, €3,690). This is the dedicated music-lab setup. Five stations of 3 students. Each station rotates through devices over the semester.
+**Buy:** 15 TouchMe + 10 Playtron + 3 Biotron + 1 Orbita (Class Pack 30). This is the dedicated music-lab setup. Five stations of 3 students. Each station rotates through devices over the semester.
 
 **Don't:** spend on Orbita-only labs. Orbita is wonderful but it's specifically for pattern-and-rhythm composition. Most middle school programs need touch-based devices for 70% of lessons; Orbita is 30%.
 
-### District-wide rollout or museum-grade installation — $15,000+
+### District-wide rollout or museum-grade installation
 
 **Buy:** custom mix. Talk to us. Bigger orders include on-site training, white-glove setup, and custom curriculum updates. The [Lincoln Center](/education/case-study-lincoln-center/) configuration was incremental — three orders over two years; that's the wise pattern.
 
@@ -370,7 +370,7 @@ We made four music-technology devices because the existing options didn't solve 
 
 All four are USB MIDI class-compliant — works without drivers on Chromebooks, Macs, Windows, Linux, Android. All four work with synth.playtronica.com (free, browser-based) and with any DAW that accepts MIDI input. We open-source the firmware. We license the curriculum CC-BY-4.0.
 
-We're a small team based in Tallinn, Estonia. Founded by Sasha Pas in 2014. Our devices are used by Lincoln Center, Stanford d.school, Berklee College of Music, Hochschule für Musik Trossingen, Centre Pompidou, Garage Museum, Filharmonia Opolska, Singapore Ministry of Education, and many others. Our pricing for institutional buyers is on the [pricing page](/education/#pricing); pilot applications are open at the [pilot page](/education/pilot/).
+We're a small team based in Tallinn, Estonia. Founded by Sasha Pas in 2014. Our devices are used by Lincoln Center, Stanford d.school, Berklee College of Music, Hochschule für Musik Trossingen, Centre Pompidou, Garage Museum, Filharmonia Opolska, Singapore Ministry of Education, and many others. We quote institutional orders individually — send a request on the [quote page](/education/quote/).
 
 We're not trying to be everything to everyone. We're trying to be the best music-specific tool for the K-12 → conservatory institutional buyer. That's the niche. We own it.
 
@@ -383,7 +383,6 @@ If you've read this far and you're thinking about bringing music technology into
 - **[Lesson 1 PDF download](/education/playtronica-lesson-1.pdf)** — print-ready K-2 lesson on touch and conductivity. Teach it tomorrow with no Playtronica devices — bring fruit, foil, and a multimeter to demonstrate the concept of conduction. Then upgrade to TouchMe if it lands.
 - **[Standards alignment map](/education/standards/)** — lesson-by-lesson NCAS / UK MMC / NGSS / ISTE citations. Useful for curriculum review boards.
 - **[5 free lessons in full](/education/curriculum/)** — Lessons 1-5 from our 15-lesson curriculum. Free, CC-BY-4.0 licensed. Use them as-is, modify them, take them to your colleagues.
-- **[Free pilot program](/education/pilot/)** — applications open for Fall 2026 cohort. 5 schools selected; each receives a free Class Pack 10 (€1,380 value). In return: a written case study + photo/video rights. Applications close 31 August 2026.
 - **Talk to Andrey** — founder of Playtronica reads every email. [manirko@playtronica.com](mailto:manirko@playtronica.com). Reply within 1 business day. No sales pitch unless you ask for one.
 
 ---
@@ -396,7 +395,7 @@ If you've read this far and you're thinking about bringing music technology into
 - **Stanford d.school case study — [Design-thinking + maker pedagogy](/education/case-study-stanford-dschool/)** — €1,802 mixed-device order.
 - **Hochschule für Musik Trossingen case study — [European conservatory + MIDI research](/education/case-study-hochschule-trossingen/)** — single-faculty-led adoption.
 - **[Standards alignment](/education/standards/)** — lesson-by-lesson mapping.
-- **[Pricing tiers](/education/#pricing)** — Single Teacher Starter through District / Lab.
+- **[Classroom sets](/education/#pricing)** — Single Teacher Starter through District / Lab.
 - **[Institutional quote](/education/quote/)** — POs accepted, 1-business-day reply.
 
 ---

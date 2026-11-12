@@ -6,6 +6,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Dat
 
 ## [Unreleased]
 
+### Removed — education portal prices and closed pilot (2026-11-12)
+- **What:** Class Pack prices (Starter €390, Class Pack 10 €1,380, Class Pack 30 €3,690, District from €15,000) and the closed Fall 2026 pilot removed from education.playtronica.com. Sets are now "Quote on request"; the quote form is unchanged. Andrey's decision 12.11 (P22 "Убрать", P8 "Да, выложить"). B2B prices now follow the B2B canon: website price excl. VAT, education discount.
+- **Where:** `app/education/*` (pilot and thanks-pilot pages deleted), `content/en/education/` (welcome, K-12 guide, 3 case studies), and 8 × 301 redirects for `/pilot`, `/thanks-pilot`, `/education/pilot`, `/education/thanks-pilot` → `/quote/` in `public/_redirects`.
+- **Rollback:** `git revert` this commit, then push to `main`. Cloudflare Pages redeploys in 10–50 min.
+
 ### Added — self-improving system layer
 - **`scripts/audit-help-system.py`** — reproducible 5-method system audit (GAP / Bottlenecks / Staleness / SO Patterns / Leverage Points). Outputs JSON or human-readable text. Runs in CI as an informational check, and from the monthly Cowork scheduled task.
 - **`scripts/check-internal-consistency.py`** — blocking CI gate. Catches non-canonical service URLs, SLA-phrase drift in "Still stuck" footers, hard-coded calendar dates, broken internal links, and stale `status:` markers.

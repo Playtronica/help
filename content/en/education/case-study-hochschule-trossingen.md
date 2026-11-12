@@ -62,7 +62,7 @@ For German Musikhochschulen specifically, Playtronica is increasingly distribute
 
 If you're a European conservatory or music-tech department:
 
-1. **Start with a Class Pack 10 (€1,380)** or directly with a Class Pack 30 (€3,690) if your seminar runs >20 students.
+1. **Start with a Class Pack 10-size set** or directly with a Class Pack 30-size set if your seminar runs >20 students.
 2. **Order via Sonic Sales** (Germany) if you want a local invoice in German + DSGVO-compliant procurement flow.
 3. **Pair with Lesson 4 (Pattern, pulse, sequence with Orbita)** for the composition + sequencing portion of your curriculum. Pair with Lesson 5 (Composing for the body) for the accessible-instrument design module.
 4. **Expect lecturer-led adoption first.** This pattern works. A single advocate champions Playtronica into one course; the lab procures more after the second semester.

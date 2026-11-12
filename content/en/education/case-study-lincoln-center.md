@@ -62,7 +62,7 @@ The procurement pattern is also useful intelligence for any institution thinking
 
 If you're a music teacher, museum educator, or after-school program lead reading this — the Lincoln Center model is one you can copy.
 
-1. Start with a single Class Pack 10 (€1,380) or a Single Teacher Starter (€390) if you're testing solo.
+1. Start with a Class Pack 10-size set, or a Single Teacher Starter if you're testing solo.
 2. Run a 6-8 week program around 2-3 lessons from our curriculum — Lesson 1 + Lesson 2 cover almost any K-5 entry point.
 3. Document what happened. Send us photos and one paragraph of what surprised you.
 4. Place a refined second order based on what your students gravitated toward.
@@ -74,5 +74,4 @@ That's the entire Lincoln Center playbook.
 - **Lesson 1 — [What is sound? Touch as conductor](/education/lesson-1-touch-as-conductor/)** — the entry-point lesson Lincoln Center runs at open-studio days.
 - **Lesson 3 — [The plant that plays itself](/education/lesson-3-plant-that-plays-itself/)** — the Biotron lesson that anchors the family-day station.
 - **Lesson 4 — [Pattern, pulse, sequence](/education/lesson-4-pattern-pulse-orbita/)** — composer-in-residence-style mechanics lesson.
-- **[Apply for the free Fall 2026 pilot](/education/pilot/)** — get a free Class Pack 10 (€1,380 value) plus the same hands-on guidance Lincoln Center got.
 - **[Institutional quote](/education/quote/)** — for procurement-led purchases like Lincoln Center's.

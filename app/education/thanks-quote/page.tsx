@@ -41,12 +41,6 @@ export default function ThanksQuote() {
             </Link>{" "}
             — share with the music teacher who'll actually run the program.
           </li>
-          <li>
-            <Link href="/education/pilot/" className="text-accent hover:underline">
-              Read the free pilot program details
-            </Link>{" "}
-            — applicable if your budget is constrained this year.
-          </li>
         </ul>
 
         <p className="mt-10 text-[12px] text-ink-soft">

@@ -2,7 +2,7 @@
 title: "Welcome — Playtronica for Education"
 slug: welcome
 section: education
-summary: "Music tech for K-12 classrooms. Standards-aligned curriculum, classroom bundles, free pilot program. Quick links to the program landing, pricing, and lesson library."
+summary: "Music tech for K-12 classrooms. Standards-aligned curriculum, classroom bundles, quotes on request. Quick links to the program landing, quote form, and lesson library."
 segment: ["education", "b2b"]
 deflection_target: 0
 order: 0
@@ -18,9 +18,8 @@ The full experience for music teachers, STEAM coordinators, school IT, and procu
 ## Quick links
 
 - **[Music Technology in K-12 Classrooms — The Complete Guide](/education/guide-music-technology-k12-classrooms/)** — 28-min comprehensive guide. Lesson design, standards, equipment, classroom management, procurement, accessibility. **Start here if you're new to music tech.**
-- **[Program landing](/education/)** — hero, pricing, pilot CTA, FAQ, contact.
-- **[Pricing tiers](/education/#pricing)** — €390 Single Teacher / €1,380 Class Pack 10 / €3,690 Class Pack 30 / €15K+ District.
-- **[Free pilot program](/education/pilot/)** — 5 schools, free Class Pack 10, Fall 2026 cohort, applications close 31 August.
+- **[Program landing](/education/)** — hero, classroom sets, FAQ, contact.
+- **[Classroom sets](/education/#pricing)** — Single Teacher / Class Pack 10 / Class Pack 30 / District, each quoted on request.
 - **[Institutional quote](/education/quote/)** — POs accepted, W-9 / DPA included on request.
 - **[Standards alignment](/education/standards/)** — NCAS, UK MMC, NGSS, ISTE per lesson.
 - **[Full curriculum library](/education/curriculum/)** — 15 lessons; 5 free, 10 in the Class Pack bundle.
@@ -45,6 +44,6 @@ Browse them below in the sidebar, or jump straight to one:
 
 ## Contact
 
-Andrey Manirko (founder) replies to every quote request and pilot application within 1 business day. Email **manirko@playtronica.com** with the subject `Education — [your school]`.
+Andrey Manirko (founder) replies to every quote request within 1 business day. Email **manirko@playtronica.com** with the subject `Education — [your school]`.
 
 Used by music programs at Lincoln Center for the Performing Arts, Stanford d.school, Berklee College of Music, Hochschule für Musik Trossingen, Centre Pompidou, Garage Museum, Filharmonia Opolska, Singapore Ministry of Education, and many others.

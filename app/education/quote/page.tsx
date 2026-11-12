@@ -38,7 +38,7 @@ export default function QuotePage() {
           <li>On-site or remote setup training</li>
           <li>Multi-year curriculum updates</li>
           <li>Replacement-parts replenishment plans</li>
-          <li>Bulk discount tiers (5+ units, 25+ units, district-wide)</li>
+          <li>Education discount for schools and universities</li>
         </ul>
       </section>
 
@@ -179,10 +179,10 @@ export default function QuotePage() {
               className="border-[1.5px] border-rule bg-white px-3 py-2 text-[14px] outline-none focus:border-accent"
             >
               <option value="">Pick one…</option>
-              <option>Single Teacher Starter (€390)</option>
-              <option>Class Pack 10 (€1,380)</option>
-              <option>Class Pack 30 (€3,690)</option>
-              <option>District / Lab (custom, from €15,000)</option>
+              <option>Single Teacher Starter</option>
+              <option>Class Pack 10</option>
+              <option>Class Pack 30</option>
+              <option>District / Lab (custom)</option>
               <option>I want to talk through it</option>
             </select>
           </label>

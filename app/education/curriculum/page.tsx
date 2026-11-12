@@ -107,7 +107,7 @@ export default function CurriculumIndex() {
             Want the other 10 lessons?
           </h3>
           <p className="mt-2 max-w-[60ch] text-[14px] leading-relaxed text-ink-soft">
-            Lessons 6-15 ship with the Class Pack 10 bundle (€1,380) and up. They cover
+            Lessons 6-15 ship with the Class Pack 10 bundle and up. They cover
             generative composition, multi-device ensembles, project-based assessment, and
             cross-curricular maker units.
           </p>
@@ -117,12 +117,6 @@ export default function CurriculumIndex() {
               className="inline-flex min-h-[40px] items-center border-[1.5px] border-ink bg-ink px-4 py-2 font-mono text-[12px] uppercase tracking-[0.06em] text-bg no-underline hover:border-accent hover:bg-accent"
             >
               Request a quote →
-            </Link>
-            <Link
-              href="/education/pilot/"
-              className="inline-flex min-h-[40px] items-center border-[1.5px] border-rule bg-white px-4 py-2 font-mono text-[12px] uppercase tracking-[0.06em] no-underline hover:border-accent hover:text-accent"
-            >
-              Apply for free pilot
             </Link>
           </div>
         </div>

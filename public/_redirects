@@ -102,3 +102,15 @@
 /contact                        /site/contact/                          301
 /support                        /site/contact/                          301
 /help                           /                                       301
+
+# Education pilot (closed 2026-08-31) removed 2026-11-12 -> quote form.
+# Absolute URLs so both hosts land on the education subdomain root paths
+# (education.playtronica.com serves /education/* as "/", see functions/_middleware.ts).
+/education/pilot                https://education.playtronica.com/quote/    301
+/education/pilot/               https://education.playtronica.com/quote/    301
+/education/thanks-pilot         https://education.playtronica.com/quote/    301
+/education/thanks-pilot/        https://education.playtronica.com/quote/    301
+/pilot                          https://education.playtronica.com/quote/    301
+/pilot/                         https://education.playtronica.com/quote/    301
+/thanks-pilot                   https://education.playtronica.com/quote/    301
+/thanks-pilot/                  https://education.playtronica.com/quote/    301
