@@ -57,11 +57,10 @@ We send the invoice within 1 business day.
 
 Enter your billing details correctly at checkout. This is the best way to get a correct invoice the first time. At checkout, fill in:
 
-- Company name
-- Billing address
-- VAT number
+- **Company** — the company name as it should appear on the invoice
+- **Billing address** — the full company address
 
-The invoice is built from the billing details entered at checkout.
+The invoice is built from the billing details entered at checkout. Checkout has no VAT number field. If you need your VAT number on the invoice, email us after your order (see below) and we add it to a copy of the invoice.
 
 **We do not refund VAT after an order is paid.** For EU orders, VAT is part of the price you paid. A VAT number added after payment does not change the VAT amount. A VAT invoice does not make us return the VAT.
 
