@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "description": "Article outcome inventory — each page is a hypothesis that a verified reusable answer improves the matching customer outcome. Review with referenced before/after evidence. See docs/HYPOTHESIS-LOG.md.",
-  "generated_at": "2026-11-11",
+  "generated_at": "2026-11-12",
   "pages": [
     {
       "url": "/devices/biotron-advanced/",
@@ -701,7 +701,7 @@
     },
     {
       "url": "/software/online-synths/",
-      "title": "Online synth library",
+      "title": "More instruments",
       "audience": [
         "music-producer",
         "gift-recipient"
@@ -805,6 +805,20 @@
       "deflection_target_per_month": 40,
       "first_published": "2026-07-06",
       "next_check_in": "2026-10-04",
+      "outcome": null,
+      "notes": ""
+    },
+    {
+      "url": "/troubleshooting/windows-browser-freeze/",
+      "title": "Windows: the browser freezes when I unplug the device",
+      "audience": [
+        "music-producer",
+        "gift-recipient"
+      ],
+      "what_we_hope": "Publish a verified answer for 'windows-browser-freeze' that makes the matching customer problem easier to resolve or prevents it.",
+      "deflection_target_per_month": null,
+      "first_published": "2026-11-12",
+      "next_check_in": "2027-02-10",
       "outcome": null,
       "notes": ""
     },

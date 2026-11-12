@@ -23,6 +23,7 @@ Pick the symptom that matches your situation. Each row points to the right page 
 | USB port loose, device physically broken | Hardware fault | "Hardware damage" below |
 | Some objects play, others do not | Conductivity | [Objects you can play](/sound/objects-you-can-play/) |
 | Worked once, now missing | Busy MIDI port, cable, USB enumeration, driver, or firmware | [Device will not connect](/troubleshooting/wont-connect/) |
+| Windows: browser freezes when I unplug the device | Chromium browser bug on Windows | [Windows: browser freezes](/troubleshooting/windows-browser-freeze/) |
 
 ## Quick checklist — works for 80% of "not working" cases
 

@@ -47,6 +47,8 @@ For devices that do have a status LED (Scales, Biotron, Orbita):
 3. **Use a USB port directly on the computer.** Avoid USB hubs.
 4. **Try a different USB cable.** The cable must be a data cable, not charge-only.
 
+If Chrome, Edge or Opera freezes when you unplug the device, see [Windows: the browser freezes](/troubleshooting/windows-browser-freeze/).
+
 ## Old Micro-USB device on a new Mac? Add a USB hub
 
 For the older **Micro-USB TouchMe (v1)** and **Micro-USB Playtron** on a recent Apple-silicon Mac (M1/M2/M3 and later): the device powers on and reacts to touch, but the Mac shows **nothing** in Audio MIDI Setup — even with a good data cable straight into a port.
