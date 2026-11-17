@@ -7,7 +7,7 @@ order: 12
 segment: ["music-producer", "b2b"]
 deflection_target: 10
 status: edited-2026-05
-last_edited: 2026-10-25
+last_edited: 2026-11-17
 emoji: 🍉
 parent: playtron
 hide_from_nav: true
@@ -21,13 +21,23 @@ This page is for makers and musicians who already have Playtron playing and want
 
 ## Custom scales and per-pin mapping
 
-Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Chrome. Each of the 16 alligator pins can be mapped to:
+Open [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron) in Chrome. There you can:
 
-- A specific MIDI note (0–127).
-- A specific MIDI channel (1–16). Useful for routing pins to different instruments in a DAW.
-- A specific velocity profile — fixed value or derived from contact area.
+- Set a MIDI note (0–127) for each of the 16 alligator pins. This is how you build your own scale.
+- Set one MIDI channel (1–16) for the whole device. All pins send on that channel.
+- Save your own presets and load them again. The tool comes with one preset, **Default**. There are no ready-made scale presets.
 
-Common presets ship in the web tool: major, minor, pentatonic, and octatonic. Custom mappings are stored on the device. You do not need to set them again on another computer.
+Press **Send to Device** to store the notes and the channel in Playtron's memory. They stay on the device, so you do not need to set them again on another computer.
+
+## Velocity
+
+Playtron sends the same velocity on every touch. On USB-C Playtron it is **90**. The pins do not sense pressure or contact area, and there is no velocity setting on the device or in the web tool.
+
+To get a different or varying velocity, change it in your DAW or synth:
+
+- **Ableton Live** — put the **Velocity** MIDI effect on the track. Its Fixed mode sets one value for every note. The Random control adds variation.
+- **Logic Pro** — add the **Velocity Processor** MIDI FX to the track and set the velocity you want.
+- **Other DAWs and synths** — look for a velocity or MIDI transform setting on the track or the instrument. To keep every note at the same level, turn the synth's velocity sensitivity to zero.
 
 ## What materials work best
 
@@ -56,10 +66,14 @@ Methods that do not work: ground clipped to a radiator, a pipe, or a laptop body
 
 ## Route Playtron in a DAW
 
-Playtron is a class-compliant MIDI device. In any DAW, select Playtron as a MIDI input. To split pins across different instruments:
+Playtron is a class-compliant MIDI device. In any DAW, select Playtron as a MIDI input.
 
-1. In [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron), set each pin to a different MIDI channel.
-2. In the DAW, filter each track by the corresponding MIDI channel.
+All 16 pins send on one MIDI channel. To send different pins to different instruments, split them by note:
+
+1. In [settings.playtronica.com/#/playtron](https://settings.playtronica.com/#/playtron), give each pin its own note.
+2. In the DAW, route the notes to different sounds — for example, with a Drum Rack in Ableton Live or Drum Machine Designer in Logic Pro.
+
+To play two Playtrons into different instruments, set a different MIDI channel on each device and filter each DAW track by its channel.
 
 See the DAW setup pages:
 

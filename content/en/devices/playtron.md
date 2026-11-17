@@ -93,7 +93,7 @@ Compatible monitors:
 Steps:
 
 1. **Plug in Playtron first, then open MorningStar in Chrome.**
-2. **Touch a note object while holding the ground.** You should see message type **Note On** and **Note Off**, MIDI channel 1, and velocity **127**. If messages appear, Playtron is working. The problem is in Play, your synth, or your browser.
+2. **Touch a note object while holding the ground.** You should see message type **Note On** and **Note Off**, MIDI channel 1 (unless you changed it in settings), and the same velocity on every touch (**90** on USB-C Playtron). If messages appear, Playtron is working. The problem is in Play, your synth, or your browser.
 3. **If Playtron does not appear in the device list**, close the browser, wait 5 seconds, reopen the browser, and reload MorningStar. Click the "Devices" button in the top right.
 4. **If the device is listed but no messages appear**, open MorningStar Settings and confirm "Note On" messages are enabled. MorningStar shows all 16 notes at once even if only one is active.
 
