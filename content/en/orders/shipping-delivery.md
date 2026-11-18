@@ -8,28 +8,35 @@ order: 5
 segment: ["gift-buyer", "international"]
 deflection_target: 110
 status: edited-2026-05
-last_edited: 2026-05-26
+last_edited: 2026-11-18
 emoji: 🚚
 ---
 
-All orders ship within **1–2 business days** from one of two fulfilment centres. EU and North America orders ship from the Netherlands via UPS, DHL, or local post. Asia Pacific orders ship from Hong Kong via DHL or FedEx. Tracking is provided for every order.
+All orders ship within **1–2 business days** from one of two fulfilment centres. EU and Canada orders ship from the Netherlands via UPS, DHL, or local post. Orders to the US, the UK, Asia Pacific, and the rest of the world ship from Hong Kong via DHL, FedEx, or the national post. Tracking is provided for every order.
 
 We ship globally from two fulfilment centres:
 
-- **Netherlands (ShipBob NL)** — for Europe and North America. Carriers: UPS, DHL, PostNL.
-- **Hong Kong (Floship)** — for Asia Pacific and the rest of the world. Carriers: DHL, FedEx.
+- **Netherlands (ShipBob NL)** — for the EU, Canada, Israel, Iceland, Georgia, Armenia, Montenegro, and North Macedonia. Carriers: UPS, DHL, PostNL.
+- **Hong Kong (Floship)** — for the US, the UK, Switzerland, Norway, Asia Pacific, and the rest of the world. Carriers: DHL, FedEx, or the national post (USPS in the US).
 
 ## Delivery times by region
 
 | Region | Warehouse | Delivery | Free shipping from |
 |---|---|---|---|
 | 🇪🇺 European Union | ShipBob Netherlands | 3–7 business days | €100 |
-| 🇬🇧 United Kingdom | ShipBob Netherlands | 5–10 business days | €100 |
-| 🇺🇸 United States | ShipBob Netherlands | 7–14 business days | €100 |
-| 🇨🇦 Canada | ShipBob Netherlands | 7–14 business days | €100 |
-| 🇮🇱 Israel / 🇬🇪 Georgia | ShipBob Netherlands | 5–10 business days | €100 |
-| 🌏 Asia Pacific | Floship Hong Kong | 5–10 business days | €100 |
+| 🇬🇧 United Kingdom | Floship Hong Kong | 5–10 business days | €100 |
+| 🇺🇸 United States | Floship Hong Kong | 7–14 business days | €100 |
+| 🇨🇦 Canada | ShipBob Netherlands (express) | 3–7 business days | None |
+| 🇮🇱 Israel, 🇬🇪 Georgia, and others listed above | ShipBob Netherlands | 5–10 business days | None |
+| 🌏 Asia Pacific | Floship Hong Kong | 5–10 business days | Varies |
 | 🌍 Rest of the world | Floship Hong Kong | 7–21 business days | Varies |
+
+**Exceptions:**
+
+- **Orbita** (and bundles with Orbita) always ships separately from the Netherlands, to every country, including the US. Free shipping does not apply to Orbita.
+- **Scales and Scales Gems** ship only from the Netherlands.
+
+The free-shipping threshold is checked after discounts. Checkout shows the exact shipping options and price for your country.
 
 ## Processing time
 
