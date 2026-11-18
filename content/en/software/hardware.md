@@ -21,7 +21,7 @@ Many modern hardware synths have a USB host port. The port is often labelled **U
 
 **Devices with USB host built in:** Korg Volca Sample 2, Roland JD-Xi, Elektron Digitakt II, Elektron Digitone II, Nord Stage 3, most Behringer Deepmind variants, and many MPC standalone units.
 
-**Teenage Engineering:** OP-Z takes TouchMe, Playtron and Biotron straight into its USB-C port — no adapter — once the device runs the single-MIDI-port firmware. See [Playtronica + Teenage Engineering](/software/teenage-engineering/) for OP-Z, OP-XY, OP-1 field, EP-133 and the rest.
+**Teenage Engineering:** OP-Z takes any Playtronica device straight into its USB-C port — no adapter — on the latest firmware. See [Playtronica + Teenage Engineering](/software/teenage-engineering/) for OP-Z, OP-XY, OP-1 field, EP-133 and the rest.
 
 **Devices without USB host:** older Volcas, classic Eurorack modules, and hardware MIDI keyboards from before approximately 2018. For these, use a USB-host adapter (see below).
 

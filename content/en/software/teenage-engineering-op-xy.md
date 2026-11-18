@@ -22,7 +22,7 @@ links_out: ["/software/teenage-engineering/", "/software/teenage-engineering-op-
 
 - An **OP-XY**.
 - A **USB-C data cable** (a charge-only cable carries no MIDI).
-- A Playtronica device. We recommend the **single-MIDI-port firmware** — TouchMe 1.3.10 (Love 1.4.2), Playtron 1.1.12, Biotron 1.8.4. These builds also include a USB fix made for OP-XY. On 18 November 2026 they are beta builds; email [support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-XY firmware` to get them.
+- A Playtronica device on the **latest firmware** — update at [settings.playtronica.com](https://settings.playtronica.com).
 
 ## Connect
 
@@ -37,7 +37,7 @@ links_out: ["/software/teenage-engineering/", "/software/teenage-engineering-op-
 ## What we do not know yet
 
 - **Which track plays incoming notes.** TE's guide does not say which track incoming MIDI notes from a controller play on. Check what plays when you touch the device, and tell us.
-- **How many MIDI ports OP-XY accepts.** OP-Z accepts a device with only one MIDI port. TE does not state a limit for OP-XY. If the older Playtronica firmware is not detected, the single-port firmware above is the fix to try.
+- **How many MIDI ports OP-XY accepts.** OP-Z accepts a device with only one MIDI port. TE does not state a limit for OP-XY. If an older Playtronica firmware is not detected, update to the latest.
 - **Current limit of the USB port.** Not published by TE.
 
 ## Scales and TRS
@@ -62,7 +62,7 @@ Yes, according to Teenage Engineering: the OP-XY USB-C port is a MIDI host and d
 <details>
 <summary><strong>OP-XY does not see my Playtronica device. What should I try?</strong></summary>
 
-Use a data cable, check COM → M3 (devices view) that notes are enabled for the device, and try a powered USB hub. If you are on older Playtronica firmware, update to the single-port firmware (TouchMe 1.3.10, Playtron 1.1.12, Biotron 1.8.4), which includes a USB fix for OP-XY.
+Use a data cable, check COM → M3 (devices view) that notes are enabled for the device, and try a powered USB hub. Update the Playtronica device to the latest firmware.
 </details>
 
 <details>

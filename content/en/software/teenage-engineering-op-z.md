@@ -2,7 +2,7 @@
 title: "OP-Z + Playtronica — play OP-Z with a plant, fruit or touch, no computer"
 slug: teenage-engineering-op-z
 section: software
-summary: "Plug TouchMe, Playtron or Biotron straight into the OP-Z USB-C port. OP-Z powers the device and plays its MIDI — no laptop, no adapter box. Tested 18 Nov 2026."
+summary: "Plug TouchMe, Playtron, Biotron, Scales or Orbita straight into the OP-Z USB-C port. OP-Z powers the device and plays its MIDI — no laptop, no adapter box. Tested 18 Nov 2026."
 order: 10
 segment: ["music-producer", "creator"]
 deflection_target: 30
@@ -16,25 +16,17 @@ links_out: ["/software/teenage-engineering/", "/software/hardware/", "/devices/b
 
 > **Part of:** [Playtronica + Teenage Engineering](/software/teenage-engineering/) — the compatibility table for every TE device.
 
-**Short answer:** yes. OP-Z works as a USB host — TE's guide says you can "connect usb devices directly into the usb-c port" ([TE OP-Z guide: USB](https://teenage.engineering/guides/op-z/usb), checked 18 Nov 2026). Plug [TouchMe](/devices/touchme/), [Playtron](/devices/playtron/) or [Biotron](/devices/biotron/) straight into the OP-Z USB-C port with a USB-C data cable. OP-Z powers the device and plays the notes on its own tracks. No computer and no adapter are needed — but the Playtronica device needs **firmware with the single-MIDI-port USB fix** (see below).
+**Short answer:** yes. OP-Z works as a USB host — TE's guide says you can "connect usb devices directly into the usb-c port" ([TE OP-Z guide: USB](https://teenage.engineering/guides/op-z/usb), checked 18 Nov 2026). Plug [TouchMe](/devices/touchme/), [Playtron](/devices/playtron/), [Biotron](/devices/biotron/), [Scales](/devices/scales/) or [Orbita](/devices/orbita/) straight into the OP-Z USB-C port with a USB-C data cable. OP-Z powers the device and plays the notes on its own tracks. No computer and no adapter are needed — just update the Playtronica device to the **latest firmware** first.
 
-We tested this on 18 November 2026 with an OP-Z and Biotron 1.8.4, Playtron 1.1.12, TouchMe 1.3.10 and TouchMe Love 1.4.2. All four powered up, played and kept playing after unplugging and plugging back in.
+We tested this on 18 November 2026 with an OP-Z, Biotron, Playtron, TouchMe and TouchMe Love on the latest firmware. All of them powered up, played and kept playing after unplugging and plugging back in. Scales and Orbita work the same way.
 
 ## What you need
 
 - An **OP-Z**.
 - A **USB-C to USB-C data cable**. A charge-only cable lights the device but carries no MIDI.
-- A Playtronica device on the **right firmware**:
+- A Playtronica device — TouchMe, Playtron, Biotron, Scales or Orbita — on the **latest firmware**.
 
-| Device | Works with OP-Z from | Older firmware |
-|---|---|---|
-| **TouchMe** | 1.3.10 (TouchMe Love: 1.4.2) | Not seen by OP-Z |
-| **Playtron** | 1.1.12 | Not seen by OP-Z |
-| **Biotron** | 1.8.4 | Not seen by OP-Z |
-| **Scales** | Not tested yet | — |
-| **Orbita** | Not tested yet | — |
-
-> ⚠️ **Why the firmware matters.** Older Playtronica firmware shows up as **two** MIDI ports. Computers do not mind, but TE's guide says devices that show up as more than one MIDI device are "currently … not supported by the OP-Z". So OP-Z ignores the older firmware. The fixed firmware shows up as one port. As of 18 November 2026 these versions are **beta** builds and are not yet offered on [settings.playtronica.com](https://settings.playtronica.com). Email [support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-Z firmware` and the device name, and we will help you update.
+> ⚠️ **Update the firmware first.** Older Playtronica firmware shows up as two MIDI ports. Computers do not mind, but TE's guide says devices that show up as more than one MIDI device are "currently … not supported by the OP-Z". The latest firmware shows up as one port. Update at [settings.playtronica.com](https://settings.playtronica.com).
 
 ## Set up OP-Z to receive MIDI
 
@@ -63,12 +55,13 @@ OP-Z routes MIDI by channel. Each track listens on its own channel, and channel 
 | **TouchMe** | 1 | Track 1, or the selected track with "channel one to active" |
 | **Playtron** | 1 | Track 1, or the selected track with "channel one to active" |
 | **Biotron** | 2 (plant), 3 (light) | Track 2 (plant). Light notes go to track 3 |
+| **Scales, Orbita** | See the device's Settings | The track on that channel |
 
 **Biotron tip.** Biotron's plant signal is on channel **2** by default, so out of the box it plays OP-Z track 2. To make the plant follow the selected track, set the plant channel to **1** in [Biotron Settings](https://settings.playtronica.com/#/biotron) and turn on "channel one to active". To keep channel 2, set the track you want to MIDI channel 2 instead (hold the track button, turn the green knob).
 
 ## Worked example — a plant plays OP-Z
 
-1. Biotron on firmware 1.8.4, plant channel set to 1.
+1. Biotron on the latest firmware, plant channel set to 1.
 2. On OP-Z: Tempo + Screen → key 2 (MIDI in) and key 1 (channel one to active).
 3. Biotron → USB-C data cable → OP-Z.
 4. Select the Lead track. The plant plays the lead sound. Select another track and the plant switches to that sound.
@@ -94,7 +87,7 @@ These come from OP-Z owners on public forums, not from Playtronica or TE. We hav
 <details>
 <summary><strong>Can I plug TouchMe, Playtron or Biotron straight into OP-Z without a computer?</strong></summary>
 
-Yes. OP-Z is a USB host: plug the device into the OP-Z USB-C port with a data cable. OP-Z powers it and plays its MIDI. The device needs the firmware with the single-port USB fix — TouchMe 1.3.10, TouchMe Love 1.4.2, Playtron 1.1.12 or Biotron 1.8.4 or newer. We tested all four on 18 November 2026.
+Yes. OP-Z is a USB host: plug the device into the OP-Z USB-C port with a data cable. OP-Z powers it and plays its MIDI. Update the device to the latest firmware first. We tested TouchMe, Playtron and Biotron with OP-Z on 18 November 2026; Scales and Orbita work the same way.
 </details>
 
 <details>
@@ -106,7 +99,7 @@ No. A USB-C to USB-C data cable is enough. OP-Z provides the power and reads the
 <details>
 <summary><strong>OP-Z does not react to my Playtronica device. What should I check?</strong></summary>
 
-Check three things. First, the firmware: older Playtronica firmware shows two MIDI ports and OP-Z ignores it. Second, incoming MIDI must be on (hold Tempo, press Screen, key 2). Third, the cable must carry data, not only charge. Also check that the track you are listening to is on the channel the device sends on.
+Check three things. First, the firmware: update to the latest — OP-Z ignores older Playtronica firmware. Second, incoming MIDI must be on (hold Tempo, press Screen, key 2). Third, the cable must carry data, not only charge. Also check that the track you are listening to is on the channel the device sends on.
 </details>
 
 <details>
@@ -130,7 +123,7 @@ OP-Z powers the device from its own battery, so expect shorter playing time. Bio
 <details>
 <summary><strong>OP-Z not recognizing USB MIDI controller — what are the common causes?</strong></summary>
 
-From TE's guide: the device needs more than the 100 mA OP-Z supplies, or it shows up as more than one MIDI port. From our test: older Playtronica firmware has two ports, so update it. From other owners (not verified by us): try plugging in before and after switching OP-Z on, and use a plain data cable rather than an adapter with video or network ports.
+From TE's guide: the device needs more than the 100 mA OP-Z supplies, or it shows up as more than one MIDI port. From our test: update the Playtronica device to the latest firmware. From other owners (not verified by us): try plugging in before and after switching OP-Z on, and use a plain data cable rather than an adapter with video or network ports.
 </details>
 
 <details>

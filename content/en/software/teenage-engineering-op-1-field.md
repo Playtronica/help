@@ -22,7 +22,7 @@ links_out: ["/software/teenage-engineering/", "/software/teenage-engineering-op-
 
 - An **OP-1 field**.
 - A **USB-C data cable**.
-- A Playtronica device. We recommend the **single-MIDI-port firmware** — TouchMe 1.3.10 (Love 1.4.2), Playtron 1.1.12, Biotron 1.8.4 (beta builds on 18 Nov 2026; email [support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-1 field firmware`).
+- A Playtronica device on the **latest firmware** — update at [settings.playtronica.com](https://settings.playtronica.com).
 
 ## Connect and check
 
@@ -38,7 +38,7 @@ links_out: ["/software/teenage-engineering/", "/software/teenage-engineering-op-
 ## What we do not know yet
 
 - **Power.** TE does not publish how much current the OP-1 field USB port supplies to a connected device. If the Playtronica device does not light up, try a powered USB hub.
-- **Number of MIDI ports.** TE does not state a port limit for OP-1 field. The single-port firmware is the safe choice.
+- **Number of MIDI ports.** TE does not state a port limit for OP-1 field. The latest Playtronica firmware is the safe choice.
 - **Channels.** TE describes outgoing MIDI channel and filters, but not how incoming channels map to engines. TouchMe and Playtron send on channel 1; Biotron on channel 2 (plant) and 3 (light).
 
 There is no TRS MIDI jack on OP-1 field — MIDI goes over USB-C or Bluetooth LE.
@@ -62,7 +62,7 @@ Yes. Teenage Engineering lists the OP-1 field USB-C port as a USB MIDI host and 
 <details>
 <summary><strong>OP-1 field does not show my Playtronica device. What should I try?</strong></summary>
 
-Use a USB-C data cable, check the COM screen for the device, and try a powered USB hub. If your Playtronica device runs older firmware, update to the single-port firmware (TouchMe 1.3.10, Playtron 1.1.12, Biotron 1.8.4).
+Use a USB-C data cable, check the COM screen for the device, and try a powered USB hub. Update the Playtronica device to the latest firmware.
 </details>
 
 <details>
