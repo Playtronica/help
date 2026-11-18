@@ -7,7 +7,7 @@ order: 7
 segment: ["music-producer"]
 deflection_target: 20
 status: edited-2026-06
-last_edited: 2026-06-24
+last_edited: 2026-11-18
 emoji: 📻
 ---
 
@@ -19,7 +19,9 @@ You do not need a laptop. Every Playtronica device is a standard USB MIDI contro
 
 Many modern hardware synths have a USB host port. The port is often labelled **USB A** to distinguish it from the USB B port that connects to a computer. Plug your Playtronica device into the USB host port. The synth treats the device as a MIDI input.
 
-**Devices with USB host built in:** Korg Volca Sample 2, Roland JD-Xi, Elektron Digitakt II, Elektron Digitone II, OP-1 Field, OP-Z (with an adapter), Nord Stage 3, most Behringer Deepmind variants, and many MPC standalone units.
+**Devices with USB host built in:** Korg Volca Sample 2, Roland JD-Xi, Elektron Digitakt II, Elektron Digitone II, Nord Stage 3, most Behringer Deepmind variants, and many MPC standalone units.
+
+**Teenage Engineering:** OP-Z takes any Playtronica device straight into its USB-C port — no adapter — on the latest firmware. See [Playtronica + Teenage Engineering](/software/teenage-engineering/) for OP-Z, OP-XY, OP-1 field, EP-133 and the rest.
 
 **Devices without USB host:** older Volcas, classic Eurorack modules, and hardware MIDI keyboards from before approximately 2018. For these, use a USB-host adapter (see below).
 
@@ -48,7 +50,7 @@ TouchMe → USB-C-to-USB-A cable → H4MIDI WC (USB-A host port) → 5-pin MIDI 
 
 ## TRS MIDI (the Scales path)
 
-[Scales](/devices/scales/) has a TRS MIDI output (a 3.5 mm jack) in addition to USB-C. If your hardware uses TRS MIDI — most modern compact synths use the MIDI Manufacturers Association's **Type A** pinout (OP-Z, Korg's pocket range, most Eurorack MIDI-to-CV modules) — connect with a TRS-to-TRS or TRS-to-DIN cable.
+[Scales](/devices/scales/) has a TRS MIDI output (a 3.5 mm jack) in addition to USB-C. If your hardware uses TRS MIDI — most modern compact synths use the MIDI Manufacturers Association's **Type A** pinout (for example Teenage Engineering OP-XY, Korg's pocket range, most Eurorack MIDI-to-CV modules) — connect with a TRS-to-TRS or TRS-to-DIN cable.
 
 If your hardware uses the older **Type B** pinout, you will need an adapter. Adapters exist. Check your synth's manual first.
 
@@ -64,7 +66,7 @@ Playtronica devices output MIDI, not CV. To play a Eurorack rig, use a MIDI-to-C
 
 - **TouchMe + OP-1 Field** — a workshop classic. TouchMe's two-person play feeds the OP-1 sampler.
 - **Playtron + Volca Sample** — fruit as drum pads. Map each alligator wire to a different sample.
-- **Biotron + OP-Z** — the plant drives an arpeggio. The OP-Z sequences it with its built-in tracks for a generative piece.
+- **Biotron + OP-Z** — the plant plays OP-Z directly over USB-C, no computer. Biotron sends the plant on MIDI channel 2 and the light sensor on channel 3 by default, so the plant plays OP-Z track 2. [Full OP-Z setup](/software/teenage-engineering-op-z/).
 - **Orbita + Eurorack** — Orbita as a melodic source feeding a quantizer, then into your modular voices.
 - **Scales + any synth** — weight as pitch is a strong on-stage gesture. It works especially well with brass-like presets.
 
