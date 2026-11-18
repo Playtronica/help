@@ -2,7 +2,7 @@
 title: "OP-Z + Playtronica — play OP-Z with a plant, fruit or touch, no computer"
 slug: teenage-engineering-op-z
 section: software
-summary: "Plug TouchMe, Playtron, Biotron, Scales or Orbita straight into the OP-Z USB-C port. OP-Z powers the device and plays its MIDI — no laptop, no adapter box. Tested 18 Nov 2026."
+summary: "Plug TouchMe, Playtron or Biotron straight into the OP-Z USB-C port. OP-Z powers the device and plays its MIDI — no laptop, no adapter box. Tested 18 Nov 2026."
 order: 10
 segment: ["music-producer", "creator"]
 deflection_target: 30
@@ -16,15 +16,15 @@ links_out: ["/software/teenage-engineering/", "/software/hardware/", "/devices/b
 
 > **Part of:** [Playtronica + Teenage Engineering](/software/teenage-engineering/) — the compatibility table for every TE device.
 
-**Short answer:** yes. OP-Z works as a USB host — TE's guide says you can "connect usb devices directly into the usb-c port" ([TE OP-Z guide: USB](https://teenage.engineering/guides/op-z/usb), checked 18 Nov 2026). Plug [TouchMe](/devices/touchme/), [Playtron](/devices/playtron/), [Biotron](/devices/biotron/), [Scales](/devices/scales/) or [Orbita](/devices/orbita/) straight into the OP-Z USB-C port with a USB-C data cable. OP-Z powers the device and plays the notes on its own tracks. No computer and no adapter are needed — just update the Playtronica device to the **latest firmware** first.
+**Short answer:** yes. OP-Z works as a USB host — TE's guide says you can "connect usb devices directly into the usb-c port" ([TE OP-Z guide: USB](https://teenage.engineering/guides/op-z/usb), checked 18 Nov 2026). Plug [TouchMe](/devices/touchme/), [Playtron](/devices/playtron/), [Biotron](/devices/biotron/) straight into the OP-Z USB-C port with a USB-C data cable. OP-Z powers the device and plays the notes on its own tracks. No computer and no adapter are needed — just update the Playtronica device to the **latest firmware** first.
 
-We tested this on 18 November 2026 with an OP-Z, Biotron, Playtron, TouchMe and TouchMe Love on the latest firmware. All of them powered up, played and kept playing after unplugging and plugging back in. Scales and Orbita work the same way.
+We tested this on 18 November 2026 with an OP-Z, Biotron, Playtron, TouchMe and TouchMe Love on the latest firmware. All of them powered up, played and kept playing after unplugging and plugging back in. Scales and Orbita should work the same way — we are testing them now.
 
 ## What you need
 
 - An **OP-Z**.
 - A **USB-C to USB-C data cable**. A charge-only cable lights the device but carries no MIDI.
-- A Playtronica device — TouchMe, Playtron, Biotron, Scales or Orbita — on the **latest firmware**.
+- A Playtronica device on the **latest firmware** — TouchMe, Playtron or Biotron. [Scales](/devices/scales/) and [Orbita](/devices/orbita/) should work too; we are testing them.
 
 > ⚠️ **Update the firmware first.** Older Playtronica firmware shows up as two MIDI ports. Computers do not mind, but TE's guide says devices that show up as more than one MIDI device are "currently … not supported by the OP-Z". The latest firmware shows up as one port. Update at [settings.playtronica.com](https://settings.playtronica.com).
 
@@ -87,7 +87,7 @@ These come from OP-Z owners on public forums, not from Playtronica or TE. We hav
 <details>
 <summary><strong>Can I plug TouchMe, Playtron or Biotron straight into OP-Z without a computer?</strong></summary>
 
-Yes. OP-Z is a USB host: plug the device into the OP-Z USB-C port with a data cable. OP-Z powers it and plays its MIDI. Update the device to the latest firmware first. We tested TouchMe, Playtron and Biotron with OP-Z on 18 November 2026; Scales and Orbita work the same way.
+Yes. OP-Z is a USB host: plug the device into the OP-Z USB-C port with a data cable. OP-Z powers it and plays its MIDI. Update the device to the latest firmware first. We tested TouchMe, Playtron and Biotron with OP-Z on 18 November 2026; Scales and Orbita should work too, we are testing them.
 </details>
 
 <details>

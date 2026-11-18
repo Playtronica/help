@@ -23,11 +23,11 @@ Every Playtronica device is a class-compliant USB MIDI controller. Some Teenage 
 
 ## Compatibility at a glance
 
-**Legend:** ✅ works, latest firmware · 🟡 should work according to TE's guide, not tested by us yet · 🔌 works through a computer or a USB MIDI host box · ❔ unknown · ❌ not possible.
+**Legend:** ✅ works, tested by Playtronica, latest firmware · 🟡 should work, not tested by us yet · 🔌 works through a computer or a USB MIDI host box · ❔ unknown · ❌ not possible.
 
 | TE device | TouchMe | Playtron | Biotron | Scales | Orbita | Computer needed? |
 |---|---|---|---|---|---|---|
-| **[OP-Z](/software/teenage-engineering-op-z/)** | ✅ | ✅ | ✅ | ✅ | ✅ | No — USB-C data cable only |
+| **[OP-Z](/software/teenage-engineering-op-z/)** | ✅ | ✅ | ✅ | 🟡 testing | 🟡 testing | No — USB-C data cable only |
 | **[OP-XY](/software/teenage-engineering-op-xy/)** | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | No — USB-C data cable |
 | **[OP-1 field](/software/teenage-engineering-op-1-field/)** | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | No — USB-C data cable |
 | **[EP-133 K.O. II](/software/teenage-engineering-ep-133/)** | 🔌 | 🔌 | 🔌 | 🔌 or TRS cable | 🔌 | Yes, or a USB MIDI host box |
@@ -70,7 +70,7 @@ Before you connect to a TE device, update your Playtronica device to the latest 
 <details>
 <summary><strong>Which Teenage Engineering devices can I play with a Playtronica device without a computer?</strong></summary>
 
-OP-Z, OP-XY and OP-1 field have a USB host port, so a Playtronica device can plug straight in. OP-Z works with TouchMe, Playtron, Biotron, Scales and Orbita on the latest firmware (we tested it on 18 November 2026). OP-XY and OP-1 field are USB hosts according to TE, but we have not tested them yet. EP-133 K.O. II, EP-1320 and EP-40 need a computer or a USB MIDI host box.
+OP-Z, OP-XY and OP-1 field have a USB host port, so a Playtronica device can plug straight in. OP-Z works with TouchMe, Playtron and Biotron on the latest firmware (we tested it on 18 November 2026); Scales and Orbita should work too, we are testing them. OP-XY and OP-1 field are USB hosts according to TE, but we have not tested them yet. EP-133 K.O. II, EP-1320 and EP-40 need a computer or a USB MIDI host box.
 </details>
 
 <details>
