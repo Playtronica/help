@@ -79,7 +79,7 @@ Check COM → M3 that the device and its notes are enabled. Try a powered USB hu
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-XY setup`, your Playtronica device and its firmware version. If you get it working, tell us — we will add your result to this page.
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-XY setup`, your Playtronica device and its firmware version. We aim for 24 hours, but a reply may take up to 3 business days. If you get it working, tell us — we will add your result to this page.
 
 ## See also
 

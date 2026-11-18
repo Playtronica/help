@@ -1,5 +1,5 @@
 ---
-title: "Playtronica + Teenage Engineering — OP-Z, OP-XY, OP-1 field, EP-133 K.O. II"
+title: "Playtronica + Teenage Engineering: OP-Z, OP-XY, OP-1, EP-133"
 slug: teenage-engineering
 section: software
 summary: "Which Teenage Engineering devices TouchMe, Playtron, Biotron, Scales and Orbita can play — with or without a computer, which cable or adapter, which firmware. OP-Z tested 18 Nov 2026."

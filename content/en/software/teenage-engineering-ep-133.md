@@ -1,8 +1,8 @@
 ---
-title: "EP-133 K.O. II, EP-1320, EP-40 + Playtronica — play K.O. II with TouchMe, Playtron or Biotron"
+title: "EP-133 K.O. II + Playtronica — TouchMe, Playtron, Biotron"
 slug: teenage-engineering-ep-133
 section: software
-summary: "EP-133 K.O. II, EP-1320 medieval and EP-40 riddim are not USB hosts. Two ways to play them from a Playtronica device: through a computer, or through a USB MIDI host box and the TRS MIDI input."
+summary: "EP-133 K.O. II, EP-1320 and EP-40 are not USB hosts. Play them from a Playtronica device via a computer or a USB MIDI host box to TRS MIDI."
 order: 13
 segment: ["music-producer", "creator"]
 deflection_target: 20
@@ -94,7 +94,7 @@ Make sure the cable goes into the MIDI in jack, not the sync jack, and that the 
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `EP-133 setup`, your Playtronica device and how it is connected.
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `EP-133 setup`, your Playtronica device and how it is connected. We aim for 24 hours, but a reply may take up to 3 business days.
 
 ## See also
 

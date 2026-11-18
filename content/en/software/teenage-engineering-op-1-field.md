@@ -1,8 +1,8 @@
 ---
-title: "OP-1 field + Playtronica — play OP-1 field with TouchMe, Playtron or Biotron"
+title: "OP-1 field + Playtronica — TouchMe, Playtron, Biotron"
 slug: teenage-engineering-op-1-field
 section: software
-summary: "OP-1 field is a USB MIDI host and accepts class-compliant controllers. How to connect a Playtronica device, check it in the MIDI monitor, and what is not confirmed yet. Not tested by Playtronica yet."
+summary: "OP-1 field is a USB MIDI host. How to connect a Playtronica device, check it in the MIDI monitor, and what is not confirmed yet."
 order: 12
 segment: ["music-producer", "creator"]
 deflection_target: 20
@@ -79,7 +79,7 @@ OP-1 field has one USB-C port. Owners on public forums use a powered USB hub or 
 
 ## Still stuck
 
-[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-1 field setup`, your Playtronica device and its firmware version.
+[Email support@playtronica.com](mailto:support@playtronica.com) with the subject `OP-1 field setup`, your Playtronica device and its firmware version. We aim for 24 hours, but a reply may take up to 3 business days.
 
 ## See also
 
