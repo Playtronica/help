@@ -20,6 +20,8 @@ emoji: 🌿
 
 ## Quick start
 
+Prefer to play in your browser? Open [Biotron online](https://biotron.playtronica.com/).
+
 <ol class="steps">
   <li><strong>Plug both contact cables into Biotron.</strong> The two contacts come on cables with Dupont connectors — push each connector onto the <strong>CONTACT PINS</strong> marked in the board picture below. Both cables have to be connected: a single contact on its own produces no signal.</li>
   <li><strong>Clip the two contacts to the plant.</strong> Use two separate leaves or branches. Keep the contacts apart.</li>
