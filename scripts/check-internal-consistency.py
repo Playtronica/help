@@ -143,6 +143,8 @@ def issues_iter():
                 continue
             if host_path.startswith("touchme.playtronica.com"):  # TouchMe home, Andrey 11.11.2026 (one subdomain per device)
                 continue
+            if host_path.startswith("biotron.playtronica.com"):  # Biotron home, released 19.11.2026 (AM-6672, AM-6675)
+                continue
             if host_path.startswith("shop.playtronica.com"):
                 continue
             if host_path.startswith("playtronica.com"):
