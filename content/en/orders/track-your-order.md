@@ -14,10 +14,14 @@ emoji: 🔍
 
 Your tracking link is in the order confirmation email. Search your inbox for **"Playtronica"** and **"shipped"** — that email has a one-click tracking link. If you cannot find the email, see "I lost my tracking number" below.
 
-Two carriers ship Playtronica orders:
+Playtronica orders ship from two warehouses:
 
 - **EU orders** ship from the Netherlands with **ShipBob**. Typical delivery: **3 to 7 business days** after shipment.
-- **International orders** (US, Canada, UK, Asia-Pacific, all other regions) ship from Hong Kong with **Floship**. Typical delivery: **7 to 14 business days** for the US and Canada, **5 to 10 business days** for Asia-Pacific.
+- **Orders to Canada** also ship from the Netherlands, by express. Typical delivery: **3 to 7 business days**.
+- **Orders to the US, the UK, Asia-Pacific, and the rest of the world** ship from Hong Kong with **Floship**. Typical delivery: **7 to 14 business days** for the US, **5 to 10 business days** for Asia-Pacific.
+- **Orbita** always ships from the Netherlands, to every country, as a separate parcel with its own tracking link.
+
+Your shipping confirmation email names the carrier and has the tracking link.
 
 The first 24 to 48 hours after we ship can show no updates. The carrier may not scan the package until it reaches the first regional hub. This is normal.
 
